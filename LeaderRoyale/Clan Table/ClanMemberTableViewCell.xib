@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="magic.ttf">
+            <string>Supercell-Magic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ClanMemberTableViewCell" customModule="LeaderRoyale" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmR-Ug-zgb">
+                    <rect key="frame" x="16" y="32.5" width="64" height="25.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="uCZ-cP-pVg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="aUE-yT-cAV">
+                    <rect key="frame" x="88" y="24.5" width="134" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="134" id="zZy-d7-oo9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHR-6J-fBG">
+                    <rect key="frame" x="232" y="24.5" width="66" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUE-fa-GQ0">
+                    <rect key="frame" x="306" y="29.5" width="65" height="31"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy" translatesAutoresizingMaskIntoConstraints="NO" id="0sT-rG-it7">
+                            <rect key="frame" x="42" y="5.5" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="QLx-ZG-OYZ"/>
+                                <constraint firstAttribute="width" constant="20" id="hzh-Cl-fck"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Vuu-5j-WuZ">
+                            <rect key="frame" x="4" y="5" width="38" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="38" id="MY8-ys-4k3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.61176470588235299" green="0.61568627450980395" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Vuu-5j-WuZ" firstAttribute="centerY" secondItem="GUE-fa-GQ0" secondAttribute="centerY" id="00X-43-LKa"/>
+                        <constraint firstAttribute="height" constant="31" id="69g-0y-0HW"/>
+                        <constraint firstAttribute="trailing" secondItem="0sT-rG-it7" secondAttribute="trailing" constant="3" id="6oC-P8-1AR"/>
+                        <constraint firstItem="0sT-rG-it7" firstAttribute="leading" secondItem="Vuu-5j-WuZ" secondAttribute="trailing" id="Fqe-WL-3NQ"/>
+                        <constraint firstAttribute="width" constant="65" id="Msa-qL-wz4"/>
+                        <constraint firstItem="0sT-rG-it7" firstAttribute="centerY" secondItem="GUE-fa-GQ0" secondAttribute="centerY" id="xUl-zW-1bv"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="role" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qes-Bu-l4l">
+                    <rect key="frame" x="88" y="42.5" width="52.5" height="25.5"/>
+                    <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMI-13-CUK">
+                    <rect key="frame" x="232" y="44.5" width="11" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kmR-Ug-zgb" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="1jl-QT-KWw"/>
+                <constraint firstItem="qes-Bu-l4l" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="10" id="3Cw-a4-d2e"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GUE-fa-GQ0" secondAttribute="trailing" constant="4" id="9Fu-MS-PZT"/>
+                <constraint firstItem="XHR-6J-fBG" firstAttribute="leading" secondItem="aUE-yT-cAV" secondAttribute="trailing" constant="10" id="9X1-8B-OVG"/>
+                <constraint firstItem="kmR-Ug-zgb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="FnH-si-aAt"/>
+                <constraint firstItem="GUE-fa-GQ0" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="GSp-1Y-oqo"/>
+                <constraint firstItem="aUE-yT-cAV" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-10" id="HWk-Ld-5rk"/>
+                <constraint firstItem="iMI-13-CUK" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="10" id="VK4-h2-CHQ"/>
+                <constraint firstItem="iMI-13-CUK" firstAttribute="leading" secondItem="XHR-6J-fBG" secondAttribute="leading" id="gxp-el-Kvn"/>
+                <constraint firstItem="aUE-yT-cAV" firstAttribute="leading" secondItem="kmR-Ug-zgb" secondAttribute="trailing" constant="8" id="mjT-cP-OZU"/>
+                <constraint firstItem="XHR-6J-fBG" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-10" id="ngi-pM-mfz"/>
+                <constraint firstItem="qes-Bu-l4l" firstAttribute="leading" secondItem="aUE-yT-cAV" secondAttribute="leading" id="txW-XJ-qB4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="donatedCountLabel" destination="iMI-13-CUK" id="UiH-dh-xab"/>
+                <outlet property="donatedTitleLabel" destination="XHR-6J-fBG" id="cfO-bT-WrL"/>
+                <outlet property="nameLabel" destination="aUE-yT-cAV" id="pVt-Ae-1x0"/>
+                <outlet property="rankLabel" destination="kmR-Ug-zgb" id="8in-Js-8eY"/>
+                <outlet property="roleLabel" destination="qes-Bu-l4l" id="918-Eb-TCw"/>
+                <outlet property="trophiesLabel" destination="Vuu-5j-WuZ" id="BZH-tw-m3K"/>
+                <outlet property="trophyContainerView" destination="GUE-fa-GQ0" id="Moc-Xu-Izb"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="381.40929535232385"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="trophy" width="250" height="250"/>
+    </resources>
+</document>

@@ -7,23 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */; };
+		A412614B21A65EC9005A4B24 /* ClanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614A21A65EC9005A4B24 /* ClanTableViewController.swift */; };
+		A412614D21A786FD005A4B24 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614C21A786FD005A4B24 /* GradientView.swift */; };
+		A412614F21A789FF005A4B24 /* magic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A412614E21A789FF005A4B24 /* magic.ttf */; };
+		A41952DB21A7A01D0086D964 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952DA21A7A01D0086D964 /* StyledButton.swift */; };
+		A41952DF21A8AE330086D964 /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */; };
+		A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952E021AA6C3D0086D964 /* PlayerInfo.swift */; };
 		A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47753F021A24CF9000098F6 /* AppDelegate.swift */; };
-		A47753F321A24CF9000098F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47753F221A24CF9000098F6 /* ViewController.swift */; };
 		A47753F621A24CF9000098F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47753F421A24CF9000098F6 /* Main.storyboard */; };
 		A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */; };
 		A47753FB21A24CFC000098F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A47753FA21A24CFC000098F6 /* Assets.xcassets */; };
 		A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47753FC21A24CFC000098F6 /* LaunchScreen.storyboard */; };
+		A477540621A250B9000098F6 /* ClanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477540521A250B9000098F6 /* ClanInfo.swift */; };
+		A477540821A2552A000098F6 /* ClashRoyaleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */; };
+		A4D5346A21DF15D8005E5835 /* ClanListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5346921DF15D8005E5835 /* ClanListTableViewController.swift */; };
+		A4D5346C21DF1697005E5835 /* ClanNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5346B21DF1697005E5835 /* ClanNameTableViewCell.swift */; };
+		A4D5346F21DF171D005E5835 /* ClanNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4D5346E21DF171D005E5835 /* ClanNameTableViewCell.xib */; };
+		A4F24F3421B4A5DF004D437D /* ClanMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F24F3321B4A5DF004D437D /* ClanMemberTableViewCell.swift */; };
+		A4F24F3621B4A5ED004D437D /* ClanMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F24F3521B4A5ED004D437D /* ClanMemberTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanSearchViewController.swift; sourceTree = "<group>"; };
+		A412614A21A65EC9005A4B24 /* ClanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanTableViewController.swift; sourceTree = "<group>"; };
+		A412614C21A786FD005A4B24 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		A412614E21A789FF005A4B24 /* magic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = magic.ttf; sourceTree = "<group>"; };
+		A41952DA21A7A01D0086D964 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
+		A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileViewController.swift; sourceTree = "<group>"; };
+		A41952E021AA6C3D0086D964 /* PlayerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInfo.swift; sourceTree = "<group>"; };
 		A47753ED21A24CF9000098F6 /* LeaderRoyale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeaderRoyale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47753F021A24CF9000098F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A47753F221A24CF9000098F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A47753F521A24CF9000098F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A47753F821A24CF9000098F6 /* LeaderRoyale.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LeaderRoyale.xcdatamodel; sourceTree = "<group>"; };
 		A47753FA21A24CFC000098F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A47753FD21A24CFC000098F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A47753FF21A24CFC000098F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A477540521A250B9000098F6 /* ClanInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanInfo.swift; sourceTree = "<group>"; };
+		A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClashRoyaleAPI.swift; sourceTree = "<group>"; };
+		A4D5346921DF15D8005E5835 /* ClanListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanListTableViewController.swift; sourceTree = "<group>"; };
+		A4D5346B21DF1697005E5835 /* ClanNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanNameTableViewCell.swift; sourceTree = "<group>"; };
+		A4D5346E21DF171D005E5835 /* ClanNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClanNameTableViewCell.xib; sourceTree = "<group>"; };
+		A4F24F3321B4A5DF004D437D /* ClanMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanMemberTableViewCell.swift; sourceTree = "<group>"; };
+		A4F24F3521B4A5ED004D437D /* ClanMemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClanMemberTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +82,44 @@
 		A47753EF21A24CF9000098F6 /* LeaderRoyale */ = {
 			isa = PBXGroup;
 			children = (
+				A41952DA21A7A01D0086D964 /* StyledButton.swift */,
 				A47753F021A24CF9000098F6 /* AppDelegate.swift */,
-				A47753F221A24CF9000098F6 /* ViewController.swift */,
+				A412614C21A786FD005A4B24 /* GradientView.swift */,
 				A47753F421A24CF9000098F6 /* Main.storyboard */,
+				A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */,
+				A4D5346D21DF16A2005E5835 /* Clan Name Table */,
+				A4F24F3021B49EB7004D437D /* Clan Table */,
+				A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */,
+				A477540521A250B9000098F6 /* ClanInfo.swift */,
+				A41952E021AA6C3D0086D964 /* PlayerInfo.swift */,
+				A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */,
 				A47753FA21A24CFC000098F6 /* Assets.xcassets */,
 				A47753FC21A24CFC000098F6 /* LaunchScreen.storyboard */,
 				A47753FF21A24CFC000098F6 /* Info.plist */,
 				A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */,
+				A412614E21A789FF005A4B24 /* magic.ttf */,
 			);
 			path = LeaderRoyale;
+			sourceTree = "<group>";
+		};
+		A4D5346D21DF16A2005E5835 /* Clan Name Table */ = {
+			isa = PBXGroup;
+			children = (
+				A4D5346921DF15D8005E5835 /* ClanListTableViewController.swift */,
+				A4D5346B21DF1697005E5835 /* ClanNameTableViewCell.swift */,
+				A4D5346E21DF171D005E5835 /* ClanNameTableViewCell.xib */,
+			);
+			path = "Clan Name Table";
+			sourceTree = "<group>";
+		};
+		A4F24F3021B49EB7004D437D /* Clan Table */ = {
+			isa = PBXGroup;
+			children = (
+				A412614A21A65EC9005A4B24 /* ClanTableViewController.swift */,
+				A4F24F3321B4A5DF004D437D /* ClanMemberTableViewCell.swift */,
+				A4F24F3521B4A5ED004D437D /* ClanMemberTableViewCell.xib */,
+			);
+			path = "Clan Table";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +180,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4D5346F21DF171D005E5835 /* ClanNameTableViewCell.xib in Resources */,
 				A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */,
+				A4F24F3621B4A5ED004D437D /* ClanMemberTableViewCell.xib in Resources */,
 				A47753FB21A24CFC000098F6 /* Assets.xcassets in Resources */,
+				A412614F21A789FF005A4B24 /* magic.ttf in Resources */,
 				A47753F621A24CF9000098F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +196,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */,
+				A4F24F3421B4A5DF004D437D /* ClanMemberTableViewCell.swift in Sources */,
+				A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */,
+				A41952DF21A8AE330086D964 /* PlayerProfileViewController.swift in Sources */,
 				A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */,
-				A47753F321A24CF9000098F6 /* ViewController.swift in Sources */,
+				A477540821A2552A000098F6 /* ClashRoyaleAPI.swift in Sources */,
+				A4D5346A21DF15D8005E5835 /* ClanListTableViewController.swift in Sources */,
+				A4D5346C21DF1697005E5835 /* ClanNameTableViewCell.swift in Sources */,
+				A41952DB21A7A01D0086D964 /* StyledButton.swift in Sources */,
+				A412614B21A65EC9005A4B24 /* ClanTableViewController.swift in Sources */,
 				A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */,
+				A412614D21A786FD005A4B24 /* GradientView.swift in Sources */,
+				A477540621A250B9000098F6 /* ClanInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
