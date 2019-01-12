@@ -55,7 +55,7 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
 
         clanSearchTextField.autocapitalizationType = UITextAutocapitalizationType.allCharacters
 
-        clanSearchTextField.addTarget(self, action: #selector(ClanSearchViewController.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
+        clanSearchTextField.addTarget(self, action: #selector(ClanSearchViewController.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         
         clanSearchTextField.text = "#P8CVYUR0"
 
@@ -73,7 +73,7 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
         let clashUrl = URL(string: clashRoyale)!
         if UIApplication.shared.canOpenURL(clashUrl)
         {
-            UIApplication.shared.open(clashUrl, options: [:], completionHandler: nil)
+            UIApplication.shared.open(clashUrl, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             
         }
     }
@@ -115,4 +115,9 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

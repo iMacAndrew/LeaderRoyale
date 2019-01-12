@@ -20,7 +20,7 @@ class ClanStatsTableViewController: UITableViewController {
         
         navigationItem.title = clanInfo?.name
         
-        let attributes: [NSAttributedStringKey: Any] = [.font: UIFont(name: "supercell-magic", size: 20)!]
+        let attributes: [NSAttributedString.Key: Any] = [.font: UIFont(name: "supercell-magic", size: 20)!]
         
         navigationController?.navigationBar.titleTextAttributes = attributes
         navigationController?.navigationBar.largeTitleTextAttributes = attributes
