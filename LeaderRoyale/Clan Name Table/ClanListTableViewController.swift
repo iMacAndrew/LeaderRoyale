@@ -35,4 +35,25 @@ class ClanListTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90.0
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "statSegue", sender: self)
+        
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let clanStats = segue.destination as? ClanStatsTableViewController else {
+//            return
+//        }
+//        
+//        if let clanInfo = clanInfo {
+//            clanStats.clanInfo = clanInfo
+//        }
+//        
+//    }
 }
