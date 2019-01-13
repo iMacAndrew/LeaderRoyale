@@ -73,10 +73,19 @@
 			isa = PBXGroup;
 			children = (
 				1B3D5BC621EA8C9000E10B87 /* ClanDetailViewController.swift */,
+				1B3D5BCC21EAEA4D00E10B87 /* Overview */,
+				A4F24F3021B49EB7004D437D /* Clan Member Table  */,
+			);
+			path = "Clan Detail";
+			sourceTree = "<group>";
+		};
+		1B3D5BCC21EAEA4D00E10B87 /* Overview */ = {
+			isa = PBXGroup;
+			children = (
 				1B3D5BC821EA8D3800E10B87 /* ClanOverviewTableViewCell.swift */,
 				1B3D5BC921EA8D3800E10B87 /* ClanOverviewTableViewCell.xib */,
 			);
-			path = "Clan Detail";
+			path = Overview;
 			sourceTree = "<group>";
 		};
 		A47753E421A24CF9000098F6 = {
@@ -98,13 +107,13 @@
 		A47753EF21A24CF9000098F6 /* LeaderRoyale */ = {
 			isa = PBXGroup;
 			children = (
+				A4D5346D21DF16A2005E5835 /* Clan Name Table */,
+				1B3D5BC521EA8BE200E10B87 /* Clan Detail */,
 				A41952DA21A7A01D0086D964 /* StyledButton.swift */,
 				A47753F021A24CF9000098F6 /* AppDelegate.swift */,
 				A412614C21A786FD005A4B24 /* GradientView.swift */,
 				A47753F421A24CF9000098F6 /* Main.storyboard */,
 				A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */,
-				A4D5346D21DF16A2005E5835 /* Clan Name Table */,
-				A4F24F3021B49EB7004D437D /* Clan Member Table  */,
 				A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */,
 				A477540521A250B9000098F6 /* ClanInfo.swift */,
 				A41952E021AA6C3D0086D964 /* PlayerInfo.swift */,
@@ -113,7 +122,6 @@
 				A47753FC21A24CFC000098F6 /* LaunchScreen.storyboard */,
 				A47753FF21A24CFC000098F6 /* Info.plist */,
 				A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */,
-				1B3D5BC521EA8BE200E10B87 /* Clan Detail */,
 				A412614E21A789FF005A4B24 /* magic.ttf */,
 			);
 			path = LeaderRoyale;
