@@ -12,36 +12,64 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="1oC-oB-Ivj" customClass="ClanNameTableViewCell" customModule="LeaderRoyale">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+        <view contentMode="scaleToFill" id="1oC-oB-Ivj" customClass="ClanNameTableViewCell" customModule="LeaderRoyale" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ac-me-xWJ" customClass="GradientView" customModule="LeaderRoyale" customModuleProvider="target">
+                    <rect key="frame" x="10" y="10" width="355" height="180"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                            <color key="value" red="0.71621674299240112" green="0.14514186978340149" blue="0.14889070391654968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                            <color key="value" red="0.82562804222106934" green="0.25722560286521912" blue="0.37251180410385132" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowY">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                            <real key="value" value="14.1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KgJ-By-Kb4">
-                    <rect key="frame" x="7" y="3" width="97" height="84"/>
+                    <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="Sam-9v-FLK"/>
+                        <constraint firstAttribute="height" constant="200" id="zW6-0D-Mb6"/>
+                    </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcj-E0-Opn">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcj-E0-Opn">
                     <rect key="frame" x="187" y="49" width="114" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clan Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02u-1k-7JX">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clan Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02u-1k-7JX">
                     <rect key="frame" x="202" y="20" width="84" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="KgJ-By-Kb4" firstAttribute="top" secondItem="WcF-rJ-Xie" secondAttribute="top" constant="3" id="6IG-4e-Wm3"/>
-                <constraint firstItem="WcF-rJ-Xie" firstAttribute="trailing" secondItem="02u-1k-7JX" secondAttribute="trailing" constant="89" id="88a-3E-q7Q"/>
-                <constraint firstItem="KgJ-By-Kb4" firstAttribute="leading" secondItem="WcF-rJ-Xie" secondAttribute="leading" constant="7" id="BwZ-xf-eaz"/>
-                <constraint firstItem="KgJ-By-Kb4" firstAttribute="centerY" secondItem="1oC-oB-Ivj" secondAttribute="centerY" id="Cxu-Vg-ZQ7"/>
-                <constraint firstItem="02u-1k-7JX" firstAttribute="top" secondItem="1oC-oB-Ivj" secondAttribute="top" constant="20" symbolic="YES" id="Wyg-DW-p6B"/>
-                <constraint firstItem="02u-1k-7JX" firstAttribute="leading" secondItem="KgJ-By-Kb4" secondAttribute="trailing" constant="98" id="dl8-jj-uVC"/>
-                <constraint firstItem="02u-1k-7JX" firstAttribute="centerX" secondItem="Fcj-E0-Opn" secondAttribute="centerX" id="h45-OP-CIz"/>
-                <constraint firstItem="Fcj-E0-Opn" firstAttribute="top" secondItem="02u-1k-7JX" secondAttribute="bottom" constant="8" symbolic="YES" id="sDf-Ae-dKX"/>
+                <constraint firstItem="5ac-me-xWJ" firstAttribute="leading" secondItem="WcF-rJ-Xie" secondAttribute="leading" constant="10" id="1VO-ri-HFy"/>
+                <constraint firstItem="KgJ-By-Kb4" firstAttribute="centerY" secondItem="WcF-rJ-Xie" secondAttribute="centerY" id="3OJ-2Y-xyH"/>
+                <constraint firstItem="WcF-rJ-Xie" firstAttribute="bottom" secondItem="5ac-me-xWJ" secondAttribute="bottom" constant="10" id="SpF-f1-RZw"/>
+                <constraint firstItem="5ac-me-xWJ" firstAttribute="top" secondItem="WcF-rJ-Xie" secondAttribute="top" constant="10" id="do8-IC-DwD"/>
+                <constraint firstItem="KgJ-By-Kb4" firstAttribute="centerX" secondItem="WcF-rJ-Xie" secondAttribute="centerX" id="dtg-f3-qOp"/>
+                <constraint firstItem="WcF-rJ-Xie" firstAttribute="trailing" secondItem="5ac-me-xWJ" secondAttribute="trailing" constant="10" id="l1Z-0F-kWF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="WcF-rJ-Xie"/>
@@ -50,7 +78,7 @@
                 <outlet property="clanNameLabel" destination="02u-1k-7JX" id="uUN-cf-clL"/>
                 <outlet property="memberCountLabel" destination="Fcj-E0-Opn" id="VGH-06-zLG"/>
             </connections>
-            <point key="canvasLocation" x="285.60000000000002" y="326.53673163418296"/>
+            <point key="canvasLocation" x="285.60000000000002" y="266.26686656671666"/>
         </view>
     </objects>
 </document>
