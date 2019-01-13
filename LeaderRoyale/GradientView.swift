@@ -93,6 +93,10 @@ import UIKit
         self.layer.shadowRadius = shadowBlur
         self.layer.shadowOpacity = 1
         
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: cornerRadius, height: cornerRadius)).cgPath
+        layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale
+        
     }
     
     func animate(duration: TimeInterval, newTopColor: UIColor, newBottomColor: UIColor) {
