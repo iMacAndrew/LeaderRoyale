@@ -1,5 +1,5 @@
 //
-//  ClanTableViewController.swift
+//  ClanMemberTableViewController.swift
 //  LeaderRoyale
 //
 //  Created by Andy Humphries on 11/21/18.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ClanTableViewController: UITableViewController {
-    var memberInfo: ClanInfo.Member?
+class ClanMemberTableViewController: UITableViewController {
+    private var memberInfo: ClanInfo.Member?
     var clanInfo: ClanInfo?
     
     override func viewDidLoad() {
