@@ -110,7 +110,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RF9-aM-DzC">
                                 <rect key="frame" x="213.5" y="0.0" width="106.5" height="128"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SiA-Ad-a9E">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cards" translatesAutoresizingMaskIntoConstraints="NO" id="SiA-Ad-a9E">
                                         <rect key="frame" x="10" y="49" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="FwN-E2-Xnx"/>
@@ -183,6 +183,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="cards" width="96" height="102"/>
         <image name="clanScoreTrophy" width="56" height="61"/>
         <image name="trophy" width="250" height="250"/>
     </resources>

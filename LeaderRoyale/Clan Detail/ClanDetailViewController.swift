@@ -97,11 +97,7 @@ class ClanDetailViewController: UITableViewController {
     }
     
     private func goToMembers(indexPath: IndexPath) {
-        
         performSegue(withIdentifier: "memberSegue", sender: self)
-        
-        //performSegue(withIdentifier: "memberSegue", sender: self)
     }
-    
-    
+  
 }
