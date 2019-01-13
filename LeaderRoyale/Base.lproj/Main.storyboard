@@ -61,7 +61,7 @@
                                             <fragment content="Leader Royale">
                                                 <attributes>
                                                     <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="28" name="Supercell-Magic"/>
+                                                    <font key="NSFont" metaFont="system" size="28"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.75" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -137,16 +137,16 @@
             </objects>
             <point key="canvasLocation" x="1804" y="475"/>
         </scene>
-        <!--Clan Stats Table View Controller-->
+        <!--Clan Detail View Controller-->
         <scene sceneID="nDk-z3-F17">
             <objects>
-                <tableViewController id="F7p-v4-OVG" customClass="ClanStatsTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="F7p-v4-OVG" customClass="ClanDetailViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jOO-fQ-uJm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="statsCellIdentifier" id="B04-IO-UTu">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClanOverviewTableViewCell" id="B04-IO-UTu">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B04-IO-UTu" id="a9A-ZQ-WQk">
@@ -163,7 +163,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJp-PG-wWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3194" y="1164"/>
+            <point key="canvasLocation" x="2841" y="905"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xF4-xk-Ozz">

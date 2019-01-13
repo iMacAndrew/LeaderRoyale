@@ -14,13 +14,7 @@ class ClanTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.title = clanInfo?.name
-        
-        let attributes: [NSAttributedString.Key: Any] = [.font: UIFont(name: "supercell-magic", size: 20)!]
-        
-        navigationController?.navigationBar.titleTextAttributes = attributes
-        navigationController?.navigationBar.largeTitleTextAttributes = attributes
+        setNavigationTitle()
         tableView.register(UINib(nibName: "ClanMemberTableViewCell", bundle: nil), forCellReuseIdentifier: "ClanMemberTableViewCell")
     }
     
@@ -61,6 +55,16 @@ class ClanTableViewController: UITableViewController {
         }
         
         performSegue(withIdentifier: "segueMemberVC2", sender: self)
+    }
+    
+    
+    private func setNavigationTitle() {
+        navigationItem.title = clanInfo?.name
+        
+        let attributes: [NSAttributedString.Key: Any] = [.font: UIFont(name: "supercell-magic", size: 20)!]
+        
+        navigationController?.navigationBar.titleTextAttributes = attributes
+        navigationController?.navigationBar.largeTitleTextAttributes = attributes
     }
     
     // MARK: - Navigation

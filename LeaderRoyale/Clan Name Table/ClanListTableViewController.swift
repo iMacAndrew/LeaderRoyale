@@ -9,7 +9,7 @@
 import UIKit
 
 class ClanListTableViewController: UITableViewController {
-    var clanInfo: ClanInfo?
+    private var selectedClanInfo: ClanInfo?
     
     var clans = [ClanInfo]()
     
@@ -42,18 +42,20 @@ class ClanListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        selectedClanInfo = clans[indexPath.row]
+        
         performSegue(withIdentifier: "statSegue", sender: self)
         
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let clanStats = segue.destination as? ClanStatsTableViewController else {
-//            return
-//        }
-//        
-//        if let clanInfo = clanInfo {
-//            clanStats.clanInfo = clanInfo
-//        }
-//        
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let clanStats = segue.destination as? ClanDetailViewController else {
+            return
+        }
+        
+        if let clanInfo = selectedClanInfo {
+            clanStats.clanInfo = clanInfo
+        }
+        
+    }
 }

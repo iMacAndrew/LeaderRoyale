@@ -70,3 +70,13 @@ extension ClanInfo.Member {
         let trophyLimit: Int?
     }
 }
+
+extension ClanInfo {
+    var trophies: Int {
+        var sumTrophies = 0
+        for member in members ?? [] {
+            sumTrophies += member.trophies ?? 0
+        }
+        return sumTrophies
+    }
+}
