@@ -28,7 +28,6 @@ struct PlayerInfo: Decodable {
     let totalDonations: Int?
     let warDayWins: Int?
     let clanCardsCollected: Int?
-    
 }
 
 extension PlayerInfo {
@@ -77,7 +76,7 @@ extension PlayerInfo.LeagueStatistics {
         let bestTrophies: Int?
     }
     
-    struct PreciousSeason: Decodable {
+    struct PreviousSeason: Decodable {
         let id: String?
         let trophies: Int?
         let bestTrophies: Int?
