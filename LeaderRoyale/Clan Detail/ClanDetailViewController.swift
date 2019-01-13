@@ -46,6 +46,24 @@ class ClanDetailViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.row == 1 {
+            goToMembers(indexPath: indexPath)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let clanMembersTableViewController = segue.destination as? ClanMemberTableViewController {
+            clanMembersTableViewController.clanInfo = clanInfo
+        }
+        
+    }
+    
     private func setNavigationTitle() {
         navigationItem.title = clanInfo?.name
         
@@ -73,7 +91,17 @@ class ClanDetailViewController: UITableViewController {
         
         cell.textLabel?.text = cellNames[indexPath.row - 1]
         
+        cell.accessoryType = .disclosureIndicator
+        
         return cell
     }
+    
+    private func goToMembers(indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "memberSegue", sender: self)
+        
+        //performSegue(withIdentifier: "memberSegue", sender: self)
+    }
+    
     
 }
