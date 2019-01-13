@@ -38,7 +38,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPo-ah-aje">
                                 <rect key="frame" x="0.0" y="0.0" width="106.5" height="128"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k7k-Of-tZg">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clanScoreTrophy" translatesAutoresizingMaskIntoConstraints="NO" id="k7k-Of-tZg">
                                         <rect key="frame" x="10" y="49" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="HLb-dG-wpU"/>
@@ -74,7 +74,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pa4-QJ-1Ix">
                                 <rect key="frame" x="106.5" y="0.0" width="107" height="128"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dh1-aq-9Bm">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy" translatesAutoresizingMaskIntoConstraints="NO" id="Dh1-aq-9Bm">
                                         <rect key="frame" x="10" y="49" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="0V4-gh-1TP"/>
@@ -182,4 +182,8 @@
             <point key="canvasLocation" x="129.59999999999999" y="50.824587706146929"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="clanScoreTrophy" width="56" height="61"/>
+        <image name="trophy" width="250" height="250"/>
+    </resources>
 </document>

@@ -11,6 +11,7 @@ import UIKit
 class ClanDetailViewController: UITableViewController {
     
     var clanInfo: ClanInfo?
+    var cellNames = ["Members", "Recognition", "Stats", "Clan War"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,21 +24,26 @@ class ClanDetailViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return cellNames.count + 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ClanOverviewTableViewCell", for: indexPath) as! ClanOverviewTableViewCell
         
-        if let clanInfo = clanInfo {
-            cell.configure(with: clanInfo)
+        if indexPath.row == 0 {
+            return createOverviewCell(indexPath: indexPath)
         }
-        
-        return cell
+        else {
+            return createCell(indexPath: indexPath)
+        }
+    
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 270.0
+        if indexPath.row == 0 {
+            return 270.0
+        } else {
+            return 90.0
+        }
     }
     
     private func setNavigationTitle() {
@@ -51,6 +57,23 @@ class ClanDetailViewController: UITableViewController {
     
     private func registerCells() {
         tableView.register(UINib(nibName: "ClanOverviewTableViewCell", bundle: nil), forCellReuseIdentifier: "ClanOverviewTableViewCell")
+    }
+    
+    private func createOverviewCell(indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ClanOverviewTableViewCell", for: indexPath) as! ClanOverviewTableViewCell
+        
+        if let clanInfo = clanInfo {
+            cell.configure(with: clanInfo)
+        }
+        return cell
+    }
+    
+    private func createCell(indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.textLabel?.text = cellNames[indexPath.row - 1]
+        
+        return cell
     }
     
 }
