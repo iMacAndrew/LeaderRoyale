@@ -26,6 +26,17 @@ class ClanNameTableViewCell: UITableViewCell {
         } else {
             memberCountLabel.text = ""
         }
+        
+        
+        if let imageUrl = clanInfo?.badge?.image {
+            ImageManager.getImage(url: imageUrl) { (url, image) in
+                DispatchQueue.main.async {
+                    self.clanLogo.image = image
+                }
+            }
+               
+        }
+        
     }
     
 }

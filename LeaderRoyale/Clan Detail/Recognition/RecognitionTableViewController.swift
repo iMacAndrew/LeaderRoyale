@@ -60,6 +60,13 @@ class RecognitionTableViewController: UITableViewController {
             recognitions.append(recognitionForMembersThatClimbedTheMostRanks)
         }
         
+        if let member = clanInfo?.memberWithHighestDonationRatio {
+            let recognitionForHighestDonationRatio = Recognition(title: "Highest Donation Ratio", subTitle: "This week", playerName: member.name ?? "", stat: String(member.donationRatio) + "%")
+        
+            recognitions.append(recognitionForHighestDonationRatio)
+            
+        }
+        
     }
     
     private func setNavigationTitle() {

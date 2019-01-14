@@ -55,4 +55,19 @@ extension ClanInfo {
         return mostRanksClimber
     }
     
+    var memberWithHighestDonationRatio: Member? {
+        guard let members = members else { return nil }
+        guard var memberBestDonationRatio = members.first else { return nil }
+        
+        for member in members {
+            if member.donationRatio > memberBestDonationRatio.donationRatio {
+                memberBestDonationRatio = member
+            }
+        }
+        
+        return memberBestDonationRatio
+    }
+    
 }
+
+

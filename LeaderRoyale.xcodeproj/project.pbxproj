@@ -16,6 +16,7 @@
 		1B4C5FE021EBC29E004E303C /* Recognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FDF21EBC29E004E303C /* Recognition.swift */; };
 		1B4C5FE321EC1D6E004E303C /* ClanInfo+Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FE221EC1D6E004E303C /* ClanInfo+Stats.swift */; };
 		1B4C5FE521EC1D9D004E303C /* ClanInfoMember+Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FE421EC1D9D004E303C /* ClanInfoMember+Stats.swift */; };
+		1B4C5FE721EC21EE004E303C /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FE621EC21EE004E303C /* ImageManager.swift */; };
 		A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */; };
 		A412614B21A65EC9005A4B24 /* ClanMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614A21A65EC9005A4B24 /* ClanMemberTableViewController.swift */; };
 		A412614D21A786FD005A4B24 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614C21A786FD005A4B24 /* GradientView.swift */; };
@@ -47,6 +48,7 @@
 		1B4C5FDF21EBC29E004E303C /* Recognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognition.swift; sourceTree = "<group>"; };
 		1B4C5FE221EC1D6E004E303C /* ClanInfo+Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClanInfo+Stats.swift"; sourceTree = "<group>"; };
 		1B4C5FE421EC1D9D004E303C /* ClanInfoMember+Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClanInfoMember+Stats.swift"; sourceTree = "<group>"; };
+		1B4C5FE621EC21EE004E303C /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanSearchViewController.swift; sourceTree = "<group>"; };
 		A412614A21A65EC9005A4B24 /* ClanMemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanMemberTableViewController.swift; sourceTree = "<group>"; };
 		A412614C21A786FD005A4B24 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				1B4C5FE421EC1D9D004E303C /* ClanInfoMember+Stats.swift */,
 				A41952E021AA6C3D0086D964 /* PlayerInfo.swift */,
 				A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */,
+				1B4C5FE621EC21EE004E303C /* ImageManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				A477540821A2552A000098F6 /* ClashRoyaleAPI.swift in Sources */,
 				A4D5346A21DF15D8005E5835 /* ClanListTableViewController.swift in Sources */,
 				1B4C5FDA21EBBFBE004E303C /* RecognitionTableViewController.swift in Sources */,
+				1B4C5FE721EC21EE004E303C /* ImageManager.swift in Sources */,
 				A4D5346C21DF1697005E5835 /* ClanNameTableViewCell.swift in Sources */,
 				A41952DB21A7A01D0086D964 /* StyledButton.swift in Sources */,
 				A412614B21A65EC9005A4B24 /* ClanMemberTableViewController.swift in Sources */,
