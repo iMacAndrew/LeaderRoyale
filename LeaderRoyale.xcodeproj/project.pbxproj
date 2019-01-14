@@ -10,6 +10,12 @@
 		1B3D5BC721EA8C9000E10B87 /* ClanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3D5BC621EA8C9000E10B87 /* ClanDetailViewController.swift */; };
 		1B3D5BCA21EA8D3800E10B87 /* ClanOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3D5BC821EA8D3800E10B87 /* ClanOverviewTableViewCell.swift */; };
 		1B3D5BCB21EA8D3800E10B87 /* ClanOverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B3D5BC921EA8D3800E10B87 /* ClanOverviewTableViewCell.xib */; };
+		1B4C5FDA21EBBFBE004E303C /* RecognitionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FD921EBBFBE004E303C /* RecognitionTableViewController.swift */; };
+		1B4C5FDD21EBBFED004E303C /* RecognitionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FDB21EBBFED004E303C /* RecognitionTableViewCell.swift */; };
+		1B4C5FDE21EBBFED004E303C /* RecognitionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B4C5FDC21EBBFED004E303C /* RecognitionTableViewCell.xib */; };
+		1B4C5FE021EBC29E004E303C /* Recognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FDF21EBC29E004E303C /* Recognition.swift */; };
+		1B4C5FE321EC1D6E004E303C /* ClanInfo+Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FE221EC1D6E004E303C /* ClanInfo+Stats.swift */; };
+		1B4C5FE521EC1D9D004E303C /* ClanInfoMember+Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FE421EC1D9D004E303C /* ClanInfoMember+Stats.swift */; };
 		A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */; };
 		A412614B21A65EC9005A4B24 /* ClanMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614A21A65EC9005A4B24 /* ClanMemberTableViewController.swift */; };
 		A412614D21A786FD005A4B24 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614C21A786FD005A4B24 /* GradientView.swift */; };
@@ -35,6 +41,12 @@
 		1B3D5BC621EA8C9000E10B87 /* ClanDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClanDetailViewController.swift; sourceTree = "<group>"; };
 		1B3D5BC821EA8D3800E10B87 /* ClanOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		1B3D5BC921EA8D3800E10B87 /* ClanOverviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClanOverviewTableViewCell.xib; sourceTree = "<group>"; };
+		1B4C5FD921EBBFBE004E303C /* RecognitionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionTableViewController.swift; sourceTree = "<group>"; };
+		1B4C5FDB21EBBFED004E303C /* RecognitionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionTableViewCell.swift; sourceTree = "<group>"; };
+		1B4C5FDC21EBBFED004E303C /* RecognitionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecognitionTableViewCell.xib; sourceTree = "<group>"; };
+		1B4C5FDF21EBC29E004E303C /* Recognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognition.swift; sourceTree = "<group>"; };
+		1B4C5FE221EC1D6E004E303C /* ClanInfo+Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClanInfo+Stats.swift"; sourceTree = "<group>"; };
+		1B4C5FE421EC1D9D004E303C /* ClanInfoMember+Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClanInfoMember+Stats.swift"; sourceTree = "<group>"; };
 		A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanSearchViewController.swift; sourceTree = "<group>"; };
 		A412614A21A65EC9005A4B24 /* ClanMemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanMemberTableViewController.swift; sourceTree = "<group>"; };
 		A412614C21A786FD005A4B24 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -73,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				1B3D5BC621EA8C9000E10B87 /* ClanDetailViewController.swift */,
+				1B4C5FD821EBBF76004E303C /* Recognition */,
 				1B3D5BCC21EAEA4D00E10B87 /* Overview */,
 				A4F24F3021B49EB7004D437D /* Clan Member Table  */,
 			);
@@ -86,6 +99,29 @@
 				1B3D5BC921EA8D3800E10B87 /* ClanOverviewTableViewCell.xib */,
 			);
 			path = Overview;
+			sourceTree = "<group>";
+		};
+		1B4C5FD821EBBF76004E303C /* Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				1B4C5FD921EBBFBE004E303C /* RecognitionTableViewController.swift */,
+				1B4C5FDF21EBC29E004E303C /* Recognition.swift */,
+				1B4C5FDB21EBBFED004E303C /* RecognitionTableViewCell.swift */,
+				1B4C5FDC21EBBFED004E303C /* RecognitionTableViewCell.xib */,
+			);
+			path = Recognition;
+			sourceTree = "<group>";
+		};
+		1B4C5FE121EC1D34004E303C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A477540521A250B9000098F6 /* ClanInfo.swift */,
+				1B4C5FE221EC1D6E004E303C /* ClanInfo+Stats.swift */,
+				1B4C5FE421EC1D9D004E303C /* ClanInfoMember+Stats.swift */,
+				A41952E021AA6C3D0086D964 /* PlayerInfo.swift */,
+				A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		A47753E421A24CF9000098F6 = {
@@ -115,9 +151,7 @@
 				A47753F421A24CF9000098F6 /* Main.storyboard */,
 				A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */,
 				A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */,
-				A477540521A250B9000098F6 /* ClanInfo.swift */,
-				A41952E021AA6C3D0086D964 /* PlayerInfo.swift */,
-				A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */,
+				1B4C5FE121EC1D34004E303C /* API */,
 				A47753FA21A24CFC000098F6 /* Assets.xcassets */,
 				A47753FC21A24CFC000098F6 /* LaunchScreen.storyboard */,
 				A47753FF21A24CFC000098F6 /* Info.plist */,
@@ -207,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4D5346F21DF171D005E5835 /* ClanNameTableViewCell.xib in Resources */,
+				1B4C5FDE21EBBFED004E303C /* RecognitionTableViewCell.xib in Resources */,
 				A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */,
 				A4F24F3621B4A5ED004D437D /* ClanMemberTableViewCell.xib in Resources */,
 				A47753FB21A24CFC000098F6 /* Assets.xcassets in Resources */,
@@ -224,12 +259,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */,
+				1B4C5FE021EBC29E004E303C /* Recognition.swift in Sources */,
 				A4F24F3421B4A5DF004D437D /* ClanMemberTableViewCell.swift in Sources */,
 				A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */,
 				A41952DF21A8AE330086D964 /* PlayerProfileViewController.swift in Sources */,
 				A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */,
 				A477540821A2552A000098F6 /* ClashRoyaleAPI.swift in Sources */,
 				A4D5346A21DF15D8005E5835 /* ClanListTableViewController.swift in Sources */,
+				1B4C5FDA21EBBFBE004E303C /* RecognitionTableViewController.swift in Sources */,
 				A4D5346C21DF1697005E5835 /* ClanNameTableViewCell.swift in Sources */,
 				A41952DB21A7A01D0086D964 /* StyledButton.swift in Sources */,
 				A412614B21A65EC9005A4B24 /* ClanMemberTableViewController.swift in Sources */,
@@ -237,7 +274,10 @@
 				A412614D21A786FD005A4B24 /* GradientView.swift in Sources */,
 				A477540621A250B9000098F6 /* ClanInfo.swift in Sources */,
 				1B3D5BCA21EA8D3800E10B87 /* ClanOverviewTableViewCell.swift in Sources */,
+				1B4C5FE321EC1D6E004E303C /* ClanInfo+Stats.swift in Sources */,
 				1B3D5BC721EA8C9000E10B87 /* ClanDetailViewController.swift in Sources */,
+				1B4C5FDD21EBBFED004E303C /* RecognitionTableViewCell.swift in Sources */,
+				1B4C5FE521EC1D9D004E303C /* ClanInfoMember+Stats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
