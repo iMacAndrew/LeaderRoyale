@@ -163,6 +163,7 @@
                     </tableView>
                     <connections>
                         <segue destination="Ag2-AW-aI9" kind="show" identifier="memberSegue" id="BLp-Wu-4eX"/>
+                        <segue destination="To9-nd-H6Z" kind="show" identifier="recognitionSegue" id="UNJ-vj-Vqu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJp-PG-wWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -216,6 +217,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yo7-zT-qmS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2257" y="1311"/>
+        </scene>
+        <!--Recognition Table View Controller-->
+        <scene sceneID="KUZ-Ue-L2l">
+            <objects>
+                <tableViewController id="To9-nd-H6Z" customClass="RecognitionTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3sE-Sv-rcE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="To9-nd-H6Z" id="BE2-CA-GoK"/>
+                            <outlet property="delegate" destination="To9-nd-H6Z" id="PAF-VA-WPL"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FM4-gO-LWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2253" y="2032"/>
         </scene>
         <!--Player Profile View Controller-->
         <scene sceneID="Ocd-YF-eWe">

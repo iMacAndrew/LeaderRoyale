@@ -53,6 +53,9 @@ class ClanDetailViewController: UITableViewController {
         if indexPath.row == 1 {
             goToMembers(indexPath: indexPath)
         }
+        else if indexPath.row == 2 {
+            goToRecognition(indexPath: indexPath)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -60,6 +63,9 @@ class ClanDetailViewController: UITableViewController {
         
         if let clanMembersTableViewController = segue.destination as? ClanMemberTableViewController {
             clanMembersTableViewController.clanInfo = clanInfo
+        }
+        else if let clanRecognitionTableViewController = segue.destination as? RecognitionTableViewController {
+            clanRecognitionTableViewController.configure(clanInfo: clanInfo)
         }
         
     }
@@ -98,6 +104,10 @@ class ClanDetailViewController: UITableViewController {
     
     private func goToMembers(indexPath: IndexPath) {
         performSegue(withIdentifier: "memberSegue", sender: self)
+    }
+    
+    private func goToRecognition(indexPath: IndexPath) {
+        performSegue(withIdentifier: "recognitionSegue", sender: self)
     }
   
 }
