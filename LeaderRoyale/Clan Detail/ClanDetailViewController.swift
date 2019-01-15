@@ -56,6 +56,9 @@ class ClanDetailViewController: UITableViewController {
         else if indexPath.row == 2 {
             goToRecognition(indexPath: indexPath)
         }
+        else if indexPath.row == 3 {
+            goToStat(indexPath: indexPath)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

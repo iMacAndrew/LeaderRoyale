@@ -15,18 +15,17 @@ class StatsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationTitle()
-        
+        tableView.register(UINib(nibName: "StatTableViewCell", bundle: nil), forCellReuseIdentifier: "StatTableViewCell")
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return stats.count
     }
 
@@ -39,9 +38,34 @@ class StatsTableViewController: UITableViewController {
         return cell
     }
     
-    func configure(clanInfo: ClanInfo?) {
-        
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90.0
     }
+    
+    func configure(clanInfo: ClanInfo?) {
+        if let memberPercentage = clanInfo?.memberPercentages {
+            let totalMemberPercentage = Stat(title: "Percentage of Members", stat: String(memberPercentage) + "%")
+            
+            stats.append(totalMemberPercentage)
+            
+        }
+        
+        if let elderPercentage = clanInfo?.elderPercentages {
+            let totalElderPercentage = Stat(title: "Percentage of Elders", stat: String(elderPercentage) + "%")
+            
+            stats.append(totalElderPercentage)
+            
+        }
+        
+        if let coLeaderPercentage = clanInfo?.coLeaderPercentages {
+            let totalCoLeaderPercentage = Stat(title: "Percentage of CoLeaders", stat: String(coLeaderPercentage) + "%")
+            
+            stats.append(totalCoLeaderPercentage)
+            
+        }
+    }
+    
+    
     
     private func setNavigationTitle() {
         navigationItem.title = "Stats"

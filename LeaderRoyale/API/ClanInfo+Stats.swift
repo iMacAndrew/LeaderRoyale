@@ -68,6 +68,53 @@ extension ClanInfo {
         return memberBestDonationRatio
     }
     
-}
+    var memberPercentages: Double {
 
+        guard let members = members else { return 0.0 }
+        
+        let totalMembers = members.count - 1
+        var memberRoleCount = 0
+        
+        for member in members {
+            if member.role == "member" {
+                memberRoleCount += 1
+            }
+        }
+        let totalMemberPercentage = (Double(memberRoleCount) / Double(totalMembers)) * 100
+        return Double(round(totalMemberPercentage) / 1)
+    }
+    
+    var coLeaderPercentages: Double {
+        
+        guard let members = members else { return 0.0 }
+        
+        let totalMembers = members.count - 1
+        var coLeaderRoleCount = 0
+        
+        for member in members {
+            if member.role == "coLeader" {
+                coLeaderRoleCount += 1
+            }
+        }
+        let totalCoLeaderPercentage = (Double(coLeaderRoleCount) / Double(totalMembers)) * 100
+        return Double(round(totalCoLeaderPercentage) / 1)
+    }
+    
+    var elderPercentages: Double {
+        
+        guard let members = members else { return 0.0 }
+        
+        let totalMembers = members.count - 1
+        var elderRoleCount = 0
+        
+        for member in members {
+            if member.role == "elder" {
+                elderRoleCount += 1
+            }
+        }
+        let totalElderPercentage = (Double(elderRoleCount) / Double(totalMembers)) * 100
+        return Double(round(totalElderPercentage) / 1)
+    }
+    
+}
 
