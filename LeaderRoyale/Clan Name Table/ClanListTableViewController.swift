@@ -15,7 +15,7 @@ class ClanListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setNavigationTitle()
         tableView.register(UINib(nibName: "ClanNameTableViewCell", bundle: nil), forCellReuseIdentifier: "ClanNameTableViewCell")
     }
     
@@ -36,7 +36,7 @@ class ClanListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90.0
+        return 300.0
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -58,4 +58,14 @@ class ClanListTableViewController: UITableViewController {
         }
         
     }
+    
+    private func setNavigationTitle() {
+        navigationItem.title = "Clans"
+        
+        let attributes: [NSAttributedString.Key: Any] = [.font: UIFont(name: "supercell-magic", size: 20)!]
+        
+        navigationController?.navigationBar.titleTextAttributes = attributes
+        navigationController?.navigationBar.largeTitleTextAttributes = attributes
+    }
+    
 }

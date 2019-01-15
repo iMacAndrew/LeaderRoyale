@@ -9,14 +9,11 @@
 import UIKit
 
 class ClanNameTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var clanNameLabel: UILabel!
     @IBOutlet weak var memberCountLabel: UILabel!
     @IBOutlet weak var clanLogo: UIImageView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
+
     func configure(with clanInfo: ClanInfo?) {
         if let clanName = clanInfo?.name {
             clanNameLabel.text = String(clanName)
@@ -29,6 +26,17 @@ class ClanNameTableViewCell: UITableViewCell {
         } else {
             memberCountLabel.text = ""
         }
+        
+        
+        if let imageUrl = clanInfo?.badge?.image {
+            ImageManager.getImage(url: imageUrl) { (url, image) in
+                DispatchQueue.main.async {
+                    self.clanLogo.image = image
+                }
+            }
+               
+        }
+        
     }
     
 }
