@@ -13,7 +13,12 @@ class ClanNameTableViewCell: UITableViewCell {
     @IBOutlet weak var clanNameLabel: UILabel!
     @IBOutlet weak var memberCountLabel: UILabel!
     @IBOutlet weak var clanLogo: UIImageView!
-
+    @IBOutlet weak var clanTagLabel: UILabel!
+    @IBOutlet weak var clanScoreLabel: UILabel!
+    @IBOutlet weak var clanTrophyWork: UILabel!
+    @IBOutlet weak var clanDonationsLabel: UILabel!
+    @IBOutlet weak var clanDescriptionLabel: UITextView!
+    
     func configure(with clanInfo: ClanInfo?) {
         if let clanName = clanInfo?.name {
             clanNameLabel.text = String(clanName)
@@ -36,6 +41,25 @@ class ClanNameTableViewCell: UITableViewCell {
             }
                
         }
+        
+        clanTagLabel.text = clanInfo?.tag
+        
+        if let clanScore = clanInfo?.score {
+            clanScoreLabel.text = String(clanScore)
+        }
+        
+        if let clanTrophies = clanInfo?.trophies {
+            clanTrophyWork.text = String(clanTrophies)
+        }
+        
+        if let clanDonations = clanInfo?.donations {
+            clanDonationsLabel.text = String(clanDonations)
+        }
+        
+        if let clanDescription = clanInfo?.description {
+            clanDescriptionLabel.text = clanDescription
+        }
+        
         
     }
     

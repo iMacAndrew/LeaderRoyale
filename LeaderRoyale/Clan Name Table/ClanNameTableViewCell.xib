@@ -241,8 +241,13 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="WcF-rJ-Xie"/>
             <connections>
+                <outlet property="clanDescriptionLabel" destination="WGp-ff-x0Z" id="Nh0-sB-F1L"/>
+                <outlet property="clanDonationsLabel" destination="2Z7-8e-f0B" id="QE8-xb-75P"/>
                 <outlet property="clanLogo" destination="KgJ-By-Kb4" id="Qb8-pc-Sna"/>
                 <outlet property="clanNameLabel" destination="02u-1k-7JX" id="uUN-cf-clL"/>
+                <outlet property="clanScoreLabel" destination="tkF-sL-rlt" id="G9A-UC-445"/>
+                <outlet property="clanTagLabel" destination="Vli-zo-lxv" id="XbZ-eE-RDO"/>
+                <outlet property="clanTrophyWork" destination="eOq-kI-Yk2" id="WQR-mM-N9r"/>
                 <outlet property="memberCountLabel" destination="Fcj-E0-Opn" id="VGH-06-zLG"/>
             </connections>
             <point key="canvasLocation" x="285.60000000000002" y="320.23988005997006"/>
