@@ -32,5 +32,4 @@ extension ClanInfo.Member {
         
     }
     
-    
 }

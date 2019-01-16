@@ -21,7 +21,6 @@ class StatsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
 
@@ -43,26 +42,45 @@ class StatsTableViewController: UITableViewController {
     }
     
     func configure(clanInfo: ClanInfo?) {
-        if let memberPercentage = clanInfo?.memberPercentages {
-            let totalMemberPercentage = Stat(title: "Percentage of Members", stat: String(memberPercentage) + "%")
+        if let memberPercentage = clanInfo?.memberPercentages, let memberCount = clanInfo?.countMembers {
+            let totalMemberPercentage = Stat(title: "Percentage of Members", stat: String(memberPercentage) + "%. " + String(memberCount) + " members")
             
             stats.append(totalMemberPercentage)
             
         }
         
-        if let elderPercentage = clanInfo?.elderPercentages {
-            let totalElderPercentage = Stat(title: "Percentage of Elders", stat: String(elderPercentage) + "%")
+        if let elderPercentage = clanInfo?.elderPercentages,  let elderCount = clanInfo?.countElders {
+            let totalElderPercentage = Stat(title: "Percentage of Elders", stat: String(elderPercentage) + "%. " + String(elderCount) + " elders")
             
             stats.append(totalElderPercentage)
             
         }
         
-        if let coLeaderPercentage = clanInfo?.coLeaderPercentages {
-            let totalCoLeaderPercentage = Stat(title: "Percentage of CoLeaders", stat: String(coLeaderPercentage) + "%")
+        if let coLeaderPercentage = clanInfo?.coLeaderPercentages, let coLeaderCount = clanInfo?.countCoLeaders {
+            let totalCoLeaderPercentage = Stat(title: "Percentage of CoLeaders", stat: String(coLeaderPercentage) + "%. " + String(coLeaderCount) + " Co-Leaders")
             
             stats.append(totalCoLeaderPercentage)
             
         }
+        
+        if let averageDonations = clanInfo?.averageDonation {
+            let averageDonationsStat = Stat(title: "Average Donations for the week", stat: String(Int(averageDonations)))
+            
+            stats.append(averageDonationsStat)
+        }
+        
+        if let totalTrophies = clanInfo?.trophies, let memberCount = clanInfo?.members?.count {
+            let averageTrophyStat = Stat(title: "Average Trophies", stat: String(totalTrophies / memberCount))
+        
+             stats.append(averageTrophyStat)
+        }
+        
+        if let averageKingLevel = clanInfo?.averageKingLevel {
+            let averageKingLevelStat = Stat(title: "Average King Level", stat: String(averageKingLevel))
+            
+            stats.append(averageKingLevelStat)
+        }
+       
     }
     
     

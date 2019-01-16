@@ -69,7 +69,7 @@ extension ClanInfo {
     }
     
     var memberPercentages: Double {
-
+        
         guard let members = members else { return 0.0 }
         
         let totalMembers = members.count - 1
@@ -81,7 +81,7 @@ extension ClanInfo {
             }
         }
         let totalMemberPercentage = (Double(memberRoleCount) / Double(totalMembers)) * 100
-        return Double(round(totalMemberPercentage) / 1)
+        return Double(round(totalMemberPercentage * 10) / 10)
     }
     
     var coLeaderPercentages: Double {
@@ -97,7 +97,7 @@ extension ClanInfo {
             }
         }
         let totalCoLeaderPercentage = (Double(coLeaderRoleCount) / Double(totalMembers)) * 100
-        return Double(round(totalCoLeaderPercentage) / 1)
+        return Double(round(totalCoLeaderPercentage * 10) / 10)
     }
     
     var elderPercentages: Double {
@@ -113,7 +113,83 @@ extension ClanInfo {
             }
         }
         let totalElderPercentage = (Double(elderRoleCount) / Double(totalMembers)) * 100
-        return Double(round(totalElderPercentage) / 1)
+        return Double(round(totalElderPercentage * 10) / 10)
+    }
+    
+    var countMembers: Int {
+        
+        guard let members = members else { return 0 }
+        
+        var memberRoleCount = 0
+        
+        for member in members {
+            if member.role == "member" {
+                memberRoleCount += 1
+            }
+        }
+        
+        return memberRoleCount
+    }
+    
+    var countElders: Int {
+        
+        guard let members = members else { return 0 }
+        
+        var elderRoleCount = 0
+        
+        for member in members {
+            if member.role == "elder" {
+                elderRoleCount += 1
+            }
+        }
+        
+        return elderRoleCount
+    }
+    
+    var countCoLeaders: Int {
+        
+        guard let members = members else { return 0 }
+        
+        var coLeaderRoleCount = 0
+        
+        for member in members {
+            if member.role == "coLeader" {
+                coLeaderRoleCount += 1
+            }
+        }
+        
+        return coLeaderRoleCount
+    }
+    
+    var averageDonation: Double {
+        guard let members = members else { return 0.0 }
+        
+        var totalDonationCount = 0
+        
+        for member in members {
+            
+            if let donations = member.donations {
+                totalDonationCount += donations
+            }
+        }
+        let averageDonations = Double(totalDonationCount) / Double(members.count)
+        return Double(round(averageDonations))
+    }
+    
+    var averageKingLevel: Double {
+        
+        guard let members = members else { return 0.0 }
+        var totalKingLevelCount = 0
+        
+        for member in members {
+            if let memberKingLevel = member.expLevel {
+                totalKingLevelCount += memberKingLevel
+            }
+        }
+        
+        let averageKingLevel = Double(totalKingLevelCount) / Double(members.count)
+        
+        return round(averageKingLevel * 10) / 10
     }
     
 }
