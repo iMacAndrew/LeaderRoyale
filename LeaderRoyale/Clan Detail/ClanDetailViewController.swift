@@ -59,6 +59,9 @@ class ClanDetailViewController: UITableViewController {
         else if indexPath.row == 3 {
             goToStat(indexPath: indexPath)
         }
+        else if indexPath.row == 4 {
+            goToClanWarStat(indexPath: indexPath)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -72,6 +75,10 @@ class ClanDetailViewController: UITableViewController {
         }
         else if let clanStatTableViewController = segue.destination as? StatsTableViewController {
             clanStatTableViewController.configure(clanInfo: clanInfo)
+        }
+        
+        else if let clanWarStatsTableViewController = segue.destination as? ClanWarStatsTableViewController {
+            clanWarStatsTableViewController.configure(clanInfo: clanInfo)
         }
         
     }
@@ -118,6 +125,10 @@ class ClanDetailViewController: UITableViewController {
     
     private func goToStat(indexPath: IndexPath) {
         performSegue(withIdentifier: "statSegue", sender: self)
+    }
+    
+    private func goToClanWarStat(indexPath: IndexPath) {
+        performSegue(withIdentifier: "clanWarStatSegue", sender: self)
     }
   
 }

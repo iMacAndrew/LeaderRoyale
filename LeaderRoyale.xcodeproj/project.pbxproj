@@ -31,6 +31,7 @@
 		A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47753FC21A24CFC000098F6 /* LaunchScreen.storyboard */; };
 		A477540621A250B9000098F6 /* ClanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477540521A250B9000098F6 /* ClanInfo.swift */; };
 		A477540821A2552A000098F6 /* ClashRoyaleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */; };
+		A4AB5FC221EFC9A0000A0464 /* ClanWarStatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB5FC121EFC9A0000A0464 /* ClanWarStatsTableViewController.swift */; };
 		A4D5346A21DF15D8005E5835 /* ClanListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5346921DF15D8005E5835 /* ClanListTableViewController.swift */; };
 		A4D5346C21DF1697005E5835 /* ClanNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5346B21DF1697005E5835 /* ClanNameTableViewCell.swift */; };
 		A4D5346F21DF171D005E5835 /* ClanNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4D5346E21DF171D005E5835 /* ClanNameTableViewCell.xib */; };
@@ -69,6 +70,7 @@
 		A47753FF21A24CFC000098F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A477540521A250B9000098F6 /* ClanInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanInfo.swift; sourceTree = "<group>"; };
 		A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClashRoyaleAPI.swift; sourceTree = "<group>"; };
+		A4AB5FC121EFC9A0000A0464 /* ClanWarStatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanWarStatsTableViewController.swift; sourceTree = "<group>"; };
 		A4D5346921DF15D8005E5835 /* ClanListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanListTableViewController.swift; sourceTree = "<group>"; };
 		A4D5346B21DF1697005E5835 /* ClanNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanNameTableViewCell.swift; sourceTree = "<group>"; };
 		A4D5346E21DF171D005E5835 /* ClanNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClanNameTableViewCell.xib; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				1B3D5BC621EA8C9000E10B87 /* ClanDetailViewController.swift */,
+				A4AB5FC021EFC966000A0464 /* Clan War Stats */,
 				A4D5347221ED9F30005E5835 /* Stats */,
 				1B4C5FD821EBBF76004E303C /* Recognition */,
 				1B3D5BCC21EAEA4D00E10B87 /* Overview */,
@@ -171,6 +174,14 @@
 				A412614E21A789FF005A4B24 /* magic.ttf */,
 			);
 			path = LeaderRoyale;
+			sourceTree = "<group>";
+		};
+		A4AB5FC021EFC966000A0464 /* Clan War Stats */ = {
+			isa = PBXGroup;
+			children = (
+				A4AB5FC121EFC9A0000A0464 /* ClanWarStatsTableViewController.swift */,
+			);
+			path = "Clan War Stats";
 			sourceTree = "<group>";
 		};
 		A4D5346D21DF16A2005E5835 /* Clan Name Table */ = {
@@ -305,6 +316,7 @@
 				1B4C5FE321EC1D6E004E303C /* ClanInfo+Stats.swift in Sources */,
 				1B3D5BC721EA8C9000E10B87 /* ClanDetailViewController.swift in Sources */,
 				1B4C5FDD21EBBFED004E303C /* RecognitionTableViewCell.swift in Sources */,
+				A4AB5FC221EFC9A0000A0464 /* ClanWarStatsTableViewController.swift in Sources */,
 				1B4C5FE521EC1D9D004E303C /* ClanInfoMember+Stats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

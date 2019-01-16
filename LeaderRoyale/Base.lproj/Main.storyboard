@@ -165,6 +165,7 @@
                         <segue destination="Ag2-AW-aI9" kind="show" identifier="memberSegue" id="BLp-Wu-4eX"/>
                         <segue destination="To9-nd-H6Z" kind="show" identifier="recognitionSegue" id="UNJ-vj-Vqu"/>
                         <segue destination="qav-ki-aqu" kind="show" identifier="statSegue" id="ppO-gk-ZSN"/>
+                        <segue destination="jEF-br-24V" kind="show" identifier="clanWarStatSegue" id="fPs-ec-nEe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJp-PG-wWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -218,6 +219,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yo7-zT-qmS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2257" y="1311"/>
+        </scene>
+        <!--Clan War Stats Table View Controller-->
+        <scene sceneID="ywg-j2-VtY">
+            <objects>
+                <tableViewController id="jEF-br-24V" customClass="ClanWarStatsTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g0G-Vk-C3A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Cz0-qa-WsW">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cz0-qa-WsW" id="Cyz-Iz-FZ6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jEF-br-24V" id="KVr-Va-ghn"/>
+                            <outlet property="delegate" destination="jEF-br-24V" id="L2N-xZ-wvY"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tLa-xI-eOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82" y="2051"/>
         </scene>
         <!--Stats Table View Controller-->
         <scene sceneID="BrB-lw-AeG">
