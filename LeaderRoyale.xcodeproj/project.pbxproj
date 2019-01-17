@@ -32,6 +32,12 @@
 		A477540621A250B9000098F6 /* ClanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477540521A250B9000098F6 /* ClanInfo.swift */; };
 		A477540821A2552A000098F6 /* ClashRoyaleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */; };
 		A4AB5FC221EFC9A0000A0464 /* ClanWarStatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB5FC121EFC9A0000A0464 /* ClanWarStatsTableViewController.swift */; };
+		A4AB5FC521EFF50E000A0464 /* DonationListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB5FC421EFF50E000A0464 /* DonationListTableViewController.swift */; };
+		A4AB5FC821EFF563000A0464 /* DonationListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB5FC621EFF563000A0464 /* DonationListTableViewCell.swift */; };
+		A4AB5FC921EFF563000A0464 /* DonationListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AB5FC721EFF563000A0464 /* DonationListTableViewCell.xib */; };
+		A4AB5FCB21EFF69D000A0464 /* DonationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB5FCA21EFF69D000A0464 /* DonationList.swift */; };
+		A4AB5FCE21F003C1000A0464 /* DonationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB5FCC21F003C1000A0464 /* DonationsTableViewCell.swift */; };
+		A4AB5FCF21F003C1000A0464 /* DonationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AB5FCD21F003C1000A0464 /* DonationsTableViewCell.xib */; };
 		A4D5346A21DF15D8005E5835 /* ClanListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5346921DF15D8005E5835 /* ClanListTableViewController.swift */; };
 		A4D5346C21DF1697005E5835 /* ClanNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5346B21DF1697005E5835 /* ClanNameTableViewCell.swift */; };
 		A4D5346F21DF171D005E5835 /* ClanNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4D5346E21DF171D005E5835 /* ClanNameTableViewCell.xib */; };
@@ -71,6 +77,12 @@
 		A477540521A250B9000098F6 /* ClanInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanInfo.swift; sourceTree = "<group>"; };
 		A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClashRoyaleAPI.swift; sourceTree = "<group>"; };
 		A4AB5FC121EFC9A0000A0464 /* ClanWarStatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanWarStatsTableViewController.swift; sourceTree = "<group>"; };
+		A4AB5FC421EFF50E000A0464 /* DonationListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationListTableViewController.swift; sourceTree = "<group>"; };
+		A4AB5FC621EFF563000A0464 /* DonationListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationListTableViewCell.swift; sourceTree = "<group>"; };
+		A4AB5FC721EFF563000A0464 /* DonationListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationListTableViewCell.xib; sourceTree = "<group>"; };
+		A4AB5FCA21EFF69D000A0464 /* DonationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationList.swift; sourceTree = "<group>"; };
+		A4AB5FCC21F003C1000A0464 /* DonationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsTableViewCell.swift; sourceTree = "<group>"; };
+		A4AB5FCD21F003C1000A0464 /* DonationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationsTableViewCell.xib; sourceTree = "<group>"; };
 		A4D5346921DF15D8005E5835 /* ClanListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanListTableViewController.swift; sourceTree = "<group>"; };
 		A4D5346B21DF1697005E5835 /* ClanNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanNameTableViewCell.swift; sourceTree = "<group>"; };
 		A4D5346E21DF171D005E5835 /* ClanNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClanNameTableViewCell.xib; sourceTree = "<group>"; };
@@ -118,10 +130,13 @@
 		1B4C5FD821EBBF76004E303C /* Recognition */ = {
 			isa = PBXGroup;
 			children = (
+				A4AB5FC321EFF4E5000A0464 /* Donation Table */,
 				1B4C5FD921EBBFBE004E303C /* RecognitionTableViewController.swift */,
 				1B4C5FDF21EBC29E004E303C /* Recognition.swift */,
 				1B4C5FDB21EBBFED004E303C /* RecognitionTableViewCell.swift */,
 				1B4C5FDC21EBBFED004E303C /* RecognitionTableViewCell.xib */,
+				A4AB5FCC21F003C1000A0464 /* DonationsTableViewCell.swift */,
+				A4AB5FCD21F003C1000A0464 /* DonationsTableViewCell.xib */,
 			);
 			path = Recognition;
 			sourceTree = "<group>";
@@ -182,6 +197,17 @@
 				A4AB5FC121EFC9A0000A0464 /* ClanWarStatsTableViewController.swift */,
 			);
 			path = "Clan War Stats";
+			sourceTree = "<group>";
+		};
+		A4AB5FC321EFF4E5000A0464 /* Donation Table */ = {
+			isa = PBXGroup;
+			children = (
+				A4AB5FC421EFF50E000A0464 /* DonationListTableViewController.swift */,
+				A4AB5FC621EFF563000A0464 /* DonationListTableViewCell.swift */,
+				A4AB5FC721EFF563000A0464 /* DonationListTableViewCell.xib */,
+				A4AB5FCA21EFF69D000A0464 /* DonationList.swift */,
+			);
+			path = "Donation Table";
 			sourceTree = "<group>";
 		};
 		A4D5346D21DF16A2005E5835 /* Clan Name Table */ = {
@@ -274,7 +300,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AB5FCF21F003C1000A0464 /* DonationsTableViewCell.xib in Resources */,
 				A4D5346F21DF171D005E5835 /* ClanNameTableViewCell.xib in Resources */,
+				A4AB5FC921EFF563000A0464 /* DonationListTableViewCell.xib in Resources */,
 				1B4C5FDE21EBBFED004E303C /* RecognitionTableViewCell.xib in Resources */,
 				A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */,
 				A4F24F3621B4A5ED004D437D /* ClanMemberTableViewCell.xib in Resources */,
@@ -293,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AB5FC821EFF563000A0464 /* DonationListTableViewCell.swift in Sources */,
 				A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */,
 				1B4C5FE021EBC29E004E303C /* Recognition.swift in Sources */,
 				A4F24F3421B4A5DF004D437D /* ClanMemberTableViewCell.swift in Sources */,
@@ -309,7 +338,10 @@
 				A4D5346C21DF1697005E5835 /* ClanNameTableViewCell.swift in Sources */,
 				A41952DB21A7A01D0086D964 /* StyledButton.swift in Sources */,
 				A412614B21A65EC9005A4B24 /* ClanMemberTableViewController.swift in Sources */,
+				A4AB5FCB21EFF69D000A0464 /* DonationList.swift in Sources */,
 				A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */,
+				A4AB5FCE21F003C1000A0464 /* DonationsTableViewCell.swift in Sources */,
+				A4AB5FC521EFF50E000A0464 /* DonationListTableViewController.swift in Sources */,
 				A412614D21A786FD005A4B24 /* GradientView.swift in Sources */,
 				A477540621A250B9000098F6 /* ClanInfo.swift in Sources */,
 				1B3D5BCA21EA8D3800E10B87 /* ClanOverviewTableViewCell.swift in Sources */,
