@@ -10,6 +10,26 @@ import Foundation
 
 extension ClanInfo.Member {
     
+    var roleAsInt: Int {
+        guard let role = role?.lowercased().trimmingCharacters(in: .whitespaces) else {
+            return 0
+        }
+        if role == "leader" {
+            return 3
+        }
+        else if role == "coleader" {
+            return 2
+        }
+        else if role == "elder" {
+            return 1
+        }
+        else if role == "member" {
+            return 0
+        } else {
+            return 0
+        }
+    }
+    
     var ranksClimbed: Int {
         guard let rank = rank, let previousRank = previousRank else {
             return 0

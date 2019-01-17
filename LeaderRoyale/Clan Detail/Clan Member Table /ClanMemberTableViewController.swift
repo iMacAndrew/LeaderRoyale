@@ -9,15 +9,29 @@
 import UIKit
 
 class ClanMemberTableViewController: UITableViewController {
-    private var memberInfo: ClanInfo.Member?
-    var clanInfo: ClanInfo?
+    private var selectedMemberInfo: ClanInfo.Member?
+    private var members = [ClanInfo.Member]()
+    
+    
     
     @IBAction func sortButtonPresssed(_ sender: UIBarButtonItem) {
         
         let actionSheet = UIAlertController(title: "Sort by", message: nil, preferredStyle: .actionSheet)
         
         let sortByDonations = UIAlertAction(title: "Donations", style: .default) { (action) in
-            
+            self.sortByDonations()
+        }
+        
+        let sortByTrophies = UIAlertAction(title: "Trophies", style: .default) { (action) in
+            self.sortByTrophies()
+        }
+        
+        let sortByKingLevel = UIAlertAction(title: "King Level", style: .default) { (action) in
+            self.sortByKingLevel()
+        }
+        
+        let sortByRole = UIAlertAction(title: "Role", style: .default) { (action) in
+            self.sortByRole()
         }
         
         let cancelSort = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
@@ -25,14 +39,17 @@ class ClanMemberTableViewController: UITableViewController {
         }
         
         actionSheet.addAction(sortByDonations)
+        actionSheet.addAction(sortByTrophies)
+        actionSheet.addAction(sortByKingLevel)
         actionSheet.addAction(cancelSort)
+        actionSheet.addAction(sortByRole)
         
         present(actionSheet, animated: true)
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationTitle()
+        
         tableView.register(UINib(nibName: "ClanMemberTableViewCell", bundle: nil), forCellReuseIdentifier: "ClanMemberTableViewCell")
     }
     
@@ -43,16 +60,14 @@ class ClanMemberTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return clanInfo?.members?.count ?? 0
+        return members.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClanMemberTableViewCell", for: indexPath) as! ClanMemberTableViewCell
         
-        let memberCount = clanInfo?.members?.count ?? 0
-        
-        if memberCount >= indexPath.row {
-            let memberInfo = clanInfo?.members?[indexPath.row]
+        if members.count >= indexPath.row {
+            let memberInfo = members[indexPath.row]
             cell.configure(with: memberInfo)
         }
         
@@ -66,18 +81,16 @@ class ClanMemberTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        let memberCount = clanInfo?.members?.count ?? 0
-        
-        if memberCount >= indexPath.row {
-            memberInfo = clanInfo?.members?[indexPath.row]
+        if members.count >= indexPath.row {
+            selectedMemberInfo = members[indexPath.row]
         }
         
         performSegue(withIdentifier: "segueMemberVC2", sender: self)
     }
     
     
-    private func setNavigationTitle() {
-        navigationItem.title = clanInfo?.name
+    private func setNavigationTitle(title: String?) {
+        navigationItem.title = title
         
         let attributes: [NSAttributedString.Key: Any] = [.font: UIFont(name: "supercell-magic", size: 20)!]
         
@@ -92,8 +105,45 @@ class ClanMemberTableViewController: UITableViewController {
             return
         }
 
-        if let memberInfo = memberInfo {
-            playerProfile.memberInfo = memberInfo
+        if let selectedMemberInfo = selectedMemberInfo {
+            playerProfile.memberInfo = selectedMemberInfo
         }
+    }
+    
+    func configure(clanInfo: ClanInfo?) {
+        setNavigationTitle(title: clanInfo?.name)
+        members = clanInfo?.members ?? []
+    }
+    
+    func sortByDonations() {
+        members.sort { (firstMember, secondMember) -> Bool in
+            return firstMember.donations ?? 0 > secondMember.donations ?? 0
+        }
+        tableView.reloadData()
+        
+    }
+    
+    func sortByTrophies() {
+        members.sort { (firstMember, secondMember) -> Bool in
+            return firstMember.trophies ?? 0 > secondMember.trophies ?? 0
+        }
+        tableView.reloadData()
+        
+    }
+    
+    func sortByKingLevel() {
+        members.sort { (firstMember, secondMember) -> Bool in
+            return firstMember.expLevel ?? 0 > secondMember.expLevel ?? 0
+        }
+        tableView.reloadData()
+        
+    }
+    
+    func sortByRole() {
+        members.sort { (firstMember, secondMember) -> Bool in
+            return firstMember.roleAsInt > secondMember.roleAsInt
+        }
+        tableView.reloadData()
+        
     }
 }

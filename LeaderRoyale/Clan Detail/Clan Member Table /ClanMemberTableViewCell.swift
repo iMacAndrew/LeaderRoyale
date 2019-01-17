@@ -16,6 +16,7 @@ class ClanMemberTableViewCell: UITableViewCell {
     @IBOutlet weak var roleLabel: UILabel!
     @IBOutlet weak var donatedTitleLabel: UILabel!
     @IBOutlet weak var trophyContainerView: UIView!
+    @IBOutlet weak var kinglevelLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,6 +47,8 @@ class ClanMemberTableViewCell: UITableViewCell {
         } else {
             trophiesLabel.text = ""
         }
+        
+        kinglevelLabel.text = String(memberInfo.expLevel ?? 0)
         
         roleLabel.text = memberInfo.role
         

@@ -21,8 +21,21 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="king-level" translatesAutoresizingMaskIntoConstraints="NO" id="0Mg-FO-6Ja">
+                    <rect key="frame" x="28" y="42" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="iRg-E7-ZcD"/>
+                        <constraint firstAttribute="height" constant="40" id="yYA-xp-hCF"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="msL-nh-QrY">
+                    <rect key="frame" x="28" y="49.5" width="40" height="25.5"/>
+                    <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmR-Ug-zgb">
-                    <rect key="frame" x="16" y="32.5" width="64" height="25.5"/>
+                    <rect key="frame" x="16" y="12" width="64" height="25.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="64" id="uCZ-cP-pVg"/>
                     </constraints>
@@ -90,24 +103,31 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="kmR-Ug-zgb" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="1jl-QT-KWw"/>
+                <constraint firstItem="kmR-Ug-zgb" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-20.25" id="1jl-QT-KWw"/>
                 <constraint firstItem="qes-Bu-l4l" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="10" id="3Cw-a4-d2e"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GUE-fa-GQ0" secondAttribute="trailing" constant="4" id="9Fu-MS-PZT"/>
                 <constraint firstItem="XHR-6J-fBG" firstAttribute="leading" secondItem="aUE-yT-cAV" secondAttribute="trailing" constant="10" id="9X1-8B-OVG"/>
                 <constraint firstItem="kmR-Ug-zgb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="FnH-si-aAt"/>
                 <constraint firstItem="GUE-fa-GQ0" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="GSp-1Y-oqo"/>
                 <constraint firstItem="aUE-yT-cAV" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-10" id="HWk-Ld-5rk"/>
+                <constraint firstItem="0Mg-FO-6Ja" firstAttribute="top" secondItem="kmR-Ug-zgb" secondAttribute="bottom" constant="4.5" id="Hfb-gl-KAy"/>
                 <constraint firstItem="iMI-13-CUK" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="10" id="VK4-h2-CHQ"/>
+                <constraint firstItem="msL-nh-QrY" firstAttribute="leading" secondItem="0Mg-FO-6Ja" secondAttribute="leading" id="fdt-gX-OdL"/>
                 <constraint firstItem="iMI-13-CUK" firstAttribute="leading" secondItem="XHR-6J-fBG" secondAttribute="leading" id="gxp-el-Kvn"/>
+                <constraint firstItem="msL-nh-QrY" firstAttribute="centerX" secondItem="0Mg-FO-6Ja" secondAttribute="centerX" id="hJ2-vI-KWA"/>
                 <constraint firstItem="aUE-yT-cAV" firstAttribute="leading" secondItem="kmR-Ug-zgb" secondAttribute="trailing" constant="8" id="mjT-cP-OZU"/>
                 <constraint firstItem="XHR-6J-fBG" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-10" id="ngi-pM-mfz"/>
                 <constraint firstItem="qes-Bu-l4l" firstAttribute="leading" secondItem="aUE-yT-cAV" secondAttribute="leading" id="txW-XJ-qB4"/>
+                <constraint firstItem="0Mg-FO-6Ja" firstAttribute="centerX" secondItem="kmR-Ug-zgb" secondAttribute="centerX" id="vp9-XJ-BIP"/>
+                <constraint firstItem="msL-nh-QrY" firstAttribute="trailing" secondItem="0Mg-FO-6Ja" secondAttribute="trailing" id="wzS-Ih-NJc"/>
+                <constraint firstItem="msL-nh-QrY" firstAttribute="centerY" secondItem="0Mg-FO-6Ja" secondAttribute="centerY" id="xNc-Bt-oXT"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="donatedCountLabel" destination="iMI-13-CUK" id="UiH-dh-xab"/>
                 <outlet property="donatedTitleLabel" destination="XHR-6J-fBG" id="cfO-bT-WrL"/>
+                <outlet property="kinglevelLabel" destination="msL-nh-QrY" id="zdb-Me-uqw"/>
                 <outlet property="nameLabel" destination="aUE-yT-cAV" id="pVt-Ae-1x0"/>
                 <outlet property="rankLabel" destination="kmR-Ug-zgb" id="8in-Js-8eY"/>
                 <outlet property="roleLabel" destination="qes-Bu-l4l" id="918-Eb-TCw"/>
@@ -118,6 +138,7 @@
         </view>
     </objects>
     <resources>
+        <image name="king-level" width="64" height="64"/>
         <image name="trophy" width="250" height="250"/>
     </resources>
 </document>

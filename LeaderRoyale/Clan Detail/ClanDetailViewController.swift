@@ -68,7 +68,7 @@ class ClanDetailViewController: UITableViewController {
         super.prepare(for: segue, sender: sender)
         
         if let clanMembersTableViewController = segue.destination as? ClanMemberTableViewController {
-            clanMembersTableViewController.clanInfo = clanInfo
+            clanMembersTableViewController.configure(clanInfo: clanInfo)
         }
         else if let clanRecognitionTableViewController = segue.destination as? RecognitionTableViewController {
             clanRecognitionTableViewController.configure(clanInfo: clanInfo)
