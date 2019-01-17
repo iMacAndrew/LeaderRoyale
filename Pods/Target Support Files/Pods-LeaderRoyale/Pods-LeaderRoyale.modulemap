@@ -1,0 +1,6 @@
+framework module Pods_LeaderRoyale {
+  umbrella header "Pods-LeaderRoyale-umbrella.h"
+
+  export *
+  module * { export * }
+}
