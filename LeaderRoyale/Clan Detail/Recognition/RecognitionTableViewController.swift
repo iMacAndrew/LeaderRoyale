@@ -9,12 +9,17 @@
 import UIKit
 
 class RecognitionTableViewController: UITableViewController {
-
+    
     private var recognitions = [Recognition]()
+    
+    var clanInfo: ClanInfo?
+    
+    var memberInfo: ClanInfo.Member?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationTitle()
+        tableView.register(UINib(nibName: "DonationsTableViewCell", bundle: nil), forCellReuseIdentifier: "DonationsTableViewCell")
         tableView.register(UINib(nibName: "RecognitionTableViewCell", bundle: nil), forCellReuseIdentifier: "RecognitionTableViewCell")
     }
 
@@ -25,21 +30,49 @@ class RecognitionTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recognitions.count
+        return recognitions.count + 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RecognitionTableViewCell", for: indexPath) as! RecognitionTableViewCell
-
-        cell.configure(recognition: recognitions[indexPath.row])
         
-        return cell
+        if indexPath.row == 0 {
+            return createDonationCell(indexPath: indexPath)
+        } else {
+            return createRecognitionCell(indexPath: indexPath)
+        }
+
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.row == 0 {
+            goToDonationList(indexPath: indexPath)
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90.0
     }
 
+    private func createRecognitionCell(indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecognitionTableViewCell", for: indexPath) as! RecognitionTableViewCell
+        
+        cell.configure(recognition: recognitions[indexPath.row - 1])
+        
+        return cell
+    }
+    
+    private func createDonationCell(indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DonationsTableViewCell", for: indexPath) as! DonationsTableViewCell
+        
+        cell.configure()
+        
+        return cell
+    }
+    
     func configure(clanInfo: ClanInfo?) {
         if let member = clanInfo?.memberWithMostDonations {
             let recognitionForMostDonations = Recognition(title: "Most Donations", subTitle: "This week", playerName: member.name ?? "", stat: String(member.donations ?? 0))
@@ -76,6 +109,20 @@ class RecognitionTableViewController: UITableViewController {
         
         navigationController?.navigationBar.titleTextAttributes = attributes
         navigationController?.navigationBar.largeTitleTextAttributes = attributes
+    }
+    
+    private func goToDonationList(indexPath: IndexPath) {
+        performSegue(withIdentifier: "donationListSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let donationListTableViewController = segue.destination as? DonationListTableViewController {
+            donationListTableViewController.clanInfo = clanInfo
+            donationListTableViewController.memberInfo = memberInfo
+        }
+        
     }
     
     

@@ -22,6 +22,7 @@ class ClanOverviewTableViewCell: UITableViewCell {
         clanScoreLabel.text = String(clanInfo.score ?? 0)
         clanTrophyLabel.text = String(clanInfo.trophies)
         clanDonationsPerWeekLabel.text = String(clanInfo.donations ?? 0)
+        
     }
     
     
