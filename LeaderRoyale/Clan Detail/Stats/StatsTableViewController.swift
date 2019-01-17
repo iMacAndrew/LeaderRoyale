@@ -12,6 +12,10 @@ class StatsTableViewController: UITableViewController {
 
     private var stats = [Stat]()
     
+    static func make() -> StatsTableViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StatsTableViewController") as! StatsTableViewController
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationTitle()

@@ -24,6 +24,7 @@
 		A41952DB21A7A01D0086D964 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952DA21A7A01D0086D964 /* StyledButton.swift */; };
 		A41952DF21A8AE330086D964 /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */; };
 		A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952E021AA6C3D0086D964 /* PlayerInfo.swift */; };
+		A449926121F033890063B9A3 /* ClanDetailTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */; };
 		A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47753F021A24CF9000098F6 /* AppDelegate.swift */; };
 		A47753F621A24CF9000098F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47753F421A24CF9000098F6 /* Main.storyboard */; };
 		A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */; };
@@ -70,6 +71,7 @@
 		A41952DA21A7A01D0086D964 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
 		A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileViewController.swift; sourceTree = "<group>"; };
 		A41952E021AA6C3D0086D964 /* PlayerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInfo.swift; sourceTree = "<group>"; };
+		A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanDetailTabViewController.swift; sourceTree = "<group>"; };
 		A47753ED21A24CF9000098F6 /* LeaderRoyale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeaderRoyale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47753F021A24CF9000098F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47753F521A24CF9000098F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		1B3D5BC521EA8BE200E10B87 /* Clan Detail */ = {
 			isa = PBXGroup;
 			children = (
+				A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */,
 				1B3D5BC621EA8C9000E10B87 /* ClanDetailViewController.swift */,
 				A4AB5FC021EFC966000A0464 /* Clan War Stats */,
 				A4D5347221ED9F30005E5835 /* Stats */,
@@ -423,6 +426,7 @@
 				A477540621A250B9000098F6 /* ClanInfo.swift in Sources */,
 				1B3D5BCA21EA8D3800E10B87 /* ClanOverviewTableViewCell.swift in Sources */,
 				1B4C5FE321EC1D6E004E303C /* ClanInfo+Stats.swift in Sources */,
+				A449926121F033890063B9A3 /* ClanDetailTabViewController.swift in Sources */,
 				1B3D5BC721EA8C9000E10B87 /* ClanDetailViewController.swift in Sources */,
 				1B4C5FDD21EBBFED004E303C /* RecognitionTableViewCell.swift in Sources */,
 				A4AB5FC221EFC9A0000A0464 /* ClanWarStatsTableViewController.swift in Sources */,

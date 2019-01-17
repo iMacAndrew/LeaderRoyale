@@ -10,6 +10,10 @@ import UIKit
 
 class ClanWarStatsTableViewController: UITableViewController {
 
+    static func make() -> ClanWarStatsTableViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ClanWarStatsTableViewController") as! ClanWarStatsTableViewController
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationTitle()

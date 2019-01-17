@@ -49,13 +49,13 @@ class ClanListTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let clanStats = segue.destination as? ClanDetailViewController else {
-            return
+        if let clanTabViewController = segue.destination as? ClanDetailTabViewController {
+            if let clanInfo = selectedClanInfo {
+                clanTabViewController.configure(with: clanInfo)
+            }
         }
         
-        if let clanInfo = selectedClanInfo {
-            clanStats.clanInfo = clanInfo
-        }
+        
         
     }
     

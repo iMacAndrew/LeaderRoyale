@@ -12,7 +12,9 @@ class ClanMemberTableViewController: UITableViewController {
     private var selectedMemberInfo: ClanInfo.Member?
     private var members = [ClanInfo.Member]()
     
-    
+    static func make() -> ClanMemberTableViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ClanMemberTableViewController") as! ClanMemberTableViewController
+    }
     
     @IBAction func sortButtonPresssed(_ sender: UIBarButtonItem) {
         

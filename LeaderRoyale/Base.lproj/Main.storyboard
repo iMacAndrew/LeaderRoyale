@@ -123,12 +123,27 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="F7p-v4-OVG" kind="show" identifier="statSegue" id="Rfy-IJ-a7T"/>
+                        <segue destination="LAd-Nz-4gP" kind="show" identifier="statSegue" id="8uF-gw-aA6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FuI-9a-QvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1188" y="478"/>
+        </scene>
+        <!--Clan Detail Tab View Controller-->
+        <scene sceneID="KLI-bn-tl6">
+            <objects>
+                <viewController id="LAd-Nz-4gP" customClass="ClanDetailTabViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u5d-7C-ekv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yeT-gG-AdP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FqU-Fz-oxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-510" y="1254"/>
         </scene>
         <!--Clan Detail View Controller-->
         <scene sceneID="nDk-z3-F17">
@@ -170,7 +185,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJp-PG-wWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="1255"/>
+            <point key="canvasLocation" x="313" y="1254"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xF4-xk-Ozz">
@@ -191,7 +206,7 @@
         <!--clanTableIdentifier-->
         <scene sceneID="Mur-xR-hfV">
             <objects>
-                <tableViewController storyboardIdentifier="clanTableVC" title="clanTableIdentifier" id="Ag2-AW-aI9" customClass="ClanMemberTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ClanMemberTableViewController" title="clanTableIdentifier" id="Ag2-AW-aI9" customClass="ClanMemberTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JDE-uh-Scz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,7 +234,7 @@
         <!--Clan War Stats Table View Controller-->
         <scene sceneID="ywg-j2-VtY">
             <objects>
-                <tableViewController id="jEF-br-24V" customClass="ClanWarStatsTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ClanWarStatsTableViewController" id="jEF-br-24V" customClass="ClanWarStatsTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g0G-Vk-C3A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +262,7 @@
         <!--Stats Table View Controller-->
         <scene sceneID="BrB-lw-AeG">
             <objects>
-                <tableViewController id="qav-ki-aqu" customClass="StatsTableViewController" customModule="LeaderRoyale" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StatsTableViewController" id="qav-ki-aqu" customClass="StatsTableViewController" customModule="LeaderRoyale" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iOh-EU-kIj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,7 +280,7 @@
         <!--Recognition Table View Controller-->
         <scene sceneID="KUZ-Ue-L2l">
             <objects>
-                <tableViewController id="To9-nd-H6Z" customClass="RecognitionTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RecognitionTableViewController" id="To9-nd-H6Z" customClass="RecognitionTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3sE-Sv-rcE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

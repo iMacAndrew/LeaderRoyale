@@ -12,6 +12,10 @@ class RecognitionTableViewController: UITableViewController {
 
     private var recognitions = [Recognition]()
     
+    static func make() -> RecognitionTableViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecognitionTableViewController") as! RecognitionTableViewController
+    }
+    
     var memberInfo: ClanInfo.Member?
     var clanInfo: ClanInfo?
     
