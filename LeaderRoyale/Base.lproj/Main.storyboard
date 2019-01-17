@@ -170,7 +170,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJp-PG-wWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="1311"/>
+            <point key="canvasLocation" x="142" y="1255"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xF4-xk-Ozz">
@@ -211,14 +211,20 @@
                             <outlet property="delegate" destination="Ag2-AW-aI9" id="fw1-PP-ojb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="moF-sn-J7O"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="moF-sn-J7O">
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="MPb-wa-LmJ">
+                            <connections>
+                                <action selector="sortButtonPresssed:" destination="Ag2-AW-aI9" id="muC-QU-sw8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Khc-eb-076" kind="show" identifier="segueMemberVC2" id="Bb6-76-3U7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yo7-zT-qmS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2257" y="1311"/>
+            <point key="canvasLocation" x="1188" y="1254"/>
         </scene>
         <!--Clan War Stats Table View Controller-->
         <scene sceneID="ywg-j2-VtY">
@@ -264,7 +270,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zS-1d-M2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="993" y="2240"/>
+            <point key="canvasLocation" x="745" y="2074"/>
         </scene>
         <!--Recognition Table View Controller-->
         <scene sceneID="KUZ-Ue-L2l">
@@ -279,10 +285,41 @@
                             <outlet property="delegate" destination="To9-nd-H6Z" id="PAF-VA-WPL"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="ar3-fb-CBD" kind="show" identifier="donationListSegue" id="bSx-NC-GcM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FM4-gO-LWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2253" y="2032"/>
+            <point key="canvasLocation" x="1604" y="2074"/>
+        </scene>
+        <!--Donation List Table View Controller-->
+        <scene sceneID="srz-RO-Ig6">
+            <objects>
+                <tableViewController id="ar3-fb-CBD" customClass="DonationListTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sr7-yh-BFY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IR9-rK-1ee">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IR9-rK-1ee" id="dHV-p4-aUI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ar3-fb-CBD" id="z6f-gg-TMv"/>
+                            <outlet property="delegate" destination="ar3-fb-CBD" id="2lt-Fs-oiq"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WtA-fy-WsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1669" y="2863"/>
         </scene>
         <!--Player Profile View Controller-->
         <scene sceneID="Ocd-YF-eWe">
@@ -428,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IY0-b2-vHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3289" y="1311"/>
+            <point key="canvasLocation" x="1983" y="1254"/>
         </scene>
     </scenes>
 </document>

@@ -12,6 +12,24 @@ class ClanMemberTableViewController: UITableViewController {
     private var memberInfo: ClanInfo.Member?
     var clanInfo: ClanInfo?
     
+    @IBAction func sortButtonPresssed(_ sender: UIBarButtonItem) {
+        
+        let actionSheet = UIAlertController(title: "Sort by", message: nil, preferredStyle: .actionSheet)
+        
+        let sortByDonations = UIAlertAction(title: "Donations", style: .default) { (action) in
+            
+        }
+        
+        let cancelSort = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            
+        }
+        
+        actionSheet.addAction(sortByDonations)
+        actionSheet.addAction(cancelSort)
+        
+        present(actionSheet, animated: true)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationTitle()
