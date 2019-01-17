@@ -9,12 +9,11 @@
 import UIKit
 
 class RecognitionTableViewController: UITableViewController {
-    
+
     private var recognitions = [Recognition]()
     
-    var clanInfo: ClanInfo?
-    
     var memberInfo: ClanInfo.Member?
+    var clanInfo: ClanInfo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +49,6 @@ class RecognitionTableViewController: UITableViewController {
         if indexPath.row == 0 {
             goToDonationList(indexPath: indexPath)
         }
-        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -124,7 +122,4 @@ class RecognitionTableViewController: UITableViewController {
         }
         
     }
-    
-    
-
 }

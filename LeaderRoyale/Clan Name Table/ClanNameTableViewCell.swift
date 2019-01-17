@@ -60,7 +60,5 @@ class ClanNameTableViewCell: UITableViewCell {
             clanDescriptionLabel.text = clanDescription
         }
         
-        
     }
-    
 }

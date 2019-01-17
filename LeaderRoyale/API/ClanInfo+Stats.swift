@@ -193,4 +193,3 @@ extension ClanInfo {
     }
     
 }
-

@@ -31,5 +31,4 @@ extension ClanInfo.Member {
         return calcDonationRatio
         
     }
-    
 }

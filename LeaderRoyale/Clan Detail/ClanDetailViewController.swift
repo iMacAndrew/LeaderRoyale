@@ -130,5 +130,4 @@ class ClanDetailViewController: UITableViewController {
     private func goToClanWarStat(indexPath: IndexPath) {
         performSegue(withIdentifier: "clanWarStatSegue", sender: self)
     }
-  
 }
