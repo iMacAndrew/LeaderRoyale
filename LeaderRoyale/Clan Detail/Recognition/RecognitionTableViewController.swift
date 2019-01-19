@@ -76,15 +76,15 @@ class RecognitionTableViewController: UITableViewController {
     }
     
     func configure(clanInfo: ClanInfo?) {
-        if let member = clanInfo?.memberWithMostDonations {
-            let recognitionForMostDonations = Recognition(title: "Most Donations", subTitle: "This week", playerName: member.name ?? "", stat: String(member.donations ?? 0))
+        if let member = clanInfo?.memberWithMostDonations, let donations = member.donations {
+            let recognitionForMostDonations = Recognition(title: "Most Donations", subTitle: "This week", playerName: member.name ?? "", stat: String(donations.withCommas()))
             
             recognitions.append(recognitionForMostDonations)
             
         }
         
-        if let member = clanInfo?.memberWithMostDonationsReceived {
-            let recognitionForMostDonationsReceived = Recognition(title: "Most Donations Received", subTitle: "This week", playerName: member.name ?? "", stat: String(member.donationsReceived ?? 0))
+        if let member = clanInfo?.memberWithMostDonationsReceived, let donationsReceived = member.donationsReceived {
+            let recognitionForMostDonationsReceived = Recognition(title: "Most Donations Received", subTitle: "This week", playerName: member.name ?? "", stat: String(donationsReceived.withCommas()))
             
             recognitions.append(recognitionForMostDonationsReceived)
         }

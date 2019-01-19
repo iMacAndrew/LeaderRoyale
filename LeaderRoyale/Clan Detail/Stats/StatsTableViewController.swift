@@ -74,7 +74,8 @@ class StatsTableViewController: UITableViewController {
         }
         
         if let totalTrophies = clanInfo?.trophies, let memberCount = clanInfo?.members?.count {
-            let averageTrophyStat = Stat(title: "Average Trophies", stat: String(totalTrophies / memberCount))
+            let averageTrophies = totalTrophies / memberCount
+            let averageTrophyStat = Stat(title: "Average Trophies", stat: String(averageTrophies.withCommas()))
         
              stats.append(averageTrophyStat)
         }

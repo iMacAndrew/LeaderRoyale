@@ -45,20 +45,28 @@ class ClanNameTableViewCell: UITableViewCell {
         clanTagLabel.text = clanInfo?.tag
         
         if let clanScore = clanInfo?.score {
-            clanScoreLabel.text = String(clanScore)
+            clanScoreLabel.text = String(clanScore.withCommas())
         }
         
         if let clanTrophies = clanInfo?.trophies {
-            clanTrophyWork.text = String(clanTrophies)
+            clanTrophyWork.text = String(clanTrophies.withCommas())
         }
         
         if let clanDonations = clanInfo?.donations {
-            clanDonationsLabel.text = String(clanDonations)
+            clanDonationsLabel.text = String(clanDonations.withCommas())
         }
         
         if let clanDescription = clanInfo?.description {
             clanDescriptionLabel.text = clanDescription
         }
         
+    }
+}
+
+extension Int {
+    func withCommas() -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.decimal
+        return numberFormatter.string(from: NSNumber(value:self))!
     }
 }

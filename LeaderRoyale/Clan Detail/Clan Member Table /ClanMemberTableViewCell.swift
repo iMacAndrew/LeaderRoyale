@@ -37,13 +37,13 @@ class ClanMemberTableViewCell: UITableViewCell {
         nameLabel.text = memberInfo.name
         
         if let donations = memberInfo.donations {
-            donatedCountLabel.text = String(donations)
+            donatedCountLabel.text = String(donations.withCommas())
         } else {
             donatedCountLabel.text = ""
         }
         
         if let trophies = memberInfo.trophies {
-            trophiesLabel.text = String(trophies)
+            trophiesLabel.text = String(trophies.withCommas())
         } else {
             trophiesLabel.text = ""
         }
@@ -76,3 +76,4 @@ class ClanMemberTableViewCell: UITableViewCell {
         }
     }
 }
+
