@@ -145,48 +145,6 @@
             </objects>
             <point key="canvasLocation" x="-510" y="1254"/>
         </scene>
-        <!--Clan Detail View Controller-->
-        <scene sceneID="nDk-z3-F17">
-            <objects>
-                <tableViewController id="F7p-v4-OVG" customClass="ClanDetailViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jOO-fQ-uJm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClanOverviewTableViewCell" id="B04-IO-UTu">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B04-IO-UTu" id="a9A-ZQ-WQk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="VdV-5e-xvh">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VdV-5e-xvh" id="BOK-va-dga">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="F7p-v4-OVG" id="rTl-ke-09a"/>
-                            <outlet property="delegate" destination="F7p-v4-OVG" id="oec-e6-YW8"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <segue destination="Ag2-AW-aI9" kind="show" identifier="memberSegue" id="BLp-Wu-4eX"/>
-                        <segue destination="To9-nd-H6Z" kind="show" identifier="recognitionSegue" id="UNJ-vj-Vqu"/>
-                        <segue destination="qav-ki-aqu" kind="show" identifier="statSegue" id="ppO-gk-ZSN"/>
-                        <segue destination="jEF-br-24V" kind="show" identifier="clanWarStatSegue" id="fPs-ec-nEe"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NJp-PG-wWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="313" y="1254"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="xF4-xk-Ozz">
             <objects>
@@ -223,6 +181,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <segue destination="Khc-eb-076" kind="show" identifier="segueMemberVC2" id="Bb6-76-3U7"/>
                     </connections>
@@ -254,10 +213,11 @@
                             <outlet property="delegate" destination="jEF-br-24V" id="L2N-xZ-wvY"/>
                         </connections>
                     </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLa-xI-eOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-82" y="2051"/>
+            <point key="canvasLocation" x="-57" y="2074"/>
         </scene>
         <!--Stats Table View Controller-->
         <scene sceneID="BrB-lw-AeG">
@@ -272,6 +232,7 @@
                             <outlet property="delegate" destination="qav-ki-aqu" id="g1H-Cm-CtK"/>
                         </connections>
                     </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zS-1d-M2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,6 +251,7 @@
                             <outlet property="delegate" destination="To9-nd-H6Z" id="PAF-VA-WPL"/>
                         </connections>
                     </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <segue destination="ar3-fb-CBD" kind="show" identifier="donationListSegue" id="bSx-NC-GcM"/>
                     </connections>

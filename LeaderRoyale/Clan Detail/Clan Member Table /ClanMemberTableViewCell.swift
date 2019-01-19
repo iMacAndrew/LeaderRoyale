@@ -57,22 +57,24 @@ class ClanMemberTableViewCell: UITableViewCell {
     }
     
     private func decorateLeaderCell(isLeader: Bool) {
+        let leaderTextColor = UIColor.white
+        let nonLeaderTextColor = UIColor.white
         if isLeader {
-            rankLabel.textColor = .white
-            nameLabel.textColor = .white
-            donatedCountLabel.textColor = .white
-            trophiesLabel.textColor = .white
-            roleLabel.textColor = .white
-            donatedTitleLabel.textColor = .white
-            backgroundColor = .black
+            rankLabel.textColor = leaderTextColor
+            nameLabel.textColor = leaderTextColor
+            donatedCountLabel.textColor = leaderTextColor
+            trophiesLabel.textColor = leaderTextColor
+            roleLabel.textColor = .lightRed
+            donatedTitleLabel.textColor = leaderTextColor
+            backgroundColor = .dark
         } else {
-            rankLabel.textColor = .black
-            nameLabel.textColor = .black
-            donatedCountLabel.textColor = .black
-            trophiesLabel.textColor = .black
-            donatedTitleLabel.textColor = .black
-            roleLabel.textColor = .black
-            backgroundColor = .white
+            rankLabel.textColor = nonLeaderTextColor
+            nameLabel.textColor = nonLeaderTextColor
+            donatedCountLabel.textColor = nonLeaderTextColor
+            trophiesLabel.textColor = nonLeaderTextColor
+            donatedTitleLabel.textColor = nonLeaderTextColor
+            roleLabel.textColor = nonLeaderTextColor
+            backgroundColor = .dark
         }
     }
 }

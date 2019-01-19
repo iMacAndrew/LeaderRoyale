@@ -12,9 +12,7 @@ import Tabman
 class ClanDetailTabViewController: TabmanViewController {
 
     private var viewControllers = [ClanMemberTableViewController.make(), RecognitionTableViewController.make(), StatsTableViewController.make() ,ClanWarStatsTableViewController.make()]
-    
-    var titles = ["Members", "Recognitions"]
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,16 +22,28 @@ class ClanDetailTabViewController: TabmanViewController {
         let bar = TMBar.ButtonBar()
         bar.layout.contentMode = .intrinsic
         bar.buttons.customize { (button) in
-            button.tintColor = .red
-            button.selectedTintColor = .red
+            button.tintColor = .white
+            button.selectedTintColor = .white
         }
         bar.indicator.cornerStyle = .rounded
-        bar.indicator.tintColor = .red
-        
-//        bar.transitionStyle = .snap // Customize
+        bar.indicator.tintColor = .darkRed
+        bar.backgroundView.style = .flat(color: .darkNavBar)
         
         // Add to view
         addBar(bar, dataSource: self, at: .top)
+        bar.delegate = self
+        bar.layout.contentInset.left = 10.0
+        bar.layout.contentInset.right = 10.0
+        
+        bar.layout.transitionStyle = .snap
+        bar.scrollMode = .swipe
+    }
+    
+    override func pageboyViewController(_ pageboyViewController: PageboyViewController,
+                               didScrollToPageAt index: PageboyViewController.PageIndex,
+                               direction: PageboyViewController.NavigationDirection,
+                               animated: Bool) {
+         navigationItem.rightBarButtonItem = viewControllers[index].navigationItem.rightBarButtonItem
     }
     
     func configure(with clanInfo: ClanInfo?) {
@@ -68,7 +78,7 @@ extension ClanDetailTabViewController: PageboyViewControllerDataSource, TMBarDat
         case is StatsTableViewController:
             return TMBarItem(title: "Stats")
         case is ClanWarStatsTableViewController:
-            return TMBarItem(title: "Clan War Stats")
+            return TMBarItem(title: "Clan War")
         default:
             return TMBarItem(title: "Unknown")
         }
@@ -88,3 +98,4 @@ extension ClanDetailTabViewController: PageboyViewControllerDataSource, TMBarDat
     }
     
 }
+

@@ -25,6 +25,7 @@
 		A41952DF21A8AE330086D964 /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */; };
 		A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952E021AA6C3D0086D964 /* PlayerInfo.swift */; };
 		A449926121F033890063B9A3 /* ClanDetailTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */; };
+		A449926321F2D5D90063B9A3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926221F2D5D90063B9A3 /* Colors.swift */; };
 		A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47753F021A24CF9000098F6 /* AppDelegate.swift */; };
 		A47753F621A24CF9000098F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47753F421A24CF9000098F6 /* Main.storyboard */; };
 		A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */; };
@@ -72,6 +73,7 @@
 		A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileViewController.swift; sourceTree = "<group>"; };
 		A41952E021AA6C3D0086D964 /* PlayerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInfo.swift; sourceTree = "<group>"; };
 		A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanDetailTabViewController.swift; sourceTree = "<group>"; };
+		A449926221F2D5D90063B9A3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A47753ED21A24CF9000098F6 /* LeaderRoyale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeaderRoyale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47753F021A24CF9000098F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47753F521A24CF9000098F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				A47753FF21A24CFC000098F6 /* Info.plist */,
 				A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */,
 				A412614E21A789FF005A4B24 /* magic.ttf */,
+				A449926221F2D5D90063B9A3 /* Colors.swift */,
 			);
 			path = LeaderRoyale;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				1B4C5FE021EBC29E004E303C /* Recognition.swift in Sources */,
 				A4F24F3421B4A5DF004D437D /* ClanMemberTableViewCell.swift in Sources */,
 				A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */,
+				A449926321F2D5D90063B9A3 /* Colors.swift in Sources */,
 				A41952DF21A8AE330086D964 /* PlayerProfileViewController.swift in Sources */,
 				A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */,
 				A477540821A2552A000098F6 /* ClashRoyaleAPI.swift in Sources */,
