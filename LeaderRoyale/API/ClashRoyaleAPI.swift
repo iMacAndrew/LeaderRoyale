@@ -49,4 +49,42 @@ class ClashRoyaleAPI {
         
         task.resume()
     }
+    
+    func getPlayerInfo(playerTag: String, completion: @escaping (_ PlayerInfo: PlayerInfo?) -> Void) {
+        let urlString = "https://api.royaleapi.com/clan/\(playerTag)"
+        
+        guard
+            let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+            let url = URL(string: encodedUrlString)
+            else {
+                assertionFailure("Failed to create url")
+                return
+        }
+        
+        var request = URLRequest(url: url)
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "authorization")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                if httpResponse.statusCode == 404 {
+                    completion(nil)
+                    return
+                }
+            }
+            
+            if let data = data {
+                let playerInfo = try? JSONDecoder().decode(PlayerInfo.self, from: data)
+                completion(playerInfo)
+            } else if let error = error {
+                completion(nil)
+                print(error.localizedDescription)
+            } else {
+                completion(nil)
+                print("Unknown error!??!")
+            }
+        }
+        task.resume()
+    }
 }

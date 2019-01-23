@@ -14,6 +14,7 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     
     var clanInfo: ClanInfo?
     var memberInfo: ClanInfo.Member?
+    var playerInfo: PlayerInfo?
     
     @IBOutlet weak var clanSearchTextField: UITextField!
     
@@ -48,6 +49,10 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
                 print("not a clan")
             }
         }
+    }
+    
+    private func checkPlayers() {
+        
     }
     
     override func viewDidLoad() {

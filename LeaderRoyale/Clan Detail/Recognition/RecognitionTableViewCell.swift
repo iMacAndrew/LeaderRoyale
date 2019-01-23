@@ -20,6 +20,16 @@ class RecognitionTableViewCell: UITableViewCell {
         subTitleLabel.text = recognition.subTitle
         playerNameLabel.text = recognition.playerName
         statLabel.text = recognition.stat
+        
+        decorateCell()
+    }
+    
+    private func decorateCell() {
+        backgroundColor = .dark
+        titleLabel.textColor = UIColor.white
+        subTitleLabel.textColor = UIColor.white
+        playerNameLabel.textColor = UIColor.white
+        statLabel.textColor = UIColor.white
     }
     
 }

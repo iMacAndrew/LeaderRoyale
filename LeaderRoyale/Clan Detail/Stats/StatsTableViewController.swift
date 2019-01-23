@@ -19,6 +19,7 @@ class StatsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationTitle()
+        view.backgroundColor = .dark
         tableView.register(UINib(nibName: "StatTableViewCell", bundle: nil), forCellReuseIdentifier: "StatTableViewCell")
     }
 

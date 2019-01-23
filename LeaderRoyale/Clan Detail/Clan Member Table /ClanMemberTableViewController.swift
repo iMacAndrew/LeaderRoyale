@@ -11,6 +11,8 @@ import UIKit
 class ClanMemberTableViewController: UITableViewController {
     private var selectedMemberInfo: ClanInfo.Member?
     private var members = [ClanInfo.Member]()
+    private var selectedPlayerInfo: PlayerInfo?
+    
     
     static func make() -> ClanMemberTableViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ClanMemberTableViewController") as! ClanMemberTableViewController
@@ -109,6 +111,9 @@ class ClanMemberTableViewController: UITableViewController {
 
         if let selectedMemberInfo = selectedMemberInfo {
             playerProfile.memberInfo = selectedMemberInfo
+        }
+        if let selectedPlayerInfo = selectedPlayerInfo {
+            playerProfile.playerInfo = selectedPlayerInfo
         }
     }
     

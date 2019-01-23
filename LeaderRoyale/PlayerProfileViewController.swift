@@ -10,6 +10,7 @@ import UIKit
 
 class PlayerProfileViewController: UIViewController {
     var memberInfo: ClanInfo.Member?
+    var playerInfo: PlayerInfo?
    
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var playerTagLabel: UILabel!
@@ -19,6 +20,7 @@ class PlayerProfileViewController: UIViewController {
     @IBOutlet weak var playerClanRankLabel: UILabel!
     @IBOutlet weak var playerDonationsLabel: UILabel!
     @IBOutlet weak var playerDonationsReceivedLabel: UILabel!
+    @IBOutlet weak var playerWinsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +48,10 @@ class PlayerProfileViewController: UIViewController {
         
         if let playerDonationsReceived = memberInfo?.donationsReceived {
             playerDonationsReceivedLabel.text = "\(playerDonationsReceived)"
+        }
+        
+        if let playerWins = playerInfo?.wins {
+            playerWinsLabel.text = "\(playerWins)"
         }
         
     }

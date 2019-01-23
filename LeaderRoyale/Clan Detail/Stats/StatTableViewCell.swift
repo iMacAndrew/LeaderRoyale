@@ -15,6 +15,14 @@ class StatTableViewCell: UITableViewCell {
     func configure(stat: Stat) {
         statNameLabel.text = stat.title
         statLabel.text = stat.stat
+        
+        decorateCell()
+    }
+    
+    private func decorateCell() {
+            backgroundColor = .dark
+            statNameLabel.textColor = UIColor.white
+            statLabel.textColor = UIColor.white
     }
     
 }

@@ -14,6 +14,12 @@ class DonationsTableViewCell: UITableViewCell {
     
     func configure() {
         titleLabel.text = "Donations"
+        decorateCell()
+    }
+    
+    private func decorateCell() {
+        backgroundColor = .dark
+        titleLabel.textColor = UIColor.white
     }
     
 }

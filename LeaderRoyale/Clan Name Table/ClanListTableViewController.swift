@@ -10,6 +10,7 @@ import UIKit
 
 class ClanListTableViewController: UITableViewController {
     private var selectedClanInfo: ClanInfo?
+    private var playerInfo: PlayerInfo?
     
     var clans = [ClanInfo]()
     
@@ -54,9 +55,6 @@ class ClanListTableViewController: UITableViewController {
                 clanTabViewController.configure(with: clanInfo)
             }
         }
-        
-        
-        
     }
     
     private func setNavigationTitle() {
