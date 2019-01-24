@@ -46,6 +46,12 @@ class StatsTableViewController: UITableViewController {
         return 90.0
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
     func configure(clanInfo: ClanInfo?) {
         if let memberPercentage = clanInfo?.memberPercentages, let memberCount = clanInfo?.countMembers {
             let totalMemberPercentage = Stat(title: "Percentage of Members", stat: String(memberPercentage) + "%. " + String(memberCount) + " members")
