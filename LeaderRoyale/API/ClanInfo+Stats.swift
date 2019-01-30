@@ -192,4 +192,21 @@ extension ClanInfo {
         return round(averageKingLevel * 10) / 10
     }
     
+    var returnPlayerTags: [String] {
+        
+        guard let members = members else { return []}
+        
+        var completePlayerTags = [String]()
+        
+        for member in members {
+            
+            if let playerTag = member.tag {
+                completePlayerTags.append(playerTag)
+            }
+        }
+        
+        return completePlayerTags
+        
+    }
+    
 }

@@ -50,8 +50,8 @@ class ClashRoyaleAPI {
         task.resume()
     }
     
-    func getPlayerInfo(playerTag: String, completion: @escaping (_ PlayerInfo: PlayerInfo?) -> Void) {
-        let urlString = "https://api.royaleapi.com/clan/\(playerTag)"
+    func getPlayerInfo(playerTags: [String], completion: @escaping (_ PlayerInfo: [PlayerInfo]?) -> Void) {
+        let urlString = "https://api.royaleapi.com/player/\(playerTags.joined(separator: ","))"
         
         guard
             let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
@@ -75,7 +75,7 @@ class ClashRoyaleAPI {
             }
             
             if let data = data {
-                let playerInfo = try? JSONDecoder().decode(PlayerInfo.self, from: data)
+                let playerInfo = try? JSONDecoder().decode([PlayerInfo].self, from: data)
                 completion(playerInfo)
             } else if let error = error {
                 completion(nil)

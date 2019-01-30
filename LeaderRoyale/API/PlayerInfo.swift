@@ -11,42 +11,110 @@ import Foundation
 struct PlayerInfo: Decodable {
     let tag: String?
     let name: String?
-    let expLevel: Int?
     let trophies: Int?
-    let bestTrophies: Int?
-    let wins: Int?
-    let losses: Int?
-    let battleCount: Int?
-    let threeCrownWins: Int?
-    let challengeCardsWon: Int?
-    let challengeMaxWins: Int?
-    let tournamentCardsWon: Int?
-    let tournamentBattleCount: Int?
-    let role: String?
-    let donations: Int?
-    let donationsReceived: Int?
-    let totalDonations: Int?
-    let warDayWins: Int?
-    let clanCardsCollected: Int?
+    let rank: Int?
+    let arena: Arena?
+    let clan: Clan?
+    let stats: Stats?
+    let games: Games?
+    let leagueStatistics: LeagueStatistics?
+    let deckLink: String?
+    let currentDeck: [Card]?
+    let cards: [Card]?
+    let achievements: [Achievement]?
+    
 }
 
 extension PlayerInfo {
     struct Arena: Decodable {
-        let id: Int?
         let name: String?
+        let arena: String?
+        let arenaID: Int?
+        let trophyLimit: Int?
     }
     
     struct Clan: Decodable {
         let tag: String?
         let name: String?
-        let badgeId: Int?
+        let role: String?
+        let donations: Int?
+        let donationsReceived: Int?
+        let donationsDelta: Int?
+        let badge: Badge?
+        
+        struct Badge: Decodable {
+            let name: String?
+            let category: String?
+            let id: Int?
+            let image: String?
+        }
     }
     
-    struct LeagueStatistics: Decodable {
+    struct Stats: Decodable {
+        let clanCardsCollected: Int?
+        let tournamentCardsWon: Int?
+        let maxTrophies: Int?
+        let threeCrownWins: Int?
+        let cardsFound: Int?
+        let favoriteCard: Card?
+        
         
     }
     
-    struct Achievements: Decodable {
+    struct Games: Decodable {
+        let total: Int?
+        let tournamentGames: Int?
+        let wins: Int?
+        let warDayWins: Int?
+        let winsPercent: Double?
+        let losses: Int?
+        let lossesPercent: Double?
+        let draws: Int?
+        let drawsPercent: Double?
+    }
+    
+    struct Card: Decodable {
+        let name: String?
+        let level: Int?
+        let count: Int?
+        let requiredForUpgrade: StringOrInt?
+        let leftToUpgrade: Int?
+        let id: Int?
+        let maxLevel: Int?
+        let icon: String?
+        let key: String?
+        let elixer: Int?
+        let type: String?
+        let rarity: String?
+        let arena: Int?
+        let description: String?
+    }
+    
+    struct LeagueStatistics: Decodable {
+        let currentSeason: CurrrentSeason?
+        let previousSeason: PreviousSeason?
+        let bestSeason: BestSeason?
+        
+        struct CurrrentSeason: Decodable {
+            let id: String?
+            let trophies: Int?
+            let bestTrophies: Int?
+        }
+        
+        struct PreviousSeason: Decodable {
+            let id: String?
+            let trophies: Int?
+            let bestTrophies: Int?
+        }
+        
+        struct BestSeason: Decodable {
+            let id: String?
+            let trophies: Int?
+            let bestTrophies: Int?
+        }
+    }
+    
+    struct Achievement: Decodable {
         let name: String?
         let stars: Int?
         let value: Int?
@@ -54,49 +122,6 @@ extension PlayerInfo {
         let info: String?
     }
     
-    struct Cards: Decodable {
-        let name: String?
-        let level: Int?
-        let maxLevel: Int?
-        let count: Int?
-    }
-    
-    struct CurrentFavoriteCards: Decodable {
-        let name: String?
-        let id: Int?
-        let maxLevel: Int?
-    }
-    
 }
 
-extension PlayerInfo.LeagueStatistics {
-    struct CurrrentSeason: Decodable {
-        let id: String?
-        let trophies: Int?
-        let bestTrophies: Int?
-    }
-    
-    struct PreviousSeason: Decodable {
-        let id: String?
-        let trophies: Int?
-        let bestTrophies: Int?
-    }
-    
-    struct BestSeason: Decodable {
-        let id: String?
-        let trophies: Int?
-        let bestTrophies: Int?
-    }
-}
 
-extension PlayerInfo.Cards {
-    struct iconUrls: Decodable {
-        let medium: String?
-    }
-}
-
-extension PlayerInfo.CurrentFavoriteCards {
-    struct iconUrls: Decodable {
-        let medium: String?
-    }
-}

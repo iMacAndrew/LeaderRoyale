@@ -50,9 +50,5 @@ class PlayerProfileViewController: UIViewController {
             playerDonationsReceivedLabel.text = "\(playerDonationsReceived)"
         }
         
-        if let playerWins = playerInfo?.wins {
-            playerWinsLabel.text = "\(playerWins)"
-        }
-        
     }
 }

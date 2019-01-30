@@ -40,7 +40,8 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
                 print("CLAN")
                 DispatchQueue.main.async {
                     self.clanInfo = clanInfo
-                    self.performSegue(withIdentifier: "clanIdentifier", sender: self)
+                    self.checkPlayers()
+                    
                 }
             } else {
                 DispatchQueue.main.async {
@@ -48,10 +49,23 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
                 }
                 print("not a clan")
             }
+            
         }
     }
     
     private func checkPlayers() {
+        guard let playerIds = clanInfo?.returnPlayerTags else { return }
+        
+        clashRoyaleApi.getPlayerInfo(playerTags: playerIds) { playerInfo in
+            if playerInfo != nil {
+                print(playerInfo)
+                self.performSegue(withIdentifier: "clanIdentifier", sender: self)
+            } else {
+                DispatchQueue.main.async {
+                    self.displayAlert()
+                }
+            }
+        }
         
     }
     

@@ -86,6 +86,7 @@ class ClanMemberTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
 
         if members.count >= indexPath.row {
+            
             selectedMemberInfo = members[indexPath.row]
         }
         
@@ -153,4 +154,5 @@ class ClanMemberTableViewController: UITableViewController {
         tableView.reloadData()
         
     }
+
 }
