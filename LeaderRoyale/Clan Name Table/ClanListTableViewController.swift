@@ -10,9 +10,8 @@ import UIKit
 
 class ClanListTableViewController: UITableViewController {
     private var selectedClanInfo: ClanInfo?
-    private var playerInfo: PlayerInfo?
     
-    var clans = [ClanInfo]()
+    private var clans = [Clan]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +30,7 @@ class ClanListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClanNameTableViewCell", for: indexPath) as! ClanNameTableViewCell
         
-        cell.configure(with: clans[indexPath.row])
+        cell.configure(with: clans[indexPath.row].clanInfo)
         
         return cell
     }
@@ -43,7 +42,7 @@ class ClanListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        selectedClanInfo = clans[indexPath.row]
+        selectedClanInfo = clans[indexPath.row].clanInfo
         
         performSegue(withIdentifier: "statSegue", sender: self)
         
@@ -55,6 +54,11 @@ class ClanListTableViewController: UITableViewController {
                 clanTabViewController.configure(with: clanInfo)
             }
         }
+    }
+    
+    func addNew(clan: Clan) {
+        clans.append(clan)
+        tableView.reloadData()
     }
     
     private func setNavigationTitle() {

@@ -24,6 +24,7 @@
 		A41952DB21A7A01D0086D964 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952DA21A7A01D0086D964 /* StyledButton.swift */; };
 		A41952DF21A8AE330086D964 /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */; };
 		A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952E021AA6C3D0086D964 /* PlayerInfo.swift */; };
+		A44899722204124900EF00FC /* Clan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44899712204124900EF00FC /* Clan.swift */; };
 		A449926121F033890063B9A3 /* ClanDetailTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */; };
 		A449926321F2D5D90063B9A3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926221F2D5D90063B9A3 /* Colors.swift */; };
 		A449926521FFEB300063B9A3 /* StringOrInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926421FFEB300063B9A3 /* StringOrInt.swift */; };
@@ -73,6 +74,7 @@
 		A41952DA21A7A01D0086D964 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
 		A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileViewController.swift; sourceTree = "<group>"; };
 		A41952E021AA6C3D0086D964 /* PlayerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInfo.swift; sourceTree = "<group>"; };
+		A44899712204124900EF00FC /* Clan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clan.swift; sourceTree = "<group>"; };
 		A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanDetailTabViewController.swift; sourceTree = "<group>"; };
 		A449926221F2D5D90063B9A3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A449926421FFEB300063B9A3 /* StringOrInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringOrInt.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */,
 				A412614E21A789FF005A4B24 /* magic.ttf */,
 				A449926221F2D5D90063B9A3 /* Colors.swift */,
+				A44899712204124900EF00FC /* Clan.swift */,
 			);
 			path = LeaderRoyale;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				A4D5347A21EDA333005E5835 /* Stat.swift in Sources */,
 				A4D5346A21DF15D8005E5835 /* ClanListTableViewController.swift in Sources */,
 				1B4C5FDA21EBBFBE004E303C /* RecognitionTableViewController.swift in Sources */,
+				A44899722204124900EF00FC /* Clan.swift in Sources */,
 				1B4C5FE721EC21EE004E303C /* ImageManager.swift in Sources */,
 				A449926521FFEB300063B9A3 /* StringOrInt.swift in Sources */,
 				A4D5346C21DF1697005E5835 /* ClanNameTableViewCell.swift in Sources */,

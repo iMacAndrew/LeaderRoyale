@@ -13,8 +13,7 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     let clashRoyaleApi = ClashRoyaleAPI()
     
     var clanInfo: ClanInfo?
-    var memberInfo: ClanInfo.Member?
-    var playerInfo: PlayerInfo?
+    var playerInfos: [PlayerInfo]?
     
     @IBOutlet weak var clanSearchTextField: UITextField!
     
@@ -41,7 +40,6 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
                 DispatchQueue.main.async {
                     self.clanInfo = clanInfo
                     self.checkPlayers()
-                    
                 }
             } else {
                 DispatchQueue.main.async {
@@ -56,10 +54,10 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     private func checkPlayers() {
         guard let playerIds = clanInfo?.returnPlayerTags else { return }
         
-        clashRoyaleApi.getPlayerInfo(playerTags: playerIds) { playerInfo in
-            if playerInfo != nil {
-                print(playerInfo)
-                self.performSegue(withIdentifier: "clanIdentifier", sender: self)
+        clashRoyaleApi.getPlayerInfo(playerTags: playerIds) { playerInfos in
+            if playerInfos != nil {
+                self.playerInfos = playerInfos
+                self.goToClanListTable()
             } else {
                 DispatchQueue.main.async {
                     self.displayAlert()
@@ -67,6 +65,22 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
+    }
+    
+    private func goToClanListTable() {
+        DispatchQueue.main.async {
+            if let navBar = self.navigationController {
+                navBar.popViewController(animated: true)
+                let clanTable = navBar.topViewController as? ClanListTableViewController
+                
+                if let clanInfo = self.clanInfo, let playerInfos = self.playerInfos {
+                    let clan = Clan(clanInfo: clanInfo, players: playerInfos)
+                    clanTable?.addNew(clan: clan)
+                }
+            } else {
+                self.performSegue(withIdentifier: "clanIdentifier", sender: self)
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -128,8 +142,9 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
             return
         }
     
-        if let clanInfo = self.clanInfo {
-            clanTable.clans = [clanInfo]
+        if let clanInfo = self.clanInfo, let playerInfos = self.playerInfos {
+            let clan = Clan(clanInfo: clanInfo, players: playerInfos)
+            clanTable.addNew(clan: clan)
         }
         
     }

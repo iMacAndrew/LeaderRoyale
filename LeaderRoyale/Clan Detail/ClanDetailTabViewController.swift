@@ -48,7 +48,8 @@ class ClanDetailTabViewController: TabmanViewController {
     
     func configure(with clanInfo: ClanInfo?) {
         for viewController in viewControllers {
-            if let clanMemberTableViewController = viewController as? ClanMemberTableViewController {
+            if let clanMemberTableViewController = viewController as? ClanMemberTableViewController
+            {
                 clanMemberTableViewController.configure(clanInfo: clanInfo)
             }
             if let recognitionTableViewController = viewController as? RecognitionTableViewController {

@@ -50,7 +50,7 @@ class ClashRoyaleAPI {
         task.resume()
     }
     
-    func getPlayerInfo(playerTags: [String], completion: @escaping (_ PlayerInfo: [PlayerInfo]?) -> Void) {
+    func getPlayerInfo(playerTags: [String], completion: @escaping (_ playerInfo: [PlayerInfo]?) -> Void) {
         let urlString = "https://api.royaleapi.com/player/\(playerTags.joined(separator: ","))"
         
         guard

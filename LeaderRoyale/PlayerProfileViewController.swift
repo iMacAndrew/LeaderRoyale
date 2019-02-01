@@ -49,6 +49,7 @@ class PlayerProfileViewController: UIViewController {
         if let playerDonationsReceived = memberInfo?.donationsReceived {
             playerDonationsReceivedLabel.text = "\(playerDonationsReceived)"
         }
+    
         
     }
 }
