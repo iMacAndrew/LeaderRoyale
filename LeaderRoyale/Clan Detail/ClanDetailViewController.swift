@@ -11,6 +11,9 @@ import UIKit
 class ClanDetailViewController: UITableViewController {
     
     var clanInfo: ClanInfo?
+    var playerInfo: PlayerInfo?
+    
+    
     var cellNames = ["Members", "Recognition", "Stats", "Clan War"]
     
     override func viewDidLoad() {
@@ -64,24 +67,25 @@ class ClanDetailViewController: UITableViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        
-        if let clanMembersTableViewController = segue.destination as? ClanMemberTableViewController {
-            clanMembersTableViewController.configure(clanInfo: clanInfo)
-        }
-        else if let clanRecognitionTableViewController = segue.destination as? RecognitionTableViewController {
-            clanRecognitionTableViewController.configure(clanInfo: clanInfo)
-        }
-        else if let clanStatTableViewController = segue.destination as? StatsTableViewController {
-            clanStatTableViewController.configure(clanInfo: clanInfo)
-        }
-        
-        else if let clanWarStatsTableViewController = segue.destination as? ClanWarStatsTableViewController {
-            clanWarStatsTableViewController.configure(clanInfo: clanInfo)
-        }
-        
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        super.prepare(for: segue, sender: sender)
+//
+//        if let clanMembersTableViewController = segue.destination as? ClanMemberTableViewController {
+//            clanMembersTableViewController.configure(clan: Clan)
+//        }
+//        else if let clanRecognitionTableViewController = segue.destination as? RecognitionTableViewController {
+//            clanRecognitionTableViewController.configure(clan: Clan)
+//        }
+//        else if let clanStatTableViewController = segue.destination as? StatsTableViewController {
+//            clanStatTableViewController.configure(clan: Clan)
+//        }
+//
+//        else if let clanWarStatsTableViewController = segue.destination as? ClanWarStatsTableViewController {
+//            clanWarStatsTableViewController.configure(clan: Clan)
+//        }
+//
+//    }
     
     private func setNavigationTitle() {
         navigationItem.title = clanInfo?.name

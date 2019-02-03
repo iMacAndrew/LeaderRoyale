@@ -11,7 +11,9 @@ import UIKit
 class ClanMemberTableViewController: UITableViewController {
     private var selectedMemberInfo: ClanInfo.Member?
     private var members = [ClanInfo.Member]()
-    
+    private var playerInfos = [PlayerInfo?]()
+    private var playerInfo: PlayerInfo?
+
     static func make() -> ClanMemberTableViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ClanMemberTableViewController") as! ClanMemberTableViewController
     }
@@ -70,7 +72,9 @@ class ClanMemberTableViewController: UITableViewController {
         
         if members.count >= indexPath.row {
             let memberInfo = members[indexPath.row]
+    
             cell.configure(with: memberInfo)
+    
         }
         
         return cell
@@ -86,12 +90,31 @@ class ClanMemberTableViewController: UITableViewController {
         if members.count >= indexPath.row {
             
             selectedMemberInfo = members[indexPath.row]
+            playerInfo = playerInfos[indexPath.row]
+            
             
         }
         
         performSegue(withIdentifier: "segueMemberVC2", sender: self)
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let playerProfileStatsTableViewController = segue.destination as? PlayerProfileTableViewController {
+            playerProfileStatsTableViewController.memberInfo = selectedMemberInfo
+            playerProfileStatsTableViewController.playerInfo = playerInfo
+            
+            playerProfileStatsTableViewController.configure()
+        }
+
+            
+    }
     
+    func configure(clan: Clan) {
+        setNavigationTitle(title: clan.clanInfo.name)
+        members = clan.clanInfo.members ?? []
+        playerInfos = clan.players
+    }
     
     private func setNavigationTitle(title: String?) {
         navigationItem.title = title
@@ -100,24 +123,6 @@ class ClanMemberTableViewController: UITableViewController {
         
         navigationController?.navigationBar.titleTextAttributes = attributes
         navigationController?.navigationBar.largeTitleTextAttributes = attributes
-    }
-    
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let playerProfile = segue.destination as? PlayerProfileViewController else {
-            return
-        }
-
-        if let selectedMemberInfo = selectedMemberInfo {
-            playerProfile.memberInfo = selectedMemberInfo
-        }
-        
-    }
-    
-    func configure(clanInfo: ClanInfo?) {
-        setNavigationTitle(title: clanInfo?.name)
-        members = clanInfo?.members ?? []
     }
     
     func sortByDonations() {

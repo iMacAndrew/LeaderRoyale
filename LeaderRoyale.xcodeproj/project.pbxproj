@@ -22,12 +22,17 @@
 		A412614D21A786FD005A4B24 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614C21A786FD005A4B24 /* GradientView.swift */; };
 		A412614F21A789FF005A4B24 /* magic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A412614E21A789FF005A4B24 /* magic.ttf */; };
 		A41952DB21A7A01D0086D964 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952DA21A7A01D0086D964 /* StyledButton.swift */; };
-		A41952DF21A8AE330086D964 /* PlayerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */; };
 		A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952E021AA6C3D0086D964 /* PlayerInfo.swift */; };
 		A44899722204124900EF00FC /* Clan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44899712204124900EF00FC /* Clan.swift */; };
 		A449926121F033890063B9A3 /* ClanDetailTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */; };
 		A449926321F2D5D90063B9A3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926221F2D5D90063B9A3 /* Colors.swift */; };
 		A449926521FFEB300063B9A3 /* StringOrInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926421FFEB300063B9A3 /* StringOrInt.swift */; };
+		A4668BD52206C1FE0019817F /* PlayerProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BD42206C1FE0019817F /* PlayerProfileTableViewController.swift */; };
+		A4668BD92206C48D0019817F /* PlayerProfileStatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BD72206C48D0019817F /* PlayerProfileStatsTableViewCell.swift */; };
+		A4668BDA2206C48D0019817F /* PlayerProfileStatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4668BD82206C48D0019817F /* PlayerProfileStatsTableViewCell.xib */; };
+		A4668BDC2206CAD10019817F /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BDB2206CAD10019817F /* Sections.swift */; };
+		A4668BDF2206CEFB0019817F /* PlayerDeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BDD2206CEFB0019817F /* PlayerDeckTableViewCell.swift */; };
+		A4668BE02206CEFB0019817F /* PlayerDeckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4668BDE2206CEFB0019817F /* PlayerDeckTableViewCell.xib */; };
 		A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47753F021A24CF9000098F6 /* AppDelegate.swift */; };
 		A47753F621A24CF9000098F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47753F421A24CF9000098F6 /* Main.storyboard */; };
 		A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */; };
@@ -72,12 +77,17 @@
 		A412614C21A786FD005A4B24 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A412614E21A789FF005A4B24 /* magic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = magic.ttf; sourceTree = "<group>"; };
 		A41952DA21A7A01D0086D964 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
-		A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileViewController.swift; sourceTree = "<group>"; };
 		A41952E021AA6C3D0086D964 /* PlayerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInfo.swift; sourceTree = "<group>"; };
 		A44899712204124900EF00FC /* Clan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clan.swift; sourceTree = "<group>"; };
 		A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanDetailTabViewController.swift; sourceTree = "<group>"; };
 		A449926221F2D5D90063B9A3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A449926421FFEB300063B9A3 /* StringOrInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringOrInt.swift; sourceTree = "<group>"; };
+		A4668BD42206C1FE0019817F /* PlayerProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileTableViewController.swift; sourceTree = "<group>"; };
+		A4668BD72206C48D0019817F /* PlayerProfileStatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileStatsTableViewCell.swift; sourceTree = "<group>"; };
+		A4668BD82206C48D0019817F /* PlayerProfileStatsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerProfileStatsTableViewCell.xib; sourceTree = "<group>"; };
+		A4668BDB2206CAD10019817F /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
+		A4668BDD2206CEFB0019817F /* PlayerDeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDeckTableViewCell.swift; sourceTree = "<group>"; };
+		A4668BDE2206CEFB0019817F /* PlayerDeckTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerDeckTableViewCell.xib; sourceTree = "<group>"; };
 		A47753ED21A24CF9000098F6 /* LeaderRoyale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeaderRoyale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47753F021A24CF9000098F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47753F521A24CF9000098F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -178,6 +188,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A4668BD62206C4540019817F /* Player Profile Table */ = {
+			isa = PBXGroup;
+			children = (
+				A4668BD42206C1FE0019817F /* PlayerProfileTableViewController.swift */,
+				A4668BD72206C48D0019817F /* PlayerProfileStatsTableViewCell.swift */,
+				A4668BD82206C48D0019817F /* PlayerProfileStatsTableViewCell.xib */,
+				A4668BDB2206CAD10019817F /* Sections.swift */,
+				A4668BDD2206CEFB0019817F /* PlayerDeckTableViewCell.swift */,
+				A4668BDE2206CEFB0019817F /* PlayerDeckTableViewCell.xib */,
+			);
+			path = "Player Profile Table";
+			sourceTree = "<group>";
+		};
 		A47753E421A24CF9000098F6 = {
 			isa = PBXGroup;
 			children = (
@@ -206,7 +229,7 @@
 				A412614C21A786FD005A4B24 /* GradientView.swift */,
 				A47753F421A24CF9000098F6 /* Main.storyboard */,
 				A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */,
-				A41952DE21A8AE330086D964 /* PlayerProfileViewController.swift */,
+				A4668BD62206C4540019817F /* Player Profile Table */,
 				1B4C5FE121EC1D34004E303C /* API */,
 				A47753FA21A24CFC000098F6 /* Assets.xcassets */,
 				A47753FC21A24CFC000098F6 /* LaunchScreen.storyboard */,
@@ -338,12 +361,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4668BDA2206C48D0019817F /* PlayerProfileStatsTableViewCell.xib in Resources */,
 				A4AB5FCF21F003C1000A0464 /* DonationsTableViewCell.xib in Resources */,
 				A4D5346F21DF171D005E5835 /* ClanNameTableViewCell.xib in Resources */,
 				A4AB5FC921EFF563000A0464 /* DonationListTableViewCell.xib in Resources */,
 				1B4C5FDE21EBBFED004E303C /* RecognitionTableViewCell.xib in Resources */,
 				A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */,
 				A4F24F3621B4A5ED004D437D /* ClanMemberTableViewCell.xib in Resources */,
+				A4668BE02206CEFB0019817F /* PlayerDeckTableViewCell.xib in Resources */,
 				A47753FB21A24CFC000098F6 /* Assets.xcassets in Resources */,
 				A412614F21A789FF005A4B24 /* magic.ttf in Resources */,
 				A4D5347821EDA1FD005E5835 /* StatTableViewCell.xib in Resources */,
@@ -413,10 +438,11 @@
 				A4AB5FC821EFF563000A0464 /* DonationListTableViewCell.swift in Sources */,
 				A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */,
 				1B4C5FE021EBC29E004E303C /* Recognition.swift in Sources */,
+				A4668BDF2206CEFB0019817F /* PlayerDeckTableViewCell.swift in Sources */,
 				A4F24F3421B4A5DF004D437D /* ClanMemberTableViewCell.swift in Sources */,
+				A4668BD52206C1FE0019817F /* PlayerProfileTableViewController.swift in Sources */,
 				A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */,
 				A449926321F2D5D90063B9A3 /* Colors.swift in Sources */,
-				A41952DF21A8AE330086D964 /* PlayerProfileViewController.swift in Sources */,
 				A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */,
 				A477540821A2552A000098F6 /* ClashRoyaleAPI.swift in Sources */,
 				A4D5347721EDA1FD005E5835 /* StatTableViewCell.swift in Sources */,
@@ -425,6 +451,7 @@
 				A4D5346A21DF15D8005E5835 /* ClanListTableViewController.swift in Sources */,
 				1B4C5FDA21EBBFBE004E303C /* RecognitionTableViewController.swift in Sources */,
 				A44899722204124900EF00FC /* Clan.swift in Sources */,
+				A4668BDC2206CAD10019817F /* Sections.swift in Sources */,
 				1B4C5FE721EC21EE004E303C /* ImageManager.swift in Sources */,
 				A449926521FFEB300063B9A3 /* StringOrInt.swift in Sources */,
 				A4D5346C21DF1697005E5835 /* ClanNameTableViewCell.swift in Sources */,
@@ -432,6 +459,7 @@
 				A412614B21A65EC9005A4B24 /* ClanMemberTableViewController.swift in Sources */,
 				A4AB5FCB21EFF69D000A0464 /* DonationList.swift in Sources */,
 				A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */,
+				A4668BD92206C48D0019817F /* PlayerProfileStatsTableViewCell.swift in Sources */,
 				A4AB5FCE21F003C1000A0464 /* DonationsTableViewCell.swift in Sources */,
 				A4AB5FC521EFF50E000A0464 /* DonationListTableViewController.swift in Sources */,
 				A412614D21A786FD005A4B24 /* GradientView.swift in Sources */,

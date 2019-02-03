@@ -11,6 +11,9 @@ import Tabman
 
 class ClanDetailTabViewController: TabmanViewController {
 
+    var clanInfo: ClanInfo?
+    var playerInfos: [PlayerInfo]?
+    
     private var viewControllers = [ClanMemberTableViewController.make(), RecognitionTableViewController.make(), StatsTableViewController.make() ,ClanWarStatsTableViewController.make()]
         
     override func viewDidLoad() {
@@ -46,20 +49,21 @@ class ClanDetailTabViewController: TabmanViewController {
          navigationItem.rightBarButtonItem = viewControllers[index].navigationItem.rightBarButtonItem
     }
     
-    func configure(with clanInfo: ClanInfo?) {
+    func configure(with clan: Clan) {
+        
         for viewController in viewControllers {
             if let clanMemberTableViewController = viewController as? ClanMemberTableViewController
             {
-                clanMemberTableViewController.configure(clanInfo: clanInfo)
+                clanMemberTableViewController.configure(clan: clan)
             }
             if let recognitionTableViewController = viewController as? RecognitionTableViewController {
-                recognitionTableViewController.configure(clanInfo: clanInfo)
+                recognitionTableViewController.configure(clan: clan)
             }
             if let statsTableViewController = viewController as? StatsTableViewController {
-                statsTableViewController.configure(clanInfo: clanInfo)
+                statsTableViewController.configure(clan: clan)
             }
             if let clanWarStatsTableViewController = viewController as? ClanWarStatsTableViewController {
-                clanWarStatsTableViewController.configure(clanInfo: clanInfo)
+                clanWarStatsTableViewController.configure(clan: clan)
             }
             
             

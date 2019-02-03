@@ -76,27 +76,27 @@ class RecognitionTableViewController: UITableViewController {
         return cell
     }
     
-    func configure(clanInfo: ClanInfo?) {
-        if let member = clanInfo?.memberWithMostDonations, let donations = member.donations {
+    func configure(clan: Clan) {
+        if let member = clan.clanInfo.memberWithMostDonations, let donations = member.donations {
             let recognitionForMostDonations = Recognition(title: "Most Donations", subTitle: "This week", playerName: member.name ?? "", stat: String(donations.withCommas()))
             
             recognitions.append(recognitionForMostDonations)
             
         }
         
-        if let member = clanInfo?.memberWithMostDonationsReceived, let donationsReceived = member.donationsReceived {
+        if let member = clan.clanInfo.memberWithMostDonationsReceived, let donationsReceived = member.donationsReceived {
             let recognitionForMostDonationsReceived = Recognition(title: "Most Donations Received", subTitle: "This week", playerName: member.name ?? "", stat: String(donationsReceived.withCommas()))
             
             recognitions.append(recognitionForMostDonationsReceived)
         }
         
-        if let member = clanInfo?.memberThatClimbedTheMostRanks {
+        if let member = clan.clanInfo.memberThatClimbedTheMostRanks {
             let recognitionForMembersThatClimbedTheMostRanks = Recognition(title: "Most Ranks Climbed", subTitle: "This week", playerName: member.name ?? "", stat: String(member.ranksClimbed))
             
             recognitions.append(recognitionForMembersThatClimbedTheMostRanks)
         }
         
-        if let member = clanInfo?.memberWithHighestDonationRatio {
+        if let member = clan.clanInfo.memberWithHighestDonationRatio {
             let recognitionForHighestDonationRatio = Recognition(title: "Highest Donation Ratio", subTitle: "This week", playerName: member.name ?? "", stat: String(member.donationRatio) + "%")
         
             recognitions.append(recognitionForHighestDonationRatio)
