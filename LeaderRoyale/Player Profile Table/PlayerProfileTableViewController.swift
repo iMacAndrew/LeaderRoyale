@@ -24,6 +24,15 @@ class PlayerProfileTableViewController: UITableViewController {
         
     }
     
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        tableView.rowHeight = UITableView.automaticDimension
+//        tableView.estimatedRowHeight = 180.0
+//
+//    }
+    
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
@@ -56,17 +65,16 @@ class PlayerProfileTableViewController: UITableViewController {
     private func createPlayerDeckCell(indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerDeckTableViewCell", for: indexPath) as! PlayerDeckTableViewCell
         
-        cell.configure(section: sections[indexPath.row])
-        
+        cell.configure(section: sections[indexPath.row], playerInfo: playerInfo)
+
         return cell
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180.0
+        return UITableView.automaticDimension
     }
-    
+
     func configure() {
-        
             let statSection = Sections(title: "Stats")
             
             sections.append(statSection)

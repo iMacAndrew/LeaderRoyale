@@ -33,6 +33,8 @@
 		A4668BDC2206CAD10019817F /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BDB2206CAD10019817F /* Sections.swift */; };
 		A4668BDF2206CEFB0019817F /* PlayerDeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BDD2206CEFB0019817F /* PlayerDeckTableViewCell.swift */; };
 		A4668BE02206CEFB0019817F /* PlayerDeckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4668BDE2206CEFB0019817F /* PlayerDeckTableViewCell.xib */; };
+		A4668BE3220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BE1220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift */; };
+		A4668BE4220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4668BE2220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib */; };
 		A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47753F021A24CF9000098F6 /* AppDelegate.swift */; };
 		A47753F621A24CF9000098F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47753F421A24CF9000098F6 /* Main.storyboard */; };
 		A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */; };
@@ -88,6 +90,8 @@
 		A4668BDB2206CAD10019817F /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
 		A4668BDD2206CEFB0019817F /* PlayerDeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDeckTableViewCell.swift; sourceTree = "<group>"; };
 		A4668BDE2206CEFB0019817F /* PlayerDeckTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerDeckTableViewCell.xib; sourceTree = "<group>"; };
+		A4668BE1220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerGeneralInfoTableViewCell.swift; sourceTree = "<group>"; };
+		A4668BE2220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerGeneralInfoTableViewCell.xib; sourceTree = "<group>"; };
 		A47753ED21A24CF9000098F6 /* LeaderRoyale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeaderRoyale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47753F021A24CF9000098F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47753F521A24CF9000098F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 				A4668BDB2206CAD10019817F /* Sections.swift */,
 				A4668BDD2206CEFB0019817F /* PlayerDeckTableViewCell.swift */,
 				A4668BDE2206CEFB0019817F /* PlayerDeckTableViewCell.xib */,
+				A4668BE1220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift */,
+				A4668BE2220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib */,
 			);
 			path = "Player Profile Table";
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				A4668BDA2206C48D0019817F /* PlayerProfileStatsTableViewCell.xib in Resources */,
 				A4AB5FCF21F003C1000A0464 /* DonationsTableViewCell.xib in Resources */,
 				A4D5346F21DF171D005E5835 /* ClanNameTableViewCell.xib in Resources */,
+				A4668BE4220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib in Resources */,
 				A4AB5FC921EFF563000A0464 /* DonationListTableViewCell.xib in Resources */,
 				1B4C5FDE21EBBFED004E303C /* RecognitionTableViewCell.xib in Resources */,
 				A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */,
@@ -443,6 +450,7 @@
 				A4668BD52206C1FE0019817F /* PlayerProfileTableViewController.swift in Sources */,
 				A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */,
 				A449926321F2D5D90063B9A3 /* Colors.swift in Sources */,
+				A4668BE3220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift in Sources */,
 				A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */,
 				A477540821A2552A000098F6 /* ClashRoyaleAPI.swift in Sources */,
 				A4D5347721EDA1FD005E5835 /* StatTableViewCell.swift in Sources */,

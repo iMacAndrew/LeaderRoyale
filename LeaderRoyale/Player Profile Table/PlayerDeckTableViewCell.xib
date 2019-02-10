@@ -17,27 +17,88 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="PlayerDeckTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerDeckTableViewCell" rowHeight="96" id="KGk-i7-Jjw" customClass="PlayerDeckTableViewCell" customModule="LeaderRoyale" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="347" height="96"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="PlayerDeckTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerDeckTableViewCell" rowHeight="295" id="KGk-i7-Jjw" customClass="PlayerDeckTableViewCell" customModule="LeaderRoyale" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="347" height="295"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="PlayerDeckTableViewCell" customModule="LeaderRoyale" customModuleProvider="target">
-                <rect key="frame" x="0.0" y="0.0" width="347" height="95.5"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="347" height="294.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LC-tS-u3Y">
-                        <rect key="frame" x="143" y="11" width="60" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LC-tS-u3Y">
+                        <rect key="frame" x="144" y="11" width="59.5" height="57.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="57.5" id="dTh-5Q-e3d"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Klg-fb-71s">
+                        <rect key="frame" x="16" y="70.5" width="315" height="174"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WC9-WJ-rVs">
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="82"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KKg-b3-nlT">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="82"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bo8-qv-y4P">
+                                        <rect key="frame" x="81.5" y="0.0" width="71" height="82"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kcz-18-ywY">
+                                        <rect key="frame" x="162.5" y="0.0" width="71.5" height="82"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HBY-i7-PZo">
+                                        <rect key="frame" x="244" y="0.0" width="71" height="82"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hdk-fd-azg">
+                                <rect key="frame" x="0.0" y="92" width="315" height="82"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mvt-WS-Glm">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="82"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CQa-yw-mu6">
+                                        <rect key="frame" x="81.5" y="0.0" width="71" height="82"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LEY-xk-yrL">
+                                        <rect key="frame" x="162.5" y="0.0" width="71.5" height="82"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rPw-rH-KYX">
+                                        <rect key="frame" x="244" y="0.0" width="71" height="82"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="174" id="MQ3-y8-S3E"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Klg-fb-71s" secondAttribute="trailing" constant="16" id="Ihd-lO-56q"/>
+                    <constraint firstItem="Klg-fb-71s" firstAttribute="top" secondItem="3LC-tS-u3Y" secondAttribute="bottom" constant="2" id="UR3-gp-5zO"/>
+                    <constraint firstItem="3LC-tS-u3Y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="Vcp-n4-oy4"/>
+                    <constraint firstItem="3LC-tS-u3Y" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="paT-7A-fyi"/>
+                    <constraint firstItem="Klg-fb-71s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="w6K-jT-SWh"/>
+                    <constraint firstAttribute="bottom" secondItem="Klg-fb-71s" secondAttribute="bottom" constant="50" id="x3k-RQ-zxy"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="sectionTitle" destination="3LC-tS-u3Y" id="9nN-Xn-4tr"/>
+                <outletCollection property="cardImageViews" destination="kcz-18-ywY" collectionClass="NSMutableArray" id="WoJ-by-BPX"/>
+                <outletCollection property="cardImageViews" destination="HBY-i7-PZo" collectionClass="NSMutableArray" id="FWm-7V-wot"/>
+                <outletCollection property="cardImageViews" destination="rPw-rH-KYX" collectionClass="NSMutableArray" id="KdS-vf-8CQ"/>
+                <outletCollection property="cardImageViews" destination="LEY-xk-yrL" collectionClass="NSMutableArray" id="HKr-I5-7oI"/>
+                <outletCollection property="cardImageViews" destination="CQa-yw-mu6" collectionClass="NSMutableArray" id="HI7-PU-Kpg"/>
+                <outletCollection property="cardImageViews" destination="bo8-qv-y4P" collectionClass="NSMutableArray" id="dcH-lU-dpG"/>
+                <outletCollection property="cardImageViews" destination="KKg-b3-nlT" collectionClass="NSMutableArray" id="9yK-nH-AVl"/>
+                <outletCollection property="cardImageViews" destination="mvt-WS-Glm" collectionClass="NSMutableArray" id="Z4N-cC-5oY"/>
             </connections>
-            <point key="canvasLocation" x="159.19999999999999" y="144.82758620689657"/>
+            <point key="canvasLocation" x="159.19999999999999" y="234.33283358320841"/>
         </tableViewCell>
     </objects>
 </document>

@@ -92,7 +92,6 @@ class ClanMemberTableViewController: UITableViewController {
             selectedMemberInfo = members[indexPath.row]
             playerInfo = playerInfos[indexPath.row]
             
-            
         }
         
         performSegue(withIdentifier: "segueMemberVC2", sender: self)
@@ -106,8 +105,7 @@ class ClanMemberTableViewController: UITableViewController {
             
             playerProfileStatsTableViewController.configure()
         }
-
-            
+        
     }
     
     func configure(clan: Clan) {
@@ -154,7 +152,6 @@ class ClanMemberTableViewController: UITableViewController {
             return firstMember.roleAsInt > secondMember.roleAsInt
         }
         tableView.reloadData()
-        
     }
 
 }

@@ -57,8 +57,10 @@ extension PlayerInfo {
         let threeCrownWins: Int?
         let cardsFound: Int?
         let favoriteCard: Card?
-        
-        
+        let totalDonations: Int?
+        let challengeMaxWins: Int?
+        let challengeCardsWon: Int?
+        let level: Int?
     }
     
     struct Games: Decodable {
