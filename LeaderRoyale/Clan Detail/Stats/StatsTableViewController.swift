@@ -52,6 +52,8 @@ class StatsTableViewController: UITableViewController {
         
     }
     
+   
+    
     func configure(clan: Clan) {
         let memberPercentage = clan.clanInfo.memberPercentages
         let memberCount = clan.clanInfo.countMembers

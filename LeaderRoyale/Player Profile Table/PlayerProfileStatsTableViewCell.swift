@@ -47,6 +47,19 @@ class PlayerProfileStatsTableViewCell: UITableViewCell {
         if let playerFavoriteCard = playerInfo.stats?.favoriteCard?.name {
             playerFavCard.text = playerFavoriteCard
         }
+        
+        decorateCell()
+    }
+    
+    private func decorateCell() {
+        backgroundColor = .dark
+        sectionTitle.textColor = .white
+        playerWinsLabel.textColor = .white
+        playerThreeCrownWinsLabel.textColor = .white
+        playerHighestTrophiesLabel.textColor = .white
+        playerCardsFoundLabel.textColor = .white
+        playerTotalDonationsLabel.textColor = .white
+        playerFavCard.textColor = .white
     }
     
 }

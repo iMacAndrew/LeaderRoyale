@@ -18,9 +18,14 @@ class PlayerProfileTableViewController: UITableViewController {
         super.viewDidLoad()
         setNavigationTitle()
         view.backgroundColor = .dark
+        
+        tableView.register(UINib(nibName: "PlayerGeneralInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerGeneralInfoTableViewCell")
+        
         tableView.register(UINib(nibName: "PlayerProfileStatsTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerProfileStatsTableViewCell")
         
         tableView.register(UINib(nibName: "PlayerDeckTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerDeckTableViewCell")
+        
+        tableView.register(UINib(nibName: "PlayerSeasonTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerSeasonTableViewCell")
         
     }
     
@@ -34,7 +39,6 @@ class PlayerProfileTableViewController: UITableViewController {
     
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
 
@@ -45,10 +49,31 @@ class PlayerProfileTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         if indexPath.row == 0 {
-            return createPlayerProfileStatsCell(indexPath: indexPath)
-        } else {
-            return createPlayerDeckCell(indexPath: indexPath)
+            return createPlayerGeneralInfoCell(indexPath: indexPath)
         }
+        else if indexPath.row == 1 {
+            return createPlayerProfileStatsCell(indexPath: indexPath)
+        }
+        else if indexPath.row == 2 {
+            return createPlayerDeckCell(indexPath: indexPath)
+        } else {
+            return createPlayerSeasonCell(indexPath: indexPath)
+        }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    private func createPlayerGeneralInfoCell(indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerGeneralInfoTableViewCell", for: indexPath) as! PlayerGeneralInfoTableViewCell
+        
+        if let playerInfo = playerInfo {
+            cell.configure(section: sections[indexPath.row], playerInfo: playerInfo)
+        }
+        
+        return cell
+        
     }
     
     private func createPlayerProfileStatsCell(indexPath: IndexPath) -> UITableViewCell {
@@ -69,28 +94,47 @@ class PlayerProfileTableViewController: UITableViewController {
 
         return cell
     }
+    
+    private func createPlayerSeasonCell(indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerSeasonTableViewCell", for: indexPath) as! PlayerSeasonTableViewCell
+        
+        if let playerInfo = playerInfo {
+            cell.configure(section: sections[indexPath.row], playerInfo: playerInfo)
+        }
+        
+        return cell
+    }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
 
     func configure() {
-            let statSection = Sections(title: "Stats")
+        
+        let generalSection = Sections(title: "Player Profile")
+        
+        sections.append(generalSection)
+        
+        let statSection = Sections(title: "Stats")
             
-            sections.append(statSection)
+        sections.append(statSection)
         
-            let deckSection = Sections(title: "Deck")
+        let deckSection = Sections(title: "Deck")
         
-            sections.append(deckSection)
+        sections.append(deckSection)
+        
+        let leagueSection = Sections(title: "League")
+        
+        sections.append(leagueSection)
     }
 
     private func setNavigationTitle() {
-        navigationItem.title = "Profile"
+        navigationItem.title = "Player Profile"
         
-        let attributes: [NSAttributedString.Key: Any] = [.font: UIFont(name: "supercell-magic", size: 20)!]
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: UIColor.white,
+             NSAttributedString.Key.font: UIFont(name: "supercell-magic", size: 15)!]
         
-        navigationController?.navigationBar.titleTextAttributes = attributes
-        navigationController?.navigationBar.largeTitleTextAttributes = attributes
     }
 
 }

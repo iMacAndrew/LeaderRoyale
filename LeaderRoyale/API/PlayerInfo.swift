@@ -85,7 +85,7 @@ extension PlayerInfo {
         let maxLevel: Int?
         let icon: String?
         let key: String?
-        let elixer: Int?
+        let elixir: Int?
         let type: String?
         let rarity: String?
         let arena: Int?

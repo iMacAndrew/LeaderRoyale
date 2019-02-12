@@ -15,10 +15,11 @@ class ClanListTableViewController: UITableViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .dark
         setNavigationTitle()
         tableView.register(UINib(nibName: "ClanNameTableViewCell", bundle: nil), forCellReuseIdentifier: "ClanNameTableViewCell")
     }
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -71,10 +72,9 @@ class ClanListTableViewController: UITableViewController {
     private func setNavigationTitle() {
         navigationItem.title = "Clans"
         
-        let attributes: [NSAttributedString.Key: Any] = [.font: UIFont(name: "supercell-magic", size: 20)!]
-        
-        navigationController?.navigationBar.titleTextAttributes = attributes
-        navigationController?.navigationBar.largeTitleTextAttributes = attributes
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: UIColor.white,
+             NSAttributedString.Key.font: UIFont(name: "supercell-magic", size: 15)!]
     }
     
 }

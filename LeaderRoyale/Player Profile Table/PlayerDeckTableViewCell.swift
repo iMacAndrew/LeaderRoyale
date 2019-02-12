@@ -11,6 +11,7 @@ import UIKit
 class PlayerDeckTableViewCell: UITableViewCell {
     @IBOutlet weak var sectionTitle: UILabel!
     @IBOutlet var cardImageViews: [UIImageView]!
+    @IBOutlet weak var averageElixerLabel: UILabel!
     
     
     func configure(section: Sections, playerInfo: PlayerInfo?) {
@@ -18,7 +19,11 @@ class PlayerDeckTableViewCell: UITableViewCell {
         
         setCardImages(playerInfo: playerInfo)
         
+        let averageElixer = getAverageElixer(playerInfo: playerInfo)
         
+        averageElixerLabel.text = String(averageElixer)
+        
+        decorateCell()
     }
     
     func setCardImages(playerInfo: PlayerInfo?) {
@@ -28,6 +33,7 @@ class PlayerDeckTableViewCell: UITableViewCell {
         }
         
         for i in 0..<currentDeck.count {
+            
             
             if let cardIconUrl = currentDeck[i].icon {
                 ImageManager.getImage(url: cardIconUrl) { (_, cardImage) in
@@ -43,6 +49,34 @@ class PlayerDeckTableViewCell: UITableViewCell {
             
             
         }
+    }
+    
+    func getAverageElixer(playerInfo: PlayerInfo?) -> Double {
+        
+        guard let currentDeck = playerInfo?.currentDeck else {
+            return 0.0
+        }
+        
+        var totalElixir = 0
+        
+        for card in currentDeck {
+            
+            if let elixir = card.elixir {
+                totalElixir += elixir
+            }
+            
+        }
+        
+        let averageElixir = Double(totalElixir) / Double(currentDeck.count)
+        
+        return averageElixir
+        
+    }
+    
+    private func decorateCell() {
+        backgroundColor = .dark
+        sectionTitle.textColor = .white
+        averageElixerLabel.textColor = .white
     }
     
 }

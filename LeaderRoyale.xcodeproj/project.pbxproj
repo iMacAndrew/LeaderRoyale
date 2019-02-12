@@ -35,6 +35,8 @@
 		A4668BE02206CEFB0019817F /* PlayerDeckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4668BDE2206CEFB0019817F /* PlayerDeckTableViewCell.xib */; };
 		A4668BE3220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BE1220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift */; };
 		A4668BE4220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4668BE2220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib */; };
+		A4668BE722136E030019817F /* PlayerSeasonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BE522136E030019817F /* PlayerSeasonTableViewCell.swift */; };
+		A4668BE822136E030019817F /* PlayerSeasonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4668BE622136E030019817F /* PlayerSeasonTableViewCell.xib */; };
 		A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47753F021A24CF9000098F6 /* AppDelegate.swift */; };
 		A47753F621A24CF9000098F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47753F421A24CF9000098F6 /* Main.storyboard */; };
 		A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */; };
@@ -92,6 +94,8 @@
 		A4668BDE2206CEFB0019817F /* PlayerDeckTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerDeckTableViewCell.xib; sourceTree = "<group>"; };
 		A4668BE1220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerGeneralInfoTableViewCell.swift; sourceTree = "<group>"; };
 		A4668BE2220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerGeneralInfoTableViewCell.xib; sourceTree = "<group>"; };
+		A4668BE522136E030019817F /* PlayerSeasonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSeasonTableViewCell.swift; sourceTree = "<group>"; };
+		A4668BE622136E030019817F /* PlayerSeasonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerSeasonTableViewCell.xib; sourceTree = "<group>"; };
 		A47753ED21A24CF9000098F6 /* LeaderRoyale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeaderRoyale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47753F021A24CF9000098F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47753F521A24CF9000098F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 				A4668BDE2206CEFB0019817F /* PlayerDeckTableViewCell.xib */,
 				A4668BE1220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift */,
 				A4668BE2220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib */,
+				A4668BE522136E030019817F /* PlayerSeasonTableViewCell.swift */,
+				A4668BE622136E030019817F /* PlayerSeasonTableViewCell.xib */,
 			);
 			path = "Player Profile Table";
 			sourceTree = "<group>";
@@ -373,6 +379,7 @@
 				A4668BE4220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib in Resources */,
 				A4AB5FC921EFF563000A0464 /* DonationListTableViewCell.xib in Resources */,
 				1B4C5FDE21EBBFED004E303C /* RecognitionTableViewCell.xib in Resources */,
+				A4668BE822136E030019817F /* PlayerSeasonTableViewCell.xib in Resources */,
 				A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */,
 				A4F24F3621B4A5ED004D437D /* ClanMemberTableViewCell.xib in Resources */,
 				A4668BE02206CEFB0019817F /* PlayerDeckTableViewCell.xib in Resources */,
@@ -459,6 +466,7 @@
 				A4D5346A21DF15D8005E5835 /* ClanListTableViewController.swift in Sources */,
 				1B4C5FDA21EBBFBE004E303C /* RecognitionTableViewController.swift in Sources */,
 				A44899722204124900EF00FC /* Clan.swift in Sources */,
+				A4668BE722136E030019817F /* PlayerSeasonTableViewCell.swift in Sources */,
 				A4668BDC2206CAD10019817F /* Sections.swift in Sources */,
 				1B4C5FE721EC21EE004E303C /* ImageManager.swift in Sources */,
 				A449926521FFEB300063B9A3 /* StringOrInt.swift in Sources */,

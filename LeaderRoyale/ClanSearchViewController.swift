@@ -86,6 +86,8 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .dark
+        
         clanSearchTextField.autocapitalizationType = UITextAutocapitalizationType.allCharacters
 
         clanSearchTextField.addTarget(self, action: #selector(ClanSearchViewController.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
@@ -133,6 +135,10 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
         clanSearchTextField.resignFirstResponder()
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard

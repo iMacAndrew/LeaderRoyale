@@ -49,6 +49,8 @@ class ClanDetailTabViewController: TabmanViewController {
          navigationItem.rightBarButtonItem = viewControllers[index].navigationItem.rightBarButtonItem
     }
     
+    
+    
     func configure(with clan: Clan) {
         
         for viewController in viewControllers {

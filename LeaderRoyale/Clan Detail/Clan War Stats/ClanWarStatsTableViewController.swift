@@ -37,6 +37,8 @@ class ClanWarStatsTableViewController: UITableViewController {
         return cell
     }
     
+    
+    
     func configure(clan: Clan) {
         
     }
