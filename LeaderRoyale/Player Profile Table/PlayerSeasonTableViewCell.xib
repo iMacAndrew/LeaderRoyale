@@ -17,27 +17,198 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="238" id="KGk-i7-Jjw" customClass="PlayerSeasonTableViewCell" customModule="LeaderRoyale" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="238"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="316" id="KGk-i7-Jjw" customClass="PlayerSeasonTableViewCell" customModule="LeaderRoyale" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="316"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="237.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="321" height="315.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="League" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzU-Gq-wPS">
-                        <rect key="frame" x="117" y="12" width="86" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ge9-uZ-GgB">
+                        <rect key="frame" x="79" y="45.5" width="163" height="143"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sGH-Zz-XnL">
+                                <rect key="frame" x="0.0" y="0.0" width="163" height="31"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="OA2-a2-4ie">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Season" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="CzN-UK-hqg">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="31"/>
+                                                <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AYn-G6-Lil">
+                                        <rect key="frame" x="91.5" y="0.0" width="71.5" height="31"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ho5-kI-yTJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="31"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy" translatesAutoresizingMaskIntoConstraints="NO" id="tjI-7P-Yvi">
+                                                        <rect key="frame" x="48.5" y="5.5" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="CWY-bU-DWF"/>
+                                                            <constraint firstAttribute="width" constant="20" id="FLt-eJ-EB4"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="k0I-lb-r3u">
+                                                        <rect key="frame" x="4" y="5.5" width="42.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.61176470589999998" green="0.61568627450000002" blue="0.63921568630000003" alpha="0.29225352110000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="k0I-lb-r3u" firstAttribute="leading" secondItem="Ho5-kI-yTJ" secondAttribute="leading" constant="4" id="1Mp-J9-E8N"/>
+                                                    <constraint firstItem="tjI-7P-Yvi" firstAttribute="leading" secondItem="k0I-lb-r3u" secondAttribute="trailing" constant="2" id="Cad-d0-Omn"/>
+                                                    <constraint firstItem="k0I-lb-r3u" firstAttribute="centerY" secondItem="Ho5-kI-yTJ" secondAttribute="centerY" id="FSJ-5d-CQZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tjI-7P-Yvi" secondAttribute="trailing" constant="3" id="THh-YC-0PU"/>
+                                                    <constraint firstItem="tjI-7P-Yvi" firstAttribute="centerY" secondItem="k0I-lb-r3u" secondAttribute="centerY" id="TsI-6R-WIp"/>
+                                                    <constraint firstAttribute="width" constant="71.5" id="WgD-rc-b1K"/>
+                                                    <constraint firstAttribute="height" constant="31" id="YvU-a0-CCN"/>
+                                                    <constraint firstItem="tjI-7P-Yvi" firstAttribute="bottom" secondItem="k0I-lb-r3u" secondAttribute="bottom" id="nYJ-lD-bCb"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4nn-7M-YYC">
+                                <rect key="frame" x="0.0" y="56" width="163" height="31"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="O13-yf-izp">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Season" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="tZv-4u-pL8">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="31"/>
+                                                <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PMX-VK-SNq">
+                                        <rect key="frame" x="91.5" y="0.0" width="71.5" height="31"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztP-qW-CXy">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="31"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy" translatesAutoresizingMaskIntoConstraints="NO" id="p4C-2M-RJG">
+                                                        <rect key="frame" x="48.5" y="5.5" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="3I1-mG-jdo"/>
+                                                            <constraint firstAttribute="width" constant="20" id="lHn-FE-2St"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="azV-dK-AF7">
+                                                        <rect key="frame" x="4" y="5.5" width="42.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.61176470589999998" green="0.61568627450000002" blue="0.63921568630000003" alpha="0.29225352110000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="azV-dK-AF7" firstAttribute="leading" secondItem="ztP-qW-CXy" secondAttribute="leading" constant="4" id="2RL-fF-DN7"/>
+                                                    <constraint firstAttribute="height" constant="31" id="6XC-Cq-XvQ"/>
+                                                    <constraint firstAttribute="width" constant="71.5" id="H9J-fC-yII"/>
+                                                    <constraint firstItem="p4C-2M-RJG" firstAttribute="bottom" secondItem="azV-dK-AF7" secondAttribute="bottom" id="Mop-BE-cmN"/>
+                                                    <constraint firstAttribute="trailing" secondItem="p4C-2M-RJG" secondAttribute="trailing" constant="3" id="NfK-h9-JQg"/>
+                                                    <constraint firstItem="azV-dK-AF7" firstAttribute="centerY" secondItem="ztP-qW-CXy" secondAttribute="centerY" id="TY4-Ft-USG"/>
+                                                    <constraint firstItem="p4C-2M-RJG" firstAttribute="leading" secondItem="azV-dK-AF7" secondAttribute="trailing" constant="2" id="lEL-Dc-zo5"/>
+                                                    <constraint firstItem="p4C-2M-RJG" firstAttribute="centerY" secondItem="azV-dK-AF7" secondAttribute="centerY" id="uI1-rK-Tng"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CSc-5c-HZ2">
+                                <rect key="frame" x="0.0" y="112" width="163" height="31"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="zxw-7E-ug0">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Season" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="fGm-8O-2bE">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="31"/>
+                                                <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lgO-6t-nEq">
+                                        <rect key="frame" x="91.5" y="0.0" width="71.5" height="31"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJ0-2P-FpX">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="31"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy" translatesAutoresizingMaskIntoConstraints="NO" id="45z-qC-Enk">
+                                                        <rect key="frame" x="48.5" y="5.5" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="ipr-KZ-XBA"/>
+                                                            <constraint firstAttribute="width" constant="20" id="pdp-wI-0Eu"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="ADt-8t-gkM">
+                                                        <rect key="frame" x="4" y="5.5" width="42.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.61176470589999998" green="0.61568627450000002" blue="0.63921568630000003" alpha="0.29225352110000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="45z-qC-Enk" firstAttribute="bottom" secondItem="ADt-8t-gkM" secondAttribute="bottom" id="63h-Yj-ByP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="45z-qC-Enk" secondAttribute="trailing" constant="3" id="a17-P2-vRd"/>
+                                                    <constraint firstAttribute="height" constant="31" id="fk8-42-pIF"/>
+                                                    <constraint firstItem="45z-qC-Enk" firstAttribute="centerY" secondItem="ADt-8t-gkM" secondAttribute="centerY" id="hM6-4O-A0g"/>
+                                                    <constraint firstAttribute="width" constant="71.5" id="n73-Id-iJL"/>
+                                                    <constraint firstItem="ADt-8t-gkM" firstAttribute="centerY" secondItem="gJ0-2P-FpX" secondAttribute="centerY" id="oQo-ty-S2P"/>
+                                                    <constraint firstItem="45z-qC-Enk" firstAttribute="leading" secondItem="ADt-8t-gkM" secondAttribute="trailing" constant="2" id="ySq-hu-WhI"/>
+                                                    <constraint firstItem="ADt-8t-gkM" firstAttribute="leading" secondItem="gJ0-2P-FpX" secondAttribute="leading" constant="4" id="zsC-dy-P1M"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzU-Gq-wPS">
+                        <rect key="frame" x="117.5" y="12" width="86" height="25.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="ohM-w3-3FX"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="wzU-Gq-wPS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="9CB-dT-kpP"/>
+                    <constraint firstItem="ge9-uZ-GgB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Gzf-Xw-xeZ"/>
+                    <constraint firstItem="ge9-uZ-GgB" firstAttribute="top" secondItem="wzU-Gq-wPS" secondAttribute="bottom" constant="8" symbolic="YES" id="Xls-Db-Eug"/>
+                    <constraint firstItem="ge9-uZ-GgB" firstAttribute="centerX" secondItem="wzU-Gq-wPS" secondAttribute="centerX" id="j5R-pZ-dte"/>
+                    <constraint firstItem="ge9-uZ-GgB" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="qut-lc-VSe"/>
+                    <constraint firstItem="wzU-Gq-wPS" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wFE-Zc-JwH"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="bestSeasonTrophyLabel" destination="ADt-8t-gkM" id="5Rr-1K-sKt"/>
+                <outlet property="currentSeasonTrophyLabel" destination="k0I-lb-r3u" id="8Ee-1b-rop"/>
+                <outlet property="previousSeasonTrophyLabel" destination="azV-dK-AF7" id="556-Bl-CWe"/>
                 <outlet property="titleLabel" destination="wzU-Gq-wPS" id="CDq-OU-Nuh"/>
             </connections>
-            <point key="canvasLocation" x="120" y="149.32533733133434"/>
+            <point key="canvasLocation" x="119.2" y="184.40779610194903"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="trophy" width="250" height="250"/>
+    </resources>
 </document>

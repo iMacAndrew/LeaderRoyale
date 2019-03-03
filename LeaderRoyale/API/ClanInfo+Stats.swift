@@ -209,4 +209,8 @@ extension ClanInfo {
         
     }
     
+//    var activityLevel: Int {
+//        
+//    }
+    
 }
