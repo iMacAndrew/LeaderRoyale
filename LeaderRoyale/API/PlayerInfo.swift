@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PlayerInfo: Decodable {
+struct PlayerInfo: Codable {
     let tag: String?
     let name: String?
     let trophies: Int?
@@ -26,14 +26,14 @@ struct PlayerInfo: Decodable {
 }
 
 extension PlayerInfo {
-    struct Arena: Decodable {
+    struct Arena: Codable {
         let name: String?
         let arena: String?
         let arenaID: Int?
         let trophyLimit: Int?
     }
     
-    struct Clan: Decodable {
+    struct Clan: Codable {
         let tag: String?
         let name: String?
         let role: String?
@@ -42,7 +42,7 @@ extension PlayerInfo {
         let donationsDelta: Int?
         let badge: Badge?
         
-        struct Badge: Decodable {
+        struct Badge: Codable {
             let name: String?
             let category: String?
             let id: Int?
@@ -50,7 +50,7 @@ extension PlayerInfo {
         }
     }
     
-    struct Stats: Decodable {
+    struct Stats: Codable {
         let clanCardsCollected: Int?
         let tournamentCardsWon: Int?
         let maxTrophies: Int?
@@ -63,7 +63,7 @@ extension PlayerInfo {
         let level: Int?
     }
     
-    struct Games: Decodable {
+    struct Games: Codable {
         let total: Int?
         let tournamentGames: Int?
         let wins: Int?
@@ -75,7 +75,7 @@ extension PlayerInfo {
         let drawsPercent: Double?
     }
     
-    struct Card: Decodable {
+    struct Card: Codable {
         let name: String?
         let level: Int?
         let count: Int?
@@ -92,31 +92,31 @@ extension PlayerInfo {
         let description: String?
     }
     
-    struct LeagueStatistics: Decodable {
+    struct LeagueStatistics: Codable {
         let currentSeason: CurrrentSeason?
         let previousSeason: PreviousSeason?
         let bestSeason: BestSeason?
         
-        struct CurrrentSeason: Decodable {
+        struct CurrrentSeason: Codable {
             let id: String?
             let trophies: Int?
             let bestTrophies: Int?
         }
         
-        struct PreviousSeason: Decodable {
+        struct PreviousSeason: Codable {
             let id: String?
             let trophies: Int?
             let bestTrophies: Int?
         }
         
-        struct BestSeason: Decodable {
+        struct BestSeason: Codable {
             let id: String?
             let trophies: Int?
             let bestTrophies: Int?
         }
     }
     
-    struct Achievement: Decodable {
+    struct Achievement: Codable {
         let name: String?
         let stars: Int?
         let value: Int?

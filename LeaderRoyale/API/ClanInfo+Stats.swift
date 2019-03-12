@@ -54,6 +54,18 @@ extension ClanInfo {
         }
         return mostRanksClimber
     }
+
+    var memberThatClimbedTheLeastRanks: Member? {
+        guard let members = members else { return nil }
+        guard var leastRanksClimber = members.first else { return nil }
+
+        for member in members {
+            if member.ranksClimbed < leastRanksClimber.ranksClimbed {
+                leastRanksClimber = member
+            }
+        }
+        return leastRanksClimber
+    }
     
     var memberWithHighestDonationRatio: Member? {
         guard let members = members else { return nil }
@@ -67,7 +79,20 @@ extension ClanInfo {
         
         return memberBestDonationRatio
     }
-    
+
+    var memberWithLowestDonationRatio: Member? {
+        guard let members = members else { return nil }
+        guard var memberLowestDonationRatio = members.first else { return nil }
+
+        for member in members {
+            if member.donationRatio < memberLowestDonationRatio.donationRatio {
+                memberLowestDonationRatio = member
+            }
+        }
+
+        return memberLowestDonationRatio
+    }
+
     var memberPercentages: Double {
         
         guard let members = members else { return 0.0 }

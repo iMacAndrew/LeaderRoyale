@@ -106,19 +106,6 @@
                             <constraint firstAttribute="height" constant="45" id="t72-Jw-k9U"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clanScoreTrophy" translatesAutoresizingMaskIntoConstraints="NO" id="GBT-K5-qHS">
-                        <rect key="frame" x="215" y="136" width="30" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="SHj-be-gGI"/>
-                            <constraint firstAttribute="width" constant="30" id="tdY-1F-wtP"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDm-Hx-Vv6">
-                        <rect key="frame" x="247" y="136" width="59" height="21"/>
-                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Role" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f6-op-dEc">
                         <rect key="frame" x="69" y="141" width="127" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -133,21 +120,17 @@
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="centerY" secondItem="AfO-dI-Ds2" secondAttribute="centerY" id="6bf-JW-XCQ"/>
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8jY-kR-gpP"/>
                     <constraint firstItem="0v5-gz-CWc" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="B3b-JU-lUW"/>
-                    <constraint firstAttribute="trailing" secondItem="GBT-K5-qHS" secondAttribute="trailing" constant="75" id="CSB-to-w4x"/>
                     <constraint firstItem="3JE-Ry-N55" firstAttribute="top" secondItem="yQa-gH-d1i" secondAttribute="bottom" constant="1" id="DtV-wm-5rK"/>
                     <constraint firstItem="yQa-gH-d1i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="EcB-lY-7fi"/>
                     <constraint firstItem="4jG-hq-QdU" firstAttribute="top" secondItem="1Jl-rj-Qi0" secondAttribute="bottom" constant="16" id="Oih-LJ-9D4"/>
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="top" secondItem="9a9-uU-Oxs" secondAttribute="top" id="QEl-bt-OZA"/>
                     <constraint firstItem="0v5-gz-CWc" firstAttribute="leading" secondItem="AfO-dI-Ds2" secondAttribute="trailing" constant="62" id="RUi-yo-hFV"/>
                     <constraint firstItem="3JE-Ry-N55" firstAttribute="leading" secondItem="yQa-gH-d1i" secondAttribute="leading" id="S68-hx-Z8C"/>
-                    <constraint firstItem="GBT-K5-qHS" firstAttribute="top" secondItem="tDm-Hx-Vv6" secondAttribute="top" id="U0S-D6-jIf"/>
-                    <constraint firstItem="GBT-K5-qHS" firstAttribute="top" secondItem="0v5-gz-CWc" secondAttribute="bottom" constant="25" id="W6R-tV-sW3"/>
                     <constraint firstItem="0v5-gz-CWc" firstAttribute="top" secondItem="yQa-gH-d1i" secondAttribute="top" id="Xsv-n4-XxD"/>
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="centerX" secondItem="yQa-gH-d1i" secondAttribute="centerX" constant="-67.5" id="YmH-UB-pwl"/>
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="centerX" secondItem="4jG-hq-QdU" secondAttribute="centerX" id="aqR-ZB-P12"/>
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="top" secondItem="3JE-Ry-N55" secondAttribute="bottom" constant="18" id="cgc-51-baF"/>
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="leading" secondItem="9a9-uU-Oxs" secondAttribute="leading" id="mdd-BC-Jm0"/>
-                    <constraint firstItem="tDm-Hx-Vv6" firstAttribute="leading" secondItem="GBT-K5-qHS" secondAttribute="trailing" constant="2" id="o11-Ve-iMk"/>
                     <constraint firstItem="9a9-uU-Oxs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18.5" id="pYn-ok-IU2"/>
                     <constraint firstItem="0v5-gz-CWc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="qYk-M5-fuX"/>
                 </constraints>
@@ -158,7 +141,6 @@
                 <outlet property="clanIconImage" destination="4jG-hq-QdU" id="div-Sf-lkO"/>
                 <outlet property="clanNameLabel" destination="YU7-oQ-pOF" id="6pj-FP-cUO"/>
                 <outlet property="kingLevelLabel" destination="1Jl-rj-Qi0" id="kQM-we-B5O"/>
-                <outlet property="playerClanScoreLabel" destination="tDm-Hx-Vv6" id="7oe-Nw-GGI"/>
                 <outlet property="playerNameLabel" destination="yQa-gH-d1i" id="j2g-Dh-7q0"/>
                 <outlet property="playerRoleLabel" destination="2f6-op-dEc" id="cDL-VU-kpw"/>
                 <outlet property="playerTagLabel" destination="3JE-Ry-N55" id="5NC-Ii-Vqe"/>
@@ -168,7 +150,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clanScoreTrophy" width="56" height="61"/>
         <image name="king-level" width="64" height="64"/>
         <image name="trophy" width="250" height="250"/>
     </resources>

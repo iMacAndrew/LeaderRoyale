@@ -13,7 +13,7 @@ class DonationsTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     func configure() {
-        titleLabel.text = "Donations"
+        titleLabel.text = "Weekly Summary"
         decorateCell()
     }
     

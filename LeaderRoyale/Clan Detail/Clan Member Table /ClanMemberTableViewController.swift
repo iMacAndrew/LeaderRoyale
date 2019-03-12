@@ -55,6 +55,7 @@ class ClanMemberTableViewController: UITableViewController {
         super.viewDidLoad()
         view.backgroundColor = .dark
         tableView.register(UINib(nibName: "ClanMemberTableViewCell", bundle: nil), forCellReuseIdentifier: "ClanMemberTableViewCell")
+        tableView.tableFooterView = UIView()
     }
     
     // MARK: - Table view data source

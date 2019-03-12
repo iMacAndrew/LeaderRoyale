@@ -34,8 +34,7 @@ extension ClanInfo.Member {
         guard let rank = rank, let previousRank = previousRank else {
             return 0
         }
-        let totalRanksCLimbed = rank - previousRank
-        return totalRanksCLimbed
+        return rank - previousRank
     }
     
     var donationRatio: Double {

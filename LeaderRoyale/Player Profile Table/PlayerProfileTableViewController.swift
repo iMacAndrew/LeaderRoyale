@@ -24,9 +24,9 @@ class PlayerProfileTableViewController: UITableViewController {
         tableView.register(UINib(nibName: "PlayerProfileStatsTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerProfileStatsTableViewCell")
         
         tableView.register(UINib(nibName: "PlayerDeckTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerDeckTableViewCell")
-        
-        tableView.register(UINib(nibName: "PlayerSeasonTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerSeasonTableViewCell")
-        
+
+        tableView.tableFooterView = UIView()
+
     }
     
     
@@ -54,10 +54,8 @@ class PlayerProfileTableViewController: UITableViewController {
         else if indexPath.row == 1 {
             return createPlayerProfileStatsCell(indexPath: indexPath)
         }
-        else if indexPath.row == 2 {
+        else {
             return createPlayerDeckCell(indexPath: indexPath)
-        } else {
-            return createPlayerSeasonCell(indexPath: indexPath)
         }
     }
     
@@ -71,7 +69,9 @@ class PlayerProfileTableViewController: UITableViewController {
         if let playerInfo = playerInfo {
             cell.configure(section: sections[indexPath.row], playerInfo: playerInfo)
         }
-        
+
+        cell.selectionStyle = .none
+
         return cell
         
     }
@@ -83,7 +83,8 @@ class PlayerProfileTableViewController: UITableViewController {
             cell.configure(section: sections[indexPath.row], playerInfo: playerInfo)
         }
         
-        
+        cell.selectionStyle = .none
+
         return cell
     }
     
@@ -92,21 +93,19 @@ class PlayerProfileTableViewController: UITableViewController {
         
         cell.configure(section: sections[indexPath.row], playerInfo: playerInfo)
 
-        return cell
-    }
-    
-    private func createPlayerSeasonCell(indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerSeasonTableViewCell", for: indexPath) as! PlayerSeasonTableViewCell
-        
-        if let playerInfo = playerInfo {
-            cell.configure(section: sections[indexPath.row], playerInfo: playerInfo)
-        }
-        
+        cell.selectionStyle = .none
+
         return cell
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        tableView.deselectRow(at: indexPath, animated: true)
+
     }
 
     func configure() {
@@ -122,10 +121,7 @@ class PlayerProfileTableViewController: UITableViewController {
         let deckSection = Sections(title: "Deck")
         
         sections.append(deckSection)
-        
-        let leagueSection = Sections(title: "League")
-        
-        sections.append(leagueSection)
+
     }
 
     private func setNavigationTitle() {

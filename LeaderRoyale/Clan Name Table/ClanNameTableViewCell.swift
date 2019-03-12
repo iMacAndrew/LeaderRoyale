@@ -19,6 +19,12 @@ class ClanNameTableViewCell: UITableViewCell {
     @IBOutlet weak var clanDonationsLabel: UILabel!
     @IBOutlet weak var clanDescriptionLabel: UITextView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        backgroundColor = .clear
+        contentView.backgroundColor = .clear
+    }
+    
     func configure(with clanInfo: ClanInfo?) {
         if let clanName = clanInfo?.name {
             clanNameLabel.text = String(clanName)
@@ -27,7 +33,7 @@ class ClanNameTableViewCell: UITableViewCell {
         }
         
         if let memberCount = clanInfo?.memberCount {
-            memberCountLabel.text = String(memberCount)
+            memberCountLabel.text = String(memberCount) + "/50 members"
         } else {
             memberCountLabel.text = ""
         }
@@ -42,7 +48,11 @@ class ClanNameTableViewCell: UITableViewCell {
                
         }
         
-        clanTagLabel.text = clanInfo?.tag
+        if let clanTag = clanInfo?.tag {
+            clanTagLabel.text = "#" + clanTag
+        }
+        
+        
         
         if let clanScore = clanInfo?.score {
             clanScoreLabel.text = String(clanScore.withCommas())

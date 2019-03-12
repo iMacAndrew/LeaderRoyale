@@ -7,17 +7,38 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ClanListTableViewController: UITableViewController {
     private var selectedClanInfo: ClanInfo?
     private var playerInfos: [PlayerInfo]?
-    private var clans = [Clan]()
+
+    var bannerView: GADBannerView!
+
+    private var clans: [Clan] {
+        return CoreDataManager.shared.clans
+    }
   
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .dark
         setNavigationTitle()
         tableView.register(UINib(nibName: "ClanNameTableViewCell", bundle: nil), forCellReuseIdentifier: "ClanNameTableViewCell")
+
+        // GADBannerView will show in top left of the view
+        let bannerView = GADBannerView(adSize:kGADAdSizeBanner)
+        adViewDidReceiveAd(bannerView)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        self.view.addSubview(bannerView)
+        bannerView.load(GADRequest())
+
+    }
+
+    func adViewDidReceiveAd(_ bannerView: GADBannerView!) {
+        print("Banner loaded successfully")
+        tableView.tableHeaderView?.frame = bannerView.frame
+        tableView.tableHeaderView = bannerView
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -32,6 +53,8 @@ class ClanListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClanNameTableViewCell", for: indexPath) as! ClanNameTableViewCell
         
         cell.configure(with: clans[indexPath.row].clanInfo)
+        
+        cell.selectionStyle = .none
         
         return cell
     }
@@ -65,16 +88,14 @@ class ClanListTableViewController: UITableViewController {
     }
     
     func addNew(clan: Clan) {
-        clans.append(clan)
+        CoreDataManager.shared.save(clan: clan)
         tableView.reloadData()
     }
     
     private func setNavigationTitle() {
         navigationItem.title = "Clans"
-        
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white,
              NSAttributedString.Key.font: UIFont(name: "supercell-magic", size: 15)!]
     }
-    
 }

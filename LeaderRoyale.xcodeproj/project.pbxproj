@@ -35,8 +35,6 @@
 		A4668BE02206CEFB0019817F /* PlayerDeckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4668BDE2206CEFB0019817F /* PlayerDeckTableViewCell.xib */; };
 		A4668BE3220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BE1220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift */; };
 		A4668BE4220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4668BE2220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib */; };
-		A4668BE722136E030019817F /* PlayerSeasonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BE522136E030019817F /* PlayerSeasonTableViewCell.swift */; };
-		A4668BE822136E030019817F /* PlayerSeasonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4668BE622136E030019817F /* PlayerSeasonTableViewCell.xib */; };
 		A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47753F021A24CF9000098F6 /* AppDelegate.swift */; };
 		A47753F621A24CF9000098F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47753F421A24CF9000098F6 /* Main.storyboard */; };
 		A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */; };
@@ -44,11 +42,12 @@
 		A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47753FC21A24CFC000098F6 /* LaunchScreen.storyboard */; };
 		A477540621A250B9000098F6 /* ClanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477540521A250B9000098F6 /* ClanInfo.swift */; };
 		A477540821A2552A000098F6 /* ClashRoyaleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */; };
+		A4AA759E2235F5560004A7F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4AA759D2235F5560004A7F8 /* GoogleService-Info.plist */; };
+		A4AA75A62236125E0004A7F8 /* CoreDataClan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75A42236125E0004A7F8 /* CoreDataClan+CoreDataProperties.swift */; };
+		A4AA75A72236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75A52236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift */; };
+		A4AA75A9223613600004A7F8 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75A8223613600004A7F8 /* CoreDataStack.swift */; };
+		A4AA75AB223614FD0004A7F8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75AA223614FD0004A7F8 /* CoreDataManager.swift */; };
 		A4AB5FC221EFC9A0000A0464 /* ClanWarStatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB5FC121EFC9A0000A0464 /* ClanWarStatsTableViewController.swift */; };
-		A4AB5FC521EFF50E000A0464 /* DonationListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB5FC421EFF50E000A0464 /* DonationListTableViewController.swift */; };
-		A4AB5FC821EFF563000A0464 /* DonationListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB5FC621EFF563000A0464 /* DonationListTableViewCell.swift */; };
-		A4AB5FC921EFF563000A0464 /* DonationListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AB5FC721EFF563000A0464 /* DonationListTableViewCell.xib */; };
-		A4AB5FCB21EFF69D000A0464 /* DonationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB5FCA21EFF69D000A0464 /* DonationList.swift */; };
 		A4AB5FCE21F003C1000A0464 /* DonationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB5FCC21F003C1000A0464 /* DonationsTableViewCell.swift */; };
 		A4AB5FCF21F003C1000A0464 /* DonationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AB5FCD21F003C1000A0464 /* DonationsTableViewCell.xib */; };
 		A4D5346A21DF15D8005E5835 /* ClanListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5346921DF15D8005E5835 /* ClanListTableViewController.swift */; };
@@ -60,7 +59,7 @@
 		A4D5347A21EDA333005E5835 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5347921EDA333005E5835 /* Stat.swift */; };
 		A4F24F3421B4A5DF004D437D /* ClanMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F24F3321B4A5DF004D437D /* ClanMemberTableViewCell.swift */; };
 		A4F24F3621B4A5ED004D437D /* ClanMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F24F3521B4A5ED004D437D /* ClanMemberTableViewCell.xib */; };
-		AAB173BFDE17E416975DC0E0 /* Pods_LeaderRoyale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56804831493BE1DE94C85730 /* Pods_LeaderRoyale.framework */; };
+		AAB173BFDE17E416975DC0E0 /* Pods_LeaderRoyale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56804831493BE1DE94C85730 /* Pods_LeaderRoyale.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,8 +93,6 @@
 		A4668BDE2206CEFB0019817F /* PlayerDeckTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerDeckTableViewCell.xib; sourceTree = "<group>"; };
 		A4668BE1220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerGeneralInfoTableViewCell.swift; sourceTree = "<group>"; };
 		A4668BE2220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerGeneralInfoTableViewCell.xib; sourceTree = "<group>"; };
-		A4668BE522136E030019817F /* PlayerSeasonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSeasonTableViewCell.swift; sourceTree = "<group>"; };
-		A4668BE622136E030019817F /* PlayerSeasonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerSeasonTableViewCell.xib; sourceTree = "<group>"; };
 		A47753ED21A24CF9000098F6 /* LeaderRoyale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeaderRoyale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47753F021A24CF9000098F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47753F521A24CF9000098F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,11 +102,12 @@
 		A47753FF21A24CFC000098F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A477540521A250B9000098F6 /* ClanInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanInfo.swift; sourceTree = "<group>"; };
 		A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClashRoyaleAPI.swift; sourceTree = "<group>"; };
+		A4AA759D2235F5560004A7F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4AA75A42236125E0004A7F8 /* CoreDataClan+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CoreDataClan+CoreDataProperties.swift"; path = "LeaderRoyale/CoreData/CoreDataClan+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		A4AA75A52236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CoreDataClan+CoreDataClass.swift"; path = "LeaderRoyale/CoreData/CoreDataClan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		A4AA75A8223613600004A7F8 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = LeaderRoyale/CoreData/CoreDataStack.swift; sourceTree = SOURCE_ROOT; };
+		A4AA75AA223614FD0004A7F8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = LeaderRoyale/CoreData/CoreDataManager.swift; sourceTree = SOURCE_ROOT; };
 		A4AB5FC121EFC9A0000A0464 /* ClanWarStatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanWarStatsTableViewController.swift; sourceTree = "<group>"; };
-		A4AB5FC421EFF50E000A0464 /* DonationListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationListTableViewController.swift; sourceTree = "<group>"; };
-		A4AB5FC621EFF563000A0464 /* DonationListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationListTableViewCell.swift; sourceTree = "<group>"; };
-		A4AB5FC721EFF563000A0464 /* DonationListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationListTableViewCell.xib; sourceTree = "<group>"; };
-		A4AB5FCA21EFF69D000A0464 /* DonationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationList.swift; sourceTree = "<group>"; };
 		A4AB5FCC21F003C1000A0464 /* DonationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsTableViewCell.swift; sourceTree = "<group>"; };
 		A4AB5FCD21F003C1000A0464 /* DonationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationsTableViewCell.xib; sourceTree = "<group>"; };
 		A4D5346921DF15D8005E5835 /* ClanListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanListTableViewController.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 		1B4C5FD821EBBF76004E303C /* Recognition */ = {
 			isa = PBXGroup;
 			children = (
-				A4AB5FC321EFF4E5000A0464 /* Donation Table */,
 				1B4C5FD921EBBFBE004E303C /* RecognitionTableViewController.swift */,
 				1B4C5FDF21EBC29E004E303C /* Recognition.swift */,
 				1B4C5FDB21EBBFED004E303C /* RecognitionTableViewCell.swift */,
@@ -207,8 +204,6 @@
 				A4668BDE2206CEFB0019817F /* PlayerDeckTableViewCell.xib */,
 				A4668BE1220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift */,
 				A4668BE2220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib */,
-				A4668BE522136E030019817F /* PlayerSeasonTableViewCell.swift */,
-				A4668BE622136E030019817F /* PlayerSeasonTableViewCell.xib */,
 			);
 			path = "Player Profile Table";
 			sourceTree = "<group>";
@@ -217,8 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				A47753EF21A24CF9000098F6 /* LeaderRoyale */,
-				A47753EE21A24CF9000098F6 /* Products */,
 				78EDABF6021FC803343C1F00 /* Pods */,
+				A47753EE21A24CF9000098F6 /* Products */,
 				D07D8ABE1C766261BFE7F389 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -229,6 +224,7 @@
 				A47753ED21A24CF9000098F6 /* LeaderRoyale.app */,
 			);
 			name = Products;
+			path = LeaderRoyale/CoreDat/LeaderRoyale;
 			sourceTree = "<group>";
 		};
 		A47753EF21A24CF9000098F6 /* LeaderRoyale */ = {
@@ -246,12 +242,26 @@
 				A47753FA21A24CFC000098F6 /* Assets.xcassets */,
 				A47753FC21A24CFC000098F6 /* LaunchScreen.storyboard */,
 				A47753FF21A24CFC000098F6 /* Info.plist */,
+				A4AA759D2235F5560004A7F8 /* GoogleService-Info.plist */,
 				A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */,
 				A412614E21A789FF005A4B24 /* magic.ttf */,
 				A449926221F2D5D90063B9A3 /* Colors.swift */,
 				A44899712204124900EF00FC /* Clan.swift */,
+				A4AA75A32236121D0004A7F8 /* CoreData */,
 			);
 			path = LeaderRoyale;
+			sourceTree = "<group>";
+		};
+		A4AA75A32236121D0004A7F8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA75A52236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift */,
+				A4AA75A42236125E0004A7F8 /* CoreDataClan+CoreDataProperties.swift */,
+				A4AA75A8223613600004A7F8 /* CoreDataStack.swift */,
+				A4AA75AA223614FD0004A7F8 /* CoreDataManager.swift */,
+			);
+			name = CoreData;
+			path = CoreDat;
 			sourceTree = "<group>";
 		};
 		A4AB5FC021EFC966000A0464 /* Clan War Stats */ = {
@@ -260,17 +270,6 @@
 				A4AB5FC121EFC9A0000A0464 /* ClanWarStatsTableViewController.swift */,
 			);
 			path = "Clan War Stats";
-			sourceTree = "<group>";
-		};
-		A4AB5FC321EFF4E5000A0464 /* Donation Table */ = {
-			isa = PBXGroup;
-			children = (
-				A4AB5FC421EFF50E000A0464 /* DonationListTableViewController.swift */,
-				A4AB5FC621EFF563000A0464 /* DonationListTableViewCell.swift */,
-				A4AB5FC721EFF563000A0464 /* DonationListTableViewCell.xib */,
-				A4AB5FCA21EFF69D000A0464 /* DonationList.swift */,
-			);
-			path = "Donation Table";
 			sourceTree = "<group>";
 		};
 		A4D5346D21DF16A2005E5835 /* Clan Name Table */ = {
@@ -373,13 +372,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AA759E2235F5560004A7F8 /* GoogleService-Info.plist in Resources */,
 				A4668BDA2206C48D0019817F /* PlayerProfileStatsTableViewCell.xib in Resources */,
 				A4AB5FCF21F003C1000A0464 /* DonationsTableViewCell.xib in Resources */,
 				A4D5346F21DF171D005E5835 /* ClanNameTableViewCell.xib in Resources */,
 				A4668BE4220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib in Resources */,
-				A4AB5FC921EFF563000A0464 /* DonationListTableViewCell.xib in Resources */,
 				1B4C5FDE21EBBFED004E303C /* RecognitionTableViewCell.xib in Resources */,
-				A4668BE822136E030019817F /* PlayerSeasonTableViewCell.xib in Resources */,
 				A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */,
 				A4F24F3621B4A5ED004D437D /* ClanMemberTableViewCell.xib in Resources */,
 				A4668BE02206CEFB0019817F /* PlayerDeckTableViewCell.xib in Resources */,
@@ -426,16 +424,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LeaderRoyale/Pods-LeaderRoyale-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoInsetter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tabman.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -449,7 +451,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4AB5FC821EFF563000A0464 /* DonationListTableViewCell.swift in Sources */,
 				A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */,
 				1B4C5FE021EBC29E004E303C /* Recognition.swift in Sources */,
 				A4668BDF2206CEFB0019817F /* PlayerDeckTableViewCell.swift in Sources */,
@@ -463,27 +464,28 @@
 				A4D5347721EDA1FD005E5835 /* StatTableViewCell.swift in Sources */,
 				A4D5347421ED9F87005E5835 /* StatsTableViewController.swift in Sources */,
 				A4D5347A21EDA333005E5835 /* Stat.swift in Sources */,
+				A4AA75A9223613600004A7F8 /* CoreDataStack.swift in Sources */,
 				A4D5346A21DF15D8005E5835 /* ClanListTableViewController.swift in Sources */,
 				1B4C5FDA21EBBFBE004E303C /* RecognitionTableViewController.swift in Sources */,
 				A44899722204124900EF00FC /* Clan.swift in Sources */,
-				A4668BE722136E030019817F /* PlayerSeasonTableViewCell.swift in Sources */,
 				A4668BDC2206CAD10019817F /* Sections.swift in Sources */,
 				1B4C5FE721EC21EE004E303C /* ImageManager.swift in Sources */,
 				A449926521FFEB300063B9A3 /* StringOrInt.swift in Sources */,
 				A4D5346C21DF1697005E5835 /* ClanNameTableViewCell.swift in Sources */,
 				A41952DB21A7A01D0086D964 /* StyledButton.swift in Sources */,
 				A412614B21A65EC9005A4B24 /* ClanMemberTableViewController.swift in Sources */,
-				A4AB5FCB21EFF69D000A0464 /* DonationList.swift in Sources */,
 				A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */,
 				A4668BD92206C48D0019817F /* PlayerProfileStatsTableViewCell.swift in Sources */,
 				A4AB5FCE21F003C1000A0464 /* DonationsTableViewCell.swift in Sources */,
-				A4AB5FC521EFF50E000A0464 /* DonationListTableViewController.swift in Sources */,
 				A412614D21A786FD005A4B24 /* GradientView.swift in Sources */,
 				A477540621A250B9000098F6 /* ClanInfo.swift in Sources */,
 				1B3D5BCA21EA8D3800E10B87 /* ClanOverviewTableViewCell.swift in Sources */,
 				1B4C5FE321EC1D6E004E303C /* ClanInfo+Stats.swift in Sources */,
+				A4AA75A72236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift in Sources */,
 				A449926121F033890063B9A3 /* ClanDetailTabViewController.swift in Sources */,
+				A4AA75AB223614FD0004A7F8 /* CoreDataManager.swift in Sources */,
 				1B3D5BC721EA8C9000E10B87 /* ClanDetailViewController.swift in Sources */,
+				A4AA75A62236125E0004A7F8 /* CoreDataClan+CoreDataProperties.swift in Sources */,
 				1B4C5FDD21EBBFED004E303C /* RecognitionTableViewCell.swift in Sources */,
 				A4AB5FC221EFC9A0000A0464 /* ClanWarStatsTableViewController.swift in Sources */,
 				1B4C5FE521EC1D9D004E303C /* ClanInfoMember+Stats.swift in Sources */,

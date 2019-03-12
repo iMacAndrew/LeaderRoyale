@@ -10,7 +10,7 @@ import Foundation
 
 struct Recognition {
     let title: String
-    let subTitle: String
     let playerName: String
     let stat: String
+    let isGood: Bool?
 }

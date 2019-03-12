@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Clan {
+struct Clan: Codable {
     let clanInfo: ClanInfo
     let players: [PlayerInfo]
 }

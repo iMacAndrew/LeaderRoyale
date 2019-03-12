@@ -7,4 +7,7 @@ target 'LeaderRoyale' do
 
   pod 'Tabman', '~> 2.1'
 
+  pod 'Firebase/Core'
+  pod 'Firebase/AdMob' 
+
 end

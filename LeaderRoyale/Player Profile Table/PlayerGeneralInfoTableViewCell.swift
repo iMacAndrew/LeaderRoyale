@@ -15,7 +15,6 @@ class PlayerGeneralInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var playerTrophyLabel: UILabel!
     @IBOutlet weak var clanIconImage: UIImageView!
     @IBOutlet weak var clanNameLabel: UILabel!
-    @IBOutlet weak var playerClanScoreLabel: UILabel!
     @IBOutlet weak var arenaImage: UIImageView!
     @IBOutlet weak var playerRoleLabel: UILabel!
     
@@ -50,7 +49,6 @@ class PlayerGeneralInfoTableViewCell: UITableViewCell {
         }
         
         clanNameLabel.text = playerInfo?.clan?.name
-        playerClanScoreLabel.text = "??"
         
         playerRoleLabel.text = playerInfo?.clan?.role
         
@@ -65,7 +63,6 @@ class PlayerGeneralInfoTableViewCell: UITableViewCell {
         kingLevelLabel.textColor = .white
         playerTrophyLabel.textColor = .white
         clanNameLabel.textColor = .white
-        playerClanScoreLabel.textColor = .white
         playerRoleLabel.textColor = .white
     }
     

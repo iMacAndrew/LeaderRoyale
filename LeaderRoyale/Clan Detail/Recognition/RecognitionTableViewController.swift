@@ -25,6 +25,8 @@ class RecognitionTableViewController: UITableViewController {
         view.backgroundColor = .dark
         tableView.register(UINib(nibName: "DonationsTableViewCell", bundle: nil), forCellReuseIdentifier: "DonationsTableViewCell")
         tableView.register(UINib(nibName: "RecognitionTableViewCell", bundle: nil), forCellReuseIdentifier: "RecognitionTableViewCell")
+        
+        tableView.tableFooterView = UIView()
     }
 
     // MARK: - Table view data source
@@ -50,10 +52,7 @@ class RecognitionTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        if indexPath.row == 0 {
-            goToDonationList(indexPath: indexPath)
-        }
+
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -78,31 +77,53 @@ class RecognitionTableViewController: UITableViewController {
     
     func configure(clan: Clan) {
         if let member = clan.clanInfo.memberWithMostDonations, let donations = member.donations {
-            let recognitionForMostDonations = Recognition(title: "Most Donations", subTitle: "This week", playerName: member.name ?? "", stat: String(donations.withCommas()))
+            let recognitionForMostDonations = Recognition(title: "Most Donations",
+                                                          playerName: member.name ?? "",
+                                                          stat: String(donations.withCommas()),
+                                                          isGood: true)
             
             recognitions.append(recognitionForMostDonations)
             
         }
         
         if let member = clan.clanInfo.memberWithMostDonationsReceived, let donationsReceived = member.donationsReceived {
-            let recognitionForMostDonationsReceived = Recognition(title: "Most Donations Received", subTitle: "This week", playerName: member.name ?? "", stat: String(donationsReceived.withCommas()))
+            let recognitionForMostDonationsReceived = Recognition(title: "Most Donations Received", playerName: member.name ?? "", stat: String(donationsReceived.withCommas()), isGood: nil)
             
             recognitions.append(recognitionForMostDonationsReceived)
         }
         
         if let member = clan.clanInfo.memberThatClimbedTheMostRanks {
-            let recognitionForMembersThatClimbedTheMostRanks = Recognition(title: "Most Ranks Climbed", subTitle: "This week", playerName: member.name ?? "", stat: String(member.ranksClimbed))
+            let recognitionForMembersThatClimbedTheMostRanks = Recognition(title: "Most Ranks Climbed", playerName: member.name ?? "", stat: String(member.ranksClimbed), isGood: true)
             
             recognitions.append(recognitionForMembersThatClimbedTheMostRanks)
         }
+
+        if let member = clan.clanInfo.memberThatClimbedTheLeastRanks {
+            let recognitionForMembersThatClimbedTheLeastRanks = Recognition(title: "Most Ranks Dropped", playerName: member.name ?? "", stat: String(member.ranksClimbed), isGood: false)
+
+            recognitions.append(recognitionForMembersThatClimbedTheLeastRanks)
+        }
         
-        if let member = clan.clanInfo.memberWithHighestDonationRatio {
-            let recognitionForHighestDonationRatio = Recognition(title: "Highest Donation Ratio", subTitle: "This week", playerName: member.name ?? "", stat: String(member.donationRatio) + "%")
+        if let member = clan.clanInfo.memberWithHighestDonationRatio,
+            let donations = member.donations,
+            let donationsReceived = member.donationsReceived {
+            let recognitionForHighestDonationRatio = Recognition(title: "Highest Donation Ratio", playerName: member.name ?? "", stat: "Gave:\(donations) Took:\(donationsReceived)", isGood: true)
         
             recognitions.append(recognitionForHighestDonationRatio)
             
         }
-        
+
+        if let member = clan.clanInfo.memberWithLowestDonationRatio,
+            let donations = member.donations,
+            let donationsReceived = member.donationsReceived {
+            let recognitionForLowestDonationRatio = Recognition(title: "Lowest Donation Ratio",
+                                                                 playerName: member.name ?? "",
+                                                                 stat: "Gave:\(donations) Took:\(donationsReceived)",
+                                                                 isGood: false)
+
+            recognitions.append(recognitionForLowestDonationRatio)
+
+        }
     }
     
     private func setNavigationTitle() {
@@ -114,17 +135,4 @@ class RecognitionTableViewController: UITableViewController {
         navigationController?.navigationBar.largeTitleTextAttributes = attributes
     }
     
-    private func goToDonationList(indexPath: IndexPath) {
-        performSegue(withIdentifier: "donationListSegue", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        
-        if let donationListTableViewController = segue.destination as? DonationListTableViewController {
-            donationListTableViewController.clanInfo = clanInfo
-            donationListTableViewController.memberInfo = memberInfo
-        }
-        
-    }
 }

@@ -21,6 +21,7 @@ class StatsTableViewController: UITableViewController {
         setNavigationTitle()
         view.backgroundColor = .dark
         tableView.register(UINib(nibName: "StatTableViewCell", bundle: nil), forCellReuseIdentifier: "StatTableViewCell")
+        tableView.tableFooterView = UIView()
     }
     
     // MARK: - Table view data source
@@ -57,19 +58,20 @@ class StatsTableViewController: UITableViewController {
     func configure(clan: Clan) {
         let memberPercentage = clan.clanInfo.memberPercentages
         let memberCount = clan.clanInfo.countMembers
-        let totalMemberPercentage = Stat(title: "Percentage of Members", stat: String(memberPercentage) + "%. " + String(memberCount) + " members")
+        let totalMembers = clan.clanInfo.memberCount ?? 50
+        let totalMemberPercentage = Stat(title: "Percentage of Members", stat: String(memberPercentage) + "% " + String(memberCount) + "/" + String(totalMembers))
         
         stats.append(totalMemberPercentage)
         
         let elderPercentage = clan.clanInfo.elderPercentages
         let elderCount = clan.clanInfo.countElders
-        let totalElderPercentage = Stat(title: "Percentage of Elders", stat: String(elderPercentage) + "%. " + String(elderCount) + " elders")
+        let totalElderPercentage = Stat(title: "Percentage of Elders", stat: String(elderPercentage) + "% " + String(elderCount) + "/" + String(totalMembers))
         
         stats.append(totalElderPercentage)
         
         let coLeaderPercentage = clan.clanInfo.coLeaderPercentages
         let coLeaderCount = clan.clanInfo.countCoLeaders
-        let totalCoLeaderPercentage = Stat(title: "Percentage of CoLeaders", stat: String(coLeaderPercentage) + "%. " + String(coLeaderCount) + " Co-Leaders")
+        let totalCoLeaderPercentage = Stat(title: "Percentage of CoLeaders", stat: String(coLeaderPercentage) + "% " + String(coLeaderCount) + "/" + String(totalMembers))
         
         stats.append(totalCoLeaderPercentage)
         

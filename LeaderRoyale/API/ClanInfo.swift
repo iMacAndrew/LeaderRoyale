@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ClanInfo: Decodable {
+struct ClanInfo: Codable {
     let tag: String?
     let name: String?
     let description: String?
@@ -24,13 +24,13 @@ struct ClanInfo: Decodable {
 }
 
 extension ClanInfo {
-    struct ClanChest: Decodable {
+    struct ClanChest: Codable {
         let status: String?
     }
 }
 
 extension ClanInfo {
-    struct Badge: Decodable {
+    struct Badge: Codable {
         let name: String?
         let category: String?
         let id: Int?
@@ -39,13 +39,13 @@ extension ClanInfo {
 }
 
 extension ClanInfo {
-    struct Location: Decodable {
+    struct Location: Codable {
         let name: String?
         let isCountry: Bool?
         let code: String?
     }
     
-    struct Member: Decodable {
+    struct Member: Codable {
         let name: String?
         let tag: String?
         let rank: Int?
@@ -63,7 +63,7 @@ extension ClanInfo {
 }
 
 extension ClanInfo.Member {
-    struct Arena: Decodable {
+    struct Arena: Codable {
         let arenaID: Int?
         let arena: String?
         let name: String?

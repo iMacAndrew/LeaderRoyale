@@ -64,7 +64,7 @@ class ClanMemberTableViewCell: UITableViewCell {
             nameLabel.textColor = leaderTextColor
             donatedCountLabel.textColor = leaderTextColor
             trophiesLabel.textColor = leaderTextColor
-            roleLabel.textColor = .lightRed
+            roleLabel.textColor = .yellow
             donatedTitleLabel.textColor = leaderTextColor
             backgroundColor = .dark
         } else {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum StringOrInt: Decodable {
+enum StringOrInt: Codable {
     case int(Int)
     case string(String)
     
@@ -22,6 +22,17 @@ enum StringOrInt: Decodable {
             } catch DecodingError.typeMismatch {
                 throw DecodingError.typeMismatch(StringOrInt.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Not an int or a string. Expect StringOrInt"))
             }
+        }
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+
+        switch self {
+        case .int(let value):
+            try container.encode(value)
+        case .string(let value):
+            try container.encode(value)
         }
     }
 }

@@ -11,15 +11,16 @@ import UIKit
 class RecognitionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var statLabel: UILabel!
     
+    var recognition: Recognition!
+    
     func configure(recognition: Recognition) {
         titleLabel.text = recognition.title
-        subTitleLabel.text = recognition.subTitle
         playerNameLabel.text = recognition.playerName
         statLabel.text = recognition.stat
+        self.recognition = recognition
         
         decorateCell()
     }
@@ -27,9 +28,17 @@ class RecognitionTableViewCell: UITableViewCell {
     private func decorateCell() {
         backgroundColor = .dark
         titleLabel.textColor = UIColor.white
-        subTitleLabel.textColor = UIColor.white
         playerNameLabel.textColor = UIColor.white
         statLabel.textColor = UIColor.white
+        
+        if recognition.isGood == true {
+            playerNameLabel.textColor = .green
+            statLabel.textColor = .green
+        }
+        else if recognition.isGood == false {
+            playerNameLabel.textColor = .red
+            statLabel.textColor = .red
+        }
     }
     
 }

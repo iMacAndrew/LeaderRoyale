@@ -24,47 +24,38 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="90.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmN-eC-iUI">
-                        <rect key="frame" x="16" y="11" width="46" height="18"/>
-                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="12"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="now-0h-zfN">
-                        <rect key="frame" x="16" y="62" width="46" height="18"/>
-                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="12"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1d-QE-CIy">
-                        <rect key="frame" x="258" y="11" width="46" height="18"/>
-                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="12"/>
+                        <rect key="frame" x="16" y="59" width="53.5" height="21"/>
+                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRY-rN-1II">
-                        <rect key="frame" x="258" y="62" width="46" height="18"/>
-                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="12"/>
+                        <rect key="frame" x="250.5" y="59" width="53.5" height="21"/>
+                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmN-eC-iUI">
+                        <rect key="frame" x="127.5" y="11" width="65" height="25.5"/>
+                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="BRY-rN-1II" firstAttribute="trailing" secondItem="X1d-QE-CIy" secondAttribute="trailing" id="2G1-EZ-v8R"/>
-                    <constraint firstItem="X1d-QE-CIy" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Gv8-L1-daM"/>
-                    <constraint firstItem="OmN-eC-iUI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="MKm-XN-kWn"/>
-                    <constraint firstItem="now-0h-zfN" firstAttribute="top" secondItem="OmN-eC-iUI" secondAttribute="bottom" constant="39" id="c1x-Jh-wAO"/>
-                    <constraint firstItem="OmN-eC-iUI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ewr-xP-Z76"/>
-                    <constraint firstItem="OmN-eC-iUI" firstAttribute="leading" secondItem="now-0h-zfN" secondAttribute="leading" id="hAB-Xt-LCf"/>
-                    <constraint firstItem="OmN-eC-iUI" firstAttribute="baseline" secondItem="X1d-QE-CIy" secondAttribute="baseline" id="pq7-wv-sN1"/>
-                    <constraint firstItem="BRY-rN-1II" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="w29-6p-nDz"/>
+                    <constraint firstItem="OmN-eC-iUI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="7a6-lG-a81"/>
+                    <constraint firstItem="X1d-QE-CIy" firstAttribute="baseline" secondItem="BRY-rN-1II" secondAttribute="baseline" id="HMi-Xm-6XA"/>
+                    <constraint firstItem="OmN-eC-iUI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="TTo-eD-naY"/>
+                    <constraint firstItem="BRY-rN-1II" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="cx2-Wb-eqT"/>
+                    <constraint firstItem="X1d-QE-CIy" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="mhR-62-hCJ"/>
+                    <constraint firstItem="X1d-QE-CIy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="qx3-AR-AIm"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="playerNameLabel" destination="X1d-QE-CIy" id="K2O-si-b7a"/>
                 <outlet property="statLabel" destination="BRY-rN-1II" id="J8U-Br-hhg"/>
-                <outlet property="subTitleLabel" destination="now-0h-zfN" id="vC1-4u-dpd"/>
                 <outlet property="titleLabel" destination="OmN-eC-iUI" id="yuR-VS-qJH"/>
             </connections>
             <point key="canvasLocation" x="129.59999999999999" y="174.96251874062969"/>

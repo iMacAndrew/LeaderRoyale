@@ -17,6 +17,7 @@ class ClanWarStatsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationTitle()
+        tableView.tableFooterView = UIView()
     }
 
     // MARK: - Table view data source
