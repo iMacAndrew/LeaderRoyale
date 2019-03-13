@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class RecognitionTableViewController: UITableViewController {
 
     private var recognitions = [Recognition]()
+    
     
     static func make() -> RecognitionTableViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecognitionTableViewController") as! RecognitionTableViewController
@@ -27,6 +29,22 @@ class RecognitionTableViewController: UITableViewController {
         tableView.register(UINib(nibName: "RecognitionTableViewCell", bundle: nil), forCellReuseIdentifier: "RecognitionTableViewCell")
         
         tableView.tableFooterView = UIView()
+
+        // GADBannerView will show in top left of the view
+        let bannerView = GADBannerView(adSize:kGADAdSizeBanner)
+        adViewDidReceiveAd(bannerView)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        self.view.addSubview(bannerView)
+        bannerView.load(GADRequest())
+        
+    }
+
+
+    func adViewDidReceiveAd(_ bannerView: GADBannerView!) {
+        print("Banner loaded successfully")
+        tableView.tableHeaderView?.frame = bannerView.frame
+        tableView.tableHeaderView = bannerView
     }
 
     // MARK: - Table view data source
@@ -50,18 +68,21 @@ class RecognitionTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
-
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90.0
     }
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+
+
+    }
+
     private func createRecognitionCell(indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecognitionTableViewCell", for: indexPath) as! RecognitionTableViewCell
-        
         cell.configure(recognition: recognitions[indexPath.row - 1])
         
         return cell

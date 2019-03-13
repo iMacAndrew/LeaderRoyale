@@ -43,7 +43,7 @@ class ClashRoyaleAPI {
                 print(error.localizedDescription)
             } else {
                 completion(nil)
-                print("Unknown error!??!")
+                assertionFailure("Unknown error!??!")
             }
         }
         
@@ -82,9 +82,47 @@ class ClashRoyaleAPI {
                 print(error.localizedDescription)
             } else {
                 completion(nil)
-                print("Unknown error!??!")
+                assertionFailure("Unknown error!??!")
             }
         }
+        task.resume()
+    }
+
+    func getWarLogs(clanTag: String, completion: @escaping (_ warLogs: [Warlog]?) -> Void) {
+        let urlString = "https://api.royaleapi.com/clan/\(clanTag)/warlog"
+        guard
+            let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+            let url = URL(string: encodedUrlString)
+            else {
+                assertionFailure("Failed to create url")
+                return
+        }
+
+        var request = URLRequest(url: url)
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "authorization")
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+
+            if let httpResponse = response as? HTTPURLResponse {
+                if httpResponse.statusCode == 404 {
+                    completion(nil)
+                    return
+                }
+            }
+
+            if let data = data {
+                let warLogs = try? JSONDecoder().decode([Warlog].self, from: data)
+                completion(warLogs)
+            } else if let error = error {
+                completion(nil)
+                print(error.localizedDescription)
+            } else {
+                completion(nil)
+                assertionFailure("Unknown error!??!")
+            }
+        }
+
         task.resume()
     }
 }

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="magic.ttf">
+            <string>Supercell-Magic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="187" id="KGk-i7-Jjw" customClass="WarTableViewCell" customModule="LeaderRoyale" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="187"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="186.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MXf-SJ-Kaa">
+                        <rect key="frame" x="16" y="11" width="65" height="25.5"/>
+                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="gLF-6x-wvT">
+                        <rect key="frame" x="250.5" y="13.5" width="53.5" height="21"/>
+                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="HxK-ge-rmt">
+                        <rect key="frame" x="250.5" y="155" width="53.5" height="21"/>
+                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Bk9-lG-d9J">
+                        <rect key="frame" x="16" y="154" width="53.5" height="21"/>
+                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="I8m-Mx-Ik1">
+                        <rect key="frame" x="133.5" y="80" width="53.5" height="26.5"/>
+                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MXf-SJ-Kaa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="B5c-lS-hmi"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Bk9-lG-d9J" secondAttribute="bottom" constant="1" id="Mqu-8m-5OA"/>
+                    <constraint firstItem="MXf-SJ-Kaa" firstAttribute="leading" secondItem="Bk9-lG-d9J" secondAttribute="leading" id="N8o-m1-t1z"/>
+                    <constraint firstItem="MXf-SJ-Kaa" firstAttribute="centerY" secondItem="gLF-6x-wvT" secondAttribute="centerY" id="UHf-Un-ckm"/>
+                    <constraint firstItem="I8m-Mx-Ik1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="h6Z-fA-0gg"/>
+                    <constraint firstItem="gLF-6x-wvT" firstAttribute="leading" secondItem="HxK-ge-rmt" secondAttribute="leading" id="kFg-zS-DWr"/>
+                    <constraint firstItem="HxK-ge-rmt" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="loN-zm-Vtx"/>
+                    <constraint firstItem="I8m-Mx-Ik1" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="nut-93-59B"/>
+                    <constraint firstItem="gLF-6x-wvT" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="o4H-CU-Xqf"/>
+                    <constraint firstItem="MXf-SJ-Kaa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="qxI-cK-R6o"/>
+                    <constraint firstItem="I8m-Mx-Ik1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="69" id="vQv-CT-fNR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="crownsLabel" destination="HxK-ge-rmt" id="Ook-vG-tX5"/>
+                <outlet property="warDateLabel" destination="gLF-6x-wvT" id="vvv-WU-YYi"/>
+                <outlet property="warDayWinsLabel" destination="I8m-Mx-Ik1" id="qox-5q-YGw"/>
+                <outlet property="warTitleLabel" destination="MXf-SJ-Kaa" id="l4f-5W-KaA"/>
+                <outlet property="warTrophiesChangedLabel" destination="Bk9-lG-d9J" id="UGj-eM-C3l"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="175.86206896551727"/>
+        </tableViewCell>
+    </objects>
+</document>

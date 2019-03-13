@@ -11,4 +11,5 @@ import Foundation
 struct Clan: Codable {
     let clanInfo: ClanInfo
     let players: [PlayerInfo]
+    let warLogs: [Warlog]
 }

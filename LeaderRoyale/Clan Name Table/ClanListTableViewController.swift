@@ -10,8 +10,7 @@ import UIKit
 import GoogleMobileAds
 
 class ClanListTableViewController: UITableViewController {
-    private var selectedClanInfo: ClanInfo?
-    private var playerInfos: [PlayerInfo]?
+    private var selectedClan: Clan?
 
     var bannerView: GADBannerView!
 
@@ -66,27 +65,26 @@ class ClanListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        selectedClanInfo = clans[indexPath.row].clanInfo
-        playerInfos = clans[indexPath.row].players
-        
-    
+        selectedClan = clans[indexPath.row]
+
         performSegue(withIdentifier: "statSegue", sender: self)
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let clanTabViewController = segue.destination as? ClanDetailTabViewController {
             
-            if let clanInfo = selectedClanInfo, let playerInfos = playerInfos {
-                let clan = Clan(clanInfo: clanInfo, players: playerInfos)
-
+            if let clan = selectedClan {
                 clanTabViewController.configure(with: clan)
             }
         
         }
     }
     
+    @IBAction func unwindToClanListTableViewController(_ unwindSegue: UIStoryboardSegue) {
+
+    }
+
     func addNew(clan: Clan) {
         CoreDataManager.shared.save(clan: clan)
         tableView.reloadData()

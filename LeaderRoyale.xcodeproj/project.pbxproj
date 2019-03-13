@@ -23,6 +23,8 @@
 		A412614F21A789FF005A4B24 /* magic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A412614E21A789FF005A4B24 /* magic.ttf */; };
 		A41952DB21A7A01D0086D964 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952DA21A7A01D0086D964 /* StyledButton.swift */; };
 		A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952E021AA6C3D0086D964 /* PlayerInfo.swift */; };
+		A433377822389E0E00C8A202 /* WarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A433377622389E0E00C8A202 /* WarTableViewCell.swift */; };
+		A433377922389E0E00C8A202 /* WarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A433377722389E0E00C8A202 /* WarTableViewCell.xib */; };
 		A44899722204124900EF00FC /* Clan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44899712204124900EF00FC /* Clan.swift */; };
 		A449926121F033890063B9A3 /* ClanDetailTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */; };
 		A449926321F2D5D90063B9A3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926221F2D5D90063B9A3 /* Colors.swift */; };
@@ -47,6 +49,11 @@
 		A4AA75A72236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75A52236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift */; };
 		A4AA75A9223613600004A7F8 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75A8223613600004A7F8 /* CoreDataStack.swift */; };
 		A4AA75AB223614FD0004A7F8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75AA223614FD0004A7F8 /* CoreDataManager.swift */; };
+		A4AA75AD22375D250004A7F8 /* Warlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75AC22375D250004A7F8 /* Warlog.swift */; };
+		A4AA75AF2237660B0004A7F8 /* Warlog+Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75AE2237660B0004A7F8 /* Warlog+Stat.swift */; };
+		A4AA75B52237FB980004A7F8 /* WarDayParticipantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75B42237FB980004A7F8 /* WarDayParticipantsTableViewController.swift */; };
+		A4AA75B8223803440004A7F8 /* ParticipantInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75B6223803440004A7F8 /* ParticipantInfoTableViewCell.swift */; };
+		A4AA75B9223803440004A7F8 /* ParticipantInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AA75B7223803440004A7F8 /* ParticipantInfoTableViewCell.xib */; };
 		A4AB5FC221EFC9A0000A0464 /* ClanWarStatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB5FC121EFC9A0000A0464 /* ClanWarStatsTableViewController.swift */; };
 		A4AB5FCE21F003C1000A0464 /* DonationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB5FCC21F003C1000A0464 /* DonationsTableViewCell.swift */; };
 		A4AB5FCF21F003C1000A0464 /* DonationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AB5FCD21F003C1000A0464 /* DonationsTableViewCell.xib */; };
@@ -81,6 +88,8 @@
 		A412614E21A789FF005A4B24 /* magic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = magic.ttf; sourceTree = "<group>"; };
 		A41952DA21A7A01D0086D964 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
 		A41952E021AA6C3D0086D964 /* PlayerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInfo.swift; sourceTree = "<group>"; };
+		A433377622389E0E00C8A202 /* WarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarTableViewCell.swift; sourceTree = "<group>"; };
+		A433377722389E0E00C8A202 /* WarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarTableViewCell.xib; sourceTree = "<group>"; };
 		A44899712204124900EF00FC /* Clan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clan.swift; sourceTree = "<group>"; };
 		A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanDetailTabViewController.swift; sourceTree = "<group>"; };
 		A449926221F2D5D90063B9A3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -107,6 +116,11 @@
 		A4AA75A52236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CoreDataClan+CoreDataClass.swift"; path = "LeaderRoyale/CoreData/CoreDataClan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		A4AA75A8223613600004A7F8 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = LeaderRoyale/CoreData/CoreDataStack.swift; sourceTree = SOURCE_ROOT; };
 		A4AA75AA223614FD0004A7F8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = LeaderRoyale/CoreData/CoreDataManager.swift; sourceTree = SOURCE_ROOT; };
+		A4AA75AC22375D250004A7F8 /* Warlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warlog.swift; sourceTree = "<group>"; };
+		A4AA75AE2237660B0004A7F8 /* Warlog+Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Warlog+Stat.swift"; sourceTree = "<group>"; };
+		A4AA75B42237FB980004A7F8 /* WarDayParticipantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarDayParticipantsTableViewController.swift; sourceTree = "<group>"; };
+		A4AA75B6223803440004A7F8 /* ParticipantInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantInfoTableViewCell.swift; sourceTree = "<group>"; };
+		A4AA75B7223803440004A7F8 /* ParticipantInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipantInfoTableViewCell.xib; sourceTree = "<group>"; };
 		A4AB5FC121EFC9A0000A0464 /* ClanWarStatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanWarStatsTableViewController.swift; sourceTree = "<group>"; };
 		A4AB5FCC21F003C1000A0464 /* DonationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsTableViewCell.swift; sourceTree = "<group>"; };
 		A4AB5FCD21F003C1000A0464 /* DonationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationsTableViewCell.xib; sourceTree = "<group>"; };
@@ -180,6 +194,8 @@
 				A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */,
 				1B4C5FE621EC21EE004E303C /* ImageManager.swift */,
 				A449926421FFEB300063B9A3 /* StringOrInt.swift */,
+				A4AA75AC22375D250004A7F8 /* Warlog.swift */,
+				A4AA75AE2237660B0004A7F8 /* Warlog+Stat.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -267,7 +283,12 @@
 		A4AB5FC021EFC966000A0464 /* Clan War Stats */ = {
 			isa = PBXGroup;
 			children = (
+				A4AA75B42237FB980004A7F8 /* WarDayParticipantsTableViewController.swift */,
+				A4AA75B6223803440004A7F8 /* ParticipantInfoTableViewCell.swift */,
+				A4AA75B7223803440004A7F8 /* ParticipantInfoTableViewCell.xib */,
 				A4AB5FC121EFC9A0000A0464 /* ClanWarStatsTableViewController.swift */,
+				A433377622389E0E00C8A202 /* WarTableViewCell.swift */,
+				A433377722389E0E00C8A202 /* WarTableViewCell.xib */,
 			);
 			path = "Clan War Stats";
 			sourceTree = "<group>";
@@ -374,6 +395,7 @@
 			files = (
 				A4AA759E2235F5560004A7F8 /* GoogleService-Info.plist in Resources */,
 				A4668BDA2206C48D0019817F /* PlayerProfileStatsTableViewCell.xib in Resources */,
+				A433377922389E0E00C8A202 /* WarTableViewCell.xib in Resources */,
 				A4AB5FCF21F003C1000A0464 /* DonationsTableViewCell.xib in Resources */,
 				A4D5346F21DF171D005E5835 /* ClanNameTableViewCell.xib in Resources */,
 				A4668BE4220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib in Resources */,
@@ -385,6 +407,7 @@
 				A412614F21A789FF005A4B24 /* magic.ttf in Resources */,
 				A4D5347821EDA1FD005E5835 /* StatTableViewCell.xib in Resources */,
 				1B3D5BCB21EA8D3800E10B87 /* ClanOverviewTableViewCell.xib in Resources */,
+				A4AA75B9223803440004A7F8 /* ParticipantInfoTableViewCell.xib in Resources */,
 				A47753F621A24CF9000098F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,12 +476,16 @@
 			files = (
 				A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */,
 				1B4C5FE021EBC29E004E303C /* Recognition.swift in Sources */,
+				A4AA75B52237FB980004A7F8 /* WarDayParticipantsTableViewController.swift in Sources */,
 				A4668BDF2206CEFB0019817F /* PlayerDeckTableViewCell.swift in Sources */,
 				A4F24F3421B4A5DF004D437D /* ClanMemberTableViewCell.swift in Sources */,
 				A4668BD52206C1FE0019817F /* PlayerProfileTableViewController.swift in Sources */,
 				A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */,
 				A449926321F2D5D90063B9A3 /* Colors.swift in Sources */,
+				A4AA75AF2237660B0004A7F8 /* Warlog+Stat.swift in Sources */,
+				A4AA75B8223803440004A7F8 /* ParticipantInfoTableViewCell.swift in Sources */,
 				A4668BE3220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift in Sources */,
+				A433377822389E0E00C8A202 /* WarTableViewCell.swift in Sources */,
 				A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */,
 				A477540821A2552A000098F6 /* ClashRoyaleAPI.swift in Sources */,
 				A4D5347721EDA1FD005E5835 /* StatTableViewCell.swift in Sources */,
@@ -475,6 +502,7 @@
 				A41952DB21A7A01D0086D964 /* StyledButton.swift in Sources */,
 				A412614B21A65EC9005A4B24 /* ClanMemberTableViewController.swift in Sources */,
 				A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */,
+				A4AA75AD22375D250004A7F8 /* Warlog.swift in Sources */,
 				A4668BD92206C48D0019817F /* PlayerProfileStatsTableViewCell.swift in Sources */,
 				A4AB5FCE21F003C1000A0464 /* DonationsTableViewCell.swift in Sources */,
 				A412614D21A786FD005A4B24 /* GradientView.swift in Sources */,

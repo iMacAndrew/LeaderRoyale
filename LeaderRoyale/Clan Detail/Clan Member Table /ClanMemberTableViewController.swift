@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ClanMemberTableViewController: UITableViewController {
     private var selectedMemberInfo: ClanInfo.Member?
@@ -56,8 +57,22 @@ class ClanMemberTableViewController: UITableViewController {
         view.backgroundColor = .dark
         tableView.register(UINib(nibName: "ClanMemberTableViewCell", bundle: nil), forCellReuseIdentifier: "ClanMemberTableViewCell")
         tableView.tableFooterView = UIView()
+
+        // GADBannerView will show in top left of the view
+        let bannerView = GADBannerView(adSize:kGADAdSizeBanner)
+        adViewDidReceiveAd(bannerView)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        self.view.addSubview(bannerView)
+        bannerView.load(GADRequest())
     }
-    
+
+    func adViewDidReceiveAd(_ bannerView: GADBannerView!) {
+        print("Banner loaded successfully")
+        tableView.tableHeaderView?.frame = bannerView.frame
+        tableView.tableHeaderView = bannerView
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

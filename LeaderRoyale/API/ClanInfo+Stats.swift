@@ -85,7 +85,7 @@ extension ClanInfo {
         guard var memberLowestDonationRatio = members.first else { return nil }
 
         for member in members {
-            if member.donationRatio < memberLowestDonationRatio.donationRatio {
+            if member.donationRatio <= memberLowestDonationRatio.donationRatio {
                 memberLowestDonationRatio = member
             }
         }

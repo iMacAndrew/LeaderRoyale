@@ -24,13 +24,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="90.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1d-QE-CIy">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="X1d-QE-CIy">
                         <rect key="frame" x="16" y="59" width="53.5" height="21"/>
                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRY-rN-1II">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="BRY-rN-1II">
                         <rect key="frame" x="250.5" y="59" width="53.5" height="21"/>
                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
                         <nil key="textColor"/>
@@ -45,6 +45,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="OmN-eC-iUI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="7a6-lG-a81"/>
+                    <constraint firstItem="BRY-rN-1II" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="X1d-QE-CIy" secondAttribute="trailing" constant="5" id="CVD-Jy-yxl"/>
                     <constraint firstItem="X1d-QE-CIy" firstAttribute="baseline" secondItem="BRY-rN-1II" secondAttribute="baseline" id="HMi-Xm-6XA"/>
                     <constraint firstItem="OmN-eC-iUI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="TTo-eD-naY"/>
                     <constraint firstItem="BRY-rN-1II" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="cx2-Wb-eqT"/>

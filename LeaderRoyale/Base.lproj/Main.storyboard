@@ -76,9 +76,11 @@
                     <connections>
                         <outlet property="clanSearchTextField" destination="gT4-nO-NYy" id="Pgi-n3-wWO"/>
                         <segue destination="JRQ-wx-2Yx" kind="presentation" identifier="clanIdentifier" id="q4D-Jr-74E"/>
+                        <segue destination="ClC-fo-6rA" kind="unwind" identifier="unwindToClanListTableViewController" unwindAction="unwindToClanListTableViewController:" id="C2d-9n-PFh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="ClC-fo-6rA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-606" y="477"/>
         </scene>
@@ -120,10 +122,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yeT-gG-AdP"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FqU-Fz-oxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-566" y="1254"/>
+            <point key="canvasLocation" x="1974" y="477"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xF4-xk-Ozz">
@@ -213,6 +216,9 @@
                         </connections>
                     </tableView>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="fRc-BL-KRA" kind="show" identifier="warParticipantSegue" id="4oV-Wr-dZ6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLa-xI-eOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -255,6 +261,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FM4-gO-LWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1604" y="2074"/>
+        </scene>
+        <!--War Day Participants Table View Controller-->
+        <scene sceneID="GSn-nB-LEg">
+            <objects>
+                <tableViewController id="fRc-BL-KRA" customClass="WarDayParticipantsTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zfR-RU-KPf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="fRc-BL-KRA" id="fxW-3e-PK1"/>
+                            <outlet property="delegate" destination="fRc-BL-KRA" id="vkf-t7-es2"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hGZ-vR-X6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142" y="2839"/>
         </scene>
     </scenes>
 </document>

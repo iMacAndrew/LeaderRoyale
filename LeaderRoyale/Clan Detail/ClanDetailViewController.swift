@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ClanDetailViewController: UITableViewController {
     
@@ -20,8 +21,22 @@ class ClanDetailViewController: UITableViewController {
         super.viewDidLoad()
         setNavigationTitle()
         registerCells()
+
+        // GADBannerView will show in top left of the view
+        let bannerView = GADBannerView(adSize:kGADAdSizeBanner)
+        adViewDidReceiveAd(bannerView)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        self.view.addSubview(bannerView)
+        bannerView.load(GADRequest())
     }
-    
+
+    func adViewDidReceiveAd(_ bannerView: GADBannerView!) {
+        print("Banner loaded successfully")
+        tableView.tableHeaderView?.frame = bannerView.frame
+        tableView.tableHeaderView = bannerView
+    }
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

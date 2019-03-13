@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ClanSearchViewController: UIViewController, UITextFieldDelegate {
 
@@ -14,6 +15,8 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     
     var clanInfo: ClanInfo?
     var playerInfos: [PlayerInfo]?
+    var warLogs: [Warlog]?
+    var isSearching = false
     
     @IBOutlet weak var clanSearchTextField: UITextField!
     
@@ -30,9 +33,16 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func checkClan() {
+
+        guard !isSearching else {
+            return
+        }
+
         guard let clanId = clanSearchTextField.text else {
             return
         }
+
+        isSearching = true
         
         clashRoyaleApi.getClanInfo(clanTag: clanId) { clanInfo in
             if clanInfo?.tag != nil {
@@ -52,12 +62,17 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func checkPlayers() {
-        guard let playerIds = clanInfo?.returnPlayerTags else { return }
+        guard let playerIds = clanInfo?.returnPlayerTags else {
+            DispatchQueue.main.async {
+                self.displayAlert()
+            }
+            return
+        }
         
         clashRoyaleApi.getPlayerInfo(playerTags: playerIds) { playerInfos in
             if playerInfos != nil {
                 self.playerInfos = playerInfos
-                self.goToClanListTable()
+                self.getWarLog()
             } else {
                 DispatchQueue.main.async {
                     self.displayAlert()
@@ -66,17 +81,34 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+
+    private func getWarLog() {
+        guard let clanId = clanInfo?.tag else {
+            DispatchQueue.main.async {
+                self.displayAlert()
+            }
+            return
+        }
+
+        clashRoyaleApi.getWarLogs(clanTag: clanId) { (warLogs) in
+            if warLogs != nil {
+                self.warLogs = warLogs
+                self.goToClanListTable()
+            } else {
+                DispatchQueue.main.async {
+                    self.displayAlert()
+                }
+            }
+        }
+
+
+    }
     
     private func goToClanListTable() {
+        isSearching = false
         DispatchQueue.main.async {
-            if let navBar = self.navigationController {
-                navBar.popViewController(animated: true)
-                let clanTable = navBar.topViewController as? ClanListTableViewController
-                
-                if let clanInfo = self.clanInfo, let playerInfos = self.playerInfos {
-                    let clan = Clan(clanInfo: clanInfo, players: playerInfos)
-                    clanTable?.addNew(clan: clan)
-                }
+            if self.navigationController != nil {
+                self.performSegue(withIdentifier: "unwindToClanListTableViewController", sender: self)
             } else {
                 self.performSegue(withIdentifier: "clanIdentifier", sender: self)
             }
@@ -96,7 +128,7 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         view.addGestureRecognizer(tapGesture)
-        
+
     }
     
     @objc func textFieldDidChange(textField: UITextField) {
@@ -119,6 +151,7 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func displayAlert() {
+        isSearching = false
         let alert = UIAlertController(title: "Clan Not Found", message: "The clan tag you entered is incorrect. You can find your tag inside the clan info tab in the Clash Royale app.", preferredStyle: .alert)
         
         let openAction = UIAlertAction(title: "Open Clash Royale", style: .default) { _ in
@@ -140,19 +173,18 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        guard
-            let navController = segue.destination as? UINavigationController,
-            let clanTable = navController.topViewController as? ClanListTableViewController
-        else {
-            return
+        let clanTable: ClanListTableViewController?
+
+        if let navController = segue.destination as? UINavigationController {
+            clanTable = navController.topViewController as? ClanListTableViewController
+        } else {
+            clanTable = segue.destination as? ClanListTableViewController
         }
-    
-        if let clanInfo = self.clanInfo, let playerInfos = self.playerInfos {
-            let clan = Clan(clanInfo: clanInfo, players: playerInfos)
-            clanTable.addNew(clan: clan)
+
+        if let clanInfo = self.clanInfo, let playerInfos = self.playerInfos, let warLogs = self.warLogs {
+            let clan = Clan(clanInfo: clanInfo, players: playerInfos, warLogs: warLogs)
+            clanTable?.addNew(clan: clan)
         }
-        
     }
     
 }
