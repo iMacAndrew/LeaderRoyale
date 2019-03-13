@@ -233,9 +233,4 @@ extension ClanInfo {
         return completePlayerTags
         
     }
-    
-//    var activityLevel: Int {
-//        
-//    }
-    
 }

@@ -19,9 +19,17 @@ class ParticipantInfoTableViewCell: UITableViewCell {
             return
         }
 
+        var battlesLoss = participantInfo.battlesPlayed - participantInfo.wins
+
         participantNameLabel.text = participantInfo.name
         cardsCollectedLabel.text = "\(participantInfo.cardsEarned) Cards Collected"
         battlesWonLabel.text = "Won \(participantInfo.wins) / \(participantInfo.battlesPlayed) Battles"
+
+        if participantInfo.battlesPlayed == 0  {
+            battlesWonLabel.text = "Skipped Battle Day"
+        }
+
+       
 
         var didWin: Bool
 

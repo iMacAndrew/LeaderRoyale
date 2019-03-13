@@ -22,6 +22,7 @@ class ClanWarStatsTableViewController: UITableViewController {
         setNavigationTitle()
         view.backgroundColor = .dark
         tableView.register(UINib(nibName: "WarTableViewCell", bundle: nil), forCellReuseIdentifier: "WarTableViewCell")
+        tableView.register(UINib(nibName: "InactiveWarMembersTableViewCell", bundle: nil), forCellReuseIdentifier: "InactiveWarMembersTableViewCell")
         tableView.tableFooterView = UIView()
     }
 
@@ -36,23 +37,44 @@ class ClanWarStatsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return createWarCell(indexPath: indexPath)
+        if indexPath.row == 0 {
+            return createInactiveWarMemberCell(indexPath: indexPath)
+        } else {
+            return createWarCell(indexPath: indexPath)
+        }
+
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        selectedWarLog = clan.warLogs[indexPath.row]
+        if indexPath.row == 0 {
+            performSegue(withIdentifier: "inactiveMemberSegue", sender: self)
+        } else {
+            selectedWarLog = clan.warLogs[indexPath.row]
 
-        performSegue(withIdentifier: "warParticipantSegue", sender: self)
-    }
+            performSegue(withIdentifier: "warParticipantSegue", sender: self)
+        }
+        }
+
+
 
     private func createWarCell(indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WarTableViewCell", for: indexPath) as! WarTableViewCell
 
         if let clanTag = clan.clanInfo.tag {
-            cell.configure(warLog: clan.warLogs[indexPath.row], warTitle: "War \(indexPath.row + 1)", clanTag: clanTag)
+            cell.configure(warLog: clan.warLogs[indexPath.row], warTitle: "War \(indexPath.row)", clanTag: clanTag)
         }
+
+        cell.accessoryType = .disclosureIndicator
+
+        return cell
+    }
+
+    private func createInactiveWarMemberCell(indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "InactiveWarMembersTableViewCell", for: indexPath) as! InactiveWarMembersTableViewCell
+
+        cell.configure()
 
         cell.accessoryType = .disclosureIndicator
 

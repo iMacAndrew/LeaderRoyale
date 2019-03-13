@@ -192,6 +192,34 @@
             </objects>
             <point key="canvasLocation" x="2026" y="1254"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="RHV-Pb-3gK">
+            <objects>
+                <tableViewController id="VQp-DY-KR3" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yrd-wm-MXU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gNV-zG-MpR">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gNV-zG-MpR" id="zKQ-vF-3jH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VQp-DY-KR3" id="ayk-gH-aBP"/>
+                            <outlet property="delegate" destination="VQp-DY-KR3" id="Mdc-qw-srS"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zuf-wk-syg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1377" y="2292"/>
+        </scene>
         <!--Clan War Stats Table View Controller-->
         <scene sceneID="ywg-j2-VtY">
             <objects>
@@ -218,6 +246,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <segue destination="fRc-BL-KRA" kind="show" identifier="warParticipantSegue" id="4oV-Wr-dZ6"/>
+                        <segue destination="VQp-DY-KR3" kind="show" identifier="inactiveMemberSegue" id="dfB-nU-hFk"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLa-xI-eOw" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -23,7 +23,7 @@ class WarTableViewCell: UITableViewCell {
         }
 
         warTitleLabel.text = warTitle
-        warDayWinsLabel.text = "Won \(standing.wins) / \(standing.battlesPlayed) Battles"
+        warDayWinsLabel.text = "Won \(standing.wins) / \(standing.battlesPlayed) Final Battles"
         crownsLabel.text = "\(standing.crowns) Crowns"
         warDateLabel.text = Date(timeIntervalSince1970: TimeInterval(warLog.createdDate)).getElapsedInterval() + " ago"
         warTrophiesChangedLabel.text = "\(standing.warTrophiesChange) Trophies"

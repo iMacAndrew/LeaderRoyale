@@ -12,6 +12,7 @@ import GoogleMobileAds
 class StatsTableViewController: UITableViewController {
     
     private var stats = [Stat]()
+
     
     static func make() -> StatsTableViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StatsTableViewController") as! StatsTableViewController
@@ -71,6 +72,7 @@ class StatsTableViewController: UITableViewController {
    
     
     func configure(clan: Clan) {
+        
         let memberPercentage = clan.clanInfo.memberPercentages
         let memberCount = clan.clanInfo.countMembers
         let totalMembers = clan.clanInfo.memberCount ?? 50
@@ -105,7 +107,7 @@ class StatsTableViewController: UITableViewController {
         let averageKingLevelStat = Stat(title: "Average King Level", stat: String(averageKingLevel))
         
         stats.append(averageKingLevelStat)
-        
+
     }
     
     private func setNavigationTitle() {
