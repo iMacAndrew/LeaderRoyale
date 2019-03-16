@@ -12,7 +12,7 @@ class ClanWarStatsTableViewController: UITableViewController {
 
     private var clan: Clan!
     private var selectedWarLog: Warlog?
-
+    
     static func make() -> ClanWarStatsTableViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ClanWarStatsTableViewController") as! ClanWarStatsTableViewController
     }
@@ -73,16 +73,19 @@ class ClanWarStatsTableViewController: UITableViewController {
 
     private func createInactiveWarMemberCell(indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InactiveWarMembersTableViewCell", for: indexPath) as! InactiveWarMembersTableViewCell
-
         cell.configure()
-
         cell.accessoryType = .disclosureIndicator
-
         return cell
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
+
+        if let inactiveWarMembersTableViewController = segue.destination as? InactiveWarMembersTableViewController,
+            let clan = clan {
+            inactiveWarMembersTableViewController.clan = clan
+            inactiveWarMembersTableViewController.configure(clan: clan)
+        }
 
         if let warDayParticipantsTableViewController = segue.destination as? WarDayParticipantsTableViewController,
         let selectedWarLog = selectedWarLog {

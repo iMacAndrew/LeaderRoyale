@@ -145,6 +145,37 @@ class RecognitionTableViewController: UITableViewController {
             recognitions.append(recognitionForLowestDonationRatio)
 
         }
+
+        if let player = clan.playerWithMostWarDayWins,
+            let playerTag = player.tag {
+            let recognitionForPlayerWithMostWarDayWins = Recognition(title: "Most War Day Wins",
+                                                                     playerName: player.name ?? "",
+                                                                     stat: String(clan.countWarWins(playerTag: playerTag)) + "/10",
+                                                                     isGood: true)
+
+            recognitions.append(recognitionForPlayerWithMostWarDayWins)
+        }
+
+        if let player = clan.playerWithMostWarDayLosses,
+            let playerTag = player.tag {
+            let recognitionForPlayerWithMostWarDayLosses = Recognition(title: "Most War Day Losses",
+                                                                     playerName: player.name ?? "",
+                                                                     stat: String(clan.countBattlesLost(playerTag: playerTag)) + "/10",
+                                                                     isGood: false)
+
+            recognitions.append(recognitionForPlayerWithMostWarDayLosses)
+        }
+
+        if let player = clan.playerWithMostCardsEarned,
+            let playerTag = player.tag {
+            let recognitionForPlayerWithMostCardEarned = Recognition(title: "Most Clan Cards Earned",
+                                                                       playerName: player.name ?? "",
+                                                                       stat: String(clan.countCardsEarned(playerTag: playerTag)),
+                                                                       isGood: true)
+
+            recognitions.append(recognitionForPlayerWithMostCardEarned)
+        }
+
     }
     
     private func setNavigationTitle() {

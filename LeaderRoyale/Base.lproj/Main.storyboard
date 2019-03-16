@@ -192,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="2026" y="1254"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Inactive War Members Table View Controller-->
         <scene sceneID="RHV-Pb-3gK">
             <objects>
-                <tableViewController id="VQp-DY-KR3" sceneMemberID="viewController">
+                <tableViewController id="VQp-DY-KR3" customClass="InactiveWarMembersTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yrd-wm-MXU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

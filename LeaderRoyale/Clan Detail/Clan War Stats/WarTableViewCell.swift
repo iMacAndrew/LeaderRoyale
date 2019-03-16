@@ -26,7 +26,13 @@ class WarTableViewCell: UITableViewCell {
         warDayWinsLabel.text = "Won \(standing.wins) / \(standing.battlesPlayed) Final Battles"
         crownsLabel.text = "\(standing.crowns) Crowns"
         warDateLabel.text = Date(timeIntervalSince1970: TimeInterval(warLog.createdDate)).getElapsedInterval() + " ago"
-        warTrophiesChangedLabel.text = "\(standing.warTrophiesChange) Trophies"
+
+        if standing.warTrophiesChange > 0 {
+            warTrophiesChangedLabel.text = "+\(standing.warTrophiesChange) "
+        } else {
+            warTrophiesChangedLabel.text = "\(standing.warTrophiesChange) "
+        }
+
 
         var isWin: Bool
 
@@ -46,12 +52,14 @@ class WarTableViewCell: UITableViewCell {
         warDayWinsLabel.textColor = .white
         warDateLabel.textColor = .white
         crownsLabel.textColor = .white
-        warTitleLabel.textColor = .white
+
 
         if isWin {
             warTrophiesChangedLabel.textColor = .green
+            warTitleLabel.textColor = .green
         } else {
             warTrophiesChangedLabel.textColor = .red
+            warTitleLabel.textColor = .red
         }
     }
 }

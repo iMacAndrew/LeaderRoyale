@@ -14,13 +14,31 @@ extension Warlog {
         return getParticipant(for: playerTag) != nil
     }
 
-    func countPlayerWarWins(playerTag: String) -> Int {
+    func warTrophiesChanged(clanTag: String) -> Int {
+
+        guard let standing = getStanding(for: clanTag) else {
+            return 0
+        }
+
+        return standing.warTrophiesChange
+    }
+
+    func playerWarWins(playerTag: String) -> Int {
         return getParticipant(for: playerTag)?.wins ?? 0
     }
 
-    func countBattlesPlayed(playerTag: String) -> Int {
+    func battlesPlayed(playerTag: String) -> Int {
         return getParticipant(for: playerTag)?.battlesPlayed ?? 0
     }
+
+    func battlesLost(playerTag: String) -> Int {
+        return battlesPlayed(playerTag: playerTag) - playerWarWins(playerTag: playerTag)
+    }
+
+    func cardsEarned(playerTag: String) -> Int {
+        return getParticipant(for: playerTag)?.cardsEarned ?? 0
+    }
+
 
     func getParticipant(for playerTag: String) -> Participant? {
         for participant in participants {
@@ -40,4 +58,5 @@ extension Warlog {
         }
         return nil
     }
+
 }

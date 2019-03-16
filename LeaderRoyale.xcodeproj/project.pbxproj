@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B3D5BC721EA8C9000E10B87 /* ClanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3D5BC621EA8C9000E10B87 /* ClanDetailViewController.swift */; };
 		1B3D5BCA21EA8D3800E10B87 /* ClanOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3D5BC821EA8D3800E10B87 /* ClanOverviewTableViewCell.swift */; };
 		1B3D5BCB21EA8D3800E10B87 /* ClanOverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B3D5BC921EA8D3800E10B87 /* ClanOverviewTableViewCell.xib */; };
 		1B4C5FDA21EBBFBE004E303C /* RecognitionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FD921EBBFBE004E303C /* RecognitionTableViewController.swift */; };
@@ -19,7 +18,9 @@
 		1B4C5FE721EC21EE004E303C /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FE621EC21EE004E303C /* ImageManager.swift */; };
 		A40FD5262238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD5242238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.swift */; };
 		A40FD5272238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40FD5252238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.xib */; };
-		A40FD5292238EE0800AA4EE2 /* inactiveWarMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD5282238EE0800AA4EE2 /* inactiveWarMembersTableViewController.swift */; };
+		A40FD5292238EE0800AA4EE2 /* InactiveWarMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD5282238EE0800AA4EE2 /* InactiveWarMembersTableViewController.swift */; };
+		A40FD52C223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD52A223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.swift */; };
+		A40FD52D223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40FD52B223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.xib */; };
 		A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */; };
 		A412614B21A65EC9005A4B24 /* ClanMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614A21A65EC9005A4B24 /* ClanMemberTableViewController.swift */; };
 		A412614D21A786FD005A4B24 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614C21A786FD005A4B24 /* GradientView.swift */; };
@@ -73,7 +74,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B3D5BC621EA8C9000E10B87 /* ClanDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClanDetailViewController.swift; sourceTree = "<group>"; };
 		1B3D5BC821EA8D3800E10B87 /* ClanOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		1B3D5BC921EA8D3800E10B87 /* ClanOverviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClanOverviewTableViewCell.xib; sourceTree = "<group>"; };
 		1B4C5FD921EBBFBE004E303C /* RecognitionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionTableViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +87,9 @@
 		76ADAED894CEF7BF0C4465FE /* Pods-LeaderRoyale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeaderRoyale.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeaderRoyale/Pods-LeaderRoyale.debug.xcconfig"; sourceTree = "<group>"; };
 		A40FD5242238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveWarMembersTableViewCell.swift; sourceTree = "<group>"; };
 		A40FD5252238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InactiveWarMembersTableViewCell.xib; sourceTree = "<group>"; };
-		A40FD5282238EE0800AA4EE2 /* inactiveWarMembersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inactiveWarMembersTableViewController.swift; sourceTree = "<group>"; };
+		A40FD5282238EE0800AA4EE2 /* InactiveWarMembersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveWarMembersTableViewController.swift; sourceTree = "<group>"; };
+		A40FD52A223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarMemberDetailTableViewCell.swift; sourceTree = "<group>"; };
+		A40FD52B223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarMemberDetailTableViewCell.xib; sourceTree = "<group>"; };
 		A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanSearchViewController.swift; sourceTree = "<group>"; };
 		A412614A21A65EC9005A4B24 /* ClanMemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanMemberTableViewController.swift; sourceTree = "<group>"; };
 		A412614C21A786FD005A4B24 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -158,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */,
-				1B3D5BC621EA8C9000E10B87 /* ClanDetailViewController.swift */,
 				A4AB5FC021EFC966000A0464 /* Clan War Stats */,
 				A4D5347221ED9F30005E5835 /* Stats */,
 				1B4C5FD821EBBF76004E303C /* Recognition */,
@@ -297,7 +298,9 @@
 				A433377722389E0E00C8A202 /* WarTableViewCell.xib */,
 				A40FD5242238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.swift */,
 				A40FD5252238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.xib */,
-				A40FD5282238EE0800AA4EE2 /* inactiveWarMembersTableViewController.swift */,
+				A40FD5282238EE0800AA4EE2 /* InactiveWarMembersTableViewController.swift */,
+				A40FD52A223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.swift */,
+				A40FD52B223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.xib */,
 			);
 			path = "Clan War Stats";
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				A4D5346F21DF171D005E5835 /* ClanNameTableViewCell.xib in Resources */,
 				A4668BE4220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib in Resources */,
 				1B4C5FDE21EBBFED004E303C /* RecognitionTableViewCell.xib in Resources */,
+				A40FD52D223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.xib in Resources */,
 				A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */,
 				A4F24F3621B4A5ED004D437D /* ClanMemberTableViewCell.xib in Resources */,
 				A4668BE02206CEFB0019817F /* PlayerDeckTableViewCell.xib in Resources */,
@@ -493,6 +497,7 @@
 				A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */,
 				A40FD5262238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.swift in Sources */,
 				A449926321F2D5D90063B9A3 /* Colors.swift in Sources */,
+				A40FD52C223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.swift in Sources */,
 				A4AA75AF2237660B0004A7F8 /* Warlog+Stat.swift in Sources */,
 				A4AA75B8223803440004A7F8 /* ParticipantInfoTableViewCell.swift in Sources */,
 				A4668BE3220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift in Sources */,
@@ -523,8 +528,7 @@
 				A4AA75A72236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift in Sources */,
 				A449926121F033890063B9A3 /* ClanDetailTabViewController.swift in Sources */,
 				A4AA75AB223614FD0004A7F8 /* CoreDataManager.swift in Sources */,
-				1B3D5BC721EA8C9000E10B87 /* ClanDetailViewController.swift in Sources */,
-				A40FD5292238EE0800AA4EE2 /* inactiveWarMembersTableViewController.swift in Sources */,
+				A40FD5292238EE0800AA4EE2 /* InactiveWarMembersTableViewController.swift in Sources */,
 				A4AA75A62236125E0004A7F8 /* CoreDataClan+CoreDataProperties.swift in Sources */,
 				1B4C5FDD21EBBFED004E303C /* RecognitionTableViewCell.swift in Sources */,
 				A4AB5FC221EFC9A0000A0464 /* ClanWarStatsTableViewController.swift in Sources */,

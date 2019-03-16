@@ -42,12 +42,24 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Bk9-lG-d9J">
-                        <rect key="frame" x="16" y="154" width="53.5" height="21"/>
-                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aa0-22-p7d">
+                        <rect key="frame" x="16" y="154" width="39" height="25"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Bk9-lG-d9J">
+                                <rect key="frame" x="0.0" y="0.0" width="14" height="25"/>
+                                <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy" translatesAutoresizingMaskIntoConstraints="NO" id="95l-7J-21E">
+                                <rect key="frame" x="14" y="0.0" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="L6j-Px-xXc"/>
+                                    <constraint firstAttribute="width" constant="25" id="YNi-AZ-ltd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="I8m-Mx-Ik1">
                         <rect key="frame" x="133.5" y="80" width="53.5" height="26.5"/>
                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
@@ -57,9 +69,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="MXf-SJ-Kaa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="B5c-lS-hmi"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Bk9-lG-d9J" secondAttribute="bottom" constant="1" id="Mqu-8m-5OA"/>
-                    <constraint firstItem="MXf-SJ-Kaa" firstAttribute="leading" secondItem="Bk9-lG-d9J" secondAttribute="leading" id="N8o-m1-t1z"/>
+                    <constraint firstAttribute="bottom" secondItem="Aa0-22-p7d" secondAttribute="bottom" constant="7.5" id="S9e-eX-shS"/>
                     <constraint firstItem="MXf-SJ-Kaa" firstAttribute="centerY" secondItem="gLF-6x-wvT" secondAttribute="centerY" id="UHf-Un-ckm"/>
+                    <constraint firstItem="Aa0-22-p7d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="V8R-Pe-WaF"/>
                     <constraint firstItem="I8m-Mx-Ik1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="h6Z-fA-0gg"/>
                     <constraint firstItem="gLF-6x-wvT" firstAttribute="leading" secondItem="HxK-ge-rmt" secondAttribute="leading" id="kFg-zS-DWr"/>
                     <constraint firstItem="HxK-ge-rmt" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="loN-zm-Vtx"/>
@@ -80,4 +92,7 @@
             <point key="canvasLocation" x="137.59999999999999" y="175.86206896551727"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="trophy" width="250" height="250"/>
+    </resources>
 </document>

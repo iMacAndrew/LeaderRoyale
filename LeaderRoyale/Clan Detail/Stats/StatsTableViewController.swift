@@ -108,6 +108,19 @@ class StatsTableViewController: UITableViewController {
         
         stats.append(averageKingLevelStat)
 
+        let totalTrophiesChanged = clan.totalTrophiesChanged()
+
+        let stat: String
+        if totalTrophiesChanged > 0 {
+            stat = "+" + String(totalTrophiesChanged)
+        } else {
+            stat = String(totalTrophiesChanged)
+        }
+
+        let totalTrophiesChangedStat = Stat(title: "Trophy Change For Past " +
+            String(clan.warLogs.count) + " Wars", stat: stat)
+
+        stats.append(totalTrophiesChangedStat)
     }
     
     private func setNavigationTitle() {
