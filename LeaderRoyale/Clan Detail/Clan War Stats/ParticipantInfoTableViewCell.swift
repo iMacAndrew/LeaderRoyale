@@ -37,6 +37,12 @@ class ParticipantInfoTableViewCell: UITableViewCell {
             battlesWonLabel.textColor = .red
             participantNameLabel.textColor = .red
         } else {
+            if participantInfo.wins > 0 {
+                battlesWonLabel.textColor = .green
+            }
+            else {
+                battlesWonLabel.textColor = .red
+            }
             battlesWonLabel.text = "Won \(participantInfo.wins) / \(participantInfo.battlesPlayed) Battles"
         }
 

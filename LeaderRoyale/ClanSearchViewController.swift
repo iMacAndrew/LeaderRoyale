@@ -11,13 +11,9 @@ import GoogleMobileAds
 
 class ClanSearchViewController: UIViewController, UITextFieldDelegate {
 
-    let clashRoyaleApi = ClashRoyaleAPI()
-    
-    var clanInfo: ClanInfo?
-    var playerInfos: [PlayerInfo]?
-    var warLogs: [Warlog]?
-    var isSearching = false
-    
+
+    private var clan: Clan?
+
     @IBOutlet weak var clanSearchTextField: UITextField!
     
     @IBAction func openClashButton(_ sender: Any) {
@@ -25,87 +21,35 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func clanSearchButtonPressed(_ sender: UIButton) {
-        checkClan()
+        downloadClan()
     }
 
     @IBAction func searchKeyTriggered(_ sender: UITextField) {
-        checkClan()
+        downloadClan()
     }
     
-    private func checkClan() {
-
-        guard !isSearching else {
+    private func downloadClan() {
+        guard
+            let clanId = clanSearchTextField.text,
+            !clanId.isEmpty
+        else {
             return
         }
 
-        guard let clanId = clanSearchTextField.text else {
-            return
-        }
-
-        isSearching = true
-        
-        clashRoyaleApi.getClanInfo(clanTag: clanId) { clanInfo in
-            if clanInfo?.tag != nil {
-                print("CLAN")
-                DispatchQueue.main.async {
-                    self.clanInfo = clanInfo
-                    self.checkPlayers()
-                }
+        let clanDownloader = ClanDownloader(clanTag: clanId)
+        clanDownloader.download() { [weak self] clan in
+            if let clan = clan {
+                self?.clan = clan
+                self?.goToClanListTable()
             } else {
                 DispatchQueue.main.async {
-                    self.displayAlert()
-                }
-                print("not a clan")
-            }
-            
-        }
-    }
-    
-    private func checkPlayers() {
-        guard let playerIds = clanInfo?.returnPlayerTags else {
-            DispatchQueue.main.async {
-                self.displayAlert()
-            }
-            return
-        }
-        
-        clashRoyaleApi.getPlayerInfo(playerTags: playerIds) { playerInfos in
-            if playerInfos != nil {
-                self.playerInfos = playerInfos
-                self.getWarLog()
-            } else {
-                DispatchQueue.main.async {
-                    self.displayAlert()
+                    self?.displayAlert()
                 }
             }
         }
-        
     }
 
-    private func getWarLog() {
-        guard let clanId = clanInfo?.tag else {
-            DispatchQueue.main.async {
-                self.displayAlert()
-            }
-            return
-        }
-
-        clashRoyaleApi.getWarLogs(clanTag: clanId) { (warLogs) in
-            if warLogs != nil {
-                self.warLogs = warLogs
-                self.goToClanListTable()
-            } else {
-                DispatchQueue.main.async {
-                    self.displayAlert()
-                }
-            }
-        }
-
-
-    }
-    
     private func goToClanListTable() {
-        isSearching = false
         DispatchQueue.main.async {
             if self.navigationController != nil {
                 self.performSegue(withIdentifier: "unwindToClanListTableViewController", sender: self)
@@ -136,12 +80,10 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func openClashRoyale() {
-        let clashRoyale = "https://link.clashroyale.com"
+        let clashRoyale = "https://link.clashroyale.com/clan"
         let clashUrl = URL(string: clashRoyale)!
-        if UIApplication.shared.canOpenURL(clashUrl)
-        {
+        if UIApplication.shared.canOpenURL(clashUrl) {
             UIApplication.shared.open(clashUrl, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
-            
         }
     }
     
@@ -151,7 +93,6 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func displayAlert() {
-        isSearching = false
         let alert = UIAlertController(title: "Clan Not Found", message: "The clan tag you entered is incorrect. You can find your tag inside the clan info tab in the Clash Royale app.", preferredStyle: .alert)
         
         let openAction = UIAlertAction(title: "Open Clash Royale", style: .default) { _ in
@@ -181,8 +122,7 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
             clanTable = segue.destination as? ClanListTableViewController
         }
 
-        if let clanInfo = self.clanInfo, let playerInfos = self.playerInfos, let warLogs = self.warLogs {
-            let clan = Clan(clanInfo: clanInfo, players: playerInfos, warLogs: warLogs)
+        if let clan = clan {
             clanTable?.addNew(clan: clan)
         }
     }

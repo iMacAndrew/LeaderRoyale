@@ -34,7 +34,7 @@
                                         <constraint firstAttribute="height" constant="122" id="mAr-4k-tLi"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clan Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02u-1k-7JX">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clan Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="02u-1k-7JX">
                                     <rect key="frame" x="165" y="18" width="124" height="25.5"/>
                                     <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,11 +69,13 @@
                                 <constraint firstItem="02u-1k-7JX" firstAttribute="top" secondItem="KgJ-By-Kb4" secondAttribute="top" constant="10" id="JZo-ki-gvY"/>
                                 <constraint firstItem="Vli-zo-lxv" firstAttribute="leading" secondItem="KgJ-By-Kb4" secondAttribute="leading" id="KAX-5j-XP3"/>
                                 <constraint firstItem="Fcj-E0-Opn" firstAttribute="leading" secondItem="Vli-zo-lxv" secondAttribute="leading" id="KZv-j5-8wL"/>
+                                <constraint firstItem="02u-1k-7JX" firstAttribute="leading" secondItem="5ac-me-xWJ" secondAttribute="leading" constant="165" id="Mfn-XK-EdR"/>
                                 <constraint firstItem="Fcj-E0-Opn" firstAttribute="top" secondItem="Vli-zo-lxv" secondAttribute="bottom" id="a0R-xr-nTD"/>
                                 <constraint firstItem="WGp-ff-x0Z" firstAttribute="leading" secondItem="02u-1k-7JX" secondAttribute="leading" id="cfV-ws-n9o"/>
                                 <constraint firstItem="02u-1k-7JX" firstAttribute="leading" secondItem="KgJ-By-Kb4" secondAttribute="trailing" constant="23" id="j9q-Qn-EA2"/>
                                 <constraint firstItem="Vli-zo-lxv" firstAttribute="top" secondItem="KgJ-By-Kb4" secondAttribute="bottom" constant="8" id="p3K-og-Mkz"/>
                                 <constraint firstItem="KgJ-By-Kb4" firstAttribute="leading" secondItem="5ac-me-xWJ" secondAttribute="leading" constant="8" id="rFZ-Ec-pmB"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="02u-1k-7JX" secondAttribute="trailing" constant="3" id="tAg-E5-QLT"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="topColor">

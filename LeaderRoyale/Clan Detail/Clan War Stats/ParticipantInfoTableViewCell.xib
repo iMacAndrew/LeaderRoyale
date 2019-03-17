@@ -25,32 +25,31 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6M5-tD-leg">
-                        <rect key="frame" x="16" y="41.5" width="54" height="21"/>
+                        <rect key="frame" x="16" y="8" width="54" height="21"/>
                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BK-tT-t6F">
-                        <rect key="frame" x="258" y="11" width="46" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUl-22-OH4">
+                        <rect key="frame" x="258" y="75" width="46" height="18"/>
                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUl-22-OH4">
-                        <rect key="frame" x="258" y="69" width="46" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BK-tT-t6F">
+                        <rect key="frame" x="258" y="42" width="46" height="18"/>
                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="1BK-tT-t6F" secondAttribute="trailing" constant="16" id="7fF-1n-NbR"/>
-                    <constraint firstAttribute="bottom" secondItem="JUl-22-OH4" secondAttribute="bottom" constant="16.5" id="LLa-HP-NKI"/>
-                    <constraint firstAttribute="trailing" secondItem="JUl-22-OH4" secondAttribute="trailing" constant="16" id="XWZ-9n-QqS"/>
-                    <constraint firstItem="6M5-tD-leg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cw3-ff-Q0b"/>
-                    <constraint firstItem="6M5-tD-leg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dge-Uk-h3x"/>
-                    <constraint firstItem="JUl-22-OH4" firstAttribute="top" secondItem="1BK-tT-t6F" secondAttribute="bottom" constant="40" id="fFr-3O-Eea"/>
-                    <constraint firstItem="1BK-tT-t6F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="gVn-dB-exn"/>
+                    <constraint firstItem="1BK-tT-t6F" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="JA9-Sd-Ha6"/>
+                    <constraint firstAttribute="bottom" secondItem="JUl-22-OH4" secondAttribute="bottom" constant="10.5" id="Z4t-hu-0u2"/>
+                    <constraint firstAttribute="trailing" secondItem="1BK-tT-t6F" secondAttribute="trailing" constant="16" id="k4Q-rq-c0m"/>
+                    <constraint firstItem="6M5-tD-leg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="kmJ-Ef-EMB"/>
+                    <constraint firstAttribute="trailing" secondItem="JUl-22-OH4" secondAttribute="trailing" constant="16" id="ktz-Cm-XzD"/>
+                    <constraint firstItem="6M5-tD-leg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="l8p-15-JRV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

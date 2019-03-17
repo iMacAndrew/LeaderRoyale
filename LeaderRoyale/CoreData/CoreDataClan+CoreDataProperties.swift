@@ -14,6 +14,7 @@ extension CoreDataClan {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CoreDataClan> {
         return NSFetchRequest<CoreDataClan>(entityName: "CoreDataClan")
+
     }
 
     @NSManaged public var data: Data

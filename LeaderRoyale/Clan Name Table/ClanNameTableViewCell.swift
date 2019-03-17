@@ -95,9 +95,13 @@ class ClanNameTableViewCell: UITableViewCell {
 }
 
 extension Int {
-    func withCommas() -> String {
+    static var numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
-        return numberFormatter.string(from: NSNumber(value:self))!
+        return numberFormatter
+    }()
+
+    func withCommas() -> String {
+        return Int.numberFormatter.string(from: NSNumber(value:self))!
     }
 }

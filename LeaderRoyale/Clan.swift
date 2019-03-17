@@ -80,6 +80,18 @@ struct Clan: Codable {
         return totalTrophiesChanged
     }
 
+    func calcWinPercentage(playerTag: String) -> Double {
+        if countWarWins(playerTag: playerTag) == 0 && countBattlesPlayed(playerTag: playerTag) == 0 {
+            return 0.0
+        } else {
+            return Double(countWarWins(playerTag: playerTag)) / Double(countBattlesPlayed(playerTag: playerTag))
+        }
+    }
+
+    func calcWarParticipationPercentage(playerTag: String) -> Double {
+        return Double(countWarsParticipated(playerTag: playerTag)) / Double(warLogs.count)
+    }
+
 
     var playerWithMostWarDayWins: PlayerInfo? {
         guard var topPlayer = players.first, let topPlayerTag = topPlayer.tag else {

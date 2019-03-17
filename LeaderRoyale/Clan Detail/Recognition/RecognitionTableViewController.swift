@@ -150,7 +150,7 @@ class RecognitionTableViewController: UITableViewController {
             let playerTag = player.tag {
             let recognitionForPlayerWithMostWarDayWins = Recognition(title: "Most War Day Wins",
                                                                      playerName: player.name ?? "",
-                                                                     stat: String(clan.countWarWins(playerTag: playerTag)) + "/10",
+                                                                     stat: String(clan.countWarWins(playerTag: playerTag)) + " In 10 Wars",
                                                                      isGood: true)
 
             recognitions.append(recognitionForPlayerWithMostWarDayWins)
@@ -160,7 +160,7 @@ class RecognitionTableViewController: UITableViewController {
             let playerTag = player.tag {
             let recognitionForPlayerWithMostWarDayLosses = Recognition(title: "Most War Day Losses",
                                                                      playerName: player.name ?? "",
-                                                                     stat: String(clan.countBattlesLost(playerTag: playerTag)) + "/10",
+                                                                     stat: String(clan.countBattlesLost(playerTag: playerTag)) + " In 10 Wars",
                                                                      isGood: false)
 
             recognitions.append(recognitionForPlayerWithMostWarDayLosses)

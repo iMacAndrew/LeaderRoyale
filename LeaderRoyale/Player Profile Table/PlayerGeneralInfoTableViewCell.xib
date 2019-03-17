@@ -92,9 +92,8 @@
                             <constraint firstAttribute="width" constant="100" id="lsV-7d-9ar"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YU7-oQ-pOF">
-                        <rect key="frame" x="69" y="122" width="127" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YU7-oQ-pOF">
+                        <rect key="frame" x="69" y="122" width="42.5" height="21"/>
                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -106,9 +105,8 @@
                             <constraint firstAttribute="height" constant="45" id="t72-Jw-k9U"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Role" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f6-op-dEc">
-                        <rect key="frame" x="69" y="141" width="127" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Role" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f6-op-dEc">
+                        <rect key="frame" x="69" y="141" width="44.5" height="21"/>
                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -117,6 +115,7 @@
                 <constraints>
                     <constraint firstItem="AfO-dI-Ds2" firstAttribute="leading" secondItem="1Jl-rj-Qi0" secondAttribute="trailing" constant="12" id="0EZ-5W-ibU"/>
                     <constraint firstItem="3JE-Ry-N55" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="3HZ-90-SGw"/>
+                    <constraint firstItem="YU7-oQ-pOF" firstAttribute="leading" secondItem="4jG-hq-QdU" secondAttribute="trailing" constant="8" id="5Sp-AM-3iV"/>
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="centerY" secondItem="AfO-dI-Ds2" secondAttribute="centerY" id="6bf-JW-XCQ"/>
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8jY-kR-gpP"/>
                     <constraint firstItem="0v5-gz-CWc" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="B3b-JU-lUW"/>
@@ -126,10 +125,13 @@
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="top" secondItem="9a9-uU-Oxs" secondAttribute="top" id="QEl-bt-OZA"/>
                     <constraint firstItem="0v5-gz-CWc" firstAttribute="leading" secondItem="AfO-dI-Ds2" secondAttribute="trailing" constant="62" id="RUi-yo-hFV"/>
                     <constraint firstItem="3JE-Ry-N55" firstAttribute="leading" secondItem="yQa-gH-d1i" secondAttribute="leading" id="S68-hx-Z8C"/>
+                    <constraint firstItem="2f6-op-dEc" firstAttribute="leading" secondItem="4jG-hq-QdU" secondAttribute="trailing" constant="8" id="S8V-YR-7py"/>
                     <constraint firstItem="0v5-gz-CWc" firstAttribute="top" secondItem="yQa-gH-d1i" secondAttribute="top" id="Xsv-n4-XxD"/>
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="centerX" secondItem="yQa-gH-d1i" secondAttribute="centerX" constant="-67.5" id="YmH-UB-pwl"/>
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="centerX" secondItem="4jG-hq-QdU" secondAttribute="centerX" id="aqR-ZB-P12"/>
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="top" secondItem="3JE-Ry-N55" secondAttribute="bottom" constant="18" id="cgc-51-baF"/>
+                    <constraint firstAttribute="bottom" secondItem="2f6-op-dEc" secondAttribute="bottom" constant="15.5" id="jGG-ab-76d"/>
+                    <constraint firstItem="YU7-oQ-pOF" firstAttribute="top" secondItem="AfO-dI-Ds2" secondAttribute="bottom" constant="17.5" id="lyA-NX-xDi"/>
                     <constraint firstItem="1Jl-rj-Qi0" firstAttribute="leading" secondItem="9a9-uU-Oxs" secondAttribute="leading" id="mdd-BC-Jm0"/>
                     <constraint firstItem="9a9-uU-Oxs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18.5" id="pYn-ok-IU2"/>
                     <constraint firstItem="0v5-gz-CWc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="qYk-M5-fuX"/>

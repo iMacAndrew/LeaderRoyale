@@ -11,18 +11,28 @@ import GoogleMobileAds
 
 class ClanListTableViewController: UITableViewController {
     private var selectedClan: Clan?
-
     var bannerView: GADBannerView!
 
     private var clans: [Clan] {
         return CoreDataManager.shared.clans
     }
-  
+
+    lazy var refresher: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .white
+
+        refreshControl.addTarget(self, action: #selector(requestData), for: .valueChanged)
+
+        return refreshControl
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .dark
         setNavigationTitle()
         tableView.register(UINib(nibName: "ClanNameTableViewCell", bundle: nil), forCellReuseIdentifier: "ClanNameTableViewCell")
+
+        tableView.refreshControl = refresher
 
         // GADBannerView will show in top left of the view
         let bannerView = GADBannerView(adSize:kGADAdSizeBanner)
@@ -32,6 +42,31 @@ class ClanListTableViewController: UITableViewController {
         self.view.addSubview(bannerView)
         bannerView.load(GADRequest())
 
+    }
+
+    @objc func requestData() {
+        let group = DispatchGroup()
+        for clan in clans {
+            guard let clanTag = clan.clanInfo.tag else {
+                continue
+            }
+
+            group.enter()
+            let clanDownloader = ClanDownloader(clanTag: clanTag)
+            clanDownloader.download { clan in
+                group.leave()
+                if let clan = clan {
+                    CoreDataManager.shared.save(clan: clan)
+                } else {
+                    print("Failed to refresh \(clanTag)")
+                }
+            }
+        }
+
+        group.notify(queue: .main) {
+            self.tableView.reloadData()
+            self.refresher.endRefreshing()
+        }
     }
 
     func adViewDidReceiveAd(_ bannerView: GADBannerView!) {

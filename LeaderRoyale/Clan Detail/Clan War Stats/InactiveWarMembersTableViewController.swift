@@ -48,7 +48,7 @@ class InactiveWarMembersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170.0
+        return 110.0
     }
 
     func configure(clan: Clan) {

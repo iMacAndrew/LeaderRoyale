@@ -23,21 +23,29 @@ class WarMemberDetailTableViewCell: UITableViewCell {
                 String(clan.countWarsParticipated(playerTag: playerTag)) +
                 "/" + String(clan.warLogs.count) + " Wars"
 
+
+            if clan.calcWinPercentage(playerTag: playerTag) > 0.50 {
+                totalWarsWonLabel.textColor = .green
+            } else {
+                totalWarsWonLabel.textColor = .red
+            }
+
+            if clan.calcWarParticipationPercentage(playerTag: playerTag) > 0.50 {
+                warsParticipatedInLabel.textColor = .green
+            } else {
+                warsParticipatedInLabel.textColor = .red
+            }
+
             totalWarsWonLabel.text = "Won " + String(clan.countWarWins(playerTag: playerTag)) +
                 "/" + String(clan.countBattlesPlayed(playerTag: playerTag)) + " Battles"
 
         }
-
-
-
         decorateCell()
     }
 
     func decorateCell() {
         backgroundColor = .dark
         memberNameLabel.textColor = .white
-        warsParticipatedInLabel.textColor = .white
-        totalWarsWonLabel.textColor = .white
     }
     
 }

@@ -35,7 +35,22 @@ class CoreDataManager {
         }
     }
 
+    func isNew(clan: Clan) -> Bool {
+        for otherClan in clans {
+            if clan.clanInfo.tag == otherClan.clanInfo.tag {
+                return false
+            }
+        }
+
+        return true
+    }
+
     func save(clan: Clan) {
+        guard isNew(clan: clan) else {
+            overwrite(clan: clan)
+            return
+        }
+
         guard let data = try? JSONEncoder().encode(clan) else {
             assertionFailure("Failed to encode clan.")
             return
@@ -47,4 +62,23 @@ class CoreDataManager {
         coreDataClans.append(coreDataClan)
         CoreDataStack.saveContext()
     }
+
+    private func overwrite(clan: Clan) {
+        // Look through the coreDataClans for a `CoreDataClan` that has the same tag as the given `Clan`
+        for coreDataClan in coreDataClans {
+            if let otherClan = try? JSONDecoder().decode(Clan.self, from: coreDataClan.data),
+                clan.clanInfo.tag == otherClan.clanInfo.tag {
+
+                // We found a `CoreDataClan` that matches the `Clan`!
+                // So overrite the data...
+                if let newData = try? JSONEncoder().encode(clan) {
+                    coreDataClan.data = newData
+                } else {
+                    assertionFailure("Unable to encode a clan?")
+                }
+            }
+        }
+    }
+
+
 }

@@ -25,31 +25,31 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxd-pj-kZc">
-                        <rect key="frame" x="16" y="48.5" width="54" height="21"/>
+                        <rect key="frame" x="16" y="11" width="54" height="21"/>
                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JU1-PH-Wj5">
-                        <rect key="frame" x="133" y="11" width="54" height="21"/>
-                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                        <rect key="frame" x="258" y="50" width="46" height="18"/>
+                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dm-d4-Jch">
-                        <rect key="frame" x="133" y="49" width="54" height="21"/>
-                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                        <rect key="frame" x="258" y="89" width="46" height="18"/>
+                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="4Dm-d4-Jch" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="CaF-ZI-Etm"/>
-                    <constraint firstItem="4Dm-d4-Jch" firstAttribute="top" secondItem="JU1-PH-Wj5" secondAttribute="bottom" constant="17" id="D3U-6J-Y8e"/>
-                    <constraint firstItem="JU1-PH-Wj5" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="LyO-We-lgX"/>
-                    <constraint firstItem="JU1-PH-Wj5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="QLb-PP-PPS"/>
-                    <constraint firstItem="Yxd-pj-kZc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iX4-nk-cBy"/>
-                    <constraint firstItem="Yxd-pj-kZc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jyN-uI-dXJ"/>
+                    <constraint firstAttribute="trailing" secondItem="4Dm-d4-Jch" secondAttribute="trailing" constant="16" id="7OA-dK-pzK"/>
+                    <constraint firstAttribute="bottom" secondItem="4Dm-d4-Jch" secondAttribute="bottom" constant="10.5" id="7TT-pD-sbW"/>
+                    <constraint firstItem="Yxd-pj-kZc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="LeE-iX-A6G"/>
+                    <constraint firstItem="Yxd-pj-kZc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="g0q-gK-QK7"/>
+                    <constraint firstAttribute="trailing" secondItem="JU1-PH-Wj5" secondAttribute="trailing" constant="16" id="pUL-QG-Ndp"/>
+                    <constraint firstItem="JU1-PH-Wj5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tIV-XA-xna"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
