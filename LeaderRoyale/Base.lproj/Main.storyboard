@@ -44,7 +44,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="gT4-nO-NYy">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#P8CVYUR0" textAlignment="center" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="gT4-nO-NYy">
                                         <rect key="frame" x="0.0" y="124" width="305" height="52"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="17"/>

@@ -38,6 +38,7 @@ class ClanDetailTabViewController: TabmanViewController {
         bar.layout.contentInset.left = 10.0
         bar.layout.contentInset.right = 10.0
         
+        
         bar.layout.transitionStyle = .snap
         bar.scrollMode = .swipe
     }

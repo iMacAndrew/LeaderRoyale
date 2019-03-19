@@ -77,7 +77,7 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
 
         clanSearchTextField.addTarget(self, action: #selector(ClanSearchViewController.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         
-        clanSearchTextField.text = "#P8CVYUR0"
+        
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         view.addGestureRecognizer(tapGesture)
