@@ -28,13 +28,17 @@ class PlayerProfileTableViewController: UITableViewController {
 
         tableView.tableFooterView = UIView()
 
-        // GADBannerView will show in top left of the view
         let bannerView = GADBannerView(adSize:kGADAdSizeBanner)
         adViewDidReceiveAd(bannerView)
+        #if DEBUG
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        #else
+        bannerView.adUnitID = "ca-app-pub-7190012204747216/1294433789"
+        #endif
         bannerView.rootViewController = self
         self.view.addSubview(bannerView)
         bannerView.load(GADRequest())
+        tableView.tableFooterView = UIView()
     }
 
     func adViewDidReceiveAd(_ bannerView: GADBannerView!) {

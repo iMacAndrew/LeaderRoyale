@@ -13,15 +13,7 @@ class CoreDataManager {
 
     private var coreDataClans = [CoreDataClan]()
 
-    var clans: [Clan] {
-        var clans = [Clan]()
-        for coreDataClan in coreDataClans {
-            if let clan = try? JSONDecoder().decode(Clan.self, from: coreDataClan.data) {
-                clans.append(clan)
-            }
-        }
-        return clans
-    }
+    private(set) var clans: [Clan] = []
 
     static let shared = CoreDataManager()
 
@@ -29,6 +21,11 @@ class CoreDataManager {
         do {
             let coreDataClans = try CoreDataStack.context.fetch(CoreDataClan.fetchRequest()) as [CoreDataClan]
             self.coreDataClans = coreDataClans
+            for coreDataClan in coreDataClans {
+                if let clan = try? JSONDecoder().decode(Clan.self, from: coreDataClan.data) {
+                    clans.append(clan)
+                }
+            }
 
         } catch let e as NSError {
             assertionFailure("Error loading clans from Core Data \(e)")
@@ -60,6 +57,7 @@ class CoreDataManager {
         let coreDataClan = NSManagedObject(entity: coreDataClanEntity, insertInto: CoreDataStack.context) as! CoreDataClan
         coreDataClan.data = data
         coreDataClans.append(coreDataClan)
+        clans.append(clan)
         CoreDataStack.saveContext()
     }
 
@@ -78,7 +76,40 @@ class CoreDataManager {
                 }
             }
         }
+
+        for i in 0..<clans.count {
+            if clans[i].clanInfo.tag == clan.clanInfo.tag {
+                clans[i] = clan
+                break
+            }
+        }
+
+        CoreDataStack.saveContext()
     }
 
+    func delete(clanTag: String) {
+        guard let indexOfClan = clans.firstIndex(where: { clan in
+            clan.clanInfo.tag == clanTag
+        }) else {
+            return
+        }
+
+        clans.remove(at: indexOfClan)
+
+        guard let indexOfData = coreDataClans.firstIndex(where: { coreDataClan in
+            if let clan = try? JSONDecoder().decode(Clan.self, from: coreDataClan.data),
+                clan.clanInfo.tag == clanTag {
+                return true
+            } else {
+                return false
+            }
+        }) else {
+            return
+        }
+
+        CoreDataStack.context.delete(coreDataClans[indexOfData])
+        coreDataClans.remove(at: indexOfData)
+        CoreDataStack.saveContext()
+    }
 
 }

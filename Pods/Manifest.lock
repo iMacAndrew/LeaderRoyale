@@ -48,6 +48,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.3.7):
     - GoogleUtilities/Logger
+  - MBProgressHUD (1.1.0)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -61,6 +62,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/AdMob
   - Firebase/Core
+  - MBProgressHUD (~> 1.1.0)
   - Tabman (~> 2.1)
 
 SPEC REPOS:
@@ -73,6 +75,7 @@ SPEC REPOS:
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUtilities
+    - MBProgressHUD
     - nanopb
     - Pageboy
     - Tabman
@@ -86,10 +89,11 @@ SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 101ce89b94fdf60ec64ba7b6e9b9d812dc765936
   GoogleAppMeasurement: 6cf307834da065863f9faf4c0de0a936d81dd832
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Pageboy: ec0170fd880ea6fa3589219edfd64b554443ff6e
   Tabman: 083741793bed532032b1a010f4af3725d49fa519
 
-PODFILE CHECKSUM: 189bb0deee78a8ff3a969aa8bddb8f9ef8d473b5
+PODFILE CHECKSUM: 2a9eb5165208beeedad5c39a9210c75cb2f46a32
 
 COCOAPODS: 1.5.3

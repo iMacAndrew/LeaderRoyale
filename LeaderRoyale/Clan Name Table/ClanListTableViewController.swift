@@ -37,14 +37,19 @@ class ClanListTableViewController: UITableViewController {
         // GADBannerView will show in top left of the view
         let bannerView = GADBannerView(adSize:kGADAdSizeBanner)
         adViewDidReceiveAd(bannerView)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        #if DEBUG
+            bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        #else
+            bannerView.adUnitID = "ca-app-pub-7190012204747216/4527748582"
+        #endif
         bannerView.rootViewController = self
         self.view.addSubview(bannerView)
         bannerView.load(GADRequest())
-
     }
 
     @objc func requestData() {
+        AdManager.shared.present(on: self)
+
         let group = DispatchGroup()
         for clan in clans {
             guard let clanTag = clan.clanInfo.tag else {
@@ -54,9 +59,10 @@ class ClanListTableViewController: UITableViewController {
             group.enter()
             let clanDownloader = ClanDownloader(clanTag: clanTag)
             clanDownloader.download { clan in
-                group.leave()
-                if let clan = clan {
+                if var clan = clan {
+                    clan.lastRefreshed = Date()
                     CoreDataManager.shared.save(clan: clan)
+                    group.leave()
                 } else {
                     print("Failed to refresh \(clanTag)")
                 }
@@ -86,11 +92,23 @@ class ClanListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClanNameTableViewCell", for: indexPath) as! ClanNameTableViewCell
         
-        cell.configure(with: clans[indexPath.row].clanInfo)
-        
+        cell.configure(with: clans[indexPath.row].clanInfo, lastRefreshDate: clans[indexPath.row].lastRefreshed)
+
         cell.selectionStyle = .none
         
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard clans.indices.contains(indexPath.row),
+            let clanTag = clans[indexPath.row].clanInfo.tag else {
+            return
+        }
+
+        if editingStyle == .delete {
+            CoreDataManager.shared.delete(clanTag: clanTag)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

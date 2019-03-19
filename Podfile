@@ -8,6 +8,7 @@ target 'LeaderRoyale' do
   pod 'Tabman', '~> 2.1'
 
   pod 'Firebase/Core'
-  pod 'Firebase/AdMob' 
+  pod 'Firebase/AdMob'
+  pod 'MBProgressHUD', '~> 1.1.0'
 
 end

@@ -56,15 +56,19 @@ class ClanMemberTableViewController: UITableViewController {
         super.viewDidLoad()
         view.backgroundColor = .dark
         tableView.register(UINib(nibName: "ClanMemberTableViewCell", bundle: nil), forCellReuseIdentifier: "ClanMemberTableViewCell")
-        tableView.tableFooterView = UIView()
 
         // GADBannerView will show in top left of the view
         let bannerView = GADBannerView(adSize:kGADAdSizeBanner)
         adViewDidReceiveAd(bannerView)
+        #if DEBUG
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        #else
+        bannerView.adUnitID = "ca-app-pub-7190012204747216/5616822175"
+        #endif
         bannerView.rootViewController = self
         self.view.addSubview(bannerView)
         bannerView.load(GADRequest())
+        tableView.tableFooterView = UIView()
     }
 
     func adViewDidReceiveAd(_ bannerView: GADBannerView!) {

@@ -12,6 +12,7 @@ struct Clan: Codable {
     let clanInfo: ClanInfo
     let players: [PlayerInfo]
     let warLogs: [Warlog]
+    var lastRefreshed: Date?
 
     func countWarsParticipated(playerTag: String) -> Int {
         var numberOfWarsParticipatedIn: Int = 0
@@ -149,5 +150,3 @@ struct Clan: Codable {
     }
 
 }
-
-

@@ -8,10 +8,9 @@
 
 import UIKit
 import GoogleMobileAds
+import MBProgressHUD
 
 class ClanSearchViewController: UIViewController, UITextFieldDelegate {
-
-
     private var clan: Clan?
 
     @IBOutlet weak var clanSearchTextField: UITextField!
@@ -36,13 +35,23 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
             return
         }
 
+        if navigationController != nil {
+            AdManager.shared.present(on: self)
+        }
+
         let clanDownloader = ClanDownloader(clanTag: clanId)
+        let mbHud = MBProgressHUD.showAdded(to: view, animated: true)
+        mbHud.label.text = "Downloading Clan"
         clanDownloader.download() { [weak self] clan in
             if let clan = clan {
                 self?.clan = clan
                 self?.goToClanListTable()
+                DispatchQueue.main.async {
+                    mbHud.hide(animated: true)
+                }
             } else {
                 DispatchQueue.main.async {
+                    mbHud.hide(animated: true)
                     self?.displayAlert()
                 }
             }

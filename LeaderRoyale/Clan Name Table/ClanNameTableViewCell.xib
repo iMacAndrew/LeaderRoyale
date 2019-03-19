@@ -59,9 +59,16 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="refreshed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="cHc-fo-jKH">
+                                    <rect key="frame" x="239.5" y="159" width="107.5" height="21"/>
+                                    <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="1" green="0.05842654135" blue="0.1221236222" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="cHc-fo-jKH" secondAttribute="bottom" constant="10" id="2Z2-MO-uNr"/>
                                 <constraint firstItem="KgJ-By-Kb4" firstAttribute="top" secondItem="5ac-me-xWJ" secondAttribute="top" constant="8" id="9Bs-2u-3YO"/>
                                 <constraint firstItem="WGp-ff-x0Z" firstAttribute="top" secondItem="02u-1k-7JX" secondAttribute="bottom" constant="7.5" id="BZL-3a-wyh"/>
                                 <constraint firstItem="WGp-ff-x0Z" firstAttribute="bottom" secondItem="KgJ-By-Kb4" secondAttribute="bottom" id="EGA-B1-5AK"/>
@@ -70,12 +77,14 @@
                                 <constraint firstItem="Vli-zo-lxv" firstAttribute="leading" secondItem="KgJ-By-Kb4" secondAttribute="leading" id="KAX-5j-XP3"/>
                                 <constraint firstItem="Fcj-E0-Opn" firstAttribute="leading" secondItem="Vli-zo-lxv" secondAttribute="leading" id="KZv-j5-8wL"/>
                                 <constraint firstItem="02u-1k-7JX" firstAttribute="leading" secondItem="5ac-me-xWJ" secondAttribute="leading" constant="165" id="Mfn-XK-EdR"/>
+                                <constraint firstAttribute="trailing" secondItem="cHc-fo-jKH" secondAttribute="trailing" constant="8" id="S8U-nW-jLj"/>
                                 <constraint firstItem="Fcj-E0-Opn" firstAttribute="top" secondItem="Vli-zo-lxv" secondAttribute="bottom" id="a0R-xr-nTD"/>
                                 <constraint firstItem="WGp-ff-x0Z" firstAttribute="leading" secondItem="02u-1k-7JX" secondAttribute="leading" id="cfV-ws-n9o"/>
                                 <constraint firstItem="02u-1k-7JX" firstAttribute="leading" secondItem="KgJ-By-Kb4" secondAttribute="trailing" constant="23" id="j9q-Qn-EA2"/>
                                 <constraint firstItem="Vli-zo-lxv" firstAttribute="top" secondItem="KgJ-By-Kb4" secondAttribute="bottom" constant="8" id="p3K-og-Mkz"/>
                                 <constraint firstItem="KgJ-By-Kb4" firstAttribute="leading" secondItem="5ac-me-xWJ" secondAttribute="leading" constant="8" id="rFZ-Ec-pmB"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="02u-1k-7JX" secondAttribute="trailing" constant="3" id="tAg-E5-QLT"/>
+                                <constraint firstItem="cHc-fo-jKH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Fcj-E0-Opn" secondAttribute="trailing" constant="20" id="yWR-jl-U3j"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="topColor">
@@ -234,6 +243,7 @@
                 <outlet property="clanScoreLabel" destination="tkF-sL-rlt" id="G9A-UC-445"/>
                 <outlet property="clanTagLabel" destination="Vli-zo-lxv" id="XbZ-eE-RDO"/>
                 <outlet property="clanTrophyWork" destination="eOq-kI-Yk2" id="WQR-mM-N9r"/>
+                <outlet property="lastRefreshedLabel" destination="cHc-fo-jKH" id="ktV-ql-rd8"/>
                 <outlet property="memberCountLabel" destination="Fcj-E0-Opn" id="VGH-06-zLG"/>
             </connections>
             <point key="canvasLocation" x="285.60000000000002" y="320.23988005997006"/>

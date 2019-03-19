@@ -71,7 +71,7 @@ class ClanDownloader {
             }
 
             self.isDownloading = false
-            completion(Clan(clanInfo: clanInfo, players: playerInfos, warLogs: warLogs))
+            completion(Clan(clanInfo: clanInfo, players: playerInfos, warLogs: warLogs, lastRefreshed: Date()))
         }
     }
 

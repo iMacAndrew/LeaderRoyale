@@ -18,14 +18,15 @@ class ClanNameTableViewCell: UITableViewCell {
     @IBOutlet weak var clanTrophyWork: UILabel!
     @IBOutlet weak var clanDonationsLabel: UILabel!
     @IBOutlet weak var clanDescriptionLabel: UITextView!
-    
+    @IBOutlet weak var lastRefreshedLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
         contentView.backgroundColor = .clear
     }
     
-    func configure(with clanInfo: ClanInfo?) {
+    func configure(with clanInfo: ClanInfo?, lastRefreshDate: Date?) {
         if let clanName = clanInfo?.name {
             clanNameLabel.text = String(clanName)
         } else {
@@ -68,6 +69,12 @@ class ClanNameTableViewCell: UITableViewCell {
         
         if let clanDescription = clanInfo?.description {
             clanDescriptionLabel.text = clanDescription
+        }
+
+        if let lastRefreshDate = lastRefreshDate {
+            lastRefreshedLabel.text = "Refreshed " + lastRefreshDate.getElapsedInterval()
+        } else {
+            lastRefreshedLabel.text = ""
         }
         
     }
