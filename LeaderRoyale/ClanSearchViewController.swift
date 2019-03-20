@@ -95,6 +95,9 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
 
     @objc func textFieldDidChange(textField: UITextField) {
         textField.text = textField.text?.uppercased()
+        if let text = textField.text?.replacingOccurrences(of: "O", with: "0") {
+            textField.text = text
+        }
     }
     
     func openClashRoyale() {
