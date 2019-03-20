@@ -12,6 +12,8 @@ import MBProgressHUD
 
 class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     private var clan: Clan?
+    private var shouldDisplayError = false
+
 
     @IBOutlet weak var clanSearchTextField: UITextField!
     
@@ -83,7 +85,14 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(tapGesture)
 
     }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if shouldDisplayError {
+            displayAlert()
+        }
+    }
+
     @objc func textFieldDidChange(textField: UITextField) {
         textField.text = textField.text?.uppercased()
     }
@@ -102,13 +111,15 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func displayAlert() {
+        shouldDisplayError = true
         let alert = UIAlertController(title: "Clan Not Found", message: "The clan tag you entered is incorrect. You can find your tag inside the clan info tab in the Clash Royale app.", preferredStyle: .alert)
         
         let openAction = UIAlertAction(title: "Open Clash Royale", style: .default) { _ in
             self.openClashRoyale()
+            self.shouldDisplayError = false
         }
         
-        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: {_ in self.shouldDisplayError = false }))
         alert.addAction(openAction)
         
         self.present(alert, animated: true)

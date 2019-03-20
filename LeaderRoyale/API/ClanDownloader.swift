@@ -47,6 +47,7 @@ class ClanDownloader {
 
         downloadClanInfo() { [weak self] in
             guard let playerTags = self?.clanInfo?.returnPlayerTags else {
+                self?.isDownloading = false
                 completion(nil)
                 return
             }
@@ -66,6 +67,7 @@ class ClanDownloader {
                 let playerInfos = self.playerInfos,
                 let warLogs = self.warLogs
             else {
+                self.isDownloading = false
                 completion(nil)
                 return
             }

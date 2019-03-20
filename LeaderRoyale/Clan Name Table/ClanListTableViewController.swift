@@ -12,6 +12,8 @@ import GoogleMobileAds
 class ClanListTableViewController: UITableViewController {
     private var selectedClan: Clan?
     var bannerView: GADBannerView!
+    private var isLoadingData = false
+
 
     private var clans: [Clan] {
         return CoreDataManager.shared.clans
@@ -50,9 +52,27 @@ class ClanListTableViewController: UITableViewController {
         bannerView.load(GADRequest())
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        refresher.endRefreshing()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if isLoadingData {
+            // for simplicity using harcoded height for refresh control
+            tableView.setContentOffset(CGPoint(x: 0, y: -refresher.frame.height), animated: false)
+            refresher.beginRefreshing()
+        } else {
+            refresher.endRefreshing()
+        }
+    }
+
     @objc func requestData() {
         AdManager.shared.present(on: self)
 
+        isLoadingData = true
         let group = DispatchGroup()
         for clan in clans {
             guard let clanTag = clan.clanInfo.tag else {
@@ -65,14 +85,16 @@ class ClanListTableViewController: UITableViewController {
                 if var clan = clan {
                     clan.lastRefreshed = Date()
                     CoreDataManager.shared.save(clan: clan)
-                    group.leave()
                 } else {
                     print("Failed to refresh \(clanTag)")
                 }
+
+                group.leave()
             }
         }
 
         group.notify(queue: .main) {
+            self.isLoadingData = false
             self.tableView.reloadData()
             self.refresher.endRefreshing()
         }
