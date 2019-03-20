@@ -35,15 +35,18 @@ class ClanListTableViewController: UITableViewController {
         tableView.refreshControl = refresher
 
         // GADBannerView will show in top left of the view
-        let bannerView = GADBannerView(adSize:kGADAdSizeBanner)
-        adViewDidReceiveAd(bannerView)
+        let bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+
+
         #if DEBUG
             bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         #else
             bannerView.adUnitID = "ca-app-pub-7190012204747216/4527748582"
         #endif
         bannerView.rootViewController = self
-        self.view.addSubview(bannerView)
+        bannerView.delegate = self
+        view.addSubview(bannerView)
+
         bannerView.load(GADRequest())
     }
 
@@ -73,12 +76,6 @@ class ClanListTableViewController: UITableViewController {
             self.tableView.reloadData()
             self.refresher.endRefreshing()
         }
-    }
-
-    func adViewDidReceiveAd(_ bannerView: GADBannerView!) {
-        print("Banner loaded successfully")
-        tableView.tableHeaderView?.frame = bannerView.frame
-        tableView.tableHeaderView = bannerView
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -148,5 +145,13 @@ class ClanListTableViewController: UITableViewController {
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white,
              NSAttributedString.Key.font: UIFont(name: "supercell-magic", size: 15)!]
+    }
+}
+
+extension ClanListTableViewController: GADBannerViewDelegate {
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        tableView.tableHeaderView?.frame = bannerView.frame
+        tableView.tableHeaderView = bannerView
+        print("Banner loaded successfully")
     }
 }
