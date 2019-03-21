@@ -41,6 +41,11 @@ class RecognitionTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIMenuController.shared.menuItems = nil
+    }
+
     func adViewDidReceiveAd(_ bannerView: GADBannerView!) {
         print("Banner loaded successfully")
         tableView.tableHeaderView?.frame = bannerView.frame
@@ -58,13 +63,11 @@ class RecognitionTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if indexPath.row == 0 {
             return createDonationCell(indexPath: indexPath)
         } else {
             return createRecognitionCell(indexPath: indexPath)
         }
-
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -73,6 +76,23 @@ class RecognitionTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90.0
+    }
+
+    override func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
+        return indexPath.row != 0
+    }
+
+    override func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        return action == #selector(RecognitionTableViewCell.copyAndOpenClashRoyale(_:)) || action == #selector(copy(_:))
+    }
+
+    override func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
+        switch action {
+        case #selector(copy(_:)):
+            UIPasteboard.general.string = "I copied this to your pasteboard ;)"            
+        default:
+            assertionFailure("Unexpected action")
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -176,6 +196,9 @@ class RecognitionTableViewController: UITableViewController {
             recognitions.append(recognitionForPlayerWithMostCardEarned)
         }
 
+        let menuItem = UIMenuItem(title: "Copy & Open Clash Royale", action: #selector(RecognitionTableViewCell.copyAndOpenClashRoyale(_:)))
+        UIMenuController.shared.menuItems = [menuItem]
+        UIMenuController.shared.update()
     }
     
     private func setNavigationTitle() {

@@ -12,9 +12,25 @@ class PlayerDeckTableViewCell: UITableViewCell {
     @IBOutlet weak var sectionTitle: UILabel!
     @IBOutlet var cardImageViews: [UIImageView]!
     @IBOutlet weak var averageElixerLabel: UILabel!
-    
-    
+    @IBOutlet weak var copyDeckButton: UIButton!
+
+    private var playerInfo: PlayerInfo?
+
+    @IBAction func pushedCopyButton(_ sender: Any) {
+        if let deckLink = playerInfo?.deckLink, let url = URL(string: deckLink) {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        copyDeckButton.imageView?.contentMode = .scaleAspectFit
+    }
+
     func configure(section: Sections, playerInfo: PlayerInfo?) {
+
+        self.playerInfo = playerInfo
+
         sectionTitle.text = section.title
         
         setCardImages(playerInfo: playerInfo)

@@ -101,7 +101,7 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func openClashRoyale() {
-        let clashRoyale = "https://link.clashroyale.com/clan"
+        let clashRoyale = "https://link.clashroyale.com"
         let clashUrl = URL(string: clashRoyale)!
         if UIApplication.shared.canOpenURL(clashUrl) {
             UIApplication.shared.open(clashUrl, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)

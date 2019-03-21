@@ -24,7 +24,14 @@ class RecognitionTableViewCell: UITableViewCell {
         
         decorateCell()
     }
-    
+
+    @objc func copyAndOpenClashRoyale(_ sender: Any) {
+        UIPasteboard.general.string = recognition.description
+        if let url = URL(string: "https://link.clashroyale.com/en") {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+
     private func decorateCell() {
         backgroundColor = .dark
         titleLabel.textColor = UIColor.white
