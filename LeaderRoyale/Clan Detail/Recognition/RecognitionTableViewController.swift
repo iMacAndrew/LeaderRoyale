@@ -134,8 +134,8 @@ class RecognitionTableViewController: UITableViewController {
         preferences.drawing.font = UIFont(name: "supercell-magic", size: 13)!
         preferences.drawing.foregroundColor = .white
         preferences.drawing.backgroundColor = .darkRed
-
         preferences.drawing.arrowPosition = .bottom
+
         toolTip = EasyTipView(text: "Press and hold to share with your clan.", preferences: preferences)
         toolTip?.show(animated: true, forView: cell, withinSuperview: tableView)
     }

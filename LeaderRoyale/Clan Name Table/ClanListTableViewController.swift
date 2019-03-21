@@ -8,12 +8,13 @@
 
 import UIKit
 import GoogleMobileAds
+import EasyTipView
 
 class ClanListTableViewController: UITableViewController {
     private var selectedClan: Clan?
     var bannerView: GADBannerView!
     private var isLoadingData = false
-
+    private var toolTip: EasyTipView?
 
     private var clans: [Clan] {
         return CoreDataManager.shared.clans
@@ -136,14 +137,14 @@ class ClanListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+
+        toolTip?.dismiss()
         selectedClan = clans[indexPath.row]
 
         performSegue(withIdentifier: "statSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if let clanTabViewController = segue.destination as? ClanDetailTabViewController {
             
             if let clan = selectedClan {
@@ -151,6 +152,30 @@ class ClanListTableViewController: UITableViewController {
             }
         
         }
+    }
+
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            showTip(on: cell)
+        }
+    }
+
+    private func showTip(on cell: UITableViewCell) {
+        let userDefaultsKey = "hasShownClanToolTip"
+        let hasShownToolTip = UserDefaults.standard.bool(forKey: userDefaultsKey)
+        guard !hasShownToolTip else {
+            return
+        }
+        UserDefaults.standard.set(true, forKey: userDefaultsKey)
+
+        var preferences = EasyTipView.Preferences()
+        preferences.drawing.font = UIFont(name: "supercell-magic", size: 13)!
+        preferences.drawing.foregroundColor = .white
+        preferences.drawing.backgroundColor = .darkRed
+        preferences.drawing.arrowPosition = .top
+
+        toolTip = EasyTipView(text: "Tap a clan card to see details.", preferences: preferences)
+        toolTip?.show(animated: true, forView: cell, withinSuperview: tableView)
     }
     
     @IBAction func unwindToClanListTableViewController(_ unwindSegue: UIStoryboardSegue) {
