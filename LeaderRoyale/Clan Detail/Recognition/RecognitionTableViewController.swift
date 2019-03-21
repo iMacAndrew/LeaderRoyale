@@ -42,6 +42,17 @@ class RecognitionTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
     }
 
+    @IBAction func exportButtonPressed(_ sender: Any) {
+        var items = [Any]()
+        if let icon = UIImage(named: "icon") {
+            items.append(icon)
+        }
+        items = items + recognitions.map { $0.description(withPowered: false) }
+        items.append("Powered by Leader Royale")
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(ac, animated: true)
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let menuItem = UIMenuItem(title: "Copy & Open Clash Royale", action: #selector(RecognitionTableViewCell.copyAndOpenClashRoyale(_:)))

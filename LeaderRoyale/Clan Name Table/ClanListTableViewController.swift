@@ -171,7 +171,7 @@ class ClanListTableViewController: UITableViewController {
         var preferences = EasyTipView.Preferences()
         preferences.drawing.font = UIFont(name: "supercell-magic", size: 13)!
         preferences.drawing.foregroundColor = .white
-        preferences.drawing.backgroundColor = .darkRed
+        preferences.drawing.backgroundColor = .gray
         preferences.drawing.arrowPosition = .top
 
         toolTip = EasyTipView(text: "Tap a clan card to see details.", preferences: preferences)

@@ -301,6 +301,13 @@
                             <outlet property="delegate" destination="To9-nd-H6Z" id="PAF-VA-WPL"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="5Q8-x1-SXb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="MvZ-3Q-V3J">
+                            <connections>
+                                <action selector="exportButtonPressed:" destination="To9-nd-H6Z" id="pp5-q1-z9W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FM4-gO-LWu" userLabel="First Responder" sceneMemberID="firstResponder"/>

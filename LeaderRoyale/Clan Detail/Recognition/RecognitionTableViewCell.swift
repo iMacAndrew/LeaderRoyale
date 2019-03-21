@@ -26,7 +26,7 @@ class RecognitionTableViewCell: UITableViewCell {
     }
 
     @objc func copyAndOpenClashRoyale(_ sender: Any) {
-        UIPasteboard.general.string = recognition.description
+        UIPasteboard.general.string = recognition.description(withPowered: true)
         if let url = URL(string: "https://link.clashroyale.com/en") {
             UIApplication.shared.open(url, options: [:])
         }
