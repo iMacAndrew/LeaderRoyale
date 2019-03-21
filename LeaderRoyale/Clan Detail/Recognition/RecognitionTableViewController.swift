@@ -41,6 +41,13 @@ class RecognitionTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let menuItem = UIMenuItem(title: "Copy & Open Clash Royale", action: #selector(RecognitionTableViewCell.copyAndOpenClashRoyale(_:)))
+        UIMenuController.shared.menuItems = [menuItem]
+        UIMenuController.shared.update()
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         UIMenuController.shared.menuItems = nil
@@ -95,16 +102,9 @@ class RecognitionTableViewController: UITableViewController {
         }
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-
-
-    }
-
     private func createRecognitionCell(indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecognitionTableViewCell", for: indexPath) as! RecognitionTableViewCell
         cell.configure(recognition: recognitions[indexPath.row - 1])
-        
         return cell
     }
     
@@ -195,10 +195,6 @@ class RecognitionTableViewController: UITableViewController {
 
             recognitions.append(recognitionForPlayerWithMostCardEarned)
         }
-
-        let menuItem = UIMenuItem(title: "Copy & Open Clash Royale", action: #selector(RecognitionTableViewCell.copyAndOpenClashRoyale(_:)))
-        UIMenuController.shared.menuItems = [menuItem]
-        UIMenuController.shared.update()
     }
     
     private func setNavigationTitle() {
