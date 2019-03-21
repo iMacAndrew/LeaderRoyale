@@ -1,5 +1,6 @@
 PODS:
   - AutoInsetter (1.4.1)
+  - EasyTipView (2.0.1)
   - Firebase/AdMob (5.18.0):
     - Firebase/Core
     - Google-Mobile-Ads-SDK (~> 7.40)
@@ -60,6 +61,7 @@ PODS:
     - Pageboy (~> 3.0.1)
 
 DEPENDENCIES:
+  - EasyTipView
   - Firebase/AdMob
   - Firebase/Core
   - MBProgressHUD (~> 1.1.0)
@@ -68,6 +70,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AutoInsetter
+    - EasyTipView
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -82,6 +85,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AutoInsetter: d0eafc611d686f83f925ded729084cf916a39863
+  EasyTipView: 1515544456d6e943240012e9be5d25d1bb766603
   Firebase: 02f3281965c075426141a0ce1277e9de6649cab9
   FirebaseAnalytics: 23851fe602c872130a2c5c55040b302120346cc2
   FirebaseCore: 52f851b30e11360f1e67cf04b1edfebf0a47a2d3
@@ -94,6 +98,6 @@ SPEC CHECKSUMS:
   Pageboy: ec0170fd880ea6fa3589219edfd64b554443ff6e
   Tabman: 083741793bed532032b1a010f4af3725d49fa519
 
-PODFILE CHECKSUM: 2a9eb5165208beeedad5c39a9210c75cb2f46a32
+PODFILE CHECKSUM: 52bca4ac3d38a555063674f424da37461adab05d
 
 COCOAPODS: 1.5.3

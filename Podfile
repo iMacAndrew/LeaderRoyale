@@ -10,5 +10,6 @@ target 'LeaderRoyale' do
   pod 'Firebase/Core'
   pod 'Firebase/AdMob'
   pod 'MBProgressHUD', '~> 1.1.0'
-
+  pod 'EasyTipView'
+  
 end

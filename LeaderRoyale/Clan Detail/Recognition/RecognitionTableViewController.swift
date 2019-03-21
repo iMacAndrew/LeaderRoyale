@@ -8,11 +8,12 @@
 
 import UIKit
 import GoogleMobileAds
+import EasyTipView
 
 class RecognitionTableViewController: UITableViewController {
 
     private var recognitions = [Recognition]()
-    
+    private var toolTip: EasyTipView?
     
     static func make() -> RecognitionTableViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecognitionTableViewController") as! RecognitionTableViewController
@@ -90,6 +91,7 @@ class RecognitionTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        toolTip?.dismiss()
         return action == #selector(RecognitionTableViewCell.copyAndOpenClashRoyale(_:)) || action == #selector(copy(_:))
     }
 
@@ -102,6 +104,12 @@ class RecognitionTableViewController: UITableViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == 1 {
+            showTip(on: cell)
+        }
+    }
+
     private func createRecognitionCell(indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecognitionTableViewCell", for: indexPath) as! RecognitionTableViewCell
         cell.configure(recognition: recognitions[indexPath.row - 1])
@@ -110,10 +118,26 @@ class RecognitionTableViewController: UITableViewController {
     
     private func createDonationCell(indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DonationsTableViewCell", for: indexPath) as! DonationsTableViewCell
-        
         cell.configure()
-        
         return cell
+    }
+
+    private func showTip(on cell: UITableViewCell) {
+        let userDefaultsKey = "hasShownRecognizeToolTip"
+        let hasShownToolTip = UserDefaults.standard.bool(forKey: userDefaultsKey)
+        guard !hasShownToolTip else {
+            return
+        }
+        UserDefaults.standard.set(true, forKey: userDefaultsKey)
+
+        var preferences = EasyTipView.Preferences()
+        preferences.drawing.font = UIFont(name: "supercell-magic", size: 13)!
+        preferences.drawing.foregroundColor = .white
+        preferences.drawing.backgroundColor = .darkRed
+
+        preferences.drawing.arrowPosition = .bottom
+        toolTip = EasyTipView(text: "Press and hold to share with your clan.", preferences: preferences)
+        toolTip?.show(animated: true, forView: cell, withinSuperview: tableView)
     }
     
     func configure(clan: Clan) {
