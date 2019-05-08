@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
-
         let controllerId: String
         if CoreDataManager.shared.clans.isEmpty {
             controllerId = "clanSearchVC"
@@ -38,6 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
 
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if !launchedBefore {
+            let onBoardingViewController = storyboard.instantiateViewController(withIdentifier: "onBoardingVC")
+            initialViewController.present(onBoardingViewController, animated: true)
+//            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
 
         return true
     }

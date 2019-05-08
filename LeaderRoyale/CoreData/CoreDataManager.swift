@@ -12,7 +12,6 @@ import CoreData
 class CoreDataManager {
 
     private var coreDataClans = [CoreDataClan]()
-
     private(set) var clans: [Clan] = []
 
     static let shared = CoreDataManager()
@@ -110,6 +109,44 @@ class CoreDataManager {
         CoreDataStack.context.delete(coreDataClans[indexOfData])
         coreDataClans.remove(at: indexOfData)
         CoreDataStack.saveContext()
+    }
+
+
+    func isPlayerFlagged(playerTag: String) -> Bool {
+        return loadFlag(playerTag: playerTag)?.isFlagged ?? false
+    }
+
+    func toggleFlag(playerTag: String) {
+        defer {
+            CoreDataStack.saveContext()
+        }
+
+        guard let flag = loadFlag(playerTag: playerTag) else {
+            let newFlag = createFlag(playerTag: playerTag)
+            newFlag.isFlagged = true
+            return
+        }
+
+        flag.isFlagged = !flag.isFlagged
+        
+    }
+
+    private func loadFlag(playerTag: String) -> ClanFlag? {
+        do {
+            let request: NSFetchRequest<ClanFlag> = ClanFlag.fetchRequest()
+            request.predicate = NSPredicate(format: "playerTag = %@", playerTag)
+            let flags = try CoreDataStack.context.fetch(request) as [ClanFlag]
+            return flags.first
+        } catch let e as NSError {
+            assertionFailure("Error loading clans from Core Data \(e)")
+            return nil
+        }
+    }
+
+    private func createFlag(playerTag: String) -> ClanFlag {
+        let clanFlagEntity = NSEntityDescription.entity(forEntityName: "ClanFlag", in: CoreDataStack.context)!
+        let clanFlag = NSManagedObject(entity: clanFlagEntity, insertInto: CoreDataStack.context) as! ClanFlag
+        return clanFlag
     }
 
 }

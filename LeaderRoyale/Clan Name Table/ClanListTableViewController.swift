@@ -34,23 +34,7 @@ class ClanListTableViewController: UITableViewController {
         view.backgroundColor = .dark
         setNavigationTitle()
         tableView.register(UINib(nibName: "ClanNameTableViewCell", bundle: nil), forCellReuseIdentifier: "ClanNameTableViewCell")
-
         tableView.refreshControl = refresher
-
-        // GADBannerView will show in top left of the view
-        let bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-
-
-        #if DEBUG
-            bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        #else
-            bannerView.adUnitID = "ca-app-pub-7190012204747216/4527748582"
-        #endif
-        bannerView.rootViewController = self
-        bannerView.delegate = self
-        view.addSubview(bannerView)
-
-        bannerView.load(GADRequest())
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -192,13 +176,5 @@ class ClanListTableViewController: UITableViewController {
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white,
              NSAttributedString.Key.font: UIFont(name: "supercell-magic", size: 15)!]
-    }
-}
-
-extension ClanListTableViewController: GADBannerViewDelegate {
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        tableView.tableHeaderView?.frame = bannerView.frame
-        tableView.tableHeaderView = bannerView
-        print("Banner loaded successfully")
     }
 }

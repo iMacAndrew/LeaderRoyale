@@ -25,37 +25,16 @@ class PlayerProfileTableViewController: UITableViewController {
         tableView.register(UINib(nibName: "PlayerProfileStatsTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerProfileStatsTableViewCell")
         
         tableView.register(UINib(nibName: "PlayerDeckTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerDeckTableViewCell")
-
-        tableView.tableFooterView = UIView()
-
-        let bannerView = GADBannerView(adSize:kGADAdSizeBanner)
-        adViewDidReceiveAd(bannerView)
-        #if DEBUG
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        #else
-        bannerView.adUnitID = "ca-app-pub-7190012204747216/1294433789"
-        #endif
-        bannerView.rootViewController = self
-        self.view.addSubview(bannerView)
-        bannerView.load(GADRequest())
         tableView.tableFooterView = UIView()
     }
 
-    func adViewDidReceiveAd(_ bannerView: GADBannerView!) {
-        print("Banner loaded successfully")
-        tableView.tableHeaderView?.frame = bannerView.frame
-        tableView.tableHeaderView = bannerView
+    @IBAction func flagButtonPressed(_ sender: Any) {
+        if let tag = memberInfo?.tag {
+            CoreDataManager.shared.toggleFlag(playerTag: tag)
+            tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        }
     }
-    
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        tableView.rowHeight = UITableView.automaticDimension
-//        tableView.estimatedRowHeight = 180.0
-//
-//    }
-    
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

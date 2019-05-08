@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +15,35 @@
         </array>
     </customFonts>
     <scenes>
+        <!--On Boarding View Controller-->
+        <scene sceneID="HHB-FG-SBE">
+            <objects>
+                <viewController storyboardIdentifier="onBoardingVC" id="trY-V3-pBH" customClass="OnBoardingViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ESF-QQ-dQO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAZ-na-fMf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jZo-jD-5em">
+                                <rect key="frame" x="168" y="315" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="b2T-cb-NUc"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="jZo-jD-5em" id="qPD-27-FnQ"/>
+                        <outlet property="scrollView" destination="YAZ-na-fMf" id="5qc-XW-RlQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rC2-tN-yrx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1944" y="480"/>
+        </scene>
         <!--Clan Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -91,6 +120,8 @@
                     </view>
                     <connections>
                         <outlet property="clanSearchTextField" destination="gT4-nO-NYy" id="Pgi-n3-wWO"/>
+                        <outlet property="pageControl" destination="jZo-jD-5em" id="evo-cU-Dc4"/>
+                        <outlet property="scrollView" destination="YAZ-na-fMf" id="jns-gU-VfL"/>
                         <segue destination="JRQ-wx-2Yx" kind="presentation" identifier="clanIdentifier" id="q4D-Jr-74E"/>
                         <segue destination="ClC-fo-6rA" kind="unwind" identifier="unwindToClanListTableViewController" unwindAction="unwindToClanListTableViewController:" id="C2d-9n-PFh"/>
                     </connections>
@@ -114,6 +145,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Clans" id="JEh-dk-cXa">
+                        <barButtonItem key="leftBarButtonItem" title="Mini Game" style="plain" id="vSj-3d-bEk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ewr-7C-Ro1" userLabel="Mini Game">
+                                <rect key="frame" x="-23" y="-15" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ll0-el-uhu">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="dvF-Fo-zLM"/>
@@ -203,6 +241,15 @@
                             <outlet property="delegate" destination="8dt-Cq-Qxe" id="VKD-g9-DEo"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="ubd-oa-CQR">
+                        <barButtonItem key="rightBarButtonItem" image="flag" id="hhj-EL-ReW">
+                            <inset key="imageInsets" minX="0.0" minY="2" maxX="-10" maxY="-5"/>
+                            <connections>
+                                <action selector="flagButtonPressed:" destination="8dt-Cq-Qxe" id="TCf-hd-AyR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGw-x1-E2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -235,6 +282,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zuf-wk-syg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1377" y="2292"/>
+        </scene>
+        <!--Matching Game View Controller-->
+        <scene sceneID="dEM-TM-MCk">
+            <objects>
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="PaS-rF-sfj" customClass="MatchingGameViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qPe-q5-KgL">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jdJ-S6-Fey">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qTG-1C-dWy">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="Zta-Dp-X3G" customClass="CardCollectionViewCell" customModule="LeaderRoyale" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bandit" translatesAutoresizingMaskIntoConstraints="NO" id="7Cg-aO-ZrB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="legendarycardbackground" translatesAutoresizingMaskIntoConstraints="NO" id="atb-ih-qp3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="atb-ih-qp3" firstAttribute="top" secondItem="Zta-Dp-X3G" secondAttribute="top" id="7qi-dv-9vr"/>
+                                            <constraint firstAttribute="bottom" secondItem="atb-ih-qp3" secondAttribute="bottom" id="McA-LH-c9x"/>
+                                            <constraint firstItem="7Cg-aO-ZrB" firstAttribute="top" secondItem="Zta-Dp-X3G" secondAttribute="top" id="MrN-BI-wM3"/>
+                                            <constraint firstItem="7Cg-aO-ZrB" firstAttribute="leading" secondItem="Zta-Dp-X3G" secondAttribute="leading" id="Mw3-CV-jCm"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Cg-aO-ZrB" secondAttribute="trailing" id="PE8-l1-fLS"/>
+                                            <constraint firstAttribute="trailing" secondItem="atb-ih-qp3" secondAttribute="trailing" id="mhc-EB-kJg"/>
+                                            <constraint firstAttribute="bottom" secondItem="7Cg-aO-ZrB" secondAttribute="bottom" id="oG5-u6-hjQ"/>
+                                            <constraint firstItem="atb-ih-qp3" firstAttribute="leading" secondItem="Zta-Dp-X3G" secondAttribute="leading" id="vaB-JG-BNW"/>
+                                        </constraints>
+                                        <size key="customSize" width="250" height="300"/>
+                                        <connections>
+                                            <outlet property="backImageView" destination="atb-ih-qp3" id="6iZ-hF-hjm"/>
+                                            <outlet property="frontImageView" destination="7Cg-aO-ZrB" id="0Jw-NC-oV1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jdJ-S6-Fey" firstAttribute="top" secondItem="kXn-9q-cZf" secondAttribute="top" id="SBq-td-fs9"/>
+                            <constraint firstItem="kXn-9q-cZf" firstAttribute="trailing" secondItem="jdJ-S6-Fey" secondAttribute="trailing" id="beZ-8q-msr"/>
+                            <constraint firstItem="jdJ-S6-Fey" firstAttribute="leading" secondItem="kXn-9q-cZf" secondAttribute="leading" id="eA8-Wp-tTG"/>
+                            <constraint firstItem="kXn-9q-cZf" firstAttribute="bottom" secondItem="jdJ-S6-Fey" secondAttribute="bottom" id="wi8-tY-irL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kXn-9q-cZf"/>
+                    </view>
+                    <size key="freeformSize" width="667" height="375"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SeX-DS-uJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484" y="1335"/>
         </scene>
         <!--Clan War Stats Table View Controller-->
         <scene sceneID="ywg-j2-VtY">
@@ -334,6 +448,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bandit" width="250" height="300"/>
         <image name="crown" width="654" height="436"/>
+        <image name="flag" width="50" height="50"/>
+        <image name="legendarycardbackground" width="201" height="251"/>
     </resources>
 </document>

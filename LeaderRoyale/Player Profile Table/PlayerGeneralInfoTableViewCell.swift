@@ -52,13 +52,19 @@ class PlayerGeneralInfoTableViewCell: UITableViewCell {
         
         playerRoleLabel.text = playerInfo?.clan?.role
         
-        decorateCell()
+        decorateCell(playerInfo: playerInfo)
         
     }
     
-    private func decorateCell() {
+    private func decorateCell(playerInfo: PlayerInfo?) {
         backgroundColor = .dark
-        playerNameLabel.textColor = .white
+
+        if let tag = playerInfo?.tag {
+            playerNameLabel.textColor = CoreDataManager.shared.isPlayerFlagged(playerTag: tag) ? .red : .white
+        } else {
+            playerNameLabel.textColor = .white
+        }
+
         playerTagLabel.textColor = .white
         kingLevelLabel.textColor = .white
         playerTrophyLabel.textColor = .white

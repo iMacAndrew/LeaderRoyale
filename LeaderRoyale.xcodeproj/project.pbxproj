@@ -23,6 +23,8 @@
 		A40FD52D223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40FD52B223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.xib */; };
 		A40FD52F223DFFA600AA4EE2 /* ClanDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD52E223DFFA600AA4EE2 /* ClanDownloader.swift */; };
 		A40FD531223F526900AA4EE2 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD530223F526800AA4EE2 /* AdManager.swift */; };
+		A40FD5342249CF5800AA4EE2 /* ClanFlag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD5322249CF5700AA4EE2 /* ClanFlag+CoreDataProperties.swift */; };
+		A40FD5352249CF5800AA4EE2 /* ClanFlag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD5332249CF5700AA4EE2 /* ClanFlag+CoreDataClass.swift */; };
 		A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */; };
 		A412614B21A65EC9005A4B24 /* ClanMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614A21A65EC9005A4B24 /* ClanMemberTableViewController.swift */; };
 		A412614D21A786FD005A4B24 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614C21A786FD005A4B24 /* GradientView.swift */; };
@@ -35,6 +37,10 @@
 		A449926121F033890063B9A3 /* ClanDetailTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */; };
 		A449926321F2D5D90063B9A3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926221F2D5D90063B9A3 /* Colors.swift */; };
 		A449926521FFEB300063B9A3 /* StringOrInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926421FFEB300063B9A3 /* StringOrInt.swift */; };
+		A46211762282604400611001 /* MatchingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46211752282604400611001 /* MatchingGameViewController.swift */; };
+		A4621178228267AA00611001 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4621177228267AA00611001 /* CardModel.swift */; };
+		A462117A2282696B00611001 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46211792282696B00611001 /* Card.swift */; };
+		A462117C22829DF800611001 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462117B22829DF800611001 /* CardCollectionViewCell.swift */; };
 		A4668BD52206C1FE0019817F /* PlayerProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BD42206C1FE0019817F /* PlayerProfileTableViewController.swift */; };
 		A4668BD92206C48D0019817F /* PlayerProfileStatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BD72206C48D0019817F /* PlayerProfileStatsTableViewCell.swift */; };
 		A4668BDA2206C48D0019817F /* PlayerProfileStatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4668BD82206C48D0019817F /* PlayerProfileStatsTableViewCell.xib */; };
@@ -50,6 +56,9 @@
 		A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47753FC21A24CFC000098F6 /* LaunchScreen.storyboard */; };
 		A477540621A250B9000098F6 /* ClanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477540521A250B9000098F6 /* ClanInfo.swift */; };
 		A477540821A2552A000098F6 /* ClashRoyaleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */; };
+		A497DFF9225BF14C00DF28D5 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497DFF8225BF14C00DF28D5 /* Slide.swift */; };
+		A497DFFB225BF19100DF28D5 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = A497DFFA225BF19100DF28D5 /* Slide.xib */; };
+		A497DFFD225EE54C00DF28D5 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497DFFC225EE54B00DF28D5 /* OnBoardingViewController.swift */; };
 		A4AA759E2235F5560004A7F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4AA759D2235F5560004A7F8 /* GoogleService-Info.plist */; };
 		A4AA75A62236125E0004A7F8 /* CoreDataClan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75A42236125E0004A7F8 /* CoreDataClan+CoreDataProperties.swift */; };
 		A4AA75A72236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75A52236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift */; };
@@ -94,6 +103,8 @@
 		A40FD52B223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarMemberDetailTableViewCell.xib; sourceTree = "<group>"; };
 		A40FD52E223DFFA600AA4EE2 /* ClanDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanDownloader.swift; sourceTree = "<group>"; };
 		A40FD530223F526800AA4EE2 /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
+		A40FD5322249CF5700AA4EE2 /* ClanFlag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ClanFlag+CoreDataProperties.swift"; path = "/Users/andyhumphries/Desktop/Xcode/LeaderRoyale/LeaderRoyale/CoreDat/ClanFlag+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		A40FD5332249CF5700AA4EE2 /* ClanFlag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ClanFlag+CoreDataClass.swift"; path = "/Users/andyhumphries/Desktop/Xcode/LeaderRoyale/LeaderRoyale/CoreDat/ClanFlag+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanSearchViewController.swift; sourceTree = "<group>"; };
 		A412614A21A65EC9005A4B24 /* ClanMemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanMemberTableViewController.swift; sourceTree = "<group>"; };
 		A412614C21A786FD005A4B24 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -106,6 +117,10 @@
 		A449926021F033890063B9A3 /* ClanDetailTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanDetailTabViewController.swift; sourceTree = "<group>"; };
 		A449926221F2D5D90063B9A3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A449926421FFEB300063B9A3 /* StringOrInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringOrInt.swift; sourceTree = "<group>"; };
+		A46211752282604400611001 /* MatchingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingGameViewController.swift; sourceTree = "<group>"; };
+		A4621177228267AA00611001 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		A46211792282696B00611001 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A462117B22829DF800611001 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4668BD42206C1FE0019817F /* PlayerProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileTableViewController.swift; sourceTree = "<group>"; };
 		A4668BD72206C48D0019817F /* PlayerProfileStatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileStatsTableViewCell.swift; sourceTree = "<group>"; };
 		A4668BD82206C48D0019817F /* PlayerProfileStatsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerProfileStatsTableViewCell.xib; sourceTree = "<group>"; };
@@ -123,6 +138,9 @@
 		A47753FF21A24CFC000098F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A477540521A250B9000098F6 /* ClanInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanInfo.swift; sourceTree = "<group>"; };
 		A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClashRoyaleAPI.swift; sourceTree = "<group>"; };
+		A497DFF8225BF14C00DF28D5 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		A497DFFA225BF19100DF28D5 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		A497DFFC225EE54B00DF28D5 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		A4AA759D2235F5560004A7F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4AA75A42236125E0004A7F8 /* CoreDataClan+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CoreDataClan+CoreDataProperties.swift"; path = "LeaderRoyale/CoreData/CoreDataClan+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		A4AA75A52236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CoreDataClan+CoreDataClass.swift"; path = "LeaderRoyale/CoreData/CoreDataClan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -221,6 +239,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A462117422825FCE00611001 /* Card Matching Game */ = {
+			isa = PBXGroup;
+			children = (
+				A46211752282604400611001 /* MatchingGameViewController.swift */,
+				A4621177228267AA00611001 /* CardModel.swift */,
+				A46211792282696B00611001 /* Card.swift */,
+				A462117B22829DF800611001 /* CardCollectionViewCell.swift */,
+			);
+			path = "Card Matching Game";
+			sourceTree = "<group>";
+		};
 		A4668BD62206C4540019817F /* Player Profile Table */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,16 +289,18 @@
 			children = (
 				A4D5346D21DF16A2005E5835 /* Clan Name Table */,
 				1B3D5BC521EA8BE200E10B87 /* Clan Detail */,
+				A462117422825FCE00611001 /* Card Matching Game */,
+				A4668BD62206C4540019817F /* Player Profile Table */,
+				A49A9ECD22714E8C000BA449 /* Tutorial Page */,
+				1B4C5FE121EC1D34004E303C /* API */,
+				A47753FA21A24CFC000098F6 /* Assets.xcassets */,
 				A41952DA21A7A01D0086D964 /* StyledButton.swift */,
 				A47753F021A24CF9000098F6 /* AppDelegate.swift */,
 				A412614C21A786FD005A4B24 /* GradientView.swift */,
-				A47753F421A24CF9000098F6 /* Main.storyboard */,
 				A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */,
 				A40FD530223F526800AA4EE2 /* AdManager.swift */,
-				A4668BD62206C4540019817F /* Player Profile Table */,
-				1B4C5FE121EC1D34004E303C /* API */,
-				A47753FA21A24CFC000098F6 /* Assets.xcassets */,
 				A47753FC21A24CFC000098F6 /* LaunchScreen.storyboard */,
+				A47753F421A24CF9000098F6 /* Main.storyboard */,
 				A47753FF21A24CFC000098F6 /* Info.plist */,
 				A4AA759D2235F5560004A7F8 /* GoogleService-Info.plist */,
 				A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */,
@@ -281,9 +312,21 @@
 			path = LeaderRoyale;
 			sourceTree = "<group>";
 		};
+		A49A9ECD22714E8C000BA449 /* Tutorial Page */ = {
+			isa = PBXGroup;
+			children = (
+				A497DFFC225EE54B00DF28D5 /* OnBoardingViewController.swift */,
+				A497DFF8225BF14C00DF28D5 /* Slide.swift */,
+				A497DFFA225BF19100DF28D5 /* Slide.xib */,
+			);
+			path = "Tutorial Page";
+			sourceTree = "<group>";
+		};
 		A4AA75A32236121D0004A7F8 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				A40FD5332249CF5700AA4EE2 /* ClanFlag+CoreDataClass.swift */,
+				A40FD5322249CF5700AA4EE2 /* ClanFlag+CoreDataProperties.swift */,
 				A4AA75A52236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift */,
 				A4AA75A42236125E0004A7F8 /* CoreDataClan+CoreDataProperties.swift */,
 				A4AA75A8223613600004A7F8 /* CoreDataStack.swift */,
@@ -425,6 +468,7 @@
 				A4668BE02206CEFB0019817F /* PlayerDeckTableViewCell.xib in Resources */,
 				A47753FB21A24CFC000098F6 /* Assets.xcassets in Resources */,
 				A412614F21A789FF005A4B24 /* magic.ttf in Resources */,
+				A497DFFB225BF19100DF28D5 /* Slide.xib in Resources */,
 				A4D5347821EDA1FD005E5835 /* StatTableViewCell.xib in Resources */,
 				1B3D5BCB21EA8D3800E10B87 /* ClanOverviewTableViewCell.xib in Resources */,
 				A4AA75B9223803440004A7F8 /* ParticipantInfoTableViewCell.xib in Resources */,
@@ -501,16 +545,20 @@
 				A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */,
 				1B4C5FE021EBC29E004E303C /* Recognition.swift in Sources */,
 				A4AA75B52237FB980004A7F8 /* WarDayParticipantsTableViewController.swift in Sources */,
+				A462117C22829DF800611001 /* CardCollectionViewCell.swift in Sources */,
 				A4668BDF2206CEFB0019817F /* PlayerDeckTableViewCell.swift in Sources */,
 				A4F24F3421B4A5DF004D437D /* ClanMemberTableViewCell.swift in Sources */,
 				A4668BD52206C1FE0019817F /* PlayerProfileTableViewController.swift in Sources */,
+				A46211762282604400611001 /* MatchingGameViewController.swift in Sources */,
 				A41952E121AA6C3D0086D964 /* PlayerInfo.swift in Sources */,
 				A40FD5262238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.swift in Sources */,
 				A40FD52F223DFFA600AA4EE2 /* ClanDownloader.swift in Sources */,
+				A497DFF9225BF14C00DF28D5 /* Slide.swift in Sources */,
 				A449926321F2D5D90063B9A3 /* Colors.swift in Sources */,
 				A40FD52C223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.swift in Sources */,
 				A4AA75AF2237660B0004A7F8 /* Warlog+Stat.swift in Sources */,
 				A4AA75B8223803440004A7F8 /* ParticipantInfoTableViewCell.swift in Sources */,
+				A40FD5342249CF5800AA4EE2 /* ClanFlag+CoreDataProperties.swift in Sources */,
 				A4668BE3220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift in Sources */,
 				A433377822389E0E00C8A202 /* WarTableViewCell.swift in Sources */,
 				A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */,
@@ -521,6 +569,7 @@
 				A4AA75A9223613600004A7F8 /* CoreDataStack.swift in Sources */,
 				A4D5346A21DF15D8005E5835 /* ClanListTableViewController.swift in Sources */,
 				1B4C5FDA21EBBFBE004E303C /* RecognitionTableViewController.swift in Sources */,
+				A40FD5352249CF5800AA4EE2 /* ClanFlag+CoreDataClass.swift in Sources */,
 				A44899722204124900EF00FC /* Clan.swift in Sources */,
 				A4668BDC2206CAD10019817F /* Sections.swift in Sources */,
 				1B4C5FE721EC21EE004E303C /* ImageManager.swift in Sources */,
@@ -528,12 +577,15 @@
 				A4D5346C21DF1697005E5835 /* ClanNameTableViewCell.swift in Sources */,
 				A41952DB21A7A01D0086D964 /* StyledButton.swift in Sources */,
 				A412614B21A65EC9005A4B24 /* ClanMemberTableViewController.swift in Sources */,
+				A497DFFD225EE54C00DF28D5 /* OnBoardingViewController.swift in Sources */,
 				A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */,
 				A4AA75AD22375D250004A7F8 /* Warlog.swift in Sources */,
+				A462117A2282696B00611001 /* Card.swift in Sources */,
 				A4668BD92206C48D0019817F /* PlayerProfileStatsTableViewCell.swift in Sources */,
 				A4AB5FCE21F003C1000A0464 /* DonationsTableViewCell.swift in Sources */,
 				A412614D21A786FD005A4B24 /* GradientView.swift in Sources */,
 				A477540621A250B9000098F6 /* ClanInfo.swift in Sources */,
+				A4621178228267AA00611001 /* CardModel.swift in Sources */,
 				1B3D5BCA21EA8D3800E10B87 /* ClanOverviewTableViewCell.swift in Sources */,
 				1B4C5FE321EC1D6E004E303C /* ClanInfo+Stats.swift in Sources */,
 				A4AA75A72236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift in Sources */,

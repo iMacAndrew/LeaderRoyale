@@ -10,11 +10,13 @@ import UIKit
 import GoogleMobileAds
 import MBProgressHUD
 
-class ClanSearchViewController: UIViewController, UITextFieldDelegate {
+class ClanSearchViewController: UIViewController, UITextFieldDelegate{
     private var clan: Clan?
     private var shouldDisplayError = false
 
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    
     @IBOutlet weak var clanSearchTextField: UITextField!
     
     @IBAction func openClashButton(_ sender: Any) {
@@ -69,21 +71,20 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .dark
-        
+
         clanSearchTextField.autocapitalizationType = UITextAutocapitalizationType.allCharacters
 
         clanSearchTextField.addTarget(self, action: #selector(ClanSearchViewController.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
-        
-        
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         view.addGestureRecognizer(tapGesture)
-
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -149,8 +150,10 @@ class ClanSearchViewController: UIViewController, UITextFieldDelegate {
             clanTable?.addNew(clan: clan)
         }
     }
-    
+
 }
+
+
 
 // Helper function inserted by Swift 4.2 migrator.
 fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {

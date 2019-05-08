@@ -41,6 +41,8 @@ class ClanDetailTabViewController: TabmanViewController {
         
         bar.layout.transitionStyle = .snap
         bar.scrollMode = .swipe
+
+        view.backgroundColor = .dark
     }
     
     override func pageboyViewController(_ pageboyViewController: PageboyViewController,
