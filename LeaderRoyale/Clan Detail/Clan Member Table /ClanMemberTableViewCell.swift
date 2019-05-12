@@ -51,9 +51,13 @@ class ClanMemberTableViewCell: UITableViewCell {
         kinglevelLabel.text = String(memberInfo.expLevel ?? 0)
         
         roleLabel.text = memberInfo.role
-        
+
         let isLeader = memberInfo.role?.lowercased() == "leader"
         decorateLeaderCell(isLeader: isLeader)
+
+        if let playerTag = memberInfo.tag, CoreDataManager.shared.isPlayerFlagged(playerTag: playerTag) {
+            nameLabel.textColor = .red
+        }
     }
     
     private func decorateLeaderCell(isLeader: Bool) {

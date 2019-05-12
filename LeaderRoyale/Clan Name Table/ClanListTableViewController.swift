@@ -177,4 +177,5 @@ class ClanListTableViewController: UITableViewController {
             [NSAttributedString.Key.foregroundColor: UIColor.white,
              NSAttributedString.Key.font: UIFont(name: "supercell-magic", size: 15)!]
     }
+
 }

@@ -10,28 +10,33 @@ import Foundation
 
 class CardModel {
 
-
     func getCards() -> [Card] {
+
+        var generatedNumbersArray = [Int]()
+
         var generatedCardsArray = [Card]()
 
-        for _ in 1...8 {
-            let randomNumber = arc4random_uniform(13) + 1
+        while generatedNumbersArray.count < 9 {
+            let randomNumber = arc4random_uniform(14) + 1
 
-            let cardOne = Card()
-            cardOne.imageName = "card\(randomNumber)"
+            if generatedNumbersArray.contains(Int(randomNumber)) == false {
 
-            generatedCardsArray.append(cardOne)
+                print(randomNumber)
 
-            let cardTwo = Card()
-            cardTwo.imageName = "card\(randomNumber)"
+                generatedNumbersArray.append(Int(randomNumber))
 
-            generatedCardsArray.append(cardTwo)
+                let cardOne = Card(imageName: "card\(randomNumber)")
 
+                generatedCardsArray.append(cardOne)
+
+                let cardTwo = Card(imageName: "card\(randomNumber)")
+
+                generatedCardsArray.append(cardTwo)
+            }
 
         }
 
         return generatedCardsArray
     }
-
     
 }

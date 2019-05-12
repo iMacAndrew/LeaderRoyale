@@ -17,6 +17,7 @@ class Slide: UIView {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
 
     weak var delegate: nextButtonProtocol?
 
@@ -32,6 +33,7 @@ class Slide: UIView {
         backgroundColor = .dark
         titleLabel.textColor = .white
         descLabel.textColor = .white
+        nextButton.layer.cornerRadius = 8.0
     }
 
 }

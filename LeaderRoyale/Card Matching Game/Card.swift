@@ -8,8 +8,16 @@
 
 import Foundation
 
-class Card {
-    var imageName = ""
+class Card: Equatable {
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        return lhs.imageName == rhs.imageName
+    }
+
+    var imageName: String
     var isFlipped = false
     var isMatched = false
+
+    init(imageName: String) {
+        self.imageName = imageName
+    }
 }

@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !launchedBefore {
             let onBoardingViewController = storyboard.instantiateViewController(withIdentifier: "onBoardingVC")
             initialViewController.present(onBoardingViewController, animated: true)
-//            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
         }
 
         return true

@@ -128,7 +128,6 @@ class CoreDataManager {
         }
 
         flag.isFlagged = !flag.isFlagged
-        
     }
 
     private func loadFlag(playerTag: String) -> ClanFlag? {
@@ -146,6 +145,7 @@ class CoreDataManager {
     private func createFlag(playerTag: String) -> ClanFlag {
         let clanFlagEntity = NSEntityDescription.entity(forEntityName: "ClanFlag", in: CoreDataStack.context)!
         let clanFlag = NSManagedObject(entity: clanFlagEntity, insertInto: CoreDataStack.context) as! ClanFlag
+        clanFlag.playerTag = playerTag
         return clanFlag
     }
 

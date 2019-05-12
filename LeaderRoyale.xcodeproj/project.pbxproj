@@ -41,6 +41,8 @@
 		A4621178228267AA00611001 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4621177228267AA00611001 /* CardModel.swift */; };
 		A462117A2282696B00611001 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46211792282696B00611001 /* Card.swift */; };
 		A462117C22829DF800611001 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462117B22829DF800611001 /* CardCollectionViewCell.swift */; };
+		A46211842283AEF000611001 /* CardModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46211832283AEF000611001 /* CardModelTests.swift */; };
+		A46211932283B5DE00611001 /* LeaderRoyaleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46211922283B5DE00611001 /* LeaderRoyaleUITests.swift */; };
 		A4668BD52206C1FE0019817F /* PlayerProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BD42206C1FE0019817F /* PlayerProfileTableViewController.swift */; };
 		A4668BD92206C48D0019817F /* PlayerProfileStatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4668BD72206C48D0019817F /* PlayerProfileStatsTableViewCell.swift */; };
 		A4668BDA2206C48D0019817F /* PlayerProfileStatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4668BD82206C48D0019817F /* PlayerProfileStatsTableViewCell.xib */; };
@@ -82,7 +84,25 @@
 		A4F24F3421B4A5DF004D437D /* ClanMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F24F3321B4A5DF004D437D /* ClanMemberTableViewCell.swift */; };
 		A4F24F3621B4A5ED004D437D /* ClanMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F24F3521B4A5ED004D437D /* ClanMemberTableViewCell.xib */; };
 		AAB173BFDE17E416975DC0E0 /* Pods_LeaderRoyale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56804831493BE1DE94C85730 /* Pods_LeaderRoyale.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		E52A5BE5465168D26121BF2C /* Pods_LeaderRoyaleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C961A65657371EA1B3DB77 /* Pods_LeaderRoyaleTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A46211862283AEF000611001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A47753E521A24CF9000098F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A47753EC21A24CF9000098F6;
+			remoteInfo = LeaderRoyale;
+		};
+		A46211952283B5DE00611001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A47753E521A24CF9000098F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A47753EC21A24CF9000098F6;
+			remoteInfo = LeaderRoyale;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1B3D5BC821EA8D3800E10B87 /* ClanOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanOverviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,6 +116,7 @@
 		1B4C5FE621EC21EE004E303C /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		56804831493BE1DE94C85730 /* Pods_LeaderRoyale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeaderRoyale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76ADAED894CEF7BF0C4465FE /* Pods-LeaderRoyale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeaderRoyale.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeaderRoyale/Pods-LeaderRoyale.debug.xcconfig"; sourceTree = "<group>"; };
+		81C961A65657371EA1B3DB77 /* Pods_LeaderRoyaleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeaderRoyaleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40FD5242238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveWarMembersTableViewCell.swift; sourceTree = "<group>"; };
 		A40FD5252238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InactiveWarMembersTableViewCell.xib; sourceTree = "<group>"; };
 		A40FD5282238EE0800AA4EE2 /* InactiveWarMembersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveWarMembersTableViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +142,12 @@
 		A4621177228267AA00611001 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		A46211792282696B00611001 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A462117B22829DF800611001 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		A46211812283AEF000611001 /* LeaderRoyaleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeaderRoyaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46211832283AEF000611001 /* CardModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModelTests.swift; sourceTree = "<group>"; };
+		A46211852283AEF000611001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A46211902283B5DE00611001 /* LeaderRoyaleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeaderRoyaleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46211922283B5DE00611001 /* LeaderRoyaleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderRoyaleUITests.swift; sourceTree = "<group>"; };
+		A46211942283B5DE00611001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4668BD42206C1FE0019817F /* PlayerProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileTableViewController.swift; sourceTree = "<group>"; };
 		A4668BD72206C48D0019817F /* PlayerProfileStatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileStatsTableViewCell.swift; sourceTree = "<group>"; };
 		A4668BD82206C48D0019817F /* PlayerProfileStatsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerProfileStatsTableViewCell.xib; sourceTree = "<group>"; };
@@ -163,10 +190,27 @@
 		A4D5347921EDA333005E5835 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		A4F24F3321B4A5DF004D437D /* ClanMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanMemberTableViewCell.swift; sourceTree = "<group>"; };
 		A4F24F3521B4A5ED004D437D /* ClanMemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClanMemberTableViewCell.xib; sourceTree = "<group>"; };
+		BA4AF1F47495ABDC98A166AB /* Pods-LeaderRoyaleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeaderRoyaleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeaderRoyaleTests/Pods-LeaderRoyaleTests.release.xcconfig"; sourceTree = "<group>"; };
 		DF8EEAB8995C40A7D3921EFE /* Pods-LeaderRoyale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeaderRoyale.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeaderRoyale/Pods-LeaderRoyale.release.xcconfig"; sourceTree = "<group>"; };
+		E970A3524BCE4D199E5F9BFC /* Pods-LeaderRoyaleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeaderRoyaleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeaderRoyaleTests/Pods-LeaderRoyaleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A462117E2283AEF000611001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E52A5BE5465168D26121BF2C /* Pods_LeaderRoyaleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A462118D2283B5DE00611001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A47753EA21A24CF9000098F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +279,8 @@
 			children = (
 				76ADAED894CEF7BF0C4465FE /* Pods-LeaderRoyale.debug.xcconfig */,
 				DF8EEAB8995C40A7D3921EFE /* Pods-LeaderRoyale.release.xcconfig */,
+				E970A3524BCE4D199E5F9BFC /* Pods-LeaderRoyaleTests.debug.xcconfig */,
+				BA4AF1F47495ABDC98A166AB /* Pods-LeaderRoyaleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -248,6 +294,24 @@
 				A462117B22829DF800611001 /* CardCollectionViewCell.swift */,
 			);
 			path = "Card Matching Game";
+			sourceTree = "<group>";
+		};
+		A46211822283AEF000611001 /* LeaderRoyaleTests */ = {
+			isa = PBXGroup;
+			children = (
+				A46211832283AEF000611001 /* CardModelTests.swift */,
+				A46211852283AEF000611001 /* Info.plist */,
+			);
+			path = LeaderRoyaleTests;
+			sourceTree = "<group>";
+		};
+		A46211912283B5DE00611001 /* LeaderRoyaleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A46211922283B5DE00611001 /* LeaderRoyaleUITests.swift */,
+				A46211942283B5DE00611001 /* Info.plist */,
+			);
+			path = LeaderRoyaleUITests;
 			sourceTree = "<group>";
 		};
 		A4668BD62206C4540019817F /* Player Profile Table */ = {
@@ -270,6 +334,8 @@
 			children = (
 				A47753EF21A24CF9000098F6 /* LeaderRoyale */,
 				78EDABF6021FC803343C1F00 /* Pods */,
+				A46211822283AEF000611001 /* LeaderRoyaleTests */,
+				A46211912283B5DE00611001 /* LeaderRoyaleUITests */,
 				A47753EE21A24CF9000098F6 /* Products */,
 				D07D8ABE1C766261BFE7F389 /* Frameworks */,
 			);
@@ -279,6 +345,8 @@
 			isa = PBXGroup;
 			children = (
 				A47753ED21A24CF9000098F6 /* LeaderRoyale.app */,
+				A46211812283AEF000611001 /* LeaderRoyaleTests.xctest */,
+				A46211902283B5DE00611001 /* LeaderRoyaleUITests.xctest */,
 			);
 			name = Products;
 			path = LeaderRoyale/CoreDat/LeaderRoyale;
@@ -389,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				56804831493BE1DE94C85730 /* Pods_LeaderRoyale.framework */,
+				81C961A65657371EA1B3DB77 /* Pods_LeaderRoyaleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -396,6 +465,43 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A46211802283AEF000611001 /* LeaderRoyaleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A46211882283AEF000611001 /* Build configuration list for PBXNativeTarget "LeaderRoyaleTests" */;
+			buildPhases = (
+				27CBB68E827F438BFEF2A3FF /* [CP] Check Pods Manifest.lock */,
+				A462117D2283AEF000611001 /* Sources */,
+				A462117E2283AEF000611001 /* Frameworks */,
+				A462117F2283AEF000611001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A46211872283AEF000611001 /* PBXTargetDependency */,
+			);
+			name = LeaderRoyaleTests;
+			productName = LeaderRoyaleTests;
+			productReference = A46211812283AEF000611001 /* LeaderRoyaleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A462118F2283B5DE00611001 /* LeaderRoyaleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A46211992283B5DE00611001 /* Build configuration list for PBXNativeTarget "LeaderRoyaleUITests" */;
+			buildPhases = (
+				A462118C2283B5DE00611001 /* Sources */,
+				A462118D2283B5DE00611001 /* Frameworks */,
+				A462118E2283B5DE00611001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A46211962283B5DE00611001 /* PBXTargetDependency */,
+			);
+			name = LeaderRoyaleUITests;
+			productName = LeaderRoyaleUITests;
+			productReference = A46211902283B5DE00611001 /* LeaderRoyaleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		A47753EC21A24CF9000098F6 /* LeaderRoyale */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A477540221A24CFC000098F6 /* Build configuration list for PBXNativeTarget "LeaderRoyale" */;
@@ -421,10 +527,18 @@
 		A47753E521A24CF9000098F6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Marz Software";
 				TargetAttributes = {
+					A46211802283AEF000611001 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = A47753EC21A24CF9000098F6;
+					};
+					A462118F2283B5DE00611001 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = A47753EC21A24CF9000098F6;
+					};
 					A47753EC21A24CF9000098F6 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1010;
@@ -445,11 +559,27 @@
 			projectRoot = "";
 			targets = (
 				A47753EC21A24CF9000098F6 /* LeaderRoyale */,
+				A46211802283AEF000611001 /* LeaderRoyaleTests */,
+				A462118F2283B5DE00611001 /* LeaderRoyaleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A462117F2283AEF000611001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A462118E2283B5DE00611001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A47753EB21A24CF9000098F6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,6 +609,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		27CBB68E827F438BFEF2A3FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeaderRoyaleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		499D079D34E7CA2E85BCB435 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,6 +690,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A462117D2283AEF000611001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A46211842283AEF000611001 /* CardModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A462118C2283B5DE00611001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A46211932283B5DE00611001 /* LeaderRoyaleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A47753E921A24CF9000098F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -602,6 +770,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A46211872283AEF000611001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A47753EC21A24CF9000098F6 /* LeaderRoyale */;
+			targetProxy = A46211862283AEF000611001 /* PBXContainerItemProxy */;
+		};
+		A46211962283B5DE00611001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A47753EC21A24CF9000098F6 /* LeaderRoyale */;
+			targetProxy = A46211952283B5DE00611001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		A47753F421A24CF9000098F6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -622,6 +803,92 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A46211892283AEF000611001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E970A3524BCE4D199E5F9BFC /* Pods-LeaderRoyaleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LeaderRoyaleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marzsoftware.LeaderRoyaleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeaderRoyale.app/LeaderRoyale";
+			};
+			name = Debug;
+		};
+		A462118A2283AEF000611001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA4AF1F47495ABDC98A166AB /* Pods-LeaderRoyaleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LeaderRoyaleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marzsoftware.LeaderRoyaleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeaderRoyale.app/LeaderRoyale";
+			};
+			name = Release;
+		};
+		A46211972283B5DE00611001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LeaderRoyaleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marzsoftware.LeaderRoyaleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LeaderRoyale;
+			};
+			name = Debug;
+		};
+		A46211982283B5DE00611001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LeaderRoyaleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marzsoftware.LeaderRoyaleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LeaderRoyale;
+			};
+			name = Release;
+		};
 		A477540021A24CFC000098F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -777,6 +1044,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A46211882283AEF000611001 /* Build configuration list for PBXNativeTarget "LeaderRoyaleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A46211892283AEF000611001 /* Debug */,
+				A462118A2283AEF000611001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A46211992283B5DE00611001 /* Build configuration list for PBXNativeTarget "LeaderRoyaleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A46211972283B5DE00611001 /* Debug */,
+				A46211982283B5DE00611001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A47753E821A24CF9000098F6 /* Build configuration list for PBXProject "LeaderRoyale" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

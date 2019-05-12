@@ -24,6 +24,7 @@ class OnBoardingViewController: UIViewController,  UIScrollViewDelegate, nextBut
         pageControl.numberOfPages = slides.count
         pageControl.currentPage = 0
         view.bringSubviewToFront(pageControl)
+        view.backgroundColor = .dark
     }
 
     func didClickNext() {

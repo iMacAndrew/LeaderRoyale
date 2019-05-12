@@ -11,5 +11,9 @@ target 'LeaderRoyale' do
   pod 'Firebase/AdMob'
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'EasyTipView'
+
+  target 'LeaderRoyaleTests' do
+      inherit! :search_paths
+  end
   
 end
