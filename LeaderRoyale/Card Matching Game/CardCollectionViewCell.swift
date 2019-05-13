@@ -13,19 +13,14 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var backImageView: UIImageView!
 
-    var card: Card?
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        frontImageView.isHidden = true
-    }
-
     func flip() {
-        UIView.transition(from: backImageView, to: frontImageView,
-                          duration: 0.3, options: [.transitionFlipFromLeft, .showHideTransitionViews],
+
+        UIView.transition(from: self.backImageView, to: self.frontImageView,
+                          duration: 0.3, options: [.beginFromCurrentState, .transitionFlipFromLeft, .showHideTransitionViews, .allowUserInteraction],
                           completion: { _ in
                             self.frontImageView.isHidden = false
         })
+
     }
 
     func flipBack() {
@@ -33,7 +28,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
 
             UIView.transition(from: self.frontImageView, to: self.backImageView,
-                              duration: 0.3, options: [.transitionFlipFromRight, .showHideTransitionViews],
+                              duration: 0.3, options: [.beginFromCurrentState, .transitionFlipFromRight, .showHideTransitionViews, .allowUserInteraction],
                               completion: nil)
 
         }
@@ -42,12 +37,14 @@ class CardCollectionViewCell: UICollectionViewCell {
 
     func remove() {
 
-        backImageView.alpha = 0
+        self.backImageView.alpha = 0
 
-        UIView.animate(withDuration: 0.3, delay: 0.5, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.5, options: [.beginFromCurrentState, .curveEaseOut, .allowUserInteraction], animations: {
             self.frontImageView.alpha = 0
         }, completion: nil)
 
 
+
     }
+
 }

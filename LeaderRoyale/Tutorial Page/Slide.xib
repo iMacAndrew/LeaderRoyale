@@ -49,9 +49,9 @@
                         <constraint firstAttribute="width" constant="150" id="cmI-nd-lwC"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGK-aL-gAK">
-                    <rect key="frame" x="170" y="462" width="35.5" height="17"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGK-aL-gAK">
+                    <rect key="frame" x="37.5" y="462" width="300" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -64,6 +64,7 @@
                 <constraint firstItem="wVx-wZ-kBh" firstAttribute="top" secondItem="KMH-9F-xbG" secondAttribute="bottom" constant="155" id="PbU-QO-qIf"/>
                 <constraint firstItem="pGK-aL-gAK" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="W8s-pS-PS0"/>
                 <constraint firstItem="wVx-wZ-kBh" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Xi2-3K-kST"/>
+                <constraint firstItem="pGK-aL-gAK" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.8" id="dIK-RD-hAc"/>
                 <constraint firstItem="dGm-tE-bB2" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="e6V-bX-JpG"/>
                 <constraint firstItem="KMH-9F-xbG" firstAttribute="top" secondItem="dGm-tE-bB2" secondAttribute="bottom" constant="98" id="t0N-lP-c5v"/>
                 <constraint firstItem="pGK-aL-gAK" firstAttribute="top" secondItem="KMH-9F-xbG" secondAttribute="bottom" constant="8" id="xaP-3B-w0k"/>

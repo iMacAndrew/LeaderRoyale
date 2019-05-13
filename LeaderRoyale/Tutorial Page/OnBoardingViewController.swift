@@ -79,31 +79,31 @@ class OnBoardingViewController: UIViewController,  UIScrollViewDelegate, nextBut
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide1.image.image = UIImage(named: "crown")
         slide1.titleLabel.text = "Welcome to Leader Royale!"
-        slide1.descLabel.text = "Manage your clans"
+        slide1.descLabel.text = "Manage and lead your clans more efficiently."
         slide1.delegate = self
 
         let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide2.image.image = UIImage(named: "crown")
         slide2.titleLabel.text = "Clan and Player Stats!"
-        slide2.descLabel.text = "See how well your clan and each of the members \n are doing with helpful statistics"
+        slide2.descLabel.text = "Easily view clan and player stats to see overall performance."
         slide2.delegate = self
 
         let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide3.image.image = UIImage(named: "crown")
         slide3.titleLabel.text = "Player Recognitions!"
-        slide3.descLabel.text = "Easily see which members are current \n doing the best and the worst"
+        slide3.descLabel.text = "Weekly recognitions show best and worst performing clan members in different categories."
         slide3.delegate = self
 
         let slide4:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide4.image.image = UIImage(named: "crown")
         slide4.titleLabel.text = "War Stats!"
-        slide4.descLabel.text = "Look through the clan war history to see \n war wins and player participation!"
+        slide4.descLabel.text = "View war logs with member participation and win rates. Keep track of which members have skipped, lost, or won their war day battles."
         slide4.delegate = self
 
         let slide5:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide5.image.image = UIImage(named: "crown")
-        slide5.titleLabel.text = ""
-        slide5.descLabel.text = ""
+        slide5.titleLabel.text = "Memory Game!"
+        slide5.descLabel.text = "Test out your memory with the card matching mini game."
         slide5.delegate = self
 
         return [slide1, slide2, slide3, slide4, slide5]

@@ -37,16 +37,21 @@ class MatchingGameViewController: UIViewController {
     @objc func timerElapsed() {
         miliseconds -= 1
         // convert to seconds
-        let seconds = String(format: "%.2f", miliseconds/1000)
+        let seconds = String(format: "%.2f", miliseconds / 1000)
 
-        timeRemainingLabel.text = "Time Remaining: \(seconds)"
+        DispatchQueue.main.async {
+            self.timeRemainingLabel.text = "Time Remaining: \(seconds)"
+        }
 
         if miliseconds <= 0 {
             timer?.invalidate()
-            timeRemainingLabel.textColor = .red
 
-            // check if any matches left to get
-            checkGameEnded()
+            DispatchQueue.main.async {
+                self.timeRemainingLabel.textColor = .red
+
+                // check if any matches left to get
+                self.checkGameEnded()
+            }
         }
 
     }
@@ -61,9 +66,15 @@ extension MatchingGameViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
-        cell.frontImageView.image = UIImage(named: cardArray[indexPath.item].imageName)
         cell.backImageView.image = UIImage(named: "legendarycardbackground")
+        cell.frontImageView.image = UIImage(named: cardArray[indexPath.item].imageName)
         let card = cardArray[indexPath.row]
+
+        if  cell.frontImageView.isHidden != true {
+            cell.frontImageView.isHidden = true
+        }
+
+        cell.backImageView.isHidden = false
 
         if card.isMatched == true {
             cell.backImageView.alpha = 0
@@ -77,7 +88,6 @@ extension MatchingGameViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
         if miliseconds <= 0 {
             return
         }
@@ -86,12 +96,15 @@ extension MatchingGameViewController: UICollectionViewDataSource {
         let card = cardArray[indexPath.row]
         if !card.isFlipped && card.isMatched == false {
             cell.flip()
+            card.isFlipped = true
 
             if timer == nil {
                 timer = Timer.scheduledTimer(timeInterval: 0.001, target: self,
                                              selector: #selector(timerElapsed),
                                              userInfo: nil, repeats: true)
-                RunLoop.main.add(timer!, forMode: .common)
+                DispatchQueue.global(qos: .userInitiated).async {
+                    RunLoop.current.add(self.timer!, forMode: .common)
+                }
             }
 
             if firstCard == nil {
@@ -100,19 +113,21 @@ extension MatchingGameViewController: UICollectionViewDataSource {
                 checkForMatches(indexPath)
             }
 
+        } else {
+            cell.flipBack()
+            card.isFlipped = false
+            firstCard = nil
         }
-        card.isFlipped = !card.isFlipped
     }
 
     func checkForMatches(_ secondCard: IndexPath) {
         let cardOneCell = collectionView.cellForItem(at: firstCard!) as? CardCollectionViewCell
-
         let cardTwoCell = collectionView.cellForItem(at: secondCard) as? CardCollectionViewCell
 
         let cardOne = cardArray[firstCard!.row]
         let cardTwo = cardArray[secondCard.row]
 
-        if cardOne == cardTwo {
+        if cardOne == cardTwo && cardOne !== cardTwo {
             cardOne.isMatched = true
             cardTwo.isMatched = true
 
@@ -135,7 +150,6 @@ extension MatchingGameViewController: UICollectionViewDataSource {
         }
 
         firstCard = nil
-
     }
 
 
@@ -149,16 +163,13 @@ extension MatchingGameViewController: UICollectionViewDataSource {
                 break
             }
         }
-
         var title = ""
         var message = ""
-
         // if not, then user has won, stop the timer
         if isWon == true {
             if miliseconds > 0 {
                 timer?.invalidate()
             }
-
             title = "Congratulations!"
             message = "You won!"
         }
@@ -169,10 +180,22 @@ extension MatchingGameViewController: UICollectionViewDataSource {
 
             title = "Game Over"
             message = " You Lost"
-
         }
 
         displayAlert(title, message)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+
+            self.cardArray = self.model.getCards().shuffled()
+            self.collectionView.reloadData()
+            self.timer = nil
+            self.miliseconds = 45 * 1000
+            let seconds = String(format: "%.2f", self.miliseconds/1000)
+            self.timeRemainingLabel.textColor = .white
+            self.timeRemainingLabel.text = "Time Remaining: \(seconds)"
+
+        }
+
     }
 
     func displayAlert(_ title: String,_ message: String) {
