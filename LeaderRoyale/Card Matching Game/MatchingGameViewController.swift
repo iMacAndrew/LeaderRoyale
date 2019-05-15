@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import GameKit
 
-class MatchingGameViewController: UIViewController {
+class MatchingGameViewController: UIViewController, GKGameCenterControllerDelegate {
+
     @IBOutlet weak var collectionView: UICollectionView!
 
     var model = CardModel()
@@ -16,6 +18,16 @@ class MatchingGameViewController: UIViewController {
     var firstCard: IndexPath?
     var timer: Timer?
     var miliseconds: Float = 45 * 1000 // 45 seconds
+    let totalTime: Float = 45 * 1000 // 45 seconds
+
+
+    // Game Center
+
+    var gcEnabled = Bool() // Check if the user has Game Center enabled
+    var gcDefaultLeaderBoard = String() // Check the default leaderboardID
+
+    let LEADERBOARD_ID = "com.leaderroyale.memorymatch"
+
 
     @IBOutlet weak var timeRemainingLabel: UILabel!
     
@@ -32,6 +44,9 @@ class MatchingGameViewController: UIViewController {
         collectionView.backgroundColor = .clear
         timeRemainingLabel.textColor = .white
         view.backgroundColor = .dark
+
+        authenticateLocalPlayer()
+
     }
 
     @objc func timerElapsed() {
@@ -55,6 +70,60 @@ class MatchingGameViewController: UIViewController {
         }
 
     }
+
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+    }
+
+    func submitTimeToGC() {
+        // Submit score to GC leaderboard
+        let bestScoreInt = GKScore(leaderboardIdentifier: LEADERBOARD_ID)
+
+        let elapsedTime = (totalTime - miliseconds) / 10.0
+        bestScoreInt.value = Int64(elapsedTime)
+        GKScore.report([bestScoreInt]) { (error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
+                print("Best Score submitted to your Leaderboard!")
+            }
+        }
+    }
+
+    @IBAction func pressedLeaderBoard(_ sender: Any) {
+        let gcVC = GKGameCenterViewController()
+        gcVC.gameCenterDelegate = self
+        gcVC.viewState = .leaderboards
+        gcVC.leaderboardIdentifier = LEADERBOARD_ID
+        present(gcVC, animated: true, completion: nil)
+    }
+
+    func authenticateLocalPlayer() {
+        let localPlayer: GKLocalPlayer = GKLocalPlayer.local
+
+        localPlayer.authenticateHandler = {(ViewController, error) -> Void in
+            if((ViewController) != nil) {
+                // 1. Show login if player is not logged in
+                self.present(ViewController!, animated: true, completion: nil)
+            } else if (localPlayer.isAuthenticated) {
+                // 2. Player is already authenticated & logged in, load game center
+                self.gcEnabled = true
+
+                // Get the default leaderboard ID
+                localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardIdentifer, error) in
+                    if error != nil { print(error)
+                    } else { self.gcDefaultLeaderBoard = leaderboardIdentifer! }
+                })
+
+            } else {
+                // 3. Game center is not enabled on the users device
+                self.gcEnabled = false
+                print("Local player could not be authenticated!")
+                print(error)
+            }
+        }
+    }
+
 
 }
 
@@ -167,9 +236,6 @@ extension MatchingGameViewController: UICollectionViewDataSource {
         var message = ""
         // if not, then user has won, stop the timer
         if isWon == true {
-            if miliseconds > 0 {
-                timer?.invalidate()
-            }
             title = "Congratulations!"
             message = "You won!"
         }
@@ -177,10 +243,12 @@ extension MatchingGameViewController: UICollectionViewDataSource {
             if miliseconds > 0 {
                 return
             }
-
             title = "Game Over"
             message = " You Lost"
         }
+
+        timer?.invalidate()
+        submitTimeToGC()
 
         displayAlert(title, message)
 
@@ -189,11 +257,7 @@ extension MatchingGameViewController: UICollectionViewDataSource {
             self.cardArray = self.model.getCards().shuffled()
             self.collectionView.reloadData()
             self.timer = nil
-            self.miliseconds = 45 * 1000
-            let seconds = String(format: "%.2f", self.miliseconds/1000)
-            self.timeRemainingLabel.textColor = .white
-            self.timeRemainingLabel.text = "Time Remaining: \(seconds)"
-
+            self.miliseconds = self.totalTime
         }
 
     }

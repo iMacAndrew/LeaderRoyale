@@ -83,6 +83,7 @@
 		A4D5347A21EDA333005E5835 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5347921EDA333005E5835 /* Stat.swift */; };
 		A4F24F3421B4A5DF004D437D /* ClanMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F24F3321B4A5DF004D437D /* ClanMemberTableViewCell.swift */; };
 		A4F24F3621B4A5ED004D437D /* ClanMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F24F3521B4A5ED004D437D /* ClanMemberTableViewCell.xib */; };
+		A4FA3B3C228A5F320018649D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FA3B3B228A5F320018649D /* GameKit.framework */; };
 		AAB173BFDE17E416975DC0E0 /* Pods_LeaderRoyale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56804831493BE1DE94C85730 /* Pods_LeaderRoyale.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E52A5BE5465168D26121BF2C /* Pods_LeaderRoyaleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C961A65657371EA1B3DB77 /* Pods_LeaderRoyaleTests.framework */; };
 /* End PBXBuildFile section */
@@ -190,6 +191,7 @@
 		A4D5347921EDA333005E5835 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		A4F24F3321B4A5DF004D437D /* ClanMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanMemberTableViewCell.swift; sourceTree = "<group>"; };
 		A4F24F3521B4A5ED004D437D /* ClanMemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClanMemberTableViewCell.xib; sourceTree = "<group>"; };
+		A4FA3B3B228A5F320018649D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		BA4AF1F47495ABDC98A166AB /* Pods-LeaderRoyaleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeaderRoyaleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeaderRoyaleTests/Pods-LeaderRoyaleTests.release.xcconfig"; sourceTree = "<group>"; };
 		DF8EEAB8995C40A7D3921EFE /* Pods-LeaderRoyale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeaderRoyale.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeaderRoyale/Pods-LeaderRoyale.release.xcconfig"; sourceTree = "<group>"; };
 		E970A3524BCE4D199E5F9BFC /* Pods-LeaderRoyaleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeaderRoyaleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeaderRoyaleTests/Pods-LeaderRoyaleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAB173BFDE17E416975DC0E0 /* Pods_LeaderRoyale.framework in Frameworks */,
+				A4FA3B3C228A5F320018649D /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +459,7 @@
 		D07D8ABE1C766261BFE7F389 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4FA3B3B228A5F320018649D /* GameKit.framework */,
 				56804831493BE1DE94C85730 /* Pods_LeaderRoyale.framework */,
 				81C961A65657371EA1B3DB77 /* Pods_LeaderRoyaleTests.framework */,
 			);
@@ -542,6 +546,11 @@
 					A47753EC21A24CF9000098F6 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

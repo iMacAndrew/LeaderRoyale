@@ -367,6 +367,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kXn-9q-cZf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="NDa-tJ-T00">
+                        <barButtonItem key="rightBarButtonItem" title="Leaderboard" id="5ZJ-54-esJ">
+                            <connections>
+                                <action selector="pressedLeaderBoard:" destination="PaS-rF-sfj" id="Qlp-By-mmg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="jdJ-S6-Fey" id="9nR-2e-ZN1"/>
                         <outlet property="timeRemainingLabel" destination="5WV-a7-4ed" id="Cjo-Go-VV3"/>
