@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import GoogleMobileAds
 import EasyTipView
 
 class RecognitionTableViewController: UITableViewController {
@@ -52,12 +51,6 @@ class RecognitionTableViewController: UITableViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         UIMenuController.shared.menuItems = nil
-    }
-
-    func adViewDidReceiveAd(_ bannerView: GADBannerView!) {
-        print("Banner loaded successfully")
-        tableView.tableHeaderView?.frame = bannerView.frame
-        tableView.tableHeaderView = bannerView
     }
 
     // MARK: - Table view data source

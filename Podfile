@@ -15,5 +15,9 @@ target 'LeaderRoyale' do
   target 'LeaderRoyaleTests' do
       inherit! :search_paths
   end
-  
+
+end
+
+target 'ClanKeyboard' do
+     use_frameworks!
 end

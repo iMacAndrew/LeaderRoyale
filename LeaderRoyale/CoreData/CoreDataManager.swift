@@ -22,6 +22,7 @@ class CoreDataManager {
             self.coreDataClans = coreDataClans
             if self.coreDataClans.isEmpty {
                 preloadClans()
+                CoreDataStack.saveContext()
             }
             for coreDataClan in self.coreDataClans {
                 do {
@@ -31,10 +32,6 @@ class CoreDataManager {
                 } catch {
                     print(error)
                 }
-
-//                let url = FileManager.default.temporaryDirectory.appendingPathComponent("clan3")
-//                try! coreDataClan.data.write(to: url)
-//                print(url)
             }
 
         } catch let e as NSError {

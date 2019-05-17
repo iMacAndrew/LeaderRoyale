@@ -16,6 +16,29 @@
 		1B4C5FE321EC1D6E004E303C /* ClanInfo+Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FE221EC1D6E004E303C /* ClanInfo+Stats.swift */; };
 		1B4C5FE521EC1D9D004E303C /* ClanInfoMember+Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FE421EC1D9D004E303C /* ClanInfoMember+Stats.swift */; };
 		1B4C5FE721EC21EE004E303C /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FE621EC21EE004E303C /* ImageManager.swift */; };
+		1BE93208228E5BBB00143BCC /* Clan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44899712204124900EF00FC /* Clan.swift */; };
+		1BE93209228E5BC200143BCC /* ClanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477540521A250B9000098F6 /* ClanInfo.swift */; };
+		1BE9320A228E5BC700143BCC /* PlayerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41952E021AA6C3D0086D964 /* PlayerInfo.swift */; };
+		1BE9320B228E5BCC00143BCC /* Warlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75AC22375D250004A7F8 /* Warlog.swift */; };
+		1BE9320C228E5BE100143BCC /* ClanInfo+Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FE221EC1D6E004E303C /* ClanInfo+Stats.swift */; };
+		1BE9320D228E5BE300143BCC /* ClanInfoMember+Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FE421EC1D9D004E303C /* ClanInfoMember+Stats.swift */; };
+		1BE9320E228E5BF100143BCC /* StringOrInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926421FFEB300063B9A3 /* StringOrInt.swift */; };
+		1BE9320F228E5BF400143BCC /* Warlog+Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75AE2237660B0004A7F8 /* Warlog+Stat.swift */; };
+		1BE93210228E5C0D00143BCC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75A8223613600004A7F8 /* CoreDataStack.swift */; };
+		1BE93211228E5C1A00143BCC /* ClanFlag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA5812228E545D00DBA435 /* ClanFlag+CoreDataClass.swift */; };
+		1BE93212228E5C1A00143BCC /* ClanFlag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA5813228E545D00DBA435 /* ClanFlag+CoreDataProperties.swift */; };
+		1BE93213228E5C1A00143BCC /* CoreDataClan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75A52236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift */; };
+		1BE93214228E5C1A00143BCC /* CoreDataClan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75A42236125E0004A7F8 /* CoreDataClan+CoreDataProperties.swift */; };
+		1BE93215228E5C1A00143BCC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA75AA223614FD0004A7F8 /* CoreDataManager.swift */; };
+		1BE93217228E5D0800143BCC /* Recognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C5FDF21EBC29E004E303C /* Recognition.swift */; };
+		1BE93219228E5D2700143BCC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449926221F2D5D90063B9A3 /* Colors.swift */; };
+		1BE9321B228E656500143BCC /* LeaderRoyale.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */; };
+		1BE9321F228E673F00143BCC /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BE9321E228E673F00143BCC /* KeyboardView.xib */; };
+		1BE93221228E675000143BCC /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE93220228E675000143BCC /* KeyboardView.swift */; };
+		1BFA5814228E545D00DBA435 /* ClanFlag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA5812228E545D00DBA435 /* ClanFlag+CoreDataClass.swift */; };
+		1BFA5815228E545D00DBA435 /* ClanFlag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA5813228E545D00DBA435 /* ClanFlag+CoreDataProperties.swift */; };
+		1BFA581D228E556200DBA435 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA581C228E556200DBA435 /* KeyboardViewController.swift */; };
+		1BFA5821228E556200DBA435 /* ClanKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1BFA581A228E556200DBA435 /* ClanKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A40FD5262238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD5242238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.swift */; };
 		A40FD5272238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40FD5252238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.xib */; };
 		A40FD5292238EE0800AA4EE2 /* InactiveWarMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD5282238EE0800AA4EE2 /* InactiveWarMembersTableViewController.swift */; };
@@ -23,8 +46,6 @@
 		A40FD52D223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40FD52B223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.xib */; };
 		A40FD52F223DFFA600AA4EE2 /* ClanDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD52E223DFFA600AA4EE2 /* ClanDownloader.swift */; };
 		A40FD531223F526900AA4EE2 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD530223F526800AA4EE2 /* AdManager.swift */; };
-		A40FD5342249CF5800AA4EE2 /* ClanFlag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD5322249CF5700AA4EE2 /* ClanFlag+CoreDataProperties.swift */; };
-		A40FD5352249CF5800AA4EE2 /* ClanFlag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FD5332249CF5700AA4EE2 /* ClanFlag+CoreDataClass.swift */; };
 		A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */; };
 		A412614B21A65EC9005A4B24 /* ClanMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614A21A65EC9005A4B24 /* ClanMemberTableViewController.swift */; };
 		A412614D21A786FD005A4B24 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412614C21A786FD005A4B24 /* GradientView.swift */; };
@@ -88,10 +109,18 @@
 		A4F24F3621B4A5ED004D437D /* ClanMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F24F3521B4A5ED004D437D /* ClanMemberTableViewCell.xib */; };
 		A4FA3B3C228A5F320018649D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FA3B3B228A5F320018649D /* GameKit.framework */; };
 		AAB173BFDE17E416975DC0E0 /* Pods_LeaderRoyale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56804831493BE1DE94C85730 /* Pods_LeaderRoyale.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		AC79ED7E8241DC62DFEEE1DD /* Pods_ClanKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25EFBB1046896ABD71ABEC26 /* Pods_ClanKeyboard.framework */; };
 		E52A5BE5465168D26121BF2C /* Pods_LeaderRoyaleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C961A65657371EA1B3DB77 /* Pods_LeaderRoyaleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1BFA581F228E556200DBA435 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A47753E521A24CF9000098F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BFA5819228E556200DBA435;
+			remoteInfo = ClanKeyboard;
+		};
 		A46211862283AEF000611001 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A47753E521A24CF9000098F6 /* Project object */;
@@ -108,6 +137,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1BFA5825228E556200DBA435 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1BFA5821228E556200DBA435 /* ClanKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1B3D5BC821EA8D3800E10B87 /* ClanOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		1B3D5BC921EA8D3800E10B87 /* ClanOverviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClanOverviewTableViewCell.xib; sourceTree = "<group>"; };
@@ -118,6 +161,16 @@
 		1B4C5FE221EC1D6E004E303C /* ClanInfo+Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClanInfo+Stats.swift"; sourceTree = "<group>"; };
 		1B4C5FE421EC1D9D004E303C /* ClanInfoMember+Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClanInfoMember+Stats.swift"; sourceTree = "<group>"; };
 		1B4C5FE621EC21EE004E303C /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		1BE93216228E5C3E00143BCC /* ClanKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClanKeyboard.entitlements; sourceTree = "<group>"; };
+		1BE9321A228E5F2900143BCC /* LeaderRoyale.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeaderRoyale.entitlements; sourceTree = "<group>"; };
+		1BE9321E228E673F00143BCC /* KeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
+		1BE93220228E675000143BCC /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		1BFA5812228E545D00DBA435 /* ClanFlag+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ClanFlag+CoreDataClass.swift"; path = "LeaderRoyale/CoreData/ClanFlag+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		1BFA5813228E545D00DBA435 /* ClanFlag+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ClanFlag+CoreDataProperties.swift"; path = "LeaderRoyale/CoreData/ClanFlag+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		1BFA581A228E556200DBA435 /* ClanKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClanKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BFA581C228E556200DBA435 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		1BFA581E228E556200DBA435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25EFBB1046896ABD71ABEC26 /* Pods_ClanKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClanKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56804831493BE1DE94C85730 /* Pods_LeaderRoyale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeaderRoyale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76ADAED894CEF7BF0C4465FE /* Pods-LeaderRoyale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeaderRoyale.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeaderRoyale/Pods-LeaderRoyale.debug.xcconfig"; sourceTree = "<group>"; };
 		81C961A65657371EA1B3DB77 /* Pods_LeaderRoyaleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeaderRoyaleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,8 +181,6 @@
 		A40FD52B223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarMemberDetailTableViewCell.xib; sourceTree = "<group>"; };
 		A40FD52E223DFFA600AA4EE2 /* ClanDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanDownloader.swift; sourceTree = "<group>"; };
 		A40FD530223F526800AA4EE2 /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
-		A40FD5322249CF5700AA4EE2 /* ClanFlag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ClanFlag+CoreDataProperties.swift"; path = "/Users/andyhumphries/Desktop/Xcode/LeaderRoyale/LeaderRoyale/CoreDat/ClanFlag+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		A40FD5332249CF5700AA4EE2 /* ClanFlag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ClanFlag+CoreDataClass.swift"; path = "/Users/andyhumphries/Desktop/Xcode/LeaderRoyale/LeaderRoyale/CoreDat/ClanFlag+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		A412614821A63A8B005A4B24 /* ClanSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanSearchViewController.swift; sourceTree = "<group>"; };
 		A412614A21A65EC9005A4B24 /* ClanMemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanMemberTableViewController.swift; sourceTree = "<group>"; };
 		A412614C21A786FD005A4B24 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -199,11 +250,21 @@
 		A4F24F3521B4A5ED004D437D /* ClanMemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClanMemberTableViewCell.xib; sourceTree = "<group>"; };
 		A4FA3B3B228A5F320018649D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		BA4AF1F47495ABDC98A166AB /* Pods-LeaderRoyaleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeaderRoyaleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeaderRoyaleTests/Pods-LeaderRoyaleTests.release.xcconfig"; sourceTree = "<group>"; };
+		D871D3ED576996AA068D0CE3 /* Pods-ClanKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClanKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClanKeyboard/Pods-ClanKeyboard.release.xcconfig"; sourceTree = "<group>"; };
+		D9001F984A0B612FCA2D19CB /* Pods-ClanKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClanKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClanKeyboard/Pods-ClanKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
 		DF8EEAB8995C40A7D3921EFE /* Pods-LeaderRoyale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeaderRoyale.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeaderRoyale/Pods-LeaderRoyale.release.xcconfig"; sourceTree = "<group>"; };
 		E970A3524BCE4D199E5F9BFC /* Pods-LeaderRoyaleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeaderRoyaleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeaderRoyaleTests/Pods-LeaderRoyaleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1BFA5817228E556200DBA435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC79ED7E8241DC62DFEEE1DD /* Pods_ClanKeyboard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A462117E2283AEF000611001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,6 +344,18 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		1BFA581B228E556200DBA435 /* ClanKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1BE93216228E5C3E00143BCC /* ClanKeyboard.entitlements */,
+				1BFA581C228E556200DBA435 /* KeyboardViewController.swift */,
+				1BE93220228E675000143BCC /* KeyboardView.swift */,
+				1BE9321E228E673F00143BCC /* KeyboardView.xib */,
+				1BFA581E228E556200DBA435 /* Info.plist */,
+			);
+			path = ClanKeyboard;
+			sourceTree = "<group>";
+		};
 		78EDABF6021FC803343C1F00 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +363,8 @@
 				DF8EEAB8995C40A7D3921EFE /* Pods-LeaderRoyale.release.xcconfig */,
 				E970A3524BCE4D199E5F9BFC /* Pods-LeaderRoyaleTests.debug.xcconfig */,
 				BA4AF1F47495ABDC98A166AB /* Pods-LeaderRoyaleTests.release.xcconfig */,
+				D9001F984A0B612FCA2D19CB /* Pods-ClanKeyboard.debug.xcconfig */,
+				D871D3ED576996AA068D0CE3 /* Pods-ClanKeyboard.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -345,6 +420,7 @@
 				78EDABF6021FC803343C1F00 /* Pods */,
 				A46211822283AEF000611001 /* LeaderRoyaleTests */,
 				A46211912283B5DE00611001 /* LeaderRoyaleUITests */,
+				1BFA581B228E556200DBA435 /* ClanKeyboard */,
 				A47753EE21A24CF9000098F6 /* Products */,
 				D07D8ABE1C766261BFE7F389 /* Frameworks */,
 			);
@@ -356,6 +432,7 @@
 				A47753ED21A24CF9000098F6 /* LeaderRoyale.app */,
 				A46211812283AEF000611001 /* LeaderRoyaleTests.xctest */,
 				A46211902283B5DE00611001 /* LeaderRoyaleUITests.xctest */,
+				1BFA581A228E556200DBA435 /* ClanKeyboard.appex */,
 			);
 			name = Products;
 			path = LeaderRoyale/CoreDat/LeaderRoyale;
@@ -364,6 +441,7 @@
 		A47753EF21A24CF9000098F6 /* LeaderRoyale */ = {
 			isa = PBXGroup;
 			children = (
+				1BE9321A228E5F2900143BCC /* LeaderRoyale.entitlements */,
 				A4D5346D21DF16A2005E5835 /* Clan Name Table */,
 				1B3D5BC521EA8BE200E10B87 /* Clan Detail */,
 				A462117422825FCE00611001 /* Card Matching Game */,
@@ -380,7 +458,6 @@
 				A47753F421A24CF9000098F6 /* Main.storyboard */,
 				A47753FF21A24CFC000098F6 /* Info.plist */,
 				A4AA759D2235F5560004A7F8 /* GoogleService-Info.plist */,
-				A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */,
 				A412614E21A789FF005A4B24 /* magic.ttf */,
 				A449926221F2D5D90063B9A3 /* Colors.swift */,
 				A44899712204124900EF00FC /* Clan.swift */,
@@ -402,8 +479,9 @@
 		A4AA75A32236121D0004A7F8 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				A40FD5332249CF5700AA4EE2 /* ClanFlag+CoreDataClass.swift */,
-				A40FD5322249CF5700AA4EE2 /* ClanFlag+CoreDataProperties.swift */,
+				A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */,
+				1BFA5812228E545D00DBA435 /* ClanFlag+CoreDataClass.swift */,
+				1BFA5813228E545D00DBA435 /* ClanFlag+CoreDataProperties.swift */,
 				A4AA75A52236125E0004A7F8 /* CoreDataClan+CoreDataClass.swift */,
 				A4AA75A42236125E0004A7F8 /* CoreDataClan+CoreDataProperties.swift */,
 				A4AA75A8223613600004A7F8 /* CoreDataStack.swift */,
@@ -471,6 +549,7 @@
 				A4FA3B3B228A5F320018649D /* GameKit.framework */,
 				56804831493BE1DE94C85730 /* Pods_LeaderRoyale.framework */,
 				81C961A65657371EA1B3DB77 /* Pods_LeaderRoyaleTests.framework */,
+				25EFBB1046896ABD71ABEC26 /* Pods_ClanKeyboard.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -478,6 +557,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1BFA5819228E556200DBA435 /* ClanKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BFA5822228E556200DBA435 /* Build configuration list for PBXNativeTarget "ClanKeyboard" */;
+			buildPhases = (
+				D99A6C6B9C2129CA590612B0 /* [CP] Check Pods Manifest.lock */,
+				1BFA5816228E556200DBA435 /* Sources */,
+				1BFA5817228E556200DBA435 /* Frameworks */,
+				1BFA5818228E556200DBA435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClanKeyboard;
+			productName = ClanKeyboard;
+			productReference = 1BFA581A228E556200DBA435 /* ClanKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A46211802283AEF000611001 /* LeaderRoyaleTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A46211882283AEF000611001 /* Build configuration list for PBXNativeTarget "LeaderRoyaleTests" */;
@@ -524,10 +621,12 @@
 				A47753EA21A24CF9000098F6 /* Frameworks */,
 				A47753EB21A24CF9000098F6 /* Resources */,
 				C11DAB3E7E6F5D3616D428A6 /* [CP] Embed Pods Frameworks */,
+				1BFA5825228E556200DBA435 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1BFA5820228E556200DBA435 /* PBXTargetDependency */,
 			);
 			name = LeaderRoyale;
 			productName = LeaderRoyale;
@@ -544,6 +643,14 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Marz Software";
 				TargetAttributes = {
+					1BFA5819228E556200DBA435 = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					A46211802283AEF000611001 = {
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = A47753EC21A24CF9000098F6;
@@ -556,6 +663,9 @@
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1010;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.GameCenter.iOS = {
 								enabled = 1;
 							};
@@ -577,6 +687,7 @@
 			projectRoot = "";
 			targets = (
 				A47753EC21A24CF9000098F6 /* LeaderRoyale */,
+				1BFA5819228E556200DBA435 /* ClanKeyboard */,
 				A46211802283AEF000611001 /* LeaderRoyaleTests */,
 				A462118F2283B5DE00611001 /* LeaderRoyaleUITests */,
 			);
@@ -584,6 +695,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1BFA5818228E556200DBA435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BE9321F228E673F00143BCC /* KeyboardView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A462117F2283AEF000611001 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -708,9 +827,57 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LeaderRoyale/Pods-LeaderRoyale-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D99A6C6B9C2129CA590612B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClanKeyboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1BFA5816228E556200DBA435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BE9320A228E5BC700143BCC /* PlayerInfo.swift in Sources */,
+				1BE9320D228E5BE300143BCC /* ClanInfoMember+Stats.swift in Sources */,
+				1BFA581D228E556200DBA435 /* KeyboardViewController.swift in Sources */,
+				1BE9320B228E5BCC00143BCC /* Warlog.swift in Sources */,
+				1BE93208228E5BBB00143BCC /* Clan.swift in Sources */,
+				1BE93210228E5C0D00143BCC /* CoreDataStack.swift in Sources */,
+				1BE93217228E5D0800143BCC /* Recognition.swift in Sources */,
+				1BE93209228E5BC200143BCC /* ClanInfo.swift in Sources */,
+				1BE93221228E675000143BCC /* KeyboardView.swift in Sources */,
+				1BE93213228E5C1A00143BCC /* CoreDataClan+CoreDataClass.swift in Sources */,
+				1BE9320F228E5BF400143BCC /* Warlog+Stat.swift in Sources */,
+				1BE93219228E5D2700143BCC /* Colors.swift in Sources */,
+				1BE93212228E5C1A00143BCC /* ClanFlag+CoreDataProperties.swift in Sources */,
+				1BE9321B228E656500143BCC /* LeaderRoyale.xcdatamodeld in Sources */,
+				1BE93214228E5C1A00143BCC /* CoreDataClan+CoreDataProperties.swift in Sources */,
+				1BE9320E228E5BF100143BCC /* StringOrInt.swift in Sources */,
+				1BE9320C228E5BE100143BCC /* ClanInfo+Stats.swift in Sources */,
+				1BE93215228E5C1A00143BCC /* CoreDataManager.swift in Sources */,
+				1BE93211228E5C1A00143BCC /* ClanFlag+CoreDataClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A462117D2283AEF000611001 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -731,6 +898,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BFA5815228E545D00DBA435 /* ClanFlag+CoreDataProperties.swift in Sources */,
 				A412614921A63A8C005A4B24 /* ClanSearchViewController.swift in Sources */,
 				1B4C5FE021EBC29E004E303C /* Recognition.swift in Sources */,
 				A4AA75B52237FB980004A7F8 /* WarDayParticipantsTableViewController.swift in Sources */,
@@ -747,7 +915,6 @@
 				A40FD52C223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.swift in Sources */,
 				A4AA75AF2237660B0004A7F8 /* Warlog+Stat.swift in Sources */,
 				A4AA75B8223803440004A7F8 /* ParticipantInfoTableViewCell.swift in Sources */,
-				A40FD5342249CF5800AA4EE2 /* ClanFlag+CoreDataProperties.swift in Sources */,
 				A4668BE3220F925B0019817F /* PlayerGeneralInfoTableViewCell.swift in Sources */,
 				A433377822389E0E00C8A202 /* WarTableViewCell.swift in Sources */,
 				A47753F921A24CF9000098F6 /* LeaderRoyale.xcdatamodeld in Sources */,
@@ -758,7 +925,6 @@
 				A4AA75A9223613600004A7F8 /* CoreDataStack.swift in Sources */,
 				A4D5346A21DF15D8005E5835 /* ClanListTableViewController.swift in Sources */,
 				1B4C5FDA21EBBFBE004E303C /* RecognitionTableViewController.swift in Sources */,
-				A40FD5352249CF5800AA4EE2 /* ClanFlag+CoreDataClass.swift in Sources */,
 				A44899722204124900EF00FC /* Clan.swift in Sources */,
 				A4668BDC2206CAD10019817F /* Sections.swift in Sources */,
 				1B4C5FE721EC21EE004E303C /* ImageManager.swift in Sources */,
@@ -768,6 +934,7 @@
 				A412614B21A65EC9005A4B24 /* ClanMemberTableViewController.swift in Sources */,
 				A497DFFD225EE54C00DF28D5 /* OnBoardingViewController.swift in Sources */,
 				A47753F121A24CF9000098F6 /* AppDelegate.swift in Sources */,
+				1BFA5814228E545D00DBA435 /* ClanFlag+CoreDataClass.swift in Sources */,
 				A4AA75AD22375D250004A7F8 /* Warlog.swift in Sources */,
 				A462117A2282696B00611001 /* Card.swift in Sources */,
 				A4668BD92206C48D0019817F /* PlayerProfileStatsTableViewCell.swift in Sources */,
@@ -792,6 +959,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1BFA5820228E556200DBA435 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BFA5819228E556200DBA435 /* ClanKeyboard */;
+			targetProxy = 1BFA581F228E556200DBA435 /* PBXContainerItemProxy */;
+		};
 		A46211872283AEF000611001 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A47753EC21A24CF9000098F6 /* LeaderRoyale */;
@@ -824,6 +996,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1BFA5823228E556200DBA435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9001F984A0B612FCA2D19CB /* Pods-ClanKeyboard.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClanKeyboard/ClanKeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4U9256PL4N;
+				INFOPLIST_FILE = ClanKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imacandrew.LeaderRoyale.ClanKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1BFA5824228E556200DBA435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D871D3ED576996AA068D0CE3 /* Pods-ClanKeyboard.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClanKeyboard/ClanKeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4U9256PL4N;
+				INFOPLIST_FILE = ClanKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imacandrew.LeaderRoyale.ClanKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A46211892283AEF000611001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E970A3524BCE4D199E5F9BFC /* Pods-LeaderRoyaleTests.debug.xcconfig */;
@@ -873,6 +1092,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AE7475N57L;
 				INFOPLIST_FILE = LeaderRoyaleUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -894,6 +1114,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AE7475N57L;
 				INFOPLIST_FILE = LeaderRoyaleUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1028,7 +1249,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 76ADAED894CEF7BF0C4465FE /* Pods-LeaderRoyale.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LeaderRoyale/LeaderRoyale.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4U9256PL4N;
 				INFOPLIST_FILE = LeaderRoyale/Info.plist;
@@ -1047,7 +1270,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF8EEAB8995C40A7D3921EFE /* Pods-LeaderRoyale.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LeaderRoyale/LeaderRoyale.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4U9256PL4N;
 				INFOPLIST_FILE = LeaderRoyale/Info.plist;
@@ -1065,6 +1290,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1BFA5822228E556200DBA435 /* Build configuration list for PBXNativeTarget "ClanKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BFA5823228E556200DBA435 /* Debug */,
+				1BFA5824228E556200DBA435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A46211882283AEF000611001 /* Build configuration list for PBXNativeTarget "LeaderRoyaleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
