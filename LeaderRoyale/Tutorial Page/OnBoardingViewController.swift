@@ -30,11 +30,12 @@ class OnBoardingViewController: UIViewController,  UIScrollViewDelegate, nextBut
     func didClickNext() {
         let nextPageIndex = pageControl.currentPage + 1
         if nextPageIndex >= pageControl.numberOfPages {
+            UserDefaults.standard.set(true, forKey: "seenOnboard")
             dismiss(animated: true)
         } else {
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: .beginFromCurrentState, animations: {
                 self.scrollView.contentOffset.x = CGFloat(nextPageIndex) * self.view.frame.width
-            }
+            })
         }
     }
 
@@ -54,23 +55,25 @@ class OnBoardingViewController: UIViewController,  UIScrollViewDelegate, nextBut
 
         let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
 
-        if(percentOffset.x > 0 && percentOffset.x <= 0.25) {
+        UIView.animate(withDuration: 0.1, delay: 0.0, options: .beginFromCurrentState, animations: {
+            if (percentOffset.x > 0 && percentOffset.x <= 0.25) {
 
-            slides[0].image.transform = CGAffineTransform(scaleX: (0.25-percentOffset.x)/0.25, y: (0.25-percentOffset.x)/0.25)
-            slides[1].image.transform = CGAffineTransform(scaleX: percentOffset.x/0.25, y: percentOffset.x/0.25)
+                self.slides[0].image.transform = CGAffineTransform(scaleX: (0.25-percentOffset.x)/0.25, y: (0.25-percentOffset.x)/0.25)
+                self.slides[1].image.transform = CGAffineTransform(scaleX: percentOffset.x/0.25, y: percentOffset.x/0.25)
 
-        } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
-            slides[1].image.transform = CGAffineTransform(scaleX: (0.50-percentOffset.x)/0.25, y: (0.50-percentOffset.x)/0.25)
-            slides[2].image.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
+            } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
+                self.slides[1].image.transform = CGAffineTransform(scaleX: (0.50-percentOffset.x)/0.25, y: (0.50-percentOffset.x)/0.25)
+                self.slides[2].image.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
 
-        } else if(percentOffset.x > 0.50 && percentOffset.x <= 0.75) {
-            slides[2].image.transform = CGAffineTransform(scaleX: (0.75-percentOffset.x)/0.25, y: (0.75-percentOffset.x)/0.25)
-            slides[3].image.transform = CGAffineTransform(scaleX: percentOffset.x/0.75, y: percentOffset.x/0.75)
+            } else if(percentOffset.x > 0.50 && percentOffset.x <= 0.75) {
+                self.slides[2].image.transform = CGAffineTransform(scaleX: (0.75-percentOffset.x)/0.25, y: (0.75-percentOffset.x)/0.25)
+                self.slides[3].image.transform = CGAffineTransform(scaleX: percentOffset.x/0.75, y: percentOffset.x/0.75)
 
-        } else if(percentOffset.x > 0.75 && percentOffset.x <= 1) {
-            slides[3].image.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
-            slides[4].image.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
-        }
+            } else if(percentOffset.x > 0.75 && percentOffset.x <= 1) {
+                self.slides[3].image.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
+                self.slides[4].image.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
+            }
+        })
 
     }
 
@@ -78,30 +81,31 @@ class OnBoardingViewController: UIViewController,  UIScrollViewDelegate, nextBut
 
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide1.image.image = UIImage(named: "crown")
+        slide1.imageWidthConstraint.constant = 150
         slide1.titleLabel.text = "Welcome to Leader Royale!"
         slide1.descLabel.text = "Manage and lead your clans more efficiently."
         slide1.delegate = self
 
         let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide2.image.image = UIImage(named: "crown")
+        slide2.image.image = UIImage(named: "membersOnboard")
         slide2.titleLabel.text = "Clan and Player Stats!"
         slide2.descLabel.text = "Easily view clan and player stats to see overall performance."
         slide2.delegate = self
 
         let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide3.image.image = UIImage(named: "crown")
+        slide3.image.image = UIImage(named: "TwoKings")
         slide3.titleLabel.text = "Player Recognitions!"
         slide3.descLabel.text = "Weekly recognitions show best and worst performing clan members in different categories."
         slide3.delegate = self
 
         let slide4:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide4.image.image = UIImage(named: "crown")
+        slide4.image.image = UIImage(named: "recruits")
         slide4.titleLabel.text = "War Stats!"
         slide4.descLabel.text = "View war logs with member participation and win rates. Keep track of which members have skipped, lost, or won their war day battles."
         slide4.delegate = self
 
         let slide5:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide5.image.image = UIImage(named: "crown")
+        slide5.image.image = UIImage(named: "barbarianThinking")
         slide5.titleLabel.text = "Memory Game!"
         slide5.descLabel.text = "Test out your memory with the card matching mini game."
         slide5.delegate = self

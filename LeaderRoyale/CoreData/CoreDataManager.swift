@@ -20,15 +20,71 @@ class CoreDataManager {
         do {
             let coreDataClans = try CoreDataStack.context.fetch(CoreDataClan.fetchRequest()) as [CoreDataClan]
             self.coreDataClans = coreDataClans
-            for coreDataClan in coreDataClans {
-                if let clan = try? JSONDecoder().decode(Clan.self, from: coreDataClan.data) {
+            if self.coreDataClans.isEmpty {
+                preloadClans()
+            }
+            for coreDataClan in self.coreDataClans {
+                do {
+                    let clan = try JSONDecoder().decode(Clan.self, from: coreDataClan.data)
                     clans.append(clan)
+
+                } catch {
+                    print(error)
                 }
+
+//                let url = FileManager.default.temporaryDirectory.appendingPathComponent("clan3")
+//                try! coreDataClan.data.write(to: url)
+//                print(url)
             }
 
         } catch let e as NSError {
             assertionFailure("Error loading clans from Core Data \(e)")
         }
+    }
+
+    private func preloadClans() {
+        let clan1URL = Bundle.main.url(forResource: "clan1", withExtension: nil)!
+        let clan2URL = Bundle.main.url(forResource: "clan2", withExtension: nil)!
+        let clan3URL = Bundle.main.url(forResource: "clan3", withExtension: nil)!
+
+        for url in [clan1URL] {
+            do {
+                let clan1Data = try Data(contentsOf: url)
+                let coreDataClan = createCoreDataClan(with: clan1Data)
+                coreDataClans.append(coreDataClan)
+
+            } catch {
+                print(error)
+            }
+        }
+
+        for url in [clan2URL] {
+            do {
+                let clan2Data = try Data(contentsOf: url)
+                let coreDataClan2 = createCoreDataClan(with: clan2Data)
+                coreDataClans.append(coreDataClan2)
+            } catch {
+                print(error)
+            }
+        }
+
+        for url in [clan3URL] {
+            do {
+                let clan3Data = try Data(contentsOf: url)
+                let coreDataClan3 = createCoreDataClan(with: clan3Data)
+                coreDataClans.append(coreDataClan3)
+            } catch {
+                print(error)
+            }
+        }
+
+    }
+
+    private func createCoreDataClan(with data: Data) -> CoreDataClan {
+        let coreDataClanEntity = NSEntityDescription.entity(forEntityName: "CoreDataClan", in: CoreDataStack.context)!
+        let coreDataClan = NSManagedObject(entity: coreDataClanEntity, insertInto: CoreDataStack.context) as! CoreDataClan
+        coreDataClan.data = data
+        return coreDataClan
     }
 
     func isNew(clan: Clan) -> Bool {
@@ -52,9 +108,7 @@ class CoreDataManager {
             return
         }
 
-        let coreDataClanEntity = NSEntityDescription.entity(forEntityName: "CoreDataClan", in: CoreDataStack.context)!
-        let coreDataClan = NSManagedObject(entity: coreDataClanEntity, insertInto: CoreDataStack.context) as! CoreDataClan
-        coreDataClan.data = data
+        let coreDataClan = createCoreDataClan(with: data)
         coreDataClans.append(coreDataClan)
         clans.append(clan)
         CoreDataStack.saveContext()

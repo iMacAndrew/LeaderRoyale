@@ -58,6 +58,9 @@
 		A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47753FC21A24CFC000098F6 /* LaunchScreen.storyboard */; };
 		A477540621A250B9000098F6 /* ClanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477540521A250B9000098F6 /* ClanInfo.swift */; };
 		A477540821A2552A000098F6 /* ClashRoyaleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */; };
+		A47FC017228BC93E00A21F31 /* clan1 in Resources */ = {isa = PBXBuildFile; fileRef = A47FC016228BC93E00A21F31 /* clan1 */; };
+		A47FC01D228CFE7300A21F31 /* clan2 in Resources */ = {isa = PBXBuildFile; fileRef = A47FC01C228CFE7200A21F31 /* clan2 */; };
+		A47FC01F228D025400A21F31 /* clan3 in Resources */ = {isa = PBXBuildFile; fileRef = A47FC01E228D025400A21F31 /* clan3 */; };
 		A497DFF9225BF14C00DF28D5 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497DFF8225BF14C00DF28D5 /* Slide.swift */; };
 		A497DFFB225BF19100DF28D5 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = A497DFFA225BF19100DF28D5 /* Slide.xib */; };
 		A497DFFD225EE54C00DF28D5 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497DFFC225EE54B00DF28D5 /* OnBoardingViewController.swift */; };
@@ -166,6 +169,9 @@
 		A47753FF21A24CFC000098F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A477540521A250B9000098F6 /* ClanInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanInfo.swift; sourceTree = "<group>"; };
 		A477540721A2552A000098F6 /* ClashRoyaleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClashRoyaleAPI.swift; sourceTree = "<group>"; };
+		A47FC016228BC93E00A21F31 /* clan1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = clan1; sourceTree = "<group>"; };
+		A47FC01C228CFE7200A21F31 /* clan2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = clan2; sourceTree = "<group>"; };
+		A47FC01E228D025400A21F31 /* clan3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = clan3; sourceTree = "<group>"; };
 		A497DFF8225BF14C00DF28D5 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		A497DFFA225BF19100DF28D5 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		A497DFFC225EE54B00DF28D5 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -402,6 +408,9 @@
 				A4AA75A42236125E0004A7F8 /* CoreDataClan+CoreDataProperties.swift */,
 				A4AA75A8223613600004A7F8 /* CoreDataStack.swift */,
 				A4AA75AA223614FD0004A7F8 /* CoreDataManager.swift */,
+				A47FC016228BC93E00A21F31 /* clan1 */,
+				A47FC01C228CFE7200A21F31 /* clan2 */,
+				A47FC01E228D025400A21F31 /* clan3 */,
 			);
 			name = CoreData;
 			path = CoreDat;
@@ -593,6 +602,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A47FC01F228D025400A21F31 /* clan3 in Resources */,
+				A47FC017228BC93E00A21F31 /* clan1 in Resources */,
 				A4AA759E2235F5560004A7F8 /* GoogleService-Info.plist in Resources */,
 				A40FD5272238EB6E00AA4EE2 /* InactiveWarMembersTableViewCell.xib in Resources */,
 				A4668BDA2206C48D0019817F /* PlayerProfileStatsTableViewCell.xib in Resources */,
@@ -601,6 +612,7 @@
 				A4D5346F21DF171D005E5835 /* ClanNameTableViewCell.xib in Resources */,
 				A4668BE4220F925B0019817F /* PlayerGeneralInfoTableViewCell.xib in Resources */,
 				1B4C5FDE21EBBFED004E303C /* RecognitionTableViewCell.xib in Resources */,
+				A47FC01D228CFE7300A21F31 /* clan2 in Resources */,
 				A40FD52D223C42CD00AA4EE2 /* WarMemberDetailTableViewCell.xib in Resources */,
 				A47753FE21A24CFC000098F6 /* LaunchScreen.storyboard in Resources */,
 				A4F24F3621B4A5ED004D437D /* ClanMemberTableViewCell.xib in Resources */,

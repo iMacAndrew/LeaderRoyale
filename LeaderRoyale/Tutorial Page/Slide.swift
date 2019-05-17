@@ -18,7 +18,8 @@ class Slide: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
-
+    @IBOutlet weak var imageWidthConstraint: NSLayoutConstraint!
+    
     weak var delegate: nextButtonProtocol?
 
     @IBAction func clickedNext(_ sender: Any) {
@@ -26,6 +27,7 @@ class Slide: UIView {
     }
 
     override func awakeFromNib() {
+        super.awakeFromNib()
         decorateXib()
     }
 

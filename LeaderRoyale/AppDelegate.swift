@@ -37,11 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
 
-        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        let launchedBefore = UserDefaults.standard.bool(forKey: "seenOnboard")
         if !launchedBefore {
             let onBoardingViewController = storyboard.instantiateViewController(withIdentifier: "onBoardingVC")
             initialViewController.present(onBoardingViewController, animated: true)
-            UserDefaults.standard.set(true, forKey: "launchedBefore")
         }
 
         return true
