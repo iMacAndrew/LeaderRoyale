@@ -15,7 +15,7 @@ class StatsTableViewController: UITableViewController {
 
     
     static func make() -> StatsTableViewController {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StatsTableViewController") as! StatsTableViewController
+        return UIStoryboard(name: "Clans", bundle: nil).instantiateViewController(withIdentifier: "StatsTableViewController") as! StatsTableViewController
     }
     
     override func viewDidLoad() {

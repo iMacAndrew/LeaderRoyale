@@ -15,7 +15,7 @@ class RecognitionTableViewController: UITableViewController {
     private var toolTip: EasyTipView?
     
     static func make() -> RecognitionTableViewController {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecognitionTableViewController") as! RecognitionTableViewController
+        return UIStoryboard(name: "Clans", bundle: nil).instantiateViewController(withIdentifier: "RecognitionTableViewController") as! RecognitionTableViewController
     }
     
     var memberInfo: ClanInfo.Member?

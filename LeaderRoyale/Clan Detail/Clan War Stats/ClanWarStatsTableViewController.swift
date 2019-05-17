@@ -15,7 +15,7 @@ class ClanWarStatsTableViewController: UITableViewController {
     private var selectedWarLog: Warlog?
     
     static func make() -> ClanWarStatsTableViewController {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ClanWarStatsTableViewController") as! ClanWarStatsTableViewController
+        return UIStoryboard(name: "Clans", bundle: nil).instantiateViewController(withIdentifier: "ClanWarStatsTableViewController") as! ClanWarStatsTableViewController
     }
     
     override func viewDidLoad() {

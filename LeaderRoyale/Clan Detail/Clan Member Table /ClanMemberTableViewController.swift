@@ -16,7 +16,7 @@ class ClanMemberTableViewController: UITableViewController {
     private var playerInfo: PlayerInfo?
 
     static func make() -> ClanMemberTableViewController {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ClanMemberTableViewController") as! ClanMemberTableViewController
+        return UIStoryboard(name: "Clans", bundle: nil).instantiateViewController(withIdentifier: "ClanMemberTableViewController") as! ClanMemberTableViewController
     }
     
     @IBAction func sortButtonPresssed(_ sender: UIBarButtonItem) {

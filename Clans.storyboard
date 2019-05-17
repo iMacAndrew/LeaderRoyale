@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Clans-->
+        <scene sceneID="XRp-bs-aft">
+            <objects>
+                <tableViewController storyboardIdentifier="UITableViewController-oCx-BK-jfy" id="oCx-BK-jfy" customClass="ClanListTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jxd-dh-May">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="oCx-BK-jfy" id="rLT-Lf-fB5"/>
+                            <outlet property="delegate" destination="oCx-BK-jfy" id="jBv-gS-BhP"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Clans" id="oFQ-T8-qad"/>
+                    <navigationItem key="navigationItem" title="Clans" id="JEh-dk-cXa">
+                        <barButtonItem key="leftBarButtonItem" title="Mini Game" id="2QM-m1-Hnp"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ll0-el-uhu">
+                            <connections>
+                                <segue destination="acM-8F-MNf" kind="show" id="dvF-Fo-zLM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="LAd-Nz-4gP" kind="show" identifier="statSegue" id="8uF-gw-aA6"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FuI-9a-QvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2127.1999999999998" y="477.21139430284859"/>
+        </scene>
+        <!--Clan Detail Tab View Controller-->
+        <scene sceneID="KLI-bn-tl6">
+            <objects>
+                <viewController id="LAd-Nz-4gP" customClass="ClanDetailTabViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u5d-7C-ekv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yeT-gG-AdP"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FqU-Fz-oxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2912.8000000000002" y="476.31184407796104"/>
+        </scene>
+        <!--clanTableIdentifier-->
+        <scene sceneID="Mur-xR-hfV">
+            <objects>
+                <tableViewController storyboardIdentifier="ClanMemberTableViewController" title="clanTableIdentifier" id="Ag2-AW-aI9" customClass="ClanMemberTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JDE-uh-Scz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Ag2-AW-aI9" id="xz4-4z-pqP"/>
+                            <outlet property="delegate" destination="Ag2-AW-aI9" id="fw1-PP-ojb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="moF-sn-J7O">
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="MPb-wa-LmJ">
+                            <connections>
+                                <action selector="sortButtonPresssed:" destination="Ag2-AW-aI9" id="muC-QU-sw8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="8dt-Cq-Qxe" kind="show" identifier="segueMemberVC2" id="bDL-My-Imo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yo7-zT-qmS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2127" y="1277"/>
+        </scene>
+        <!--Player Profile Table View Controller-->
+        <scene sceneID="T7P-yd-Rmx">
+            <objects>
+                <tableViewController id="8dt-Cq-Qxe" customClass="PlayerProfileTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WaB-kT-30d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="8dt-Cq-Qxe" id="pYD-ML-mJB"/>
+                            <outlet property="delegate" destination="8dt-Cq-Qxe" id="VKD-g9-DEo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ubd-oa-CQR">
+                        <barButtonItem key="rightBarButtonItem" image="flag" id="hhj-EL-ReW">
+                            <inset key="imageInsets" minX="0.0" minY="2" maxX="-10" maxY="-5"/>
+                            <connections>
+                                <action selector="flagButtonPressed:" destination="8dt-Cq-Qxe" id="TCf-hd-AyR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGw-x1-E2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2966" y="1277"/>
+        </scene>
+        <!--Stats Table View Controller-->
+        <scene sceneID="BrB-lw-AeG">
+            <objects>
+                <tableViewController storyboardIdentifier="StatsTableViewController" id="qav-ki-aqu" customClass="StatsTableViewController" customModule="LeaderRoyale" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iOh-EU-kIj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="qav-ki-aqu" id="QFy-BI-i0z"/>
+                            <outlet property="delegate" destination="qav-ki-aqu" id="g1H-Cm-CtK"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7zS-1d-M2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2126" y="2067"/>
+        </scene>
+        <!--Recognition Table View Controller-->
+        <scene sceneID="KUZ-Ue-L2l">
+            <objects>
+                <tableViewController storyboardIdentifier="RecognitionTableViewController" id="To9-nd-H6Z" customClass="RecognitionTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3sE-Sv-rcE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="To9-nd-H6Z" id="BE2-CA-GoK"/>
+                            <outlet property="delegate" destination="To9-nd-H6Z" id="PAF-VA-WPL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="5Q8-x1-SXb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="MvZ-3Q-V3J">
+                            <connections>
+                                <action selector="exportButtonPressed:" destination="To9-nd-H6Z" id="pp5-q1-z9W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FM4-gO-LWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2984" y="2067"/>
+        </scene>
+        <!--Inactive War Members Table View Controller-->
+        <scene sceneID="2a6-Lm-MZg">
+            <objects>
+                <tableViewController id="JCQ-GQ-HzU" customClass="InactiveWarMembersTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="T8a-oo-hbp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Agy-Lk-HL4">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Agy-Lk-HL4" id="W2t-kb-3Xq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JCQ-GQ-HzU" id="hsg-wH-KPk"/>
+                            <outlet property="delegate" destination="JCQ-GQ-HzU" id="gbk-My-HmB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wF3-4l-udd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-622" y="2348"/>
+        </scene>
+        <!--Clan War Stats Table View Controller-->
+        <scene sceneID="fx1-lE-aEm">
+            <objects>
+                <tableViewController storyboardIdentifier="ClanWarStatsTableViewController" id="0tf-q3-xLo" customClass="ClanWarStatsTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bDi-KN-0At">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cww-LY-m8C">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cww-LY-m8C" id="44M-d6-jlD">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0tf-q3-xLo" id="Nxu-Qe-dzL"/>
+                            <outlet property="delegate" destination="0tf-q3-xLo" id="HFZ-qa-3Vm"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="Vce-h6-kPa" kind="show" identifier="warParticipantSegue" id="ndy-24-tfZ"/>
+                        <segue destination="JCQ-GQ-HzU" kind="show" identifier="inactiveMemberSegue" id="Bs8-Ls-ufM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HEQ-vF-FJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="2131"/>
+        </scene>
+        <!--War Day Participants Table View Controller-->
+        <scene sceneID="dkA-hO-MhA">
+            <objects>
+                <tableViewController id="Vce-h6-kPa" customClass="WarDayParticipantsTableViewController" customModule="LeaderRoyale" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cVA-tU-9rb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Vce-h6-kPa" id="Cyu-AB-iqX"/>
+                            <outlet property="delegate" destination="Vce-h6-kPa" id="ajX-gM-WMs"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n8J-Sm-nwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="2895"/>
+        </scene>
+        <!--clanSearchVC-->
+        <scene sceneID="OF1-jV-3rn">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="clanSearchVC" storyboardName="Main" referencedIdentifier="clanSearchVC" id="acM-8F-MNf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ht-JY-G6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1364" y="476"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flag" width="50" height="50"/>
+    </resources>
+</document>

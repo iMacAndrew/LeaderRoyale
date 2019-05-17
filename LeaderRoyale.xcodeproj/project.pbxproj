@@ -35,6 +35,7 @@
 		1BE9321B228E656500143BCC /* LeaderRoyale.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A47753F721A24CF9000098F6 /* LeaderRoyale.xcdatamodeld */; };
 		1BE9321F228E673F00143BCC /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BE9321E228E673F00143BCC /* KeyboardView.xib */; };
 		1BE93221228E675000143BCC /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE93220228E675000143BCC /* KeyboardView.swift */; };
+		1BE93223228E729800143BCC /* Clans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE93222228E729800143BCC /* Clans.storyboard */; };
 		1BFA5814228E545D00DBA435 /* ClanFlag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA5812228E545D00DBA435 /* ClanFlag+CoreDataClass.swift */; };
 		1BFA5815228E545D00DBA435 /* ClanFlag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA5813228E545D00DBA435 /* ClanFlag+CoreDataProperties.swift */; };
 		1BFA581D228E556200DBA435 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA581C228E556200DBA435 /* KeyboardViewController.swift */; };
@@ -165,6 +166,7 @@
 		1BE9321A228E5F2900143BCC /* LeaderRoyale.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeaderRoyale.entitlements; sourceTree = "<group>"; };
 		1BE9321E228E673F00143BCC /* KeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 		1BE93220228E675000143BCC /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		1BE93222228E729800143BCC /* Clans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Clans.storyboard; sourceTree = "<group>"; };
 		1BFA5812228E545D00DBA435 /* ClanFlag+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ClanFlag+CoreDataClass.swift"; path = "LeaderRoyale/CoreData/ClanFlag+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		1BFA5813228E545D00DBA435 /* ClanFlag+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ClanFlag+CoreDataProperties.swift"; path = "LeaderRoyale/CoreData/ClanFlag+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		1BFA581A228E556200DBA435 /* ClanKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClanKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -456,6 +458,7 @@
 				A40FD530223F526800AA4EE2 /* AdManager.swift */,
 				A47753FC21A24CFC000098F6 /* LaunchScreen.storyboard */,
 				A47753F421A24CF9000098F6 /* Main.storyboard */,
+				1BE93222228E729800143BCC /* Clans.storyboard */,
 				A47753FF21A24CFC000098F6 /* Info.plist */,
 				A4AA759D2235F5560004A7F8 /* GoogleService-Info.plist */,
 				A412614E21A789FF005A4B24 /* magic.ttf */,
@@ -721,6 +724,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE93223228E729800143BCC /* Clans.storyboard in Resources */,
 				A47FC01F228D025400A21F31 /* clan3 in Resources */,
 				A47FC017228BC93E00A21F31 /* clan1 in Resources */,
 				A4AA759E2235F5560004A7F8 /* GoogleService-Info.plist in Resources */,
