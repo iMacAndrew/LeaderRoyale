@@ -1,7 +1,7 @@
 
 
-LeaderRoyal is an app designed to help leaders manage their Clash Royale clans more efficiently.
-Within the app the have acces to useful stats about member activity, including rank, donations, war day participation, and more. Leaders can also track the players who are performing the best as well as those who are performing poorly.
+LeaderRoyale is an app designed to help leaders manage their Clash Royale clans more efficiently.
+Within the app, they have access to useful stats about member activity, including rank, donations, war day participation, and more. Leaders can also track the players who are performing the best as well as those who are performing poorly.
 
 Features:
  * Member list sorted by donations, trophies, or king level 
