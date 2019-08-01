@@ -24,4 +24,4 @@ Features:
 
 * Challenge your friends and keep track of their scores with the leaderboard
 
-![ScreenShot](LeaderRoyaleScreenShot1.jpg)
+
