@@ -23,3 +23,8 @@ Features:
 * Test out your memory with a matching card game featuring Clash Royale cards
 
 * Challenge your friends and keep track of their scores with the leaderboard
+
+
+
+
+LeaderRoyaleScreenShot1.jpg
