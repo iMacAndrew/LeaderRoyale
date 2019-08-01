@@ -24,4 +24,4 @@ Features:
 
 * Challenge your friends and keep track of their scores with the leaderboard
 
-!(LeaderRoyaleScreenShot1.jpg)
+![](LeaderRoyaleScreenShot1.jpg)
